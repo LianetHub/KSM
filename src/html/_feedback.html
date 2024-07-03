@@ -1,0 +1,30 @@
+<section id="feedback" class="feedback">
+    <div class="feedback__container">
+        <h2 class="feedback__title title">
+            Начнем проект?
+        </h2>
+        <p class="feedback__subtitle">
+            Напишите нам, мы свяжемся с вами и ответим на все вопросы
+        </p>
+        <form action="#" class="feedback__form form">
+            <div class="form__row">
+                <input type="text" name="name" data-required class="form__input" placeholder="Имя">
+                <input type="tel" name="phone" data-required class="form__input" placeholder="Телефон">
+                <input type="email" name="email" data-required class="form__input" placeholder="Email">
+            </div>
+            <textarea name="message" class="form__textarea" placeholder="Расскажите о проекте"></textarea>
+            <div class="form__footer">
+                <label class="checkbox">
+                    <input type="checkbox" checked name="privacy" class="checkbox__input hidden" hidden>
+                    <span class="checkbox__content">
+                        Я согласен с
+                        <a href="/privacy.html" class="checkbox__content-link">
+                            правилами обработки персональных данных
+                        </a>
+                    </span>
+                </label>
+                <button type="submit" class="form__btn btn btn-shadow icon-more">Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>

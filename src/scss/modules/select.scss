@@ -1,0 +1,101 @@
+.dropdown {
+	position: relative;
+	&.visible {
+		.dropdown__list {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__button {
+		position: relative;
+		cursor: pointer;
+		background: #ffffff;
+		border: rem(1) solid #fff;
+		transition: all 0.3s ease 0s;
+		color: #1f2b32;
+		width: 100%;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1.125rem;
+		}
+		line-height: 140%;
+		border-radius: rem(12);
+		padding: 1rem 0.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 1;
+		&.selected {
+			color: #232c32;
+		}
+		&::before {
+			transition: transform 0.3s ease 0s;
+			@extend %ic, .icon-chevron;
+			order: 1;
+			color: $accent;
+			font-size: 1.5rem;
+		}
+		&:not(.active) {
+			&:hover {
+				border-color: #039;
+			}
+		}
+		&.active {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	&__list {
+		position: absolute;
+		left: 0;
+		top: calc(100% + 0.25rem);
+		width: 100%;
+		z-index: 4;
+		border-radius: 0.75rem;
+		padding: 1.25rem 0.62rem;
+		border: rem(1) solid #dfe0e1;
+		background: #fff;
+		transition: 200ms ease;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		&-item {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 0.31rem;
+			&::before {
+				@extend %ic, .icon-check-sm;
+				visibility: hidden;
+				font-size: 1.5rem;
+				width: 1.5rem;
+				height: 1.5rem;
+				flex-shrink: 0;
+				color: $accent;
+				transition: visibility 0.3s ease 0s;
+			}
+			&:not(.active) {
+				@media (any-hover: hover) {
+					&:hover {
+						color: $accent;
+					}
+				}
+			}
+			&.active {
+				&::before {
+					visibility: visible;
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: 0.37rem;
+			}
+		}
+	}
+	&__input {
+	}
+}

@@ -1,0 +1,346 @@
+.header {
+	// position: sticky;
+	// top: 0;
+	// left: 0;
+	// z-index: 6;
+
+	transition: opacity 0.3s ease 0s;
+
+	&.header_main {
+		// .header__body {
+		// 	@media (min-width: $md1) {
+		// 		margin-bottom: -100%;
+		// 	}
+		// }
+		& + .page {
+			padding-top: 0;
+		}
+	}
+	&.header_product {
+		&.scroll {
+			.header__body {
+				background: #fff;
+			}
+		}
+	}
+	&.scroll {
+		.header__body {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+			background: rgba(#fff, 0.9);
+			@media (any-hover: hover) {
+				&:hover {
+					background: #fff;
+				}
+			}
+		}
+	}
+	&__wrapper {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 6;
+		background: #fff;
+		@media (min-width: $md1) {
+			background: transparent;
+		}
+	}
+	// .header__container
+	&__container {
+	}
+	// .header__body
+	&__body {
+		background: #fff;
+		color: $dark;
+		display: flex;
+		align-items: center;
+		padding: 1rem 0rem;
+		transition: padding 0.3s linear 0s, background-color 0.3s ease 0s;
+		@media (min-width: $md4) {
+			padding: 1.25rem 1rem;
+		}
+		@media (min-width: $md1) {
+			padding: 1.75rem 6rem;
+		}
+	}
+	// .header__logo
+	&__logo {
+		margin-right: auto;
+		max-width: 4.5625rem;
+		margin-top: 0.5rem;
+		@media (min-width: $md5) {
+			margin-top: 0;
+			max-width: rem(117);
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__phone
+	&__phone {
+		display: none;
+		@media (min-width: $md4) {
+			display: block;
+			font-weight: 500;
+			line-height: 140%;
+			transition: color 0.3s ease 0s;
+			font-size: 1.25rem;
+		}
+		@media (min-width: $md2) {
+			font-size: 1.125rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #142356;
+			}
+		}
+	}
+	// .header__btn
+	&__btn {
+		display: none;
+		@media (min-width: $md5) {
+			min-width: rem(167);
+			margin-left: rem(22);
+			display: flex;
+		}
+		@media (min-width: $md2) {
+			margin-left: rem(19);
+			min-width: 0;
+		}
+	}
+	// .header__menu-btn
+	&__menu-btn {
+	}
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	opacity: 0;
+	visibility: hidden;
+	background: rgba($color: #161c24, $alpha: 0.6);
+	z-index: 6;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+
+	.header.open-menu & {
+		opacity: 1;
+		visibility: visible;
+		@media (min-width: $md2) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	@media (min-width: $md2) {
+		position: static;
+		top: auto;
+		left: auto;
+		width: auto;
+		height: auto;
+		padding: 0 3.75rem;
+		transition: none;
+		overflow-x: visible;
+		overflow-y: visible;
+		display: flex;
+		align-items: center;
+		background: none;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+		margin-left: auto;
+	}
+	&__body {
+		background: #fff;
+		min-height: 100%;
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: rem(232);
+		padding: 8rem 1.75rem 3.6rem;
+		@media (min-width: $md5) {
+			padding: 8rem 2.5rem 6.25rem;
+			width: 26.3125rem;
+		}
+		@media (min-width: $md2) {
+			padding: 0;
+			width: auto;
+			display: block;
+			margin-left: 0;
+			background: none;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		flex: 1 1 auto;
+		gap: 1.3rem;
+		@media (min-width: $md5) {
+			gap: 2.8rem;
+		}
+		@media (min-width: $md2) {
+			gap: 1.5rem;
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		display: block;
+		position: relative;
+		color: #8a8e92;
+		transition: color 0.3s ease 0s;
+		line-height: 120%;
+		font-size: 1.125rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+		@media (min-width: $md2) {
+			font-size: 1rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $dark;
+			}
+		}
+		&.active {
+			color: $dark;
+		}
+	}
+	// .menu__phone
+	&__phone {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		line-height: 140%;
+		font-size: 1.125rem;
+		margin-top: 4rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+			margin-top: 6rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 1.5rem;
+		}
+		&::before {
+			font-size: 1.1875rem;
+
+			@media (min-width: $md5) {
+				font-size: 1.8125rem;
+			}
+			color: #232c32;
+		}
+		@media (min-width: $md2) {
+			display: none;
+		}
+	}
+	// .menu__btn
+	&__btn {
+		margin-top: 1rem;
+		padding: 0.8rem;
+		width: 100%;
+		@media (min-width: $md5) {
+			width: auto;
+			padding: 0.8rem 1.78rem;
+			margin-top: 1.5rem;
+			min-width: 14.375rem;
+		}
+		@media (min-width: $md2) {
+			display: none;
+		}
+	}
+}
+
+.icon-menu {
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0;
+	order: 1;
+	z-index: 11;
+	margin-left: auto;
+	min-width: 1.5625rem;
+	height: rem(25);
+	@media (min-width: $md5) {
+		min-width: rem(42);
+
+		margin-left: 2.5rem;
+	}
+	@media (min-width: $md2) {
+		display: none;
+	}
+	& span {
+		display: block;
+		padding: rem(3) rem(0);
+		@media (min-width: $md5) {
+			padding: rem(4.5) rem(0);
+		}
+		width: 100%;
+		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+		will-change: transform;
+		&::before {
+			content: "";
+			display: block;
+			height: rem(2);
+			width: 100%;
+			margin-left: auto;
+			background: currentColor;
+			transition: transform 0.3s ease 0s;
+			will-change: transform;
+		}
+		&:first-child {
+			&::before {
+				width: 92%;
+			}
+		}
+		&:nth-child(2) {
+			&::before {
+				width: 82%;
+			}
+		}
+	}
+	.header.open-menu & {
+		& span {
+			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+			&::before {
+				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
+				width: 90%;
+				background: #142356;
+			}
+			&:first-child {
+				transform: translateY(rem(8));
+				@media (min-width: $md5) {
+					transform: translateY(rem(11.5));
+				}
+				&::before {
+					transform: rotate(-135deg);
+				}
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(rem(-8));
+				@media (min-width: $md5) {
+					transform: translateY(rem(-11.5));
+				}
+				&::before {
+					transform: rotate(-225deg);
+				}
+			}
+		}
+	}
+}
