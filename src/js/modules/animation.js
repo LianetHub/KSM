@@ -1,44 +1,72 @@
+gsap.registerPlugin(ScrollTrigger);
+
 export const animation = () => {
+    const logo = document.querySelector('.header__logo');
+    if (!logo) return;
+    const logoCurrent = document.querySelector('.header__logo-current');
+    const maxScroll = 600;
+    const oneThirdScroll = maxScroll / 3;
 
-    const sections = document.querySelectorAll('[data-animate]');
+    gsap.set(logo, { scale: 1 });
+    gsap.set(logoCurrent, { autoAlpha: 1 });
 
-    sections.forEach(section => {
-
-        const callback = function (entries, observer) {
-            if (entries[0].isIntersecting) {
-                if (section.dataset.animate == "number" && !section.classList.contains('animated')) {
-                    counter(section);
-                }
-                section.classList.add('animated');
-            } else {
-
-            }
-        };
-
-        const companyObserver = new IntersectionObserver(callback);
-        companyObserver.observe(section);
-
+    ScrollTrigger.create({
+        trigger: logo,
+        start: 0,
+        end: oneThirdScroll,
+        scrub: true,
+        onUpdate: self => {
+            const progress = self.progress;
+            const scale = 1 - (0.5 * progress);
+            gsap.to(logo, {
+                scale: scale,
+                duration: 0
+            });
+        }
     });
 
+    ScrollTrigger.create({
+        trigger: logo,
+        start: 2 * oneThirdScroll,
+        end: maxScroll,
+        scrub: true,
+        markers: true,
+        onUpdate: self => {
+            const progress = (self.scroll() - 2 * oneThirdScroll) / oneThirdScroll;
 
-    function counter(counter) {
-        let countFinish = +counter.innerText;
-        counter.innerText = "0";
-        const updateCounter = () => {
-            const target = countFinish;
-            const count = +counter.innerText;
-            const increment = target / 20;
-            if (count < target) {
-                counter.innerText = `${Math.ceil(count + increment)}`;
-                setTimeout(updateCounter, 30);
-            } else counter.innerText = target;
-        };
-        updateCounter();
-    }
+            gsap.to(logoCurrent, {
+                autoAlpha: 1 - progress,
+                duration: 0,
+            });
 
+            gsap.to(logo, {
+                scale: 0.5,
+                duration: 0
+            });
+        },
+        onLeave: () => {
+            logo.classList.add('clip-logo');
+        },
+        onEnterBack: () => {
+            logo.classList.remove('clip-logo');
+        }
+    });
 
-    // function numberWithCommas(x) {
-    //     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    // }
+    ScrollTrigger.create({
+        trigger: logo,
+        start: maxScroll,
+        end: "+=300",
+        scrub: true,
+        onUpdate: self => {
+            gsap.to(logoCurrent, {
+                autoAlpha: 0,
+                duration: 0,
+            });
 
-}
+            gsap.to(logo, {
+                scale: 0.5,
+                duration: 0
+            });
+        }
+    });
+};
