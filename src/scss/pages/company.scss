@@ -1,18 +1,49 @@
 .article {
-	padding: 1.125rem 0 rem(72);
+	padding: 1.5rem 0 3.75rem;
+	@media (min-width: $md6) {
+		padding: 1.125rem 0 4.13rem;
+	}
+	@media (min-width: $md4) {
+		padding: 1.125rem 0 3.75rem;
+	}
+	@media (min-width: $md2) {
+		padding: 1.125rem 0 rem(72);
+	}
 	// .article__container
 	&__container {
 	}
 	// .article__block
 	&__block {
 		&:not(:first-child) {
-			margin-top: 2.5rem;
+			margin-top: 1.65rem;
+
+			@media (min-width: $md4) {
+				margin-top: 1.75rem;
+			}
+			@media (min-width: $md2) {
+				margin-top: 2.5rem;
+			}
 			&.lg-offset {
-				margin-top: 4.35rem;
+				margin-top: 3.5rem;
+				@media (min-width: $md6) {
+					margin-top: 2.88rem;
+				}
+				@media (min-width: $md4) {
+					margin-top: 3.25rem;
+				}
+				@media (min-width: $md3) {
+					margin-top: 3.5rem;
+				}
+				@media (min-width: $md2) {
+					margin-top: 4.35rem;
+				}
 			}
 		}
 		.row {
-			--gutter-y: 1.5rem;
+			--gutter-y: 1.125rem;
+			@media (min-width: $md2) {
+				--gutter-y: 1.5rem;
+			}
 		}
 	}
 	// .article__slider
@@ -21,20 +52,40 @@
 	&__text {
 		& p {
 			&:not(:last-child) {
-				margin-bottom: 1.4rem;
+				margin-bottom: 1.1rem;
+				@media (min-width: $md2) {
+					margin-bottom: 1.4rem;
+				}
 			}
 		}
 	}
 	&__btn {
-		margin-top: 1.35rem;
+		margin-top: 0.9rem;
+		@media (min-width: $md3) {
+			margin-top: 1.35rem;
+		}
 	}
 	// .article__list
 	&__list {
-		margin-top: 1.35rem;
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
 		font-weight: 500;
-		gap: 0.4rem $gutter-x;
+		margin-top: 0.75rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $gutter-y-mobile $gutter-x-mobile;
+		@media (min-width: $md5) {
+			gap: 0.4rem 1rem;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(8, auto);
+			grid-auto-flow: column;
+		}
+		@media (min-width: $md4) {
+			gap: 0.4rem $gutter-x;
+		}
+		@media (min-width: $md2) {
+			margin-top: 1.35rem;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(5, auto);
+		}
 	}
 	// .article__list-item
 	&__list-item {
@@ -55,31 +106,5 @@
 				}
 			}
 		}
-	}
-}
-
-.slider {
-	// .slider__slide
-	&__slide {
-	}
-	// .slider__controls
-	&__controls {
-		margin-top: 0.44rem;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 0.15rem;
-		font-size: 1.125rem;
-		line-height: 133.333%;
-		letter-spacing: 0.00563rem;
-	}
-	// .slider__prev
-	&__prev {
-	}
-	// .slider__pagination
-	&__pagination {
-	}
-	// .slider__next
-	&__next {
 	}
 }

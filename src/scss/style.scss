@@ -21,13 +21,14 @@ $fontfamily: "KSM";
 
 // Шрифт по умолчанию
 
-$md0: 1919.98px;
-$md1: 1727.98px;
-$md2: 1599.98px;
-$md3: 1199.98px;
-$md4: 1023.98px;
-$md5: 767.98px;
-$md6: 575.98px;
+$md0: 1919.98px; // xxxl
+$md1: 1727.98px; // xxl
+$md2: 1599.98px; // xl
+$md3: 1199.98px; // lg
+$md4: 1023.98px; // md
+$md5: 767.98px; // sm
+$md6: 575.98px; // xs
+$md7: 429.98px;
 
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
@@ -59,9 +60,9 @@ body {
 	min-width: 320px;
 	min-height: 100%;
 	line-height: normal;
-	&.lock {
+	&.menu-lock {
 		overflow: hidden;
-		@media (min-width: $md2) {
+		@media (min-width: $md6) {
 			overflow: visible;
 		}
 	}

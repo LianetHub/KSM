@@ -1,6 +1,8 @@
 // Define variables for gutters
 $gutter-x: 1.5rem !default;
 $gutter-y: 2.81rem !default;
+$gutter-x-mobile: rem(9) !default;
+$gutter-y-mobile: rem(9) !default;
 
 // Define breakpoints
 $grid-breakpoints: (
@@ -65,11 +67,25 @@ $grid-breakpoints: (
 	margin-left: percentage(math.div($size, 8));
 }
 
+// Mixin for order
+@mixin make-order($order) {
+	order: $order;
+}
+
+// Mixin for order-first
+@mixin make-order-first {
+	order: -1;
+}
+
 // Generate classes for 8-column grid with breakpoints
 @mixin generate-grid {
 	:root {
-		--gutter-x: #{$gutter-x};
-		--gutter-y: #{$gutter-y};
+		--gutter-x: #{$gutter-x-mobile};
+		--gutter-y: #{$gutter-y-mobile};
+		@media (min-width: $md5) {
+			--gutter-x: #{$gutter-x};
+			--gutter-y: #{$gutter-y};
+		}
 	}
 	.row {
 		@include make-row;
@@ -80,16 +96,24 @@ $grid-breakpoints: (
 			@include make-col($i);
 		}
 
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			@include media-breakpoint-up($breakpoint) {
+				.col-#{$breakpoint}-#{$i} {
+					@include make-col($i);
+				}
+			}
+		}
+	}
+}
+
+@mixin generate-offset {
+	@for $i from 0 through 8 {
 		.offset-#{$i} {
 			@include make-offset($i);
 		}
 
 		@each $breakpoint in map-keys($grid-breakpoints) {
 			@include media-breakpoint-up($breakpoint) {
-				.col-#{$breakpoint}-#{$i} {
-					@include make-col($i);
-				}
-
 				.offset-#{$breakpoint}-#{$i} {
 					@include make-offset($i);
 				}
@@ -98,5 +122,36 @@ $grid-breakpoints: (
 	}
 }
 
+// Generate classes for property order
+@mixin generate-order {
+	@for $i from 0 through 8 {
+		.order-#{$i} {
+			@include make-order($i);
+		}
+
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			@include media-breakpoint-up($breakpoint) {
+				.order-#{$breakpoint}-#{$i} {
+					@include make-order($i);
+				}
+			}
+		}
+	}
+
+	.order-first {
+		@include make-order-first;
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		@include media-breakpoint-up($breakpoint) {
+			.order-#{$breakpoint}-first {
+				@include make-order-first;
+			}
+		}
+	}
+}
+
 // Include the grid mixin to generate the CSS
 @include generate-grid;
+@include generate-offset;
+@include generate-order;

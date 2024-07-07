@@ -1,29 +1,74 @@
 .footer {
 	background: #e5e5e5;
 	padding: 2.25rem 0;
-	font-size: 0.9375rem;
+	font-size: 0.75rem;
+	@media (min-width: $md7) {
+		font-size: 0.9375rem;
+	}
+	@media (min-width: $md6) {
+		font-size: 0.75rem;
+	}
+	@media (min-width: $md2) {
+		padding: 2.25rem 0;
+		font-size: 0.9375rem;
+	}
+	.row {
+		--gutter-y: 2rem;
+	}
 	// .footer__container
 	&__container {
 	}
 	// .footer__caption
 	&__caption {
+		display: inline-block;
 		line-height: 113.333%;
+		@media (min-width: $md6) {
+			line-height: 150%;
+		}
+		@media (min-width: $md4) {
+			margin-right: -2rem;
+		}
+		@media (min-width: $md3) {
+			line-height: 125%;
+		}
+		@media (min-width: $md2) {
+			line-height: 113.333%;
+		}
 	}
 	// .footer__logo
 	&__logo {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
+		@media (min-width: $md2) {
+			margin-top: 1rem;
+		}
 		display: inline-block;
 	}
 	// .footer__form
 	&__form {
-		margin-top: 0.65rem;
+		margin-top: 0.8rem;
+		@media (min-width: $md5) {
+			margin-top: 0;
+			max-width: 21.125rem;
+		}
+		@media (min-width: $md3) {
+			margin-top: 0.4rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 0.65rem;
+		}
 	}
 	// .footer__design
 	&__design {
-		margin-top: 0.5rem;
 		display: inline-block;
-		font-size: 0.75rem;
-		line-height: 1.3125rem;
+		line-height: math.div(1.3125, 0.75);
+		margin-top: 1.06rem;
+		@media (min-width: $md6) {
+			margin-top: 0.25rem;
+			font-size: 0.75rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 0.5rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				font-weight: 500;
@@ -32,8 +77,14 @@
 	}
 	// .footer__address
 	&__address {
-		margin-top: 1rem;
-		line-height: 140%;
+		margin-top: 0.25rem;
+		@media (min-width: $md6) {
+			max-width: 20rem;
+			line-height: 140%;
+		}
+		@media (min-width: $md3) {
+			margin-top: 1rem;
+		}
 	}
 	// .footer__privacy
 	&__privacy {
@@ -45,7 +96,9 @@
 	}
 	// .footer__contacts
 	&__contacts {
-		margin-top: 1rem;
+		@media (min-width: $md3) {
+			margin-top: 1rem;
+		}
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -53,8 +106,11 @@
 
 	// .footer__contacts-link
 	&__contacts-link {
+		white-space: nowrap;
 		&:not(:last-child) {
-			margin-bottom: 0.45rem;
+			@media (min-width: $md7) {
+				margin-bottom: 0.45rem;
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {

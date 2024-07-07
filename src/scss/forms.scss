@@ -12,16 +12,13 @@
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
 		width: 100%;
-		background: #fff;
-		color: $dark;
 		line-height: 140%;
 		border-radius: 0;
 		background: transparent;
 		border-bottom: rem(1) solid;
-		color: #000;
+		color: currentColor;
 		font-size: 0.9375rem;
 		padding: 0.5rem 0;
-
 		&:disabled {
 			border-color: #ddd;
 		}

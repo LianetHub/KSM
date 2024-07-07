@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
             target.previousElementSibling.classList.remove('_input');
         }
 
-        // if (target.closest('.icon-menu')) {
-        //     getMenu()
-        // }
+        if (target.closest('.icon-menu')) {
+            getMenu()
+        }
 
 
     });
 
-    // function getMenu() {
-    //     document.body.classList.toggle('lock');
-    //     document.querySelector('.header').classList.toggle('open-menu');
-    // }
+    function getMenu() {
+        document.body.classList.toggle('menu-lock');
+        document.querySelector('.header').classList.toggle('open-menu');
+    }
 
 
     // function getIndexInParent(node) {

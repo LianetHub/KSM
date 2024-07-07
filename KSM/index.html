@@ -38,10 +38,10 @@
     <meta property="twitter:image:src" content="/OG.png">
     <!-- Twitter -->
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240707180619">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240708003845">
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/reset.min.css?_v=20240707180619">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240707180619">
+    <link rel="stylesheet" href="css/reset.min.css?_v=20240708003845">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240708003845">
 </head>
 
 <body>
@@ -49,9 +49,9 @@
         <header class="header">
             <div class="header__container">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-sm-2 col-xs-1 col-4">
                         <a href="/" class="header__logo">
-                            <svg id="logoSvg" width="404" height="142" viewBox="0 0 404 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+                            <svg id="logoSvg" width="404" viewBox="0 0 404 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
                                 <path d="M46.004 0.800781L25.956 19.5048L46.004 40.0008H40.404L22.26 21.6328H7.7V40.0008H3.5V0.800781H7.7V18.0488H22.148L40.46 0.800781H46.004Z" fill="black"></path>
                                 <g class="header__logo-current">
                                     <path d="M73.1641 0.128906C87.2761 0.128906 96.0121 8.02491 96.0121 20.5689C96.0121 33.0009 87.2761 40.6729 73.1641 40.6729C58.9961 40.6729 50.2041 33.0009 50.2041 20.5689C50.2041 8.02491 59.1641 0.128906 73.1641 0.128906ZM73.1641 36.9769C84.1961 36.9769 91.6441 31.7129 91.6441 20.5689C91.6441 9.14491 84.1961 3.82491 73.1641 3.82491C61.9081 3.82491 54.5721 9.25691 54.5721 20.5689C54.5721 31.7689 61.8521 36.9769 73.1641 36.9769Z" fill="black"></path>
@@ -67,18 +67,34 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4 mobile-only">
+                        <button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-xs-7 col-8">
                         <nav aria-label="Меню в шапке" class="header__menu">
+                            <div class="header__menu-body">
+                                <ul class="header__menu-list">
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">МАТЕРИАЛЫ</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СЕРВИС</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СОБЫТИЯ</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КЕЙСЫ</a></li>
+                                </ul>
+                                <div class="header__menu-quantity">[0]</div>
+                                <form action="#" class="header__form form mobile-only">
+                                    <div class="header__form-caption font-bold">Поиск по сайту</div>
+                                    <div class="form__field">
+                                        <input type="text" name="search" autocomplete="off" class="form__input">
+                                        <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                    </div>
+                                </form>
+                            </div>
                             <ul class="header__menu-list">
-                                <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link font-medium">МАТЕРИАЛЫ</a></li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СЕРВИС</a></li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СОБЫТИЯ</a></li>
-                                <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
-                                <li class="header__menu-item">
-                                    <a href="" class="header__menu-link font-medium">КЕЙСЫ</a>
-                                    <div class="header__menu-quantity">[0]</div>
-                                </li>
                                 <li class="header__menu-item"><a href="" class="header__menu-link">ИСТОРИЯ</a></li>
                                 <li class="header__menu-item"><a href="" class="header__menu-link">МИССИЯ</a></li>
                                 <li class="header__menu-item"><a href="" class="header__menu-link">СТРАТЕГИЯ</a></li>
@@ -96,7 +112,7 @@
                 <div class="article__container">
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-8 col-md-7 offset-md-1">
                                 <div class="article__slider slider swiper">
                                     <div class="swiper-wrapper">
                                         <picture class="slider__slide swiper-slide">
@@ -162,7 +178,7 @@
                     </div>
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-5 offset-2">
+                            <div class="col-8 col-xs-7 col-sm-6 col-md-5 offset-xs-1 offset-sm-2">
                                 <div class="article__text">
                                     <p class="text-block font-medium"> КСМ работает на рынке России 25 лет, мы развивались и росли вместе с ним. Много раз за это время изменялись правила игры, и тем не менее мы добивались успеха. Мы всегда стремились жить в ногу со временем и не боялись учиться новому. Всё начиналось просто с организации поставок. Но за годы мы приняли участие в сотнях проектов самого разного масштаба, от дачного домика до микрорайона, поработали с яркими архитекторами, амбициозными девелоперами, расширили сеть производителей. В каждом проекте стремились войти во все детали, вникали в специфику задачи. Теперь мы знаем о нашем материале всё: детали его производства, способы монтажа, нюансы эстетики, технические качества. Мы помогаем архитекторам реализовывать их самые смелые замыслы, застройщикам&nbsp;—&nbsp;быть эффективными, конкурентоспособными, а строителям&nbsp;—&nbsp;не совершать ошибок. Мы говорим на одном языке с производителями, архитекторами и конструкторами, менеджерами проектов, строителями и застройщиками и понимаем интересы и трудности всех участников процесса. Все вместе мы строим новые дома, делая города комфортными и красивыми. Миссия КСМ&nbsp;—&nbsp;помогать всем, кто проектирует, возводит дома, максимально гибко, эффективно использовать возможности <br> современного кирпича и строительной керамики. За счёт отлаженных бизнес-процессов КСМ становится надёжным партнёром в архитектурных проектах любого масштаба и любого уровня сложности. Мы верим, что «польза, прочность и красота»&nbsp;—&nbsp;результат профессиональных и открытых отношений между нами и нашими клиентами, итог слаженного взаимодействия команды. Сегодня КСМ делает ещё один шаг вперёд. Теперь у нас появился свой язык: ясный, актуальный, гибкий, удобный. Наша новая визуальная идентичность, шоурум, сайт и этот буклет говорят о том, что КСМ&nbsp;—&nbsp;это современный, надёжный партнёр. Мы гордимся нашими достижениями и благодарны всем нашим клиентам и партнёрам за их поддержку и доверие. Всегда стремимся жить во времени и развиваться, поэтому готовы к новым проектам и новым открытиям, смотрим в будущее с оптимизмом, с нетерпением ждём продолжения работы со старыми партнёрами и открыты для знакомства с новыми! </p>
                                 </div>
@@ -171,10 +187,10 @@
                     </div>
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-8 col-md-7 offset-md-1 ">
                                 <h2 class="article__title title"> История компании </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-8 col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Широкий ассортимент и точный выбор. Для каждого проекта, от частного коттеджа и до жилого квартала или бизнес-центра, подбирается индивидуальное решение. Подтвердить правильность выбора, сравнить различные варианты помогают расчеты и визуализации. Когда требуется посмотреть или потрогать материал, клиенты могут воспользоваться нашими шоурумами&nbsp;—&nbsp;обычным или мобильным, в которых есть и образцы, и каталоги производителей. </p>
                                     <p class="text-block"> Общение и вдоxновение. Шоурум компании&nbsp;—&nbsp;здесь мы вместе с клиентами находим решения для самых сложных задач. Как и в названии компании, в шоуруме три ключевых элемента, три главных пространства: коммуникация, стиль, материалы. Само пространство не отвлекает от творческого процесса, общения, изучения материалов: был сохранен изначальный бетон, к нему добавлена нержавеющая сталь, которые стали обрамлением цветным керамическим материалам. Противоположности и контрасты&nbsp;—&nbsp;гладкая сталь мебели и шершавый кирпич, холодное и тёплое, металл и обожжённая глина&nbsp;—&nbsp;подталкивают нас по-новому посмотреть на каждый проект и искать свежие подходы. </p>
@@ -186,10 +202,10 @@
                     </div>
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-md-7 offset-md-1 col-8">
                                 <h2 class="article__title title"> Миссия компании </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
                                     <p class="text-block"> Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, <br> illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
@@ -199,10 +215,10 @@
                     </div>
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-md-7 offset-md-1 col-8">
                                 <h2 class="article__title title"> Наша стратегия </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Широкий ассортимент, точный выбор. Для каждого проекта, от частного коттеджа до жилого квартала или бизнес-центра, подбирается индивидуальное решение. Подтвердить правильность выбора, сравнить различные варианты помогают расчеты и визуализации. Когда требуется посмотреть и потрогать материал, то клиенты могут воспользоваться нашими шоурумами — обычным или мобильным, в которых есть и образцы, и каталоги производителей. </p>
                                     <p class="text-block"> Честные цены, чуткая логистика. Компания предлагает гибкое и прозрачное ценообразование. Необходимый объем материалов определяется сразу и их не приходится докупать впоследствии. Качество каждой партии контролируется и на товары предоставляется гарантия. Клиенты информируются обо всех этапах поставки. В случае необходимости компания организует временное хранение и поможет с разгрузкой.&nbsp; </p>
@@ -213,7 +229,7 @@
                     </div>
                     <div class="article__block lg-offset">
                         <div class="row">
-                            <div class="col-6 offset-1">
+                            <div class="col-md-6 offset-md-1 col-8">
                                 <div class="article__slider slider swiper">
                                     <div class="swiper-wrapper">
                                         <picture class="slider__slide swiper-slide">
@@ -398,70 +414,70 @@
                     </div>
                     <div class="article__block">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-md-7 offset-md-1 col-8">
                                 <h2 class="article__title title"> Пространство КСМ </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Каталог составлен из лучших марок известных российских и европейских производителей. КСМ — официальный дистрибьютор таких брендов как Wienerberger, quick-mix, ЛСР, Schiedel, Гжельский кирпичный завод, BRAAS. В ассортименте КСМ фасадный клинкерный кирпич и кирпич ручной формовки, клинкерная плитка, штукатурные фасадные системы СФТК, керамическая и натуральная черепица, клинкерная брусчатка и другие системы мощения, керамические поризованные блоки, а также специальные растворы и все сопутствующие аксессуары для кладки, алюминиевые и деревянные оконные фасадные конструкции, системы вентиляции и дымоудаления, мансардные окна, водосточные системы подходящие для проектов с использованием строительной керамики. Мы работаем с ведущими европейскими и российскими производителями строительной керамики всех видов: наши клиенты могут подобрать комплексное решение для любых задач, от фасадов до крыш, от несущих стен до элементов фурнитуры. <br> В ассортименте КСМ фасадный клинкерный кирпич и кирпич ручной формовки, клинкерная плитка, штукатурные фасадные системы СФТК, керамическая и натуральная черепица, клинкерная брусчатка и другие системы мощения, керамические поризованные блоки, а также специальные растворы и все сопутствующие аксессуары для кладки, алюминиевые и деревянные оконные фасадные конструкции, системы вентиляции и дымоудаления, мансардные окна, водосточные системы подходящие для проектов с использованием строительной керамики. </p>
                                 </div>
                             </div>
-                            <div class="col-2 offset-2">
+                            <div class="col-xl-2 col-lg-3 col-sm-4 col-xs-7 offset-xs-1">
                                 <a href="" class="article__btn btn btn-primary">ПОСЕТИТЬ ШОУРУМ</a>
                             </div>
                         </div>
                     </div>
                     <div class="article__block lg-offset">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-md-7 offset-md-1 col-8">
                                 <h2 class="article__title title"> Наши партнёры </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Каталог составлен из лучших марок известных российских и европейских производителей. КСМ — официальный дистрибьютор таких брендов как Wienerberger, quick-mix, ЛСР, Schiedel, Гжельский кирпичный завод, BRAAS. В ассортименте КСМ фасадный клинкерный кирпич и кирпич ручной формовки, клинкерная плитка, штукатурные фасадные системы СФТК, керамическая и натуральная черепица, клинкерная брусчатка и другие системы мощения, керамические поризованные блоки, а также специальные растворы и все сопутствующие аксессуары для кладки, алюминиевые и деревянные оконные фасадные конструкции, системы вентиляции и дымоудаления, мансардные окна, водосточные системы подходящие для проектов с использованием строительной керамики. <br> Мы работаем с ведущими европейскими и российскими производителями строительной керамики всех видов: наши клиенты могут подобрать комплексное решение для любых задач, от фасадов до крыш, от несущих стен до элементов фурнитуры </p>
                                 </div>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-xl-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <ul class="article__list">
                                     <li class="article__list-item"><a href="" class="article__list-link">ЛСР</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">ModFormat</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">FaberJar</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">ОСМ и БТ</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Braas</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Porotherm</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">ВКЗ</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Богандинский</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">НЗКМ</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Schiedel</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Гжельский КЗ</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Engels</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">ЖКЗ</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Волма</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Fakro</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Recke</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Braer</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Konigstein</a></li>
-                                    <li class="article__list-item"><a href="" class="article__list-link">Perfekta</a></li>
-                                    <li class="article__list-item">…</li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Донские Зори</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">ModFormat</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">ВКЗ</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Engels</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Braer</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Terex</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">FaberJar</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Богандинский</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">ЖКЗ</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Konigstein</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Edelhaus</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">ОСМ и БТ</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">НЗКМ</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Волма</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Perfekta</a></li>
                                     <li class="article__list-item"><a href="" class="article__list-link">Sievert</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Braas</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Schiedel</a></li>
+                                    <li class="article__list-item"><a href="" class="article__list-link">Fakro</a></li>
+                                    <li class="article__list-item">…</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="article__block lg-offset">
                         <div class="row">
-                            <div class="col-7 offset-1">
+                            <div class="col-md-7 offset-md-1 col-8">
                                 <h2 class="article__title title"> Контакты компании </h2>
                             </div>
-                            <div class="col-5 offset-2">
+                            <div class="col-md-5 col-sm-6 col-xs-7 offset-sm-2 offset-xs-1">
                                 <div class="article__text">
                                     <p class="text-block"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
                                 </div>
                             </div>
-                            <div class="col-2 offset-2">
+                            <div class="col-xl-2 col-lg-3 col-sm-4 col-xs-7 offset-xs-1">
                                 <a href="" class="article__btn btn btn-primary">СВЯЗАТЬСЯ</a>
                             </div>
                         </div>
@@ -472,13 +488,17 @@
         <footer class="footer">
             <div class="footer__container">
                 <div class="row">
-                    <div class="col-1">
-                        <h2 class="footer__caption font-bold">Каталог материалов</h2>
+                    <div class="col-md-1 col-sm-2 col-4 order-sm-first order-2">
+                        <a href="" class="footer__caption font-bold"> Полный каталог строительных материалов <span class="text-nowrap">«КСМ—Строй»</span>
+                        </a>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 order-sm-0 order-1">
+                        <h2 class="footer__caption font-bold pc-only">Каталог материалов</h2>
                         <a href="" class="footer__logo">
                             <img src="img/logo.svg" alt="logo">
                         </a>
                     </div>
-                    <div class="col-2 offset-1">
+                    <div class="col-lg-2 col-md-6 col-sm-4 col-8 offset-md-1 order-lg-0 order-first">
                         <h2 class="footer__caption font-bold">Поиск по сайту</h2>
                         <form action="#" class="footer__form form">
                             <div class="form__field">
@@ -486,14 +506,15 @@
                                 <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
                             </div>
                         </form>
-                        <a href="" class="footer__design">Дизайн: Ermolaev Bureau ↽</a>
+                        <a href="" class="footer__design tablet-only">Дизайн: Ermolaev Bureau ↽</a>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-8 offset-lg-0 offset-md-1 order-sm-0 order-4">
                         <h2 class="footer__caption font-bold">©2024, Торговый дом «К.С.М.»</h2>
-                        <address class="footer__address"> г. Москва, ул. Новоалексеевская, 22/2 <br> подъезд 1, этаж 1 </address>
+                        <address class="footer__address"> г. Москва, ул. Новоалексеевская, 22/2 подъезд 1, этаж 1 </address>
                         <a href="" class="footer__privacy">Политика конфиденциальности данных </a>
+                        <a href="" class="footer__design mobile-only">Дизайн: Ermolaev Bureau ↽</a>
                     </div>
-                    <div class="col-1">
+                    <div class="col-lg-1 col-sm-2 col-4 order-sm-0 order-3">
                         <h2 class="footer__caption font-bold">Контакты</h2>
                         <div class="footer__contacts">
                             <a href="" class="footer__contacts-link">Обратная связь</a>
@@ -501,7 +522,7 @@
                             <a href="mailto:info@tdkcm.ru" class="footer__contacts-link">info@tdkcm.ru</a>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-md-1 col-sm-2 col-4 order-md-0 order-sm-first order-2">
                         <h2 class="footer__caption font-bold">Соцсети</h2>
                         <div class="footer__contacts">
                             <a href="" class="footer__contacts-link">Telegram ↽</a>
@@ -514,12 +535,11 @@
         </footer>
     </div>
     <!-- plugnis -->
-    <script src="js/libs/swiper-bundle.min.js?_v=20240707180619"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js?_v=20240707180619"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js?_v=20240707180619"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js?_v=20240707180619"></script>
+    <script src="js/libs/swiper-bundle.min.js?_v=20240708003845"></script>
+    <script src="js/libs/gsap.min.js?_v=20240708003845"></script>
+    <script src="js/libs/ScrollTrigger.min.js?_v=20240708003845"></script>
     <!-- plugnis -->
-    <script src="js/app.min.js?_v=20240707180619"></script>
+    <script src="js/app.min.js?_v=20240708003845"></script>
 </body>
 
 </html>

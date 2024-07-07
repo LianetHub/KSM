@@ -1,21 +1,37 @@
 <header class="header">
     <div class="header__container">
         <div class="row">
-            <div class="col-2">
+            <div class="col-sm-2 col-xs-1 col-4">
                 @@include('./_logo.html',{})
             </div>
-            <div class="col-6">
+            <div class="col-4 mobile-only">
+                <button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="col-sm-6 col-xs-7 col-8">
                 <nav aria-label="Меню в шапке" class="header__menu">
+                    <div class="header__menu-body">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">МАТЕРИАЛЫ</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СЕРВИС</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СОБЫТИЯ</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КЕЙСЫ</a></li>
+                        </ul>
+                        <div class="header__menu-quantity">[0]</div>
+                        <form action="#" class="header__form form mobile-only">
+                            <div class="header__form-caption font-bold">Поиск по сайту</div>
+                            <div class="form__field">
+                                <input type="text" name="search" autocomplete="off" class="form__input">
+                                <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                            </div>
+                        </form>
+                    </div>
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link font-medium">МАТЕРИАЛЫ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СЕРВИС</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СОБЫТИЯ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
-                        <li class="header__menu-item">
-                            <a href="" class="header__menu-link font-medium">КЕЙСЫ</a>
-                            <div class="header__menu-quantity">[0]</div>
-                        </li>
                         <li class="header__menu-item"><a href="" class="header__menu-link">ИСТОРИЯ</a></li>
                         <li class="header__menu-item"><a href="" class="header__menu-link">МИССИЯ</a></li>
                         <li class="header__menu-item"><a href="" class="header__menu-link">СТРАТЕГИЯ</a></li>
