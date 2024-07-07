@@ -2,7 +2,9 @@
     <div class="header__container">
         <div class="row">
             <div class="col-sm-2 col-xs-1 col-4">
-                @@include('./_logo.html',{})
+                @@include('./_logo.html',{
+                "title": "@@title"
+                })
             </div>
             <div class="col-4 mobile-only">
                 <button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
@@ -15,9 +17,9 @@
                 <nav aria-label="Меню в шапке" class="header__menu">
                     <div class="header__menu-body">
                         <ul class="header__menu-list">
-                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
+                            <li class="header__menu-item"><a href="/company.html" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
                             <li class="header__menu-item"><a href="" class="header__menu-link font-medium">МАТЕРИАЛЫ</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СЕРВИС</a></li>
+                            <li class="header__menu-item"><a href="/service.html" class="header__menu-link font-medium">СЕРВИС</a></li>
                             <li class="header__menu-item"><a href="" class="header__menu-link font-medium">СОБЫТИЯ</a></li>
                             <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
                             <li class="header__menu-item"><a href="" class="header__menu-link font-medium">КЕЙСЫ</a></li>
@@ -31,14 +33,26 @@
                             </div>
                         </form>
                     </div>
+                    @@if(title==="company"){
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="" class="header__menu-link">ИСТОРИЯ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link">МИССИЯ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link">СТРАТЕГИЯ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link">ШОУРУМ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link">ПАРТНЁРЫ</a></li>
-                        <li class="header__menu-item"><a href="" class="header__menu-link">КОНТАКТЫ</a></li>
+                        <li class="header__menu-item"><a href="#history" class="header__menu-link">ИСТОРИЯ</a></li>
+                        <li class="header__menu-item"><a href="#mission" class="header__menu-link">МИССИЯ</a></li>
+                        <li class="header__menu-item"><a href="#strategy" class="header__menu-link">СТРАТЕГИЯ</a></li>
+                        <li class="header__menu-item"><a href="#showroon" class="header__menu-link">ШОУРУМ</a></li>
+                        <li class="header__menu-item"><a href="#partners" class="header__menu-link">ПАРТНЁРЫ</a></li>
+                        <li class="header__menu-item"><a href="#contacts" class="header__menu-link">КОНТАКТЫ</a></li>
                     </ul>
+                    }
+                    @@if(title==="service"){
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item"><a href="#specavto" class="header__menu-link">СПЕЦАВТО</a></li>
+                        <li class="header__menu-item"><a href="#tablets" class="header__menu-link">ПЛАНШЕТЫ</a></li>
+                        <li class="header__menu-item"><a href="#mocaps" class="header__menu-link">МОКАПЫ</a></li>
+                        <li class="header__menu-item"><a href="#education" class="header__menu-link">ОБУЧЕНИЕ</a></li>
+                        <li class="header__menu-item"><a href="#delivery" class="header__menu-link">ДОСТАВКА</a></li>
+                        <li class="header__menu-item"><a href="#calculation" class="header__menu-link">РАСЧЁТ</a></li>
+                    </ul>
+                    }
                 </nav>
             </div>
         </div>

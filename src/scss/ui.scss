@@ -39,6 +39,10 @@
 .slider {
 	// .slider__slide
 	&__slide {
+		& source,
+		img {
+			width: 100%;
+		}
 	}
 	// .slider__controls
 	&__controls {
@@ -74,6 +78,11 @@
 
 .pc-only {
 	@media (max-width: $md3) {
+		display: none;
+	}
+}
+.pc-none {
+	@media (min-width: $md3) {
 		display: none;
 	}
 }

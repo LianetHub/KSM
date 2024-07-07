@@ -56,7 +56,11 @@
 			}
 			max-width: 100%;
 		}
-
+		.header.open-menu & {
+			@media (max-width: $md6) {
+				background: #000;
+			}
+		}
 		&.clip-logo {
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
 		}

@@ -23,6 +23,15 @@
 			@media (min-width: $md2) {
 				margin-top: 2.5rem;
 			}
+			&.xl-offset {
+				margin-top: rem(60);
+				@media (min-width: $md2) {
+					margin-top: rem(72);
+				}
+				@media (min-width: $md1) {
+					margin-top: rem(96);
+				}
+			}
 			&.lg-offset {
 				margin-top: 3.5rem;
 				@media (min-width: $md6) {
@@ -105,6 +114,13 @@
 					visibility: visible;
 				}
 			}
+		}
+	}
+	&__image {
+		source,
+		img {
+			min-height: 100%;
+			object-fit: cover;
 		}
 	}
 }

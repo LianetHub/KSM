@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -287,6 +287,11 @@ body.menu-lock {
 
 .font-bold {
   font-weight: 700;
+}
+
+.slider__slide source,
+.slider__slide img {
+  width: 100%;
 }
 
 .slider__controls {
@@ -765,6 +770,10 @@ body.menu-lock {
   margin-top: 1.65rem;
 }
 
+.article__block:not(:first-child).xl-offset {
+  margin-top: 3.75rem;
+}
+
 .article__block:not(:first-child).lg-offset {
   margin-top: 3.5rem;
 }
@@ -797,6 +806,13 @@ body.menu-lock {
   display: inline-block;
   margin-left: 0.35rem;
   vertical-align: top;
+}
+
+.article__image source,
+.article__image img {
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 429.98px) {
@@ -1600,6 +1616,10 @@ body.menu-lock {
             order: -1;
   }
 
+  .pc-none {
+    display: none;
+  }
+
   .header__menu {
     font-size: 0.875rem;
   }
@@ -1613,6 +1633,7 @@ body.menu-lock {
   }
 
   .footer__form {
+    max-width: 100%;
     margin-top: 0.4rem;
   }
 
@@ -1856,6 +1877,10 @@ body.menu-lock {
     margin-top: 2.5rem;
   }
 
+  .article__block:not(:first-child).xl-offset {
+    margin-top: 4.5rem;
+  }
+
   .article__block:not(:first-child).lg-offset {
     margin-top: 4.35rem;
   }
@@ -2028,6 +2053,10 @@ body.menu-lock {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+
+  .article__block:not(:first-child).xl-offset {
+    margin-top: 6rem;
   }
 }
 
@@ -2214,6 +2243,10 @@ body.menu-lock {
 
   .header.open-menu .header__logo svg path {
     fill: #fff;
+  }
+
+  .header.open-menu .header__logo {
+    background: #000;
   }
 
   .header__menu-body {
