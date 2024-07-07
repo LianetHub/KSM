@@ -7,7 +7,7 @@ export const animation = () => {
         const logo = document.querySelector('.header__logo');
         if (!logo) return;
         const logoCurrent = document.querySelector('.header__logo-current');
-        const maxScroll = 600;
+        const maxScroll = logo.classList.contains('header__logo_animate-sm') ? 150 : 600;
         const oneThirdScroll = maxScroll / 3;
 
         gsap.set(logo, { scale: 1 });

@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "KSM";
   font-display: swap;
   src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -815,6 +815,73 @@ body.menu-lock {
      object-fit: cover;
 }
 
+.contacts {
+  padding: 1rem 0em 3.75rem 0em;
+}
+
+.contacts__container > .row {
+  --gutter-y: 1.5rem;
+}
+
+.contacts__image source,
+.contacts__image img {
+  min-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contacts__title {
+  margin-top: 3.25rem;
+  font-size: 1.3125rem;
+}
+
+.contacts__desc {
+  margin-top: 1.125rem;
+}
+
+.contacts__desc p:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+.contacts__content > .row {
+  --gutter-y: 0.875rem;
+}
+
+.contacts__blocks .row {
+  --gutter-y: 1.25rem;
+}
+
+.contacts__worktime-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__worktime-days {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 4.5rem;
+          flex: 0 0 4.5rem;
+}
+
+.contacts__text {
+  margin-right: -0.5rem;
+}
+
+.contacts__btns {
+  margin-top: 2rem;
+}
+
+.contacts__btns .row {
+  --gutter-y: 1.75rem;
+}
+
+.contacts__map iframe {
+  min-height: 13.4375rem;
+  height: 100%;
+  width: 100%;
+}
+
 @media (min-width: 429.98px) {
   .footer {
     font-size: 0.9375rem;
@@ -1050,6 +1117,27 @@ body.menu-lock {
 
   .article__block:not(:first-child).lg-offset {
     margin-top: 2.88rem;
+  }
+
+  .contacts {
+    padding: 0em 0em 3.75rem 0em;
+  }
+
+  .contacts__title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .contacts__content > .row {
+    --gutter-y: 1.25rem;
+  }
+
+  .contacts__blocks {
+    margin-top: 1.25rem;
+  }
+
+  .contacts__btns {
+    margin-top: 1.5rem;
   }
 }
 
@@ -1424,6 +1512,10 @@ body.menu-lock {
             order: -1;
   }
 
+  .header {
+    min-height: 7.5rem;
+  }
+
   .header__logo {
     clip-path: none;
   }
@@ -1460,6 +1552,10 @@ body.menu-lock {
 
   .article__list {
     gap: 0.4rem 1.5rem;
+  }
+
+  .contacts__map iframe {
+    min-height: 19.125rem;
   }
 }
 
@@ -1652,6 +1748,26 @@ body.menu-lock {
   .article__btn {
     margin-top: 1.35rem;
   }
+
+  .contacts__container > .row {
+    --gutter-y: 2.75rem;
+  }
+
+  .contacts__title {
+    margin-top: 0;
+  }
+
+  .contacts__blocks {
+    margin-top: 0;
+  }
+
+  .contacts__btns {
+    margin-top: 2.25rem;
+  }
+
+  .contacts__map iframe {
+    min-height: 22.875rem;
+  }
 }
 
 @media (min-width: 1599.98px) {
@@ -1837,10 +1953,12 @@ body.menu-lock {
   }
 
   .header {
+    min-height: 12rem;
     padding: 0.92rem 0 5.25rem;
   }
 
   .header__logo {
+    margin-left: -2.75rem;
     max-width: 25.25rem;
   }
 
@@ -1899,6 +2017,32 @@ body.menu-lock {
     grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: (auto)[5];
     grid-template-rows: repeat(5, auto);
+  }
+
+  .contacts {
+    padding: 0em 0em 4.5rem 0em;
+  }
+
+  .contacts__container > .row {
+    --gutter-y: 3.75rem;
+  }
+
+  .contacts__title {
+    font-size: 1.75rem;
+  }
+
+  .contacts__desc {
+    margin-top: 1.5rem;
+  }
+
+  .contacts__worktime-days {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 6rem;
+            flex: 0 0 6rem;
+  }
+
+  .contacts__map iframe {
+    min-height: 33.75rem;
   }
 }
 
@@ -2058,6 +2202,10 @@ body.menu-lock {
   .article__block:not(:first-child).xl-offset {
     margin-top: 6rem;
   }
+
+  .contacts__desc p:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width: 1919.98px) {
@@ -2216,6 +2364,10 @@ body.menu-lock {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+
+  .contacts__map iframe {
+    min-height: 37.5rem;
   }
 }
 

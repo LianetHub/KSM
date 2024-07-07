@@ -3,7 +3,11 @@
 	@media (min-width: $md6) {
 		padding: 0.92rem 0;
 	}
+	@media (min-width: $md4) {
+		min-height: rem(120);
+	}
 	@media (min-width: $md2) {
+		min-height: 12rem;
 		padding: 0.92rem 0 5.25rem;
 	}
 	position: relative;
@@ -33,6 +37,7 @@
 		margin-left: -2rem;
 		max-width: rem(215);
 		display: block;
+
 		@media (min-width: $md6) {
 			position: fixed;
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
@@ -44,6 +49,7 @@
 			clip-path: none;
 		}
 		@media (min-width: $md2) {
+			margin-left: -2.75rem;
 			max-width: rem(404);
 		}
 		& svg {
