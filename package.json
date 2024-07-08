@@ -8,7 +8,8 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "deploy": "npm run build && git add . && git commit -m \"commit\" && git push"
+    "deploy": "npm run build && git add . && git commit -m \"commit\" && git push",
+    "ftpDeploy": "npm run deploy && node ftp-deploy-config.js"
   },
   "author": "Liana",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "cheerio": "^1.0.0-rc.12",
     "del": "^6.0.0",
     "fs": "^0.0.1-security",
+    "ftp-deploy": "^2.4.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
