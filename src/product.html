@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Страница товара'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "materials",
+            "small": true
+            })
+            <main class="page">
+                <section class="product">
+                    <div class="product__container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="product__slider slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <picture class="slider__slide swiper-slide">
+                                            <source media="(min-width: $md0)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md1)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md2)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md3)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md4)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md5)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md6)" srcset="@img/product.jpg">
+                                            <img src="@img/product.jpg" alt="Фото категории">
+                                        </picture>
+                                        <picture class="slider__slide swiper-slide">
+                                            <source media="(min-width: $md0)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md1)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md2)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md3)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md4)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md5)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md6)" srcset="@img/product.jpg">
+                                            <img src="@img/product.jpg" alt="Фото категории">
+                                        </picture>
+                                        <picture class="slider__slide swiper-slide">
+                                            <source media="(min-width: $md0)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md1)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md2)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md3)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md4)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md5)" srcset="@img/product.jpg">
+                                            <source media="(min-width: $md6)" srcset="@img/product.jpg">
+                                            <img src="@img/product.jpg" alt="Фото категории">
+                                        </picture>
+
+                                    </div>
+                                    <div class="slider__controls">
+                                        <div class="slider__prev swiper-button-prev"></div>
+                                        <div class="slider__pagination swiper-pagination"></div>
+                                        <div class="slider__next swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="product__options">
+                                    <h2 class="product__options-title">Красно-коричневый раствор</h2>
+                                    <p class="product__options-hint">VK 01.G 30кг quick-mix 72137</p>
+                                    <div class="product__options-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="product__options-visual">
+                                                    <img src="@img/visual.jpg" alt="visual">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-md-4 col-sm-2 col-4">
+                                                <div class="product__options-colors">
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="1" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/01.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="2" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/02.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="3" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/03.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="4" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/04.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="5" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/05.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="6" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/06.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="7" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/07.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="8" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/08.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                    <label class="product__options-color">
+                                                        <input type="radio" name="product-color" value="9" class="product__options-input hidden" hidden>
+                                                        <span class="product__options-block">
+                                                            <img src="@img/colors/09.png" class="cover-image" alt="color">
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product__info">
+                                    <ul class="product__breads">
+                                        <li class="product__bread">
+                                            <a href="" class="product__bread-link">Материалы</a>
+                                        </li>
+                                        <li class="product__bread">
+                                            <a href="" class="product__bread-link">Кирпич ручной формовки</a>
+                                        </li>
+                                        <li class="product__bread">
+                                            <span class="product__bread-link">Донские зори</span>
+                                        </li>
+                                    </ul>
+                                    <h1 class="product__title">Донские Зори Архангельское W160</h1>
+                                    <div class="product__price">
+                                        <div class="row">
+                                            <div class="col-xl-2 col-md-4 col-sm-2 col-4">
+                                                <div class="product__price-value">122,52 ₽ / шт.</div>
+                                            </div>
+                                            <div class="col-xl-2 col-md-4 col-sm-2 col-4">
+                                                <div class="product__price-value">7 260,54 ₽ / м²</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__props">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Производитель:</div>
+                                                    <div class="product__props-value">Донские Зори</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Пустотность:</div>
+                                                    <div class="product__props-value">Полнотелый</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Страна:</div>
+                                                    <div class="product__props-value">Россия</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Марка:</div>
+                                                    <div class="product__props-value">М-175</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Код товара:</div>
+                                                    <div class="product__props-value">W162</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Морозостойкость:</div>
+                                                    <div class="product__props-value">F-100</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Цвет:</div>
+                                                    <div class="product__props-value">Серый</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Водопоглощение:</div>
+                                                    <div class="product__props-value">8,50%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Тип:</div>
+                                                    <div class="product__props-value">Ручная формовка</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Вес:</div>
+                                                    <div class="product__props-value">2.5 кг</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Формат:</div>
+                                                    <div class="product__props-value">WFD</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Кол-во (м²):</div>
+                                                    <div class="product__props-value">59</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Размер:</div>
+                                                    <div class="product__props-value">215×102×65</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <div class="product__props-item">
+                                                    <div class="product__props-name">Кол-во (поддон)</div>
+                                                    <div class="product__props-value">512 шт</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__delete">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <a href="" class="product__delete-btn btn btn-primary">УДАЛИТЬ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__desc">
+                                        <h2 class="product__desc-caption">
+                                            Описание и сертификаты
+                                        </h2>
+                                        <div class="product__desc-text text-block">
+                                            <p>
+                                                Производство кирпича торговой марки «Донские зори» началось в 2009 году в городе Новочеркасск Ростовской области. <br>
+                                                Желание уйти от конвейерной безликости продукции появилось сразу: донским просторам органичны индивидуальность и творческий подход. <br>
+                                                В итоге, в тесном сотрудничестве с Ростовским государственным строительным университетом появились наработки, позволившие впервые в России наладить выпуск качественного кирпича ручной формовки.
+                                            </p>
+                                            <p>
+                                                По своим характеристикам и внешнему виду «Донские зори» ничем не уступают лучшим импортным образцам. Но в нынешних условиях их стоимость значительно ниже. Близость от Москвы и отсутствие таможни позволяют гарантировать наличие полной товарной линейки в нужном объёме в нужный срок. Сегодня с завода ежемесячно отгружается более 750 000 кирпичей. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+                                            </p>
+                                            <p>
+                                                Уникальный кирпич серии "Усадьба" нацелен на возрождение традиций русских мастеров и адресован ценителям усадебного мира во всех его проявлениях. Более того, по желанию заказчика на кирпичи могут быть нанесены логотипы и надписи, завод готов изготовить любые фигурные элементы по индивидуальным лекалам:
+                                            </p>
+                                            <ul>
+                                                <li>произведён вручную, каждый кирпич уникален и сохраняет следы рук мастера;</li>
+                                                <li>цена ниже Европейских аналогов;</li>
+                                                <li>большой ассортимент;</li>
+                                                <li>высокое качество;</li>
+                                                <li>морозостойкость более 170 циклов;</li>
+                                                <li>высокая прочность на изгиб;</li>
+                                                <li>качественная упаковка (термоусадочная пленка, каждый ряд переложен вспененным полистиролом для предотвращения потертостей).</li>
+                                                <li>возможность разработки индивидуальной сортировки под заказ (от 50 000 штук);</li>
+                                                <li>сохранение традиций русских мастеров.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__desc-links">
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ PDF</span> Протокол исследований на керамический кирпич Донские зори
+                                            </a>
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ PDF</span> Протокол испытаний на кирпич Донские зори 215x102x65 мм
+                                            </a>
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ PDF</span> Протокол испытаний на облицовочный кирпич на морозостойкость Донские зори
+                                            </a>
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ PDF</span> Сертификат соответствия на облицовочный кирпич Донские зори
+                                            </a>
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ PDF</span> Экспертное заключение на облицовочный кирпич Донские зори
+                                            </a>
+                                        </div>
+                                        <div class="product__desc-links">
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ RFA</span> BIM-модель
+                                            </a>
+                                            <a href="" class="product__desc-link">
+                                                <span class="font-medium">↓ JPG</span> Текстура
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="product__btns">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <a href="" class="product__btns-item btn btn-primary">
+                                                    ЗАКАЗАТЬ ОБРАЗЕЦ
+                                                </a>
+                                            </div>
+                                            <div class="col-xl-4 col-md-8 col-sm-4 col-8">
+                                                <a href="" class="product__btns-item btn btn-primary">
+                                                    ПОСЕТИТЬ ШОУРУМ
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title title">Похожие материалы</h2>
+                        <div class="product__cards">
+                            <div class="row">
+                                @@for (var i = 0; i < 4; i++) { @@include("./html/_product-cart.html") } </div>
+                            </div>
+                        </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

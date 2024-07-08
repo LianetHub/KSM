@@ -37,6 +37,8 @@
 }
 
 .slider {
+	min-width: 0;
+	max-width: 100%;
 	// .slider__slide
 	&__slide {
 		& source,
