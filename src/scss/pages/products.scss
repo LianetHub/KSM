@@ -329,7 +329,7 @@
 		& > .row {
 			display: contents;
 			@media (min-width: $md4) {
-				display: block;
+				display: flex;
 			}
 			& > .col-md-4 {
 				display: contents;
