@@ -154,11 +154,33 @@
 		margin-top: 1.25rem;
 		font-size: 1.125rem;
 		line-height: 133.333%;
+		&.sm-name {
+			@media (max-width: $md2) {
+				font-size: 0.9375rem;
+			}
+			@media (max-width: $md4) {
+				font-size: 1.125rem;
+			}
+			@media (max-width: $md5) {
+				font-size: 0.9375rem;
+			}
+		}
 	}
 	// .products__card-price
 	&__card-price {
 		font-size: 1.125rem;
 		line-height: 133.333%;
+		&.sm-price {
+			@media (max-width: $md2) {
+				font-size: 0.9375rem;
+			}
+			@media (max-width: $md4) {
+				font-size: 1.125rem;
+			}
+			@media (max-width: $md5) {
+				font-size: 0.9375rem;
+			}
+		}
 	}
 	// .products__card-btn
 	&__card-btn {

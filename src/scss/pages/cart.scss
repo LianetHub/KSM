@@ -1,0 +1,31 @@
+.cart {
+	padding: 2.5rem 0 4.25rem;
+	// .cart__container
+	&__container {
+	}
+	&__form {
+		margin-top: 4.5rem;
+		@media (min-width: $md6) {
+			margin-top: 3.5rem;
+		}
+		@media (min-width: $md3) {
+			margin-top: 4.5rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 7.5rem;
+		}
+		.row {
+			@media (max-width: $md6) {
+				--gutter-y: 2.7rem;
+			}
+		}
+		.form__label {
+			@media (max-width: $md6) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__form-footer {
+		margin-top: 3.75rem;
+	}
+}

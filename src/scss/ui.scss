@@ -86,6 +86,11 @@
 		display: none;
 	}
 }
+.pc-xl-none {
+	@media (min-width: $md2) {
+		display: none;
+	}
+}
 
 .tablet-only {
 	@media (max-width: $md6) {

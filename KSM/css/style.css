@@ -11,8 +11,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -27,8 +27,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -400,6 +400,12 @@ body.menu-lock {
      object-fit: cover;
 }
 
+.form__label {
+  font-size: 1.125rem;
+  line-height: 94.444%;
+  margin-bottom: 0.5rem;
+}
+
 .form__input {
   text-overflow: ellipsis;
   -webkit-transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
@@ -412,6 +418,10 @@ body.menu-lock {
   color: currentColor;
   font-size: 0.9375rem;
   padding: 0.5rem 0;
+}
+
+.form__input.form__input_lg {
+  font-size: 1.125rem;
 }
 
 .form__input:disabled {
@@ -485,23 +495,21 @@ body.menu-lock {
 }
 
 .checkbox {
+  margin-top: 2.25rem;
   display: block;
 }
 
-.checkbox:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.checkbox.checkbox_dark .checkbox__content::before {
-  background: #10181d;
-  color: #fff;
+.checkbox__input:checked + .checkbox__content::before {
+  background: #000;
 }
 
 .checkbox__content {
   position: relative;
   display: block;
   font-size: 0.75rem;
-  padding: 0.15rem 0 0.15rem 1.5rem;
+  padding: 0.15rem 0 0.15rem 2.5rem;
+  font-weight: 500;
+  line-height: 125%;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -512,7 +520,8 @@ body.menu-lock {
 .checkbox__content::before {
   content: "";
   position: absolute;
-  top: 0;
+  color: #fff;
+  top: 0.25rem;
   left: 0;
   background: transparent;
   display: -webkit-box;
@@ -524,16 +533,9 @@ body.menu-lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #10181d;
-  background: #fff;
-  border-radius: 0.25rem;
-  width: 1rem;
-  height: 1rem;
-  font-size: 0.4rem;
-}
-
-.checkbox__content a {
-  text-decoration: underline;
+  border: 0.0625rem solid #000;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .header {
@@ -570,7 +572,7 @@ body.menu-lock {
   position: relative;
 }
 
-.header__menu-quantity {
+.header__menu-cart {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -603,10 +605,6 @@ body.menu-lock {
 
 .header__form {
   margin-top: auto;
-}
-
-.header__form-caption {
-  margin-bottom: 1.25rem;
 }
 
 .icon-menu {
@@ -1207,6 +1205,18 @@ body.menu-lock {
   margin-bottom: 1.25rem;
 }
 
+.cart {
+  padding: 2.5rem 0 4.25rem;
+}
+
+.cart__form {
+  margin-top: 4.5rem;
+}
+
+.cart__form-footer {
+  margin-top: 3.75rem;
+}
+
 @media (min-width: 429.98px) {
   .footer {
     font-size: 0.9375rem;
@@ -1411,7 +1421,7 @@ body.menu-lock {
     font-size: 0.75rem;
   }
 
-  .header__menu-quantity {
+  .header__menu-cart {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -1499,6 +1509,10 @@ body.menu-lock {
 
   .events {
     padding: 3.75rem 0 3rem;
+  }
+
+  .cart__form {
+    margin-top: 3.5rem;
   }
 }
 
@@ -1662,22 +1676,6 @@ body.menu-lock {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-  }
-
-  .checkbox.checkbox_sm .checkbox__content {
-    padding: 0.25rem 0 0.25rem 2rem;
-  }
-
-  .checkbox__content {
-    padding: 0.25rem 0 0.25rem 2.25rem;
-    font-size: 0.875rem;
-  }
-
-  .checkbox__content::before {
-    font-size: 0.5rem;
-    width: 1.3125rem;
-    border-radius: 0.375rem;
-    height: 1.3125rem;
   }
 
   .header__logo {
@@ -2199,6 +2197,10 @@ body.menu-lock {
   .contacts__map iframe {
     min-height: 22.875rem;
   }
+
+  .cart__form {
+    margin-top: 4.5rem;
+  }
 }
 
 @media (min-width: 1599.98px) {
@@ -2370,17 +2372,12 @@ body.menu-lock {
     letter-spacing: 0.00563rem;
   }
 
-  .checkbox.checkbox_sm .checkbox__content {
-    font-size: 0.875rem;
+  .pc-xl-none {
+    display: none;
   }
 
-  .checkbox__content {
-    font-size: 1rem;
-  }
-
-  .checkbox__content::before {
-    width: 1.5rem;
-    height: 1.5rem;
+  .form__label {
+    margin-bottom: 1.25rem;
   }
 
   .header {
@@ -2541,6 +2538,10 @@ body.menu-lock {
 
   .event__body {
     margin-top: 1.5rem;
+  }
+
+  .cart__form {
+    margin-top: 7.5rem;
   }
 }
 
@@ -2877,9 +2878,39 @@ body.menu-lock {
   }
 }
 
+@media (max-width: 1599.98px) {
+  .products__card-name.sm-name {
+    font-size: 0.9375rem;
+  }
+
+  .products__card-price.sm-price {
+    font-size: 0.9375rem;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .pc-only {
     display: none;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .products__card-name.sm-name {
+    font-size: 1.125rem;
+  }
+
+  .products__card-price.sm-price {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .products__card-name.sm-name {
+    font-size: 0.9375rem;
+  }
+
+  .products__card-price.sm-price {
+    font-size: 0.9375rem;
   }
 }
 
@@ -2946,7 +2977,7 @@ body.menu-lock {
     gap: 2.075rem;
   }
 
-  .header__menu-body .header__menu-quantity {
+  .header__menu-body .header__menu-cart {
     font-size: 1.875rem;
     position: relative;
     z-index: 12;
@@ -2962,6 +2993,14 @@ body.menu-lock {
     font-size: 1.125rem;
     line-height: 116.667%;
   }
+
+  .cart__form .row {
+    --gutter-y: 2.7rem;
+  }
+
+  .cart__form .form__label {
+    margin-bottom: 0;
+  }
 }
 
 @media (any-hover: hover) {
@@ -2969,8 +3008,8 @@ body.menu-lock {
     background: #cccccc;
   }
 
-  .checkbox__content a:hover {
-    text-decoration: none;
+  .header__menu-cart:hover {
+    font-weight: 700;
   }
 
   .header__menu-link:hover {

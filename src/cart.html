@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Корзина'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "cart",
+            "small": true
+            })
+            <main class="page">
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="products__cards">
+                            <div class="row">
+                                @@for (var i = 0; i < 4; i++) { @@include("./html/_product-cart.html") } </div>
+                            </div>
+                            <form action="#" class="cart__form form">
+                                <div class="row">
+                                    <div class="col-xl-2 offset-xl-2 col-sm-4 col-8">
+                                        <div class="form__label font-bold">Имя*:</div>
+                                        <div class="form__field">
+                                            <input type="text" name="name" class="form__input form__input_lg">
+                                            <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-4 col-8">
+                                        <div class="form__label font-bold">Электронная почта*:</div>
+                                        <div class="form__field">
+                                            <input type="email" name="email" class="form__input form__input_lg">
+                                            <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-4 col-8">
+                                        <div class="form__label font-bold">Телефон:</div>
+                                        <div class="form__field">
+                                            <input type="tel" name="phone" class="form__input form__input_lg">
+                                            <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__form-footer">
+                                    <div class="row">
+                                        <div class="col-xl-2 col-sm-4 col-8">
+                                            <a href="" class="btn btn-primary">СКАЧАТЬ PDF</a>
+                                        </div>
+                                        <div class="col-xl-2 col-sm-4 col-8">
+                                            <button type="submit" class="btn btn-primary">ОТПРАВИТЬ ЗАПРОС</button>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="nda" class="checkbox__input hidden" hidden>
+                                                <span class="checkbox__content">
+                                                    ОЗНАКОМЛЕН(-А) И ПРИНИМАЮ УСЛОВИЯ
+                                                    ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

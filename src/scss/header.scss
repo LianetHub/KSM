@@ -120,7 +120,7 @@
 				grid-template-columns: 1fr;
 				gap: 2.075rem;
 			}
-			.header__menu-quantity {
+			.header__menu-cart {
 				font-size: 1.875rem;
 				position: relative;
 				z-index: 12;
@@ -130,8 +130,8 @@
 			}
 		}
 	}
-	// .header__menu-quantity
-	&__menu-quantity {
+	// .header__menu-cart
+	&__menu-cart {
 		order: -1;
 		text-align: right;
 		@media (min-width: $md6) {
@@ -139,6 +139,11 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				font-weight: 700;
+			}
 		}
 	}
 	// .header__menu-list
@@ -190,9 +195,6 @@
 	}
 	&__form {
 		margin-top: auto;
-	}
-	&__form-caption {
-		margin-bottom: 1.25rem;
 	}
 }
 
