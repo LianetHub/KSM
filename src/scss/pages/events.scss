@@ -1,0 +1,114 @@
+.events {
+	padding: 1.25rem 0 3rem;
+	@media (min-width: $md6) {
+		padding: 3.75rem 0 3rem;
+	}
+	@media (min-width: $md4) {
+		padding: 0.25rem 0 3rem;
+	}
+	@media (min-width: $md2) {
+		padding: 1.5rem 0 4.06rem;
+	}
+	// .events__container
+	&__container {
+	}
+	// .events__block
+	&__block {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+			@media (min-width: $md2) {
+				margin-bottom: 4.5rem;
+			}
+		}
+	}
+	// .events__title
+	&__title {
+	}
+	// .events__content
+	&__content {
+		margin-top: 1.125rem;
+		@media (min-width: $md2) {
+			margin-top: 1.75rem;
+		}
+		.row {
+			--gutter-y: 2rem;
+		}
+	}
+	// .events__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-height: 100%;
+	}
+	// .events__item-time
+	&__item-time {
+		font-size: 1.125rem;
+		line-height: 133.333%;
+	}
+	// .events__item-name
+	&__item-name {
+		margin-bottom: auto;
+		font-size: 1.125rem;
+		line-height: 133.333%;
+	}
+	// .events__blockd-desc
+	&__item-desc {
+		line-height: 120%;
+		margin-top: 0.25rem;
+		font-size: 0.9375rem;
+		@media (min-width: $md2) {
+			margin-top: 0.75rem;
+			line-height: 133.333%;
+			font-size: 1.125rem;
+		}
+	}
+	// .events__item-more
+	&__item-reg {
+		margin-top: 0.75rem;
+		font-size: 0.9375rem;
+		@media (min-width: $md2) {
+			font-size: 1.125rem;
+		}
+	}
+	// .events__card
+	&__card {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.125rem;
+		line-height: 133.333%;
+	}
+	// .events__card-image
+	&__card-image {
+		background: #c7c9cb;
+		position: relative;
+		height: 0;
+		padding-bottom: 66.666%;
+		& source,
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .events__card-time
+	&__card-time {
+		margin-top: 1.13rem;
+		line-height: 133.333%;
+	}
+	// .events__card-name
+	&__card-name {
+	}
+	// .events__more
+	&__more {
+		margin-top: 2.25rem;
+		display: inline-block;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		line-height: 180%;
+		text-transform: uppercase;
+	}
+}

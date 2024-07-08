@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Cобытия'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "events",
+            "small": true
+            })
+            <main class="page">
+                <section class="events">
+                    <div class="events__container">
+                        <div class="events__block">
+                            <h2 class="events__title title">
+                                Предстоящие
+                            </h2>
+                            <div class="events__content">
+                                <div class="row">
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <div class="events__item">
+                                            <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
+                                            <a href="/event.html" class="events__item-name font-medium">Архитектурный кинопоказ</a>
+                                            <p class="events__item-desc">Cмотрим фильм «Палладио. Власть архитектуры» режиссёра Джакомо Гатти в пространстве КСМ. Начало:&nbsp;19:00</p>
+                                            <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <div class="events__item">
+                                            <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
+                                            <a href="/event.html" class="events__item-name font-medium">Пятый Архтур</a>
+                                            <p class="events__item-desc">Новый архмаршрут по Москве вместе с&nbsp;историком-москвоведом Александром Усольцевым. Время&nbsp;сбора: 10:00</p>
+                                            <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <div class="events__item">
+                                            <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
+                                            <a href="/event.html" class="events__item-name font-medium">Архитектурный кинопоказ</a>
+                                            <p class="events__item-desc">Cмотрим фильм «Палладио. Власть архитектуры» режиссёра Джакомо Гатти в пространстве КСМ. Начало:&nbsp;19:00</p>
+                                            <div class="events__item-reg">
+                                                Вход свободный
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <div class="events__item">
+                                            <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
+                                            <a href="/event.html" class="events__item-name font-medium">Пятый Архтур</a>
+                                            <p class="events__item-desc">Новый архмаршрут по Москве вместе с&nbsp;историком-москвоведом Александром Усольцевым. Время&nbsp;сбора: 10:00</p>
+                                            <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events__block">
+                            <h2 class="events__title title">
+                                Прошедшие
+                            </h2>
+                            <div class="events__content">
+                                <div class="row">
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Архитектурный кинопоказ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для Level Group</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Официальное открытие шоурума</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Официальное открытие шоурума</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Второй Архтур</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Первый Архтур</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">КСМ на АрхМоскве ’23</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Встреча с бюро Т+Т</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Встреча с GAFA & Friends</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Тезисы в пространстве КСМ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для студентов МГАХИ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для студентов МАРШ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="" class="events__more">Показать ещё ↓</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
