@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Материалы'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "materials",
+            "small": true
+            })
+            <main class="page">
+                <section class="products">
+                    <div class="products__container">
+                        <div class="products__filters">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-4">
+                                    <div class="products__filters-caption">Цена</div>
+                                    <div class="products__filters-body">
+                                        <div class="products__filters-price">
+                                            От 1000 ₽/м²c
+                                        </div>
+                                        <div class="products__filters-price">
+                                            До 7000 ₽/м²
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <div class="products__filters-caption active">Цвет</div>
+                                    <div class="products__filters-body active">
+                                        <ul class="products__filters-list">
+                                            <li class="products__filters-item font-medium">Белый</li>
+                                            <li class="products__filters-item">Слоновая кость</li>
+                                            <li class="products__filters-item">Соломенный</li>
+                                            <li class="products__filters-item">Жёлтый</li>
+                                            <li class="products__filters-item">Красный</li>
+                                            <li class="products__filters-item">Коричневый</li>
+                                            <li class="products__filters-item">Серый</li>
+                                            <li class="products__filters-item">Чёрный</li>
+                                            <li class="products__filters-item">Пёстрый</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <div class="products__filters-caption">Бренд</div>
+                                    <div class="products__filters-body">
+                                        <ul class="products__filters-list">
+                                            <li class="products__filters-item">Донские Зори</li>
+                                            <li class="products__filters-item">Сафоновский КЗ</li>
+                                            <li class="products__filters-item">Wienerberger</li>
+                                            <li class="products__filters-item">Terca</li>
+                                            <li class="products__filters-item">Engels</li>
+                                            <li class="products__filters-item">Muhr</li>
+                                            <li class="products__filters-item">Recke</li>
+                                            <li class="products__filters-item">ЛСР</li>
+                                            <li class="products__filters-item">Terex</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <div class="products__filters-caption">Страна</div>
+                                    <div class="products__filters-body">
+                                        <ul class="products__filters-list">
+                                            <li class="products__filters-item">Россия</li>
+                                            <li class="products__filters-item">Бельгия</li>
+                                            <li class="products__filters-item">Голландия</li>
+                                            <li class="products__filters-item">Великобритания</li>
+                                            <li class="products__filters-item">Германия</li>
+                                            <li class="products__filters-item">Эстония</li>
+                                            <li class="products__filters-item">Финляндия</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="products__title title">Кирпич ручной формовки</h1>
+                        <div class="products__cards">
+                            <div class="row">
+                                @@for (var i = 0; i < 16; i++) { @@include("./html/_product.html") } </div>
+                            </div>
+                            <a href="" class="products__more">Показать ещё ↓</a>
+                        </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

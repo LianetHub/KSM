@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
             getMenu()
         }
 
+        if (target.classList.contains('products__filters-caption')) {
+            target.classList.toggle('active');
+            target.nextElementSibling.classList.toggle('active');
+        }
+
 
     });
 
