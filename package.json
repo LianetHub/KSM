@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "npm run build && git add . && git commit -m \"commit\" && git push",
-    "ftpDeploy": "npm run deploy && node ftp-deploy-config.js"
+    "ftpDeploy": "npm run deploy && node .vscode/ftp-deploy-config.js"
   },
   "author": "Liana",
   "license": "ISC",
