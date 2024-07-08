@@ -101,47 +101,85 @@
         <main class="page">
             <section class="events">
                 <div class="events__container">
-                    <div class="events__block">
-                        <h2 class="events__title title"> Предстоящие </h2>
-                        <div class="events__content">
-                            <div class="row">
-                                <div class="col-lg-2 col-xs-4 col-8">
-                                    <div class="events__item">
-                                        <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
-                                        <a href="/event.html" class="events__item-name font-medium">Архитектурный кинопоказ</a>
-                                        <p class="events__item-desc">Cмотрим фильм «Палладио. Власть архитектуры» режиссёра Джакомо Гатти в пространстве КСМ. Начало:&nbsp;19:00</p>
-                                        <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
+                    <div class="events__block event">
+                        <div class="row">
+                            <div class="col-md-4 col-8">
+                                <div class="events__slider slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <picture class="slider__slide swiper-slide">
+                                            <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1919.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1727.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1599.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1199.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1023.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 767.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 767.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 575.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 575.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" srcset="img/event.webp"><img src="img/event.jpg" alt="Фото события">
+                                        </picture>
+                                        <picture class="slider__slide swiper-slide">
+                                            <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1919.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1727.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1599.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1199.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1023.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 767.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 767.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 575.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 575.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" srcset="img/event.webp"><img src="img/event.jpg" alt="Фото события">
+                                        </picture>
+                                        <picture class="slider__slide swiper-slide">
+                                            <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1919.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1727.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1599.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1199.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 1023.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 767.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 767.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" media="(min-width: 575.98px)" srcset="img/event.webp">
+                                            <source media="(min-width: 575.98px)" srcset="img/event.jpg">
+                                            <source type="image/webp" srcset="img/event.webp"><img src="img/event.jpg" alt="Фото события">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__controls">
+                                        <div class="slider__prev swiper-button-prev"></div>
+                                        <div class="slider__pagination swiper-pagination"></div>
+                                        <div class="slider__next swiper-button-next"></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-xs-4 col-8">
-                                    <div class="events__item">
-                                        <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
-                                        <a href="/event.html" class="events__item-name font-medium">Пятый Архтур</a>
-                                        <p class="events__item-desc">Новый архмаршрут по Москве вместе с&nbsp;историком-москвоведом Александром Усольцевым. Время&nbsp;сбора: 10:00</p>
-                                        <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4 col-8">
-                                    <div class="events__item">
-                                        <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
-                                        <a href="/event.html" class="events__item-name font-medium">Архитектурный кинопоказ</a>
-                                        <p class="events__item-desc">Cмотрим фильм «Палладио. Власть архитектуры» режиссёра Джакомо Гатти в пространстве КСМ. Начало:&nbsp;19:00</p>
-                                        <div class="events__item-reg"> Вход свободный </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4 col-8">
-                                    <div class="events__item">
-                                        <time datetime="2023-01-25" class="events__item-time">25.01.2023</time>
-                                        <a href="/event.html" class="events__item-name font-medium">Пятый Архтур</a>
-                                        <p class="events__item-desc">Новый архмаршрут по Москве вместе с&nbsp;историком-москвоведом Александром Усольцевым. Время&nbsp;сбора: 10:00</p>
-                                        <a href="/event.html" class="events__item-reg">Регистрация на событие ↽ </a>
+                            </div>
+                            <div class="col-md-4 col-8">
+                                <div class="event__info text-block">
+                                    <time datetime="2023-01-10" class="event__time">01.10.2023</time>
+                                    <h1 class="event__title">Архитектурный кинопоказ</h1>
+                                    <div class="event__tagline font-medium">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                    <div class="event__body">
+                                        <p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                                        <p> Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="events__block">
-                        <h2 class="events__title title"> Прошедшие </h2>
+                        <h2 class="events__title title"> Другие события </h2>
                         <div class="events__content">
                             <div class="row">
                                 <div class="col-lg-2 col-xs-4 col-8">

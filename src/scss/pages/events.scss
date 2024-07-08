@@ -112,3 +112,55 @@
 		text-transform: uppercase;
 	}
 }
+
+.event {
+	.row {
+		--gutter-y: 1.5rem;
+	}
+	// .event__image
+	&__image {
+	}
+	// .event__info
+	&__info {
+		@media (min-width: $md2) {
+			font-size: 1.125rem;
+			line-height: 116.667%;
+		}
+	}
+	// .event__time
+	&__time {
+		@media (max-width: $md6) {
+			font-size: 1.125rem;
+			line-height: 116.667%;
+		}
+	}
+	// .event__title
+	&__title {
+		margin-top: 0.88rem;
+		font-weight: 700;
+		font-size: 1.5rem;
+		@media (min-width: $md2) {
+			font-size: 1.875rem;
+		}
+	}
+	// .event__tagline
+	&__tagline {
+		margin-top: 1.5rem;
+		@media (min-width: $md2) {
+			margin-top: 1.75rem;
+		}
+	}
+	// .event__body
+	&__body {
+		margin-top: 1rem;
+		@media (min-width: $md2) {
+			margin-top: 1.5rem;
+		}
+
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.25rem;
+			}
+		}
+	}
+}

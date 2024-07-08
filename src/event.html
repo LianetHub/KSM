@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Cобытия'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "events",
+            "small": true
+            })
+            <main class="page">
+                <section class="events">
+                    <div class="events__container">
+                        <div class="events__block event">
+                            <div class="row">
+                                <div class="col-md-4 col-8">
+                                    <div class="events__slider slider swiper">
+                                        <div class="swiper-wrapper">
+                                            <picture class="slider__slide swiper-slide">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <picture class="slider__slide swiper-slide">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <picture class="slider__slide swiper-slide">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                        </div>
+                                        <div class="slider__controls">
+                                            <div class="slider__prev swiper-button-prev"></div>
+                                            <div class="slider__pagination swiper-pagination"></div>
+                                            <div class="slider__next swiper-button-next"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 col-8">
+                                    <div class="event__info text-block">
+                                        <time datetime="2023-01-10" class="event__time">01.10.2023</time>
+                                        <h1 class="event__title">Архитектурный кинопоказ</h1>
+                                        <div class="event__tagline font-medium">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                        <div class="event__body">
+                                            <p>
+                                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events__block">
+                            <h2 class="events__title title">
+                                Другие события
+                            </h2>
+                            <div class="events__content">
+                                <div class="row">
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Архитектурный кинопоказ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для Level Group</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Официальное открытие шоурума</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Официальное открытие шоурума</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Второй Архтур</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Первый Архтур</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">КСМ на АрхМоскве ’23</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Встреча с бюро Т+Т</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Встреча с GAFA & Friends</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Тезисы в пространстве КСМ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для студентов МГАХИ</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2 col-xs-4 col-8">
+                                        <a href="/event.html" class="events__card">
+                                            <picture class="events__card-image">
+                                                <source media="(min-width: $md0)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/event.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/event.jpg">
+                                                <img src="@img/event.jpg" alt="Фото события">
+                                            </picture>
+                                            <time class="events__card-time" datetime="2023-01-25">25.01.2023</time>
+                                            <span class="events__card-name font-medium">Лекция для студентов МАРШ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="" class="events__more">Показать ещё ↓</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
