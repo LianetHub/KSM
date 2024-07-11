@@ -25,6 +25,12 @@ export const animation = () => {
                     scale: scale,
                     duration: 0
                 });
+            },
+            onEnter: () => {
+                logo.classList.add('init-animation')
+            },
+            onLeaveBack: () => {
+                logo.classList.remove('init-animation')
             }
         });
 
@@ -73,19 +79,21 @@ export const animation = () => {
         });
     }
 
-    function checkWidthAndInitAnimation() {
-        if (window.innerWidth > 1023.98) {
-            initAnimation();
-        }
-    }
+    initAnimation();
 
-    checkWidthAndInitAnimation();
-    window.addEventListener('resize', function () {
+    // function checkWidthAndInitAnimation() {
+    //     if (window.innerWidth > 1023.98) {
+    //         initAnimation();
+    //     }
+    // }
 
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    // checkWidthAndInitAnimation();
+    // window.addEventListener('resize', function () {
 
-        checkWidthAndInitAnimation();
-    });
+    //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    //     checkWidthAndInitAnimation();
+    // });
 
 
 

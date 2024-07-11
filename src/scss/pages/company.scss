@@ -33,7 +33,7 @@
 				}
 			}
 			&.lg-offset {
-				margin-top: 3.5rem;
+				margin-top: 3.25rem;
 				@media (min-width: $md6) {
 					margin-top: 2.88rem;
 				}
@@ -70,7 +70,7 @@
 	}
 	&__btn {
 		margin-top: 0.9rem;
-		@media (min-width: $md3) {
+		@media (min-width: $md2) {
 			margin-top: 1.35rem;
 		}
 	}
@@ -119,6 +119,7 @@
 	&__image {
 		source,
 		img {
+			width: 100%;
 			min-height: 100%;
 			object-fit: cover;
 		}

@@ -74,7 +74,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 //================== ОБОЛОЧКА==================================
@@ -87,7 +87,7 @@ body {
 	padding: 0 rem(9) 0 rem(40);
 	width: 100%;
 	max-width: rem(1840);
-	@media (min-width: $md5) {
+	@media (min-width: $md6) {
 		padding: 0 rem(24) 0 rem(56);
 	}
 	@media (min-width: $md0) {

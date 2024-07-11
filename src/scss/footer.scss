@@ -80,7 +80,7 @@
 	&__address {
 		margin-top: 0.25rem;
 		@media (min-width: $md6) {
-			max-width: 20rem;
+			max-width: 22rem;
 			line-height: 140%;
 		}
 		@media (min-width: $md3) {
@@ -89,6 +89,8 @@
 	}
 	// .footer__privacy
 	&__privacy {
+		margin-top: 0.25rem;
+		display: inline-block;
 		@media (any-hover: hover) {
 			&:hover {
 				font-weight: 500;
@@ -97,6 +99,7 @@
 	}
 	// .footer__contacts
 	&__contacts {
+		margin-top: 0.25rem;
 		@media (min-width: $md3) {
 			margin-top: 1rem;
 		}
@@ -117,6 +120,9 @@
 			&:hover {
 				font-weight: 500;
 			}
+		}
+		&.link-underline {
+			text-decoration: underline;
 		}
 	}
 }

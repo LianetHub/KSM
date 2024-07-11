@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -87,7 +87,6 @@ body.menu-lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
 }
 
 [class*=__container] {
@@ -424,7 +423,7 @@ body.menu-lock {
   border-bottom: 0.0625rem solid;
   color: currentColor;
   font-size: 0.9375rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.25rem;
 }
 
 .form__input.form__input_lg {
@@ -450,6 +449,7 @@ body.menu-lock {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 0.5rem;
+  font-size: 0.75rem;
   visibility: hidden;
 }
 
@@ -560,6 +560,7 @@ body.menu-lock {
   margin-left: -2rem;
   max-width: 14.375rem;
   display: block;
+  position: fixed;
 }
 
 .header__logo svg {
@@ -573,6 +574,7 @@ body.menu-lock {
 .header__menu {
   line-height: 107.143%;
   font-size: 0.875rem;
+  padding: 2.625rem 0 0 0;
 }
 
 .header__menu-body {
@@ -637,13 +639,13 @@ body.menu-lock {
           order: 1;
   z-index: 11;
   margin-left: auto;
-  min-width: 1.5625rem;
-  height: 1.5625rem;
+  min-width: 1.45rem;
+  height: 2.25rem;
 }
 
 .icon-menu span {
   display: block;
-  padding: 0.1875rem 0rem;
+  padding: 0.21875rem 0rem;
   width: 100%;
   -webkit-transition: opacity 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
   transition: opacity 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
@@ -685,9 +687,9 @@ body.menu-lock {
 }
 
 .header.open-menu .icon-menu span:first-child {
-  -webkit-transform: translateY(0.5rem);
-      -ms-transform: translateY(0.5rem);
-          transform: translateY(0.5rem);
+  -webkit-transform: translateY(0.5625rem);
+      -ms-transform: translateY(0.5625rem);
+          transform: translateY(0.5625rem);
 }
 
 .header.open-menu .icon-menu span:first-child::before {
@@ -701,9 +703,9 @@ body.menu-lock {
 }
 
 .header.open-menu .icon-menu span:nth-child(3) {
-  -webkit-transform: translateY(-0.5rem);
-      -ms-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5625rem);
+      -ms-transform: translateY(-0.5625rem);
+          transform: translateY(-0.5625rem);
 }
 
 .header.open-menu .icon-menu span:nth-child(3)::before {
@@ -746,7 +748,13 @@ body.menu-lock {
   margin-top: 0.25rem;
 }
 
+.footer__privacy {
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
 .footer__contacts {
+  margin-top: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -761,6 +769,10 @@ body.menu-lock {
 
 .footer__contacts-link {
   white-space: nowrap;
+}
+
+.footer__contacts-link.link-underline {
+  text-decoration: underline;
 }
 
 .page {
@@ -782,7 +794,7 @@ body.menu-lock {
 }
 
 .article__block:not(:first-child).lg-offset {
-  margin-top: 3.5rem;
+  margin-top: 3.25rem;
 }
 
 .article__block .row {
@@ -817,6 +829,7 @@ body.menu-lock {
 
 .article__image source,
 .article__image img {
+  width: 100%;
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1455,6 +1468,10 @@ body.menu-lock {
     overflow: visible;
   }
 
+  [class*=__container] {
+    padding: 0 1.5rem 0 3.5rem;
+  }
+
   .col-xs-1 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 12.5%;
@@ -1620,7 +1637,6 @@ body.menu-lock {
   }
 
   .header__logo {
-    position: fixed;
     clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
   }
 
@@ -1629,10 +1645,12 @@ body.menu-lock {
   }
 
   .header__menu {
+    padding: 0;
     font-size: 0.75rem;
   }
 
   .header__menu-cart {
+    font-weight: 700;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -1648,7 +1666,7 @@ body.menu-lock {
   }
 
   .header__menu-list:not(:first-child) {
-    margin-top: 0.5rem;
+    margin-top: 0.55rem;
   }
 
   .footer {
@@ -1665,7 +1683,7 @@ body.menu-lock {
   }
 
   .footer__address {
-    max-width: 20rem;
+    max-width: 22rem;
     line-height: 140%;
   }
 
@@ -1732,10 +1750,6 @@ body.menu-lock {
 }
 
 @media (min-width: 767.98px) {
-  [class*=__container] {
-    padding: 0 1.5rem 0 3.5rem;
-  }
-
   :root {
     --gutter-x: 1.5rem;
     --gutter-y: 2.81rem;
@@ -1895,6 +1909,12 @@ body.menu-lock {
 
   .header__logo {
     margin-left: -2.5rem;
+    max-width: 13.125rem;
+    clip-path: none;
+  }
+
+  .header__logo-current {
+    display: block;
   }
 
   .icon-menu {
@@ -2090,16 +2110,12 @@ body.menu-lock {
             order: -1;
   }
 
-  .header {
+  .header__container .row {
     min-height: 7.5rem;
   }
 
   .header__logo {
-    clip-path: none;
-  }
-
-  .header__logo-current {
-    display: block;
+    max-width: 14.375rem;
   }
 
   .header__menu-list {
@@ -2352,6 +2368,8 @@ body.menu-lock {
   }
 
   .header__menu {
+    position: sticky;
+    top: 1rem;
     font-size: 0.875rem;
   }
 
@@ -2378,10 +2396,6 @@ body.menu-lock {
 
   .article__block:not(:first-child).lg-offset {
     margin-top: 3.5rem;
-  }
-
-  .article__btn {
-    margin-top: 1.35rem;
   }
 
   .products {
@@ -2630,8 +2644,11 @@ body.menu-lock {
   }
 
   .header {
-    min-height: 12rem;
-    padding: 0.92rem 0 5.25rem;
+    padding: 0.92rem 0 0 0;
+  }
+
+  .header__container .row {
+    min-height: 11rem;
   }
 
   .header__logo {
@@ -2686,6 +2703,10 @@ body.menu-lock {
 
   .article__text p:not(:last-child) {
     margin-bottom: 1.4rem;
+  }
+
+  .article__btn {
+    margin-top: 1.35rem;
   }
 
   .article__list {
@@ -3190,6 +3211,16 @@ body.menu-lock {
 }
 
 @media (max-width: 1023.98px) {
+  .header__logo.init-animation {
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+  }
+
+  .header__logo.init-animation .header__logo-current {
+    display: none;
+  }
+
   .products__card-name.sm-name {
     font-size: 1.125rem;
   }

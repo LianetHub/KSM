@@ -42,6 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
             target.nextElementSibling.classList.toggle('active');
         }
 
+        if (target.matches('.swiper-pagination-current')) {
+            let sliderBlock = target.closest('.slider');
+            sliderBlock && sliderBlock.swiper.slidePrev()
+        }
+
+        if (target.matches('.swiper-pagination-total')) {
+            let sliderBlock = target.closest('.slider');
+            sliderBlock && sliderBlock.swiper.slideNext();
+        }
+
 
     });
 
@@ -70,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.slider').forEach(slider => {
             new Swiper(slider, {
                 slidesPerView: 1,
+                loop: true,
                 navigation: {
                     nextEl: slider.querySelector('.slider__next'),
                     prevEl: slider.querySelector('.slider__prev')
