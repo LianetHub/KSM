@@ -3,11 +3,8 @@
 	@media (min-width: $md6) {
 		padding: 0.92rem 0;
 	}
-	@media (min-width: $md4) {
-		// min-height: rem(120);
-	}
+
 	@media (min-width: $md2) {
-		// min-height: 11rem;
 		padding: 0.92rem 0 0 0;
 	}
 	position: relative;
@@ -33,7 +30,7 @@
 				min-height: rem(120);
 			}
 			@media (min-width: $md2) {
-				min-height: 11rem;
+				min-height: 12.75rem;
 			}
 		}
 	}
@@ -42,16 +39,16 @@
 		position: relative;
 		z-index: 11;
 		transform-origin: 0 0;
-		margin-left: -2rem;
 		max-width: rem(230);
 		display: block;
 
 		position: fixed;
+		margin-left: -2rem;
 		@media (min-width: $md6) {
+			margin-left: -2.5rem;
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
 		}
 		@media (min-width: $md5) {
-			margin-left: -2.5rem;
 			max-width: rem(210);
 			clip-path: none;
 		}
@@ -95,7 +92,7 @@
 		@media (min-width: $md6) {
 			display: none;
 		}
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			display: block;
 		}
 	}
@@ -159,7 +156,7 @@
 		order: -1;
 		text-align: right;
 		@media (min-width: $md6) {
-			font-weight: 700;
+			font-weight: 500;
 			order: 0;
 			position: absolute;
 			top: 0;
