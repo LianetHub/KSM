@@ -13,8 +13,19 @@ export const animation = () => {
         gsap.set(logo, { scale: 1 });
         gsap.set(logoCurrent, { autoAlpha: 1 });
 
-        const isSmallScreen = window.innerWidth < 1600;
-        const scaleReductionFactor = isSmallScreen ? 0.1 : 0.5;
+
+        let scaleReductionFactor;
+        if (window.innerWidth < 1600 && window.innerWidth > 1400) {
+            scaleReductionFactor = 0.1;
+        } else if (window.innerWidth < 1400 && window.innerWidth > 1200) {
+            scaleReductionFactor = 0.3;
+        } else if (window.innerWidth < 1200) {
+            scaleReductionFactor = 0.45;
+        } else {
+            scaleReductionFactor = 0.5;
+        }
+
+
 
         ScrollTrigger.create({
             trigger: logo,
