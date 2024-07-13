@@ -93,12 +93,12 @@ export const animation = () => {
     // }
 
     // checkWidthAndInitAnimation();
-    // window.addEventListener('resize', function () {
+    window.addEventListener('resize', function () {
 
-    //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-    //     checkWidthAndInitAnimation();
-    // });
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        initAnimation();
+        // checkWidthAndInitAnimation();
+    });
 
 
 

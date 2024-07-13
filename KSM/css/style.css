@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -87,6 +87,7 @@ body.menu-lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-x: clip;
 }
 
 [class*=__container] {
@@ -322,6 +323,10 @@ body.menu-lock {
 .slider__pagination .swiper-pagination-current,
 .slider__pagination .swiper-pagination-total {
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .text-nowrap {
@@ -784,6 +789,7 @@ body.menu-lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  overflow-x: hidden;
 }
 
 .article {

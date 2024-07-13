@@ -71,6 +71,7 @@
 		.swiper-pagination-current,
 		.swiper-pagination-total {
 			cursor: pointer;
+			user-select: none;
 		}
 	}
 	// .slider__next
