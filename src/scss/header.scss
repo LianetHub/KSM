@@ -19,7 +19,7 @@
 				width: 100%;
 				height: 2rem;
 				background: #000;
-				z-index: 9;
+				z-index: 5;
 			}
 		}
 	}
@@ -37,7 +37,7 @@
 	// .header__logo
 	&__logo {
 		position: relative;
-		z-index: 11;
+		z-index: 16;
 		transform-origin: 0 0;
 		max-width: rem(230);
 		display: block;
@@ -61,6 +61,11 @@
 			max-width: rem(437);
 		}
 		&.init-animation {
+			// @media (min-width: $md3) {
+			// 	@media (max-width: $md2) {
+			// 		transform: none !important;
+			// 	}
+			// }
 			@media (max-width: $md4) {
 				transform: none !important;
 				.header__logo-current {
@@ -85,6 +90,9 @@
 		}
 		&.clip-logo {
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
+			@media (max-width: $md5) {
+				clip-path: none;
+			}
 		}
 	}
 	// .header__logo-current

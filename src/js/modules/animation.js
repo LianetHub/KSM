@@ -13,6 +13,9 @@ export const animation = () => {
         gsap.set(logo, { scale: 1 });
         gsap.set(logoCurrent, { autoAlpha: 1 });
 
+        const isSmallScreen = window.innerWidth < 1600;
+        const scaleReductionFactor = isSmallScreen ? 0.1 : 0.5;
+
         ScrollTrigger.create({
             trigger: logo,
             start: 0,
@@ -20,7 +23,9 @@ export const animation = () => {
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
-                const scale = 1 - (0.5 * progress);
+
+
+                const scale = 1 - (scaleReductionFactor * progress);
                 gsap.to(logo, {
                     scale: scale,
                     duration: 0
@@ -48,7 +53,7 @@ export const animation = () => {
                 });
 
                 gsap.to(logo, {
-                    scale: 0.5,
+                    scale: 1 - scaleReductionFactor,
                     duration: 0
                 });
             },
@@ -72,7 +77,7 @@ export const animation = () => {
                 });
 
                 gsap.to(logo, {
-                    scale: 0.5,
+                    scale: 1 - scaleReductionFactor,
                     duration: 0
                 });
             }

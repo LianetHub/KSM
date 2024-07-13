@@ -65,14 +65,16 @@
 	}
 	// .slider__prev
 	&__prev {
-		cursor: pointer;
 	}
 	// .slider__pagination
 	&__pagination {
+		.swiper-pagination-current,
+		.swiper-pagination-total {
+			cursor: pointer;
+		}
 	}
 	// .slider__next
 	&__next {
-		cursor: pointer;
 	}
 }
 
