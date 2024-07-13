@@ -6,25 +6,17 @@ export const animation = () => {
     function initAnimation() {
         const logo = document.querySelector('.header__logo');
         if (!logo) return;
+
+        const isSmallScreen = window.innerWidth < 1600;
+        const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 150 : 600);
+
         const logoCurrent = document.querySelector('.header__logo-current');
-        const maxScroll = logo.classList.contains('header__logo_animate-sm') ? 150 : 600;
         const oneThirdScroll = maxScroll / 3;
 
         gsap.set(logo, { scale: 1 });
         gsap.set(logoCurrent, { autoAlpha: 1 });
 
-
-        let scaleReductionFactor;
-        if (window.innerWidth < 1600 && window.innerWidth > 1400) {
-            scaleReductionFactor = 0.1;
-        } else if (window.innerWidth < 1400 && window.innerWidth > 1200) {
-            scaleReductionFactor = 0.3;
-        } else if (window.innerWidth < 1200) {
-            scaleReductionFactor = 0.45;
-        } else {
-            scaleReductionFactor = 0.5;
-        }
-
+        const scaleReductionFactor = isSmallScreen ? 0.1 : 0.5;
 
 
         ScrollTrigger.create({
@@ -43,10 +35,10 @@ export const animation = () => {
                 });
             },
             onEnter: () => {
-                logo.classList.add('init-animation')
+                logo.classList.add('init-animation');
             },
             onLeaveBack: () => {
-                logo.classList.remove('init-animation')
+                logo.classList.remove('init-animation');
             }
         });
 
@@ -107,6 +99,7 @@ export const animation = () => {
     window.addEventListener('resize', function () {
 
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        document.querySelector('.header__logo').classList.remove('clip-logo')
         initAnimation();
         // checkWidthAndInitAnimation();
     });
