@@ -23,6 +23,15 @@
 			}
 		}
 	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		z-index: 10;
+	}
+
 	// .header__container
 	&__container {
 		.row {
@@ -92,6 +101,14 @@
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
 			@media (max-width: $md5) {
 				clip-path: none;
+			}
+		}
+		&.visible {
+			clip-path: none !important;
+			.header__logo-current {
+				opacity: 1 !important;
+				visibility: visible !important;
+				display: block !important;
 			}
 		}
 	}

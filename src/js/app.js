@@ -52,6 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderBlock && sliderBlock.swiper.slideNext();
         }
 
+        if (target.matches('.header__menu-link')) {
+            document.querySelector('.page').style = "";
+            document.querySelector('.header').classList.remove('fixed');
+            document.querySelector('.logo').classList.remove('visible');
+        }
+
 
     });
 
@@ -106,6 +112,25 @@ document.addEventListener('DOMContentLoaded', () => {
             function addLeadingZero(number) {
                 return number < 10 ? '0' + number : number;
             }
+
+        })
+    }
+
+    if (document.querySelector('.header__logo')) {
+
+        document.querySelector('.header__logo').addEventListener('mouseenter', (e) => {
+            let logo = e.target;
+            if (logo.classList.contains('clip-logo')) {
+                document.querySelector('.header').classList.add('fixed');
+                logo.classList.add('visible');
+                document.querySelector('.page').style.setProperty('padding-top', `${document.querySelector('.header').offsetHeight}px`);
+            }
+        })
+        document.querySelector('.header').addEventListener('mouseleave', (e) => {
+
+            document.querySelector('.header').classList.remove('fixed');
+            document.querySelector('.header__logo').classList.remove('visible');
+            document.querySelector('.page').style = "";
 
         })
     }
