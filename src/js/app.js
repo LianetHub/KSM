@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (target.matches('.header__menu-link')) {
-            document.querySelector('.page').style = "";
+            document.querySelector('.header').style = "";
             document.querySelector('.header').classList.remove('fixed');
             document.querySelector('.logo').classList.remove('visible');
         }
@@ -121,16 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header__logo').addEventListener('mouseenter', (e) => {
             let logo = e.target;
             if (logo.classList.contains('clip-logo')) {
+                document.querySelector('.header').style.setProperty('height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
                 document.querySelector('.header').classList.add('fixed');
                 logo.classList.add('visible');
-                document.querySelector('.page').style.setProperty('padding-top', `${document.querySelector('.header').offsetHeight}px`);
             }
         })
         document.querySelector('.header').addEventListener('mouseleave', (e) => {
 
+            document.querySelector('.header').style = "";
             document.querySelector('.header').classList.remove('fixed');
             document.querySelector('.header__logo').classList.remove('visible');
-            document.querySelector('.page').style = "";
 
         })
     }

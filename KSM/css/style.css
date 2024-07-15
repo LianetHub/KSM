@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff") format("woff"), url("../fonts/KSM-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -556,18 +556,21 @@ body.menu-lock {
 }
 
 .header {
-  padding: 0.5rem 0;
   position: relative;
   z-index: 2;
 }
 
-.header.fixed {
+.header.fixed .header__wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: #fff;
   z-index: 10;
+}
+
+.header__wrapper {
+  padding: 0.5rem 0;
 }
 
 .header__logo {
@@ -1662,7 +1665,7 @@ body.menu-lock {
     display: none;
   }
 
-  .header {
+  .header__wrapper {
     padding: 0.92rem 0;
   }
 
@@ -2673,7 +2676,7 @@ body.menu-lock {
     margin-bottom: 1.25rem;
   }
 
-  .header {
+  .header__wrapper {
     padding: 0.92rem 0 0 0;
   }
 
