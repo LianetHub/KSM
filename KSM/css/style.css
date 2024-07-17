@@ -383,19 +383,6 @@ body.menu-lock {
   font-variant-numeric: tabular-nums;
 }
 
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #e5e5e5;
-  border-radius: 0;
-}
-
 .hidden {
   position: absolute;
   width: 1px;
@@ -3367,10 +3354,6 @@ body.menu-lock {
 }
 
 @media (any-hover: hover) {
-  ::-webkit-scrollbar-thumb:hover {
-    background: #cccccc;
-  }
-
   .header__menu-cart:hover {
     font-weight: 700;
   }

@@ -337,21 +337,21 @@ $scrollbarHover: darken(
 	$amount: 10,
 );
 
-::-webkit-scrollbar {
-	width: rem(8);
-}
-::-webkit-scrollbar-track {
-	background: #fff;
-}
-::-webkit-scrollbar-thumb {
-	background: $scrollbarColor;
-	border-radius: 0;
-	@media (any-hover: hover) {
-		&:hover {
-			background: $scrollbarHover;
-		}
-	}
-}
+// ::-webkit-scrollbar {
+// 	width: rem(8);
+// }
+// ::-webkit-scrollbar-track {
+// 	background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $scrollbarColor;
+// 	border-radius: 0;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			background: $scrollbarHover;
+// 		}
+// 	}
+// }
 
 //============ ОБЩИЕ ЭЛЕМЕНТЫ ============
 
