@@ -26,8 +26,6 @@ export const animation = () => {
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
-
-
                 const scale = 1 - (scaleReductionFactor * progress);
                 gsap.to(logo, {
                     scale: scale,
@@ -48,10 +46,9 @@ export const animation = () => {
             end: maxScroll,
             scrub: true,
             onUpdate: self => {
-                const progress = (self.scroll() - 2 * oneThirdScroll) / oneThirdScroll;
 
                 gsap.to(logoCurrent, {
-                    autoAlpha: 1 - progress,
+                    autoAlpha: 1,
                     duration: 0,
                 });
 
@@ -71,8 +68,9 @@ export const animation = () => {
         ScrollTrigger.create({
             trigger: logo,
             start: maxScroll,
-            end: maxScroll,
+            end: "+=300",
             scrub: true,
+
             onUpdate: self => {
                 gsap.to(logoCurrent, {
                     autoAlpha: 0,

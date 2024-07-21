@@ -1,11 +1,12 @@
 .footer {
 	background: #e5e5e5;
-	padding: 2.25rem 0;
+	padding: 2.25rem 0 rem(27);
 	font-size: 0.75rem;
 	@media (min-width: $md7) {
 		font-size: 0.9375rem;
 	}
 	@media (min-width: $md6) {
+		padding: 1.88rem 0 rem(27);
 		font-size: 0.75rem;
 	}
 	@media (min-width: $md2) {
@@ -52,10 +53,10 @@
 		}
 		@media (min-width: $md3) {
 			max-width: 100%;
-			margin-top: 0.4rem;
+			margin-top: 0.785rem;
 		}
 		@media (min-width: $md2) {
-			margin-top: 0.65rem;
+			margin-top: 1rem;
 		}
 	}
 	// .footer__design
@@ -82,9 +83,17 @@
 		@media (min-width: $md6) {
 			max-width: 22rem;
 			line-height: 140%;
+			br {
+				display: none;
+			}
 		}
 		@media (min-width: $md3) {
 			margin-top: 1rem;
+		}
+		@media (min-width: $md2) {
+			br {
+				display: block;
+			}
 		}
 	}
 	// .footer__privacy
@@ -116,6 +125,9 @@
 		white-space: nowrap;
 		&:not(:last-child) {
 			@media (min-width: $md7) {
+				margin-bottom: 0.25rem;
+			}
+			@media (min-width: $md4) {
 				margin-bottom: 0.45rem;
 			}
 		}

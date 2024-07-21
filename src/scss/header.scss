@@ -91,11 +91,6 @@
 			max-width: rem(437);
 		}
 		&.init-animation {
-			// @media (min-width: $md3) {
-			// 	@media (max-width: $md2) {
-			// 		transform: none !important;
-			// 	}
-			// }
 			@media (max-width: $md4) {
 				transform: none !important;
 				.header__logo-current {
@@ -201,7 +196,12 @@
 	&__menu-cart {
 		order: -1;
 		text-align: right;
+
+		width: fit-content;
+		margin-left: auto;
+		margin-right: -0.2rem;
 		@media (min-width: $md6) {
+			margin-right: 0;
 			font-weight: 500;
 			order: 0;
 			position: absolute;
@@ -236,6 +236,9 @@
 				margin-top: 0.55rem;
 			}
 			@media (min-width: $md4) {
+				margin-top: 3rem;
+			}
+			@media (min-width: $md2) {
 				margin-top: 3.25rem;
 			}
 		}
@@ -266,6 +269,11 @@
 		.form__input {
 			@media (max-width: $md5) {
 				font-size: rem(18);
+			}
+		}
+		.form__field {
+			@media (max-width: $md5) {
+				margin-top: rem(18);
 			}
 		}
 	}
@@ -317,6 +325,7 @@
 	}
 	.header.open-menu & {
 		color: #fff;
+		margin-right: rem(-3);
 		& span {
 			width: rem(28);
 			// transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
