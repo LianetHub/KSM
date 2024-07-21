@@ -119,12 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.header__logo')) {
 
         document.querySelector('.header__logo').addEventListener('mouseenter', (e) => {
-            let logo = e.target;
-            if (logo.classList.contains('clip-logo')) {
-                document.querySelector('.header').style.setProperty('height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
-                document.querySelector('.header').classList.add('fixed');
-                logo.classList.add('visible');
-            }
+            getFixedMenu()
+        })
+        document.querySelector('.header__top').addEventListener('mouseenter', (e) => {
+            getFixedMenu()
         })
         document.querySelector('.header').addEventListener('mouseleave', (e) => {
 
@@ -132,7 +130,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.header').classList.remove('fixed');
             document.querySelector('.header__logo').classList.remove('visible');
 
-        })
+        });
+
+
+        function getFixedMenu() {
+            let logo = document.querySelector('.header__logo');
+            if (logo.classList.contains('clip-logo')) {
+                document.querySelector('.header').style.setProperty('height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
+                document.querySelector('.header').classList.add('fixed');
+                logo.classList.add('visible');
+            }
+        }
     }
 
 

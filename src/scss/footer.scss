@@ -37,7 +37,7 @@
 	}
 	// .footer__logo
 	&__logo {
-		margin-top: 0.5rem;
+		margin-top: 0.35rem;
 		@media (min-width: $md2) {
 			margin-top: 1rem;
 		}
@@ -45,7 +45,7 @@
 	}
 	// .footer__form
 	&__form {
-		margin-top: 0.8rem;
+		margin-top: 0.55rem;
 		@media (min-width: $md5) {
 			margin-top: 0;
 			max-width: 21.125rem;
@@ -62,7 +62,7 @@
 	&__design {
 		display: inline-block;
 		line-height: math.div(1.3125, 0.75);
-		margin-top: 1.06rem;
+		margin-top: 0.875rem;
 		@media (min-width: $md6) {
 			margin-top: 0.25rem;
 			font-size: 0.75rem;
@@ -110,6 +110,9 @@
 
 	// .footer__contacts-link
 	&__contacts-link {
+		@media (max-width: $md5) {
+			line-height: 1;
+		}
 		white-space: nowrap;
 		&:not(:last-child) {
 			@media (min-width: $md7) {

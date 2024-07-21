@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -616,7 +616,7 @@ body.menu-lock {
 }
 
 .header__menu-list:not(:first-child) {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .header__menu-item {
@@ -648,9 +648,9 @@ body.menu-lock {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 0;
   position: relative;
   -webkit-box-ordinal-group: 2;
@@ -660,16 +660,13 @@ body.menu-lock {
   margin-left: auto;
   min-width: 1.45rem;
   height: 2.25rem;
+  margin-top: -0.21875rem;
 }
 
 .icon-menu span {
   display: block;
   padding: 0.21875rem 0rem;
   width: 100%;
-  -webkit-transition: opacity 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
-  transition: opacity 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
-  transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
-  transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
   will-change: transform;
 }
 
@@ -680,10 +677,7 @@ body.menu-lock {
   width: 100%;
   margin-left: auto;
   background: currentColor;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  border-radius: 0;
   will-change: transform;
 }
 
@@ -692,17 +686,7 @@ body.menu-lock {
 }
 
 .header.open-menu .icon-menu span {
-  -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-}
-
-.header.open-menu .icon-menu span::before {
-  -webkit-transition: width 0.3s ease 0s, -webkit-transform 0.45s ease 0.35s;
-  transition: width 0.3s ease 0s, -webkit-transform 0.45s ease 0.35s;
-  transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
-  transition: transform 0.45s ease 0.35s, width 0.3s ease 0s, -webkit-transform 0.45s ease 0.35s;
+  width: 1.75rem;
 }
 
 .header.open-menu .icon-menu span:first-child {
@@ -749,18 +733,18 @@ body.menu-lock {
 }
 
 .footer__logo {
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   display: inline-block;
 }
 
 .footer__form {
-  margin-top: 0.8rem;
+  margin-top: 0.55rem;
 }
 
 .footer__design {
   display: inline-block;
   line-height: 1.75;
-  margin-top: 1.06rem;
+  margin-top: 0.875rem;
 }
 
 .footer__address {
@@ -1928,13 +1912,23 @@ body.menu-lock {
             order: -1;
   }
 
+  .header__top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 10rem;
+  }
+
   .header__logo {
-    max-width: 13.125rem;
+    max-width: 14.375rem;
     clip-path: none;
   }
 
   .icon-menu {
     min-width: 2.625rem;
+    margin-top: -0.28125rem;
     margin-left: 2.5rem;
   }
 
@@ -2169,7 +2163,7 @@ body.menu-lock {
   }
 
   .products {
-    padding: 0.25rem 0 4rem;
+    padding: 1.25rem 0 4rem;
   }
 
   .products__category-image {
@@ -2738,7 +2732,7 @@ body.menu-lock {
   }
 
   .products {
-    padding: 2.25rem 0 5rem;
+    padding: 2.5rem 0 5rem;
   }
 
   .products__cards {
@@ -3255,6 +3249,14 @@ body.menu-lock {
     clip-path: none;
   }
 
+  .header__form .form__input {
+    font-size: 1.125rem;
+  }
+
+  .footer__contacts-link {
+    line-height: 1;
+  }
+
   .products__card-name.sm-name {
     font-size: 0.9375rem;
   }
@@ -3350,6 +3352,18 @@ body.menu-lock {
 
   .cart__form .form__label {
     margin-bottom: 0;
+  }
+}
+
+@media (hover: none) {
+  .header__top {
+    display: none;
+  }
+}
+
+@media (hover: hover) {
+  .header__top {
+    display: block;
   }
 }
 

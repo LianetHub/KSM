@@ -71,7 +71,7 @@ export const animation = () => {
         ScrollTrigger.create({
             trigger: logo,
             start: maxScroll,
-            end: "+=300",
+            end: maxScroll,
             scrub: true,
             onUpdate: self => {
                 gsap.to(logoCurrent, {
