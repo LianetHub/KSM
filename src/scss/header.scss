@@ -79,11 +79,8 @@
 			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
 		}
 		@media (min-width: $md5) {
-			max-width: rem(230);
+			max-width: rem(233);
 			clip-path: none;
-		}
-		@media (min-width: $md4) {
-			max-width: rem(230);
 		}
 
 		@media (min-width: $md2) {
@@ -236,7 +233,7 @@
 				margin-top: 0.55rem;
 			}
 			@media (min-width: $md4) {
-				margin-top: 3rem;
+				margin-top: 3.1rem;
 			}
 			@media (min-width: $md2) {
 				margin-top: 3.25rem;
