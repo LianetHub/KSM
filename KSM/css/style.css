@@ -1643,7 +1643,7 @@ body.menu-lock {
   }
 
   .header__wrapper {
-    padding: 0.92rem 0;
+    padding: 0.9rem 0 0.9rem;
   }
 
   .header__logo {
@@ -1698,10 +1698,6 @@ body.menu-lock {
   .footer__address {
     max-width: 22rem;
     line-height: 140%;
-  }
-
-  .footer__address br {
-    display: none;
   }
 
   .article {
@@ -2418,6 +2414,10 @@ body.menu-lock {
 
   .footer__address {
     margin-top: 1rem;
+  }
+
+  .footer__address br {
+    display: none;
   }
 
   .footer__contacts {
