@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff") format("woff"), url("../fonts/KSM-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff") format("woff"), url("../fonts/KSM-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -94,7 +94,6 @@ body.menu-lock {
   margin: 0 auto;
   padding: 0 0.5625rem 0 2.5rem;
   width: 100%;
-  max-width: 115rem;
 }
 
 :root {
@@ -469,9 +468,9 @@ body.menu-lock {
       -ms-user-select: none;
           user-select: none;
   font-size: 0.9375rem;
-  line-height: 140%;
+  line-height: 1;
   font-weight: 500;
-  padding: 0.75rem 1rem;
+  padding: 0.94rem 1rem;
   gap: 1rem;
 }
 
@@ -557,15 +556,15 @@ body.menu-lock {
 }
 
 .header__wrapper {
-  padding: 0.5rem 0;
+  padding: 0.8rem 0 0.5rem;
 }
 
 .header__logo {
   position: relative;
   z-index: 16;
-  -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-          transform-origin: 0 0;
+  -webkit-transform-origin: 0.5rem 0;
+      -ms-transform-origin: 0.5rem 0;
+          transform-origin: 0.5rem 0;
   max-width: 14.375rem;
   display: block;
   position: fixed;
@@ -1647,7 +1646,7 @@ body.menu-lock {
   }
 
   .header__logo {
-    margin-left: -2.5rem;
+    margin-left: -2.85rem;
     clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
   }
 
@@ -1930,7 +1929,6 @@ body.menu-lock {
   }
 
   .header__logo {
-    max-width: 14.5625rem;
     clip-path: none;
   }
 
@@ -2143,7 +2141,7 @@ body.menu-lock {
   }
 
   .header__menu-list:not(:first-child) {
-    margin-top: 3.1rem;
+    margin-top: 3.25rem;
   }
 
   .footer__caption {
@@ -2669,21 +2667,12 @@ body.menu-lock {
     margin-bottom: 1.25rem;
   }
 
-  .header__wrapper {
-    padding: 0.92rem 0 0 0;
-  }
-
   .header__container .row {
     min-height: 12.75rem;
   }
 
   .header__logo {
-    margin-left: -2.75rem;
     max-width: 27.3125rem;
-  }
-
-  .header__menu-list:not(:first-child) {
-    margin-top: 3.25rem;
   }
 
   .icon-menu {
@@ -3059,6 +3048,7 @@ body.menu-lock {
 
 @media (min-width: 1919.98px) {
   [class*=__container] {
+    max-width: 115rem;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
   }
@@ -3245,12 +3235,6 @@ body.menu-lock {
 }
 
 @media (max-width: 1023.98px) {
-  .header__logo.init-animation {
-    -webkit-transform: none !important;
-        -ms-transform: none !important;
-            transform: none !important;
-  }
-
   .header__logo.init-animation .header__logo-current {
     display: none;
   }
