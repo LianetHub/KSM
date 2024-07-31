@@ -1,7 +1,7 @@
 .header {
 	position: relative;
 	z-index: 2;
-
+	min-height: rem(120);
 	&.open-menu {
 		@media (max-width: $md6) {
 			&::before {
@@ -46,13 +46,13 @@
 	&__wrapper {
 		padding: 0.8rem 0 0.5rem;
 		@media (min-width: $md6) {
-			padding: 0.8rem 0 0.9rem;
+			padding: 1.25rem 0 0.8rem;
 		}
 	}
 	// .header__container
 	&__container {
 		.row {
-			@media (min-width: $md4) {
+			@media (min-width: $md6) {
 				min-height: rem(120);
 			}
 			@media (min-width: $md2) {
