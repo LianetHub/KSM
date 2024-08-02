@@ -458,6 +458,9 @@ body.menu-lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  vertical-align: middle;
+  -ms-flex-line-pack: center;
+      align-content: center;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -470,7 +473,7 @@ body.menu-lock {
   font-size: 0.9375rem;
   line-height: 1;
   font-weight: 500;
-  padding: 1.08rem 1rem 0.8rem;
+  padding: 1rem 1rem;
   gap: 1rem;
 }
 
@@ -776,6 +779,7 @@ body.menu-lock {
 }
 
 .footer__contacts-link {
+  line-height: 1.5;
   white-space: nowrap;
 }
 
@@ -1456,7 +1460,7 @@ body.menu-lock {
   }
 
   .footer__contacts-link:not(:last-child) {
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.15rem;
   }
 
   .products__category-name {
@@ -2415,6 +2419,14 @@ body.menu-lock {
 
   .footer__contacts {
     margin-top: 1rem;
+  }
+
+  .footer__contacts-link {
+    line-height: normal;
+  }
+
+  .footer__contacts-link:not(:last-child) {
+    margin-bottom: 0.45rem;
   }
 
   .article__block:not(:first-child).lg-offset {
