@@ -125,9 +125,6 @@
 		white-space: nowrap;
 		&:not(:last-child) {
 			@media (min-width: $md7) {
-				margin-bottom: 0.25rem;
-			}
-			@media (min-width: $md4) {
 				margin-bottom: 0.45rem;
 			}
 		}

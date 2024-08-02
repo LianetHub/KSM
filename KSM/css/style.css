@@ -544,7 +544,6 @@ body.menu-lock {
 .header {
   position: relative;
   z-index: 2;
-  min-height: 7.5rem;
 }
 
 .header.fixed .header__wrapper {
@@ -1457,7 +1456,7 @@ body.menu-lock {
   }
 
   .footer__contacts-link:not(:last-child) {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.45rem;
   }
 
   .products__category-name {
@@ -1643,11 +1642,7 @@ body.menu-lock {
   }
 
   .header__wrapper {
-    padding: 1.25rem 0 0.8rem;
-  }
-
-  .header__container .row {
-    min-height: 7.5rem;
+    padding: 0.8rem 0 0.9rem;
   }
 
   .header__logo {
@@ -2134,6 +2129,10 @@ body.menu-lock {
             order: -1;
   }
 
+  .header__container .row {
+    min-height: 7.5rem;
+  }
+
   .header__logo-current {
     display: block;
   }
@@ -2150,10 +2149,6 @@ body.menu-lock {
 
   .footer__caption {
     margin-right: -2rem;
-  }
-
-  .footer__contacts-link:not(:last-child) {
-    margin-bottom: 0.45rem;
   }
 
   .article {
@@ -2393,7 +2388,7 @@ body.menu-lock {
 
   .header__menu {
     position: sticky;
-    top: 1rem;
+    top: 0.8rem;
     font-size: 0.875rem;
   }
 
