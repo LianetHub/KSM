@@ -54,6 +54,12 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 // 	scroll-padding-top: var(--header-height);
 // }
 
+.no-bef {
+	& .btn::after {
+		display: none !important;
+	}
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 

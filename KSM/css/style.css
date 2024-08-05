@@ -64,6 +64,10 @@
   content: "\e901";
 }
 
+.no-bef .btn::after {
+  display: none !important;
+}
+
 body {
   font-family: "KSM", sans-serif;
   font-size: 1rem;
