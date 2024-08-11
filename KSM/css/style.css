@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -286,6 +286,10 @@ body.menu-lock {
 .text-block {
   font-size: 0.9375rem;
   line-height: 120%;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 
 .font-medium {
@@ -818,7 +822,35 @@ body.menu-lock {
   --gutter-y: 1.125rem;
 }
 
+.article__title.ordered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
 .article__text p:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.article__text ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.article__text ul li::before {
+  content: "—";
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.article__text ul li:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+
+.article__text ul:not(:last-child) {
   margin-bottom: 1.1rem;
 }
 
@@ -2730,6 +2762,10 @@ body.menu-lock {
   }
 
   .article__text p:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+
+  .article__text ul:not(:last-child) {
     margin-bottom: 1.4rem;
   }
 
