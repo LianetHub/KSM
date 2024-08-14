@@ -100,6 +100,12 @@
 	&__privacy {
 		line-height: 150%;
 		display: inline-block;
+		@media (min-width: $md3) {
+			display: none;
+		}
+		@media (min-width: $md2) {
+			display: inline-block;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				font-weight: 500;

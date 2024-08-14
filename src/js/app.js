@@ -66,25 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header').classList.toggle('open-menu');
     }
 
-
-    // function getIndexInParent(node) {
-    //     var children = node.parentNode.childNodes;
-    //     var num = 0;
-    //     for (var i = 0; i < children.length; i++) {
-    //         if (children[i] == node) return num;
-    //         if (children[i].nodeType == 1) num++;
-    //     }
-    //     return -1;
-    // }
-
-
-
-
     //  sliders
 
     if (document.querySelectorAll('.slider')) {
         document.querySelectorAll('.slider').forEach(slider => {
-            new Swiper(slider, {
+            const swiper = new Swiper(slider, {
                 slidesPerView: 1,
                 loop: true,
                 navigation: {
@@ -112,6 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
             function addLeadingZero(number) {
                 return number < 10 ? '0' + number : number;
             }
+
+            swiper.slides.forEach(slide => {
+                const img = slide.querySelector('img');
+                img.addEventListener('click', (e) => {
+                    const rect = img.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const slideWidth = rect.width;
+
+                    if (x < slideWidth * 0.1) {
+                        swiper.slidePrev();
+                    } else if (x > slideWidth * 0.9) {
+
+                        swiper.slideNext();
+                    }
+                });
+            });
+
 
         })
     }
@@ -144,31 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // animation header
-
-    // window.addEventListener('scroll', function (e) {
-
-    //     document.body.style.setProperty("--header-height", Math.ceil(document.querySelector('.header__wrapper').offsetHeight) + "px")
-    // })
-
-
-    // const headerElement = document.querySelector('.header');
-
-    // const callback = function (entries, observer) {
-    //     if (entries[0].isIntersecting) {
-    //         headerElement.classList.remove('scroll');
-    //     } else {
-    //         headerElement.classList.add('scroll');
-    //     }
-    // };
-
-    // const headerObserver = new IntersectionObserver(callback);
-    // headerObserver.observe(headerElement);
-
-
-
-
-    // configurator
 
 
 
