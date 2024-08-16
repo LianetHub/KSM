@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const target = e.target;
 
+
+
+
         if (target.matches('.form__field-clear')) {
             target.previousElementSibling.value = "";
             target.previousElementSibling.classList.remove('_input');
@@ -100,11 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             swiper.slides.forEach(slide => {
-                const img = slide.querySelector('img');
-                img.addEventListener('click', (e) => {
-                    const rect = img.getBoundingClientRect();
+
+                slide.addEventListener('click', (e) => {
+                    const rect = slide.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const slideWidth = rect.width;
+
 
                     if (x < slideWidth * 0.1) {
                         swiper.slidePrev();

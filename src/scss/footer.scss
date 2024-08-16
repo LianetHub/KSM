@@ -99,12 +99,13 @@
 	// .footer__privacy
 	&__privacy {
 		line-height: 150%;
-		display: inline-block;
-		@media (min-width: $md3) {
-			display: none;
-		}
-		@media (min-width: $md2) {
-			display: inline-block;
+		& span {
+			@media (min-width: $md3) {
+				display: none;
+			}
+			@media (min-width: $md2) {
+				display: inline;
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
