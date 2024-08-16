@@ -599,7 +599,7 @@ body.menu-lock {
 .header__logo {
   position: relative;
   z-index: 16;
-  max-width: 14.375rem;
+  max-width: 14.6875rem;
   display: block;
   position: fixed;
   margin-left: -2.05rem;
@@ -844,6 +844,14 @@ body.menu-lock {
   margin-top: 3.25rem;
 }
 
+.article__block:not(:first-child).md-offset {
+  margin-top: 3.25rem;
+}
+
+.article__block:not(:first-child).sm-offset {
+  margin-top: 1rem;
+}
+
 .article__block .row {
   --gutter-y: 1.125rem;
 }
@@ -915,7 +923,7 @@ body.menu-lock {
 }
 
 .products {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 3.3125rem;
 }
 
 .products__content {
@@ -1777,6 +1785,10 @@ body.menu-lock {
     margin-top: 2.88rem;
   }
 
+  .article__block:not(:first-child).md-offset {
+    margin-top: 2.88rem;
+  }
+
   .products {
     padding: 3.75rem 0;
   }
@@ -2238,8 +2250,16 @@ body.menu-lock {
     margin-top: 3.25rem;
   }
 
+  .article__block:not(:first-child).md-offset {
+    margin-top: 3.25rem;
+  }
+
+  .article__block:not(:first-child).sm-offset {
+    margin-top: 1.75rem;
+  }
+
   .article__list {
-    gap: 0.3rem 1.5rem;
+    gap: 0.4rem 1.5rem;
   }
 
   .products {
@@ -2497,6 +2517,10 @@ body.menu-lock {
   }
 
   .article__block:not(:first-child).lg-offset {
+    margin-top: 3.5rem;
+  }
+
+  .article__block:not(:first-child).md-offset {
     margin-top: 3.5rem;
   }
 
@@ -2792,7 +2816,7 @@ body.menu-lock {
   }
 
   .article__block:not(:first-child) {
-    margin-top: 2.5rem;
+    margin-top: 2.2rem;
   }
 
   .article__block:not(:first-child).xl-offset {
@@ -2800,7 +2824,15 @@ body.menu-lock {
   }
 
   .article__block:not(:first-child).lg-offset {
-    margin-top: 4.35rem;
+    margin-top: 4.1rem;
+  }
+
+  .article__block:not(:first-child).md-offset {
+    margin-top: 3.75rem;
+  }
+
+  .article__block:not(:first-child).sm-offset {
+    margin-top: 2.2rem;
   }
 
   .article__block .row {
@@ -2820,8 +2852,8 @@ body.menu-lock {
   }
 
   .article__list {
-    gap: 0.4rem 1.5rem;
-    margin-top: 1.35rem;
+    gap: 0.3rem 1.5rem;
+    margin-top: 1rem;
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: (auto)[5];
