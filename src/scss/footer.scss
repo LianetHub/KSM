@@ -6,7 +6,7 @@
 		font-size: 0.9375rem;
 	}
 	@media (min-width: $md6) {
-		padding: 1.88rem 0 rem(27);
+		padding: 1.75rem 0 rem(27);
 		font-size: 0.75rem;
 	}
 	@media (min-width: $md2) {
@@ -39,6 +39,7 @@
 	// .footer__logo
 	&__logo {
 		margin-top: 0.35rem;
+		width: rem(101);
 		@media (min-width: $md2) {
 			margin-top: 1rem;
 		}
@@ -84,11 +85,14 @@
 			max-width: 22rem;
 			line-height: 150%;
 		}
+		@media (min-width: $md4) {
+			margin-top: 0;
+		}
 		@media (min-width: $md3) {
+			margin-top: 1rem;
 			br {
 				display: none;
 			}
-			margin-top: 1rem;
 		}
 		@media (min-width: $md2) {
 			br {
@@ -116,6 +120,9 @@
 	// .footer__contacts
 	&__contacts {
 		margin-top: 0.25rem;
+		@media (min-width: $md4) {
+			margin-top: 0;
+		}
 		@media (min-width: $md3) {
 			margin-top: 1rem;
 		}

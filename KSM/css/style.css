@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -507,7 +507,7 @@ body.menu-lock {
   font-size: 0.9375rem;
   line-height: 1;
   font-weight: 500;
-  padding: 1rem;
+  padding: 0.969rem 0.9rem 0.969rem 1rem;
   gap: 1rem;
 }
 
@@ -776,6 +776,7 @@ body.menu-lock {
 
 .footer__logo {
   margin-top: 0.35rem;
+  width: 6.3125rem;
   display: inline-block;
 }
 
@@ -1750,7 +1751,7 @@ body.menu-lock {
   }
 
   .footer {
-    padding: 1.88rem 0 1.6875rem;
+    padding: 1.75rem 0 1.6875rem;
     font-size: 0.75rem;
   }
 
@@ -2217,6 +2218,14 @@ body.menu-lock {
     margin-right: -2rem;
   }
 
+  .footer__address {
+    margin-top: 0;
+  }
+
+  .footer__contacts {
+    margin-top: 0;
+  }
+
   .article {
     padding: 1.125rem 0 3.75rem;
   }
@@ -2230,7 +2239,7 @@ body.menu-lock {
   }
 
   .article__list {
-    gap: 0.4rem 1.5rem;
+    gap: 0.3rem 1.5rem;
   }
 
   .products {
@@ -2811,6 +2820,7 @@ body.menu-lock {
   }
 
   .article__list {
+    gap: 0.4rem 1.5rem;
     margin-top: 1.35rem;
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);

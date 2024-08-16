@@ -114,9 +114,10 @@
 			grid-auto-flow: column;
 		}
 		@media (min-width: $md4) {
-			gap: 0.4rem $gutter-x;
+			gap: 0.3rem $gutter-x;
 		}
 		@media (min-width: $md2) {
+			gap: 0.4rem $gutter-x;
 			margin-top: 1.35rem;
 			grid-template-columns: repeat(5, 1fr);
 			grid-template-rows: repeat(5, auto);
