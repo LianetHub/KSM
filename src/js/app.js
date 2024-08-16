@@ -61,6 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.logo').classList.remove('visible');
         }
 
+        if (target.matches('.products__card-btn')) {
+            target.classList.toggle('active');
+            if (target.classList.contains('active')) {
+                document.querySelector('.header__menu-cart').innerHTML++;
+            } else {
+                document.querySelector('.header__menu-cart').innerHTML--;
+            }
+        }
+
 
     });
 
