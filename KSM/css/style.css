@@ -927,7 +927,7 @@ body.menu-lock {
 }
 
 .products {
-  padding: 1.125rem 0 3.3125rem;
+  padding: 1.125rem 0 3.75rem;
 }
 
 .products__content {
@@ -2264,7 +2264,7 @@ body.menu-lock {
   }
 
   .products {
-    padding: 1.25rem 0 4rem;
+    padding: 1.25rem 0 3.75rem;
   }
 
   .products__category-image {
