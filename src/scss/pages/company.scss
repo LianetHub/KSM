@@ -22,13 +22,22 @@
 			@media (min-width: $md2) {
 				margin-top: 2.2rem;
 			}
-			&.xl-offset {
+			&.xxl-offset {
 				margin-top: rem(60);
 				@media (min-width: $md2) {
 					margin-top: rem(72);
 				}
 				@media (min-width: $md1) {
 					margin-top: rem(96);
+				}
+			}
+			&.xl-offset {
+				margin-top: rem(42);
+				@media (min-width: $md2) {
+					margin-top: rem(60);
+				}
+				@media (min-width: $md0) {
+					margin-top: rem(72);
 				}
 			}
 			&.lg-offset {

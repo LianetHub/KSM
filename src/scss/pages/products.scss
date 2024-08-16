@@ -1,5 +1,5 @@
 .products {
-	padding: 1.25rem 0 rem(53);
+	padding: 1.125rem 0 rem(53);
 	@media (min-width: $md6) {
 		padding: 3.75rem 0;
 	}
@@ -10,13 +10,13 @@
 		padding: 2.25rem 0 3.5rem;
 	}
 	@media (min-width: $md2) {
-		padding: 2.5rem 0 5rem;
+		padding: 1.35rem 0 5rem;
 	}
 	@media (min-width: $md1) {
-		padding: 2.25rem 0 5.5rem;
+		padding: 1.35rem 0 5.5rem;
 	}
 	@media (min-width: $md0) {
-		padding: 2.25rem 0 4rem;
+		padding: 1.35rem 0 4rem;
 	}
 	// .products__container
 	&__container {
