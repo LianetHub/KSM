@@ -267,12 +267,11 @@
 	&__filters-list {
 		display: grid;
 		gap: 0.5rem $gutter-x-mobile;
-		@media (min-width: $md7) {
+
+		@media (min-width: $md5) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-auto-flow: column;
 			grid-template-rows: repeat(5, 1fr);
-		}
-		@media (min-width: $md5) {
 			gap: 0.5rem $gutter-x;
 		}
 		@media (min-width: $md4) {
@@ -293,12 +292,18 @@
 	}
 	// .products__more
 	&__more {
-		margin-top: 2.25rem;
 		display: inline-block;
 		font-size: 0.9375rem;
 		font-weight: 500;
 		line-height: 180%;
 		text-transform: uppercase;
+		margin-top: 1.15rem;
+		@media (min-width: $md2) {
+			margin-top: 1.75rem;
+		}
+		@media (min-width: $md1) {
+			margin-top: 1.5rem;
+		}
 	}
 }
 
