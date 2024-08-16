@@ -76,13 +76,32 @@
                         <h1 class="products__title title">Кирпич ручной формовки</h1>
                         <div class="products__cards">
                             <div class="row">
-                                @@for (var i = 0; i < 16; i++) { @@include("./html/_product.html") } </div>
+                                @@for (var i = 0; i < 15; i++) { @@include("./html/_product.html") } <div class="col-lg-2 col-xs-4">
+                                    <div class="products__card">
+                                        <a href="/product.html" class="products__card-image">
+                                            <picture>
+                                                <source media="(min-width: $md0)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md1)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md2)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md3)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md4)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md5)" srcset="@img/product.jpg">
+                                                <source media="(min-width: $md6)" srcset="@img/product.jpg">
+                                                <img src="@img/product.jpg" alt="Фото категории">
+                                            </picture>
+                                        </a>
+                                        <a href="/product.html" class="products__card-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
+                                        <div class="products__card-price">3019,89 ₽/м²</div>
+                                        <a href="" class="products__card-btn icon-plus"></a>
+                                    </div>
                             </div>
-                            <a href="" class="products__more">Показать ещё ↓</a>
                         </div>
-                </section>
-            </main>
-            @@include('html/_footer.html', {})
+                    </div>
+                    <a href="" class="products__more">Показать ещё ↓</a>
+        </div>
+        </section>
+        </main>
+        @@include('html/_footer.html', {})
         </div>
 
         @@include('html/_js.html', {})
