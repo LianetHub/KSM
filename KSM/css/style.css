@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "KSM";
   font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -583,6 +583,14 @@ body.menu-lock {
   z-index: 2;
 }
 
+.header.header_sm .header__container .row {
+  min-height: 7rem;
+}
+
+.header.header_sm .header__top {
+  height: 7rem;
+}
+
 .header.fixed .header__wrapper {
   position: fixed;
   top: 0;
@@ -610,6 +618,12 @@ body.menu-lock {
 
 .header__logo svg {
   max-width: 100%;
+}
+
+.header__logo.header__logo_scaled {
+  -webkit-transform: scale(0.525, 0.525) !important;
+      -ms-transform: scale(0.525, 0.525) !important;
+          transform: scale(0.525, 0.525) !important;
 }
 
 .header__logo.clip-logo {
@@ -1544,7 +1558,7 @@ body.menu-lock {
 }
 
 .cart {
-  padding: 2.5rem 0 4.25rem;
+  padding: 0rem 0 4.25rem;
 }
 
 .cart__form {

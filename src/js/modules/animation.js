@@ -8,7 +8,7 @@ export const animation = () => {
         if (!logo) return;
 
         const isSmallScreen = window.innerWidth < 1600;
-        const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 100 : 600);
+        const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 25 : 600);
 
         const logoCurrent = document.querySelector('.header__logo-current');
         const oneThirdScroll = maxScroll / 3;

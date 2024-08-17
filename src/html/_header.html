@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header@@if(big===false){ header_sm}">
     <div class="header__top"></div>
     <div class="header__wrapper">
         <div class="header__container">
@@ -6,6 +6,7 @@
                 <div class="col-sm-2 col-xs-1 col-4">
                     @@include('./_logo.html',{
                     "title": "@@title",
+                    "scale": @@big,
                     "small": @@small
                     })
                 </div>
