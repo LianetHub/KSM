@@ -68,6 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 document.querySelector('.header__menu-cart').innerHTML--;
             }
+            if (document.querySelector('.header__menu-cart').innerHTML > 0) {
+                document.querySelector('.header__menu-cart').classList.add('active')
+            } else {
+                document.querySelector('.header__menu-cart').classList.remove('active')
+            }
         }
 
 

@@ -59,6 +59,8 @@
 		}
 		@media (min-width: $md3) {
 			font-size: 1.125rem;
+		}
+		@media (min-width: $md2) {
 			line-height: 116.667%;
 		}
 	}
@@ -127,14 +129,16 @@
 			padding-bottom: 80%;
 		}
 		@media (min-width: $md4) {
-			padding-bottom: 77.5%;
+			padding-bottom: 78.5%;
 			margin-top: 0.5rem;
 		}
 		@media (min-width: $md3) {
-			padding-bottom: 78.8%;
+			padding-bottom: 77%;
 			margin-top: 1.25rem;
 		}
-
+		@media (min-width: $md2) {
+			padding-bottom: 78.8%;
+		}
 		& picture {
 			position: absolute;
 			top: 0;
@@ -151,9 +155,12 @@
 	}
 	// .products__card-name
 	&__card-name {
-		margin-top: 1.25rem;
 		font-size: 1.125rem;
 		line-height: 133.333%;
+		margin-top: 1.1rem;
+		@media (min-width: $md2) {
+			margin-top: 1.25rem;
+		}
 		&.sm-name {
 			@media (max-width: $md2) {
 				font-size: 0.9375rem;
@@ -186,7 +193,7 @@
 	&__card-btn {
 		margin-top: 0.25rem;
 		@media (min-width: $md2) {
-			margin-top: 0.75rem;
+			margin-top: 0.4rem;
 		}
 		width: 1.5rem;
 		height: 1.5rem;
@@ -293,8 +300,11 @@
 	// .products__filters-list
 	&__filters-list {
 		display: grid;
-		gap: 0.5rem $gutter-x-mobile;
-
+		gap: 0.35rem $gutter-x-mobile;
+		grid-template-columns: repeat(2, 1fr);
+		@media (min-width: $md6) {
+			grid-template-columns: 1fr;
+		}
 		@media (min-width: $md5) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-auto-flow: column;
