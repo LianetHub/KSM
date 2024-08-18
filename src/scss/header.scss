@@ -109,7 +109,9 @@
 			max-width: 100%;
 		}
 		&.header__logo_scaled {
-			transform: scale(0.525, 0.525) !important;
+			@media (min-width: $md2) {
+				transform: scale(0.525, 0.525) !important;
+			}
 		}
 		.header.open-menu & {
 			@media (max-width: $md6) {
