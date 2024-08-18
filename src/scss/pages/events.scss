@@ -70,6 +70,11 @@
 		@media (min-width: $md2) {
 			font-size: 1.125rem;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				font-weight: 500;
+			}
+		}
 	}
 	// .events__card
 	&__card {
