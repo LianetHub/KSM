@@ -26,6 +26,11 @@
 		font-size: 1.125rem;
 		line-height: 116.667%;
 	}
+	&.lh-lg {
+		@media (min-width: $md2) {
+			line-height: 133.333%;
+		}
+	}
 }
 
 .mb-0 {

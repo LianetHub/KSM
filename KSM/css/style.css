@@ -11,14 +11,6 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -29,6 +21,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -857,7 +857,7 @@ body.menu-lock {
 }
 
 .article__block:not(:first-child) {
-  margin-top: 1.65rem;
+  margin-top: 1.4rem;
 }
 
 .article__block:not(:first-child).xxl-offset {
@@ -1865,7 +1865,7 @@ body.menu-lock {
   }
 
   .article__block:not(:first-child).lg-offset {
-    margin-top: 2.88rem;
+    margin-top: 3.5rem;
   }
 
   .article__block:not(:first-child).md-offset {
@@ -2359,16 +2359,12 @@ body.menu-lock {
     padding: 1.125rem 0 3.75rem;
   }
 
-  .article__block:not(:first-child) {
-    margin-top: 1.75rem;
-  }
-
   .article__block:not(:first-child).lg-offset {
-    margin-top: 3.25rem;
+    margin-top: 3rem;
   }
 
   .article__block:not(:first-child).md-offset {
-    margin-top: 3.25rem;
+    margin-top: 2.5rem;
   }
 
   .article__block:not(:first-child).sm-offset {
@@ -2376,7 +2372,7 @@ body.menu-lock {
   }
 
   .article__list {
-    gap: 0.4rem 1.5rem;
+    gap: 0.3rem 1.5rem;
   }
 
   .products {
@@ -2650,11 +2646,11 @@ body.menu-lock {
   }
 
   .article__block:not(:first-child).lg-offset {
-    margin-top: 3.5rem;
+    margin-top: 3.125rem;
   }
 
   .article__block:not(:first-child).md-offset {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
 
   .products {
@@ -2901,6 +2897,10 @@ body.menu-lock {
     line-height: 116.667%;
   }
 
+  .text-block.lh-lg {
+    line-height: 133.333%;
+  }
+
   .slider__controls {
     margin-top: 0.44rem;
     font-size: 1.125rem;
@@ -3005,7 +3005,10 @@ body.menu-lock {
   }
 
   .article__list {
-    gap: 0.3rem 1.5rem;
+    gap: 0.4rem 1.5rem;
+  }
+
+  .article__list {
     margin-top: 1rem;
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);
@@ -3326,6 +3329,10 @@ body.menu-lock {
 
   .article__block:not(:first-child).xxl-offset {
     margin-top: 6rem;
+  }
+
+  .article__list {
+    gap: 0.3rem 1.5rem;
   }
 
   .products {

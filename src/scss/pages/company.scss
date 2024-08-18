@@ -15,10 +15,7 @@
 	// .article__block
 	&__block {
 		&:not(:first-child) {
-			margin-top: 1.65rem;
-			@media (min-width: $md4) {
-				margin-top: 1.75rem;
-			}
+			margin-top: 1.4rem;
 			@media (min-width: $md2) {
 				margin-top: 2.2rem;
 			}
@@ -43,13 +40,13 @@
 			&.lg-offset {
 				margin-top: 3.25rem;
 				@media (min-width: $md6) {
-					margin-top: 2.88rem;
+					margin-top: 3.5rem;
 				}
 				@media (min-width: $md4) {
-					margin-top: 3.25rem;
+					margin-top: 3rem;
 				}
 				@media (min-width: $md3) {
-					margin-top: 3.5rem;
+					margin-top: 3.125rem;
 				}
 				@media (min-width: $md2) {
 					margin-top: 4.1rem;
@@ -61,10 +58,10 @@
 					margin-top: 2.88rem;
 				}
 				@media (min-width: $md4) {
-					margin-top: 3.25rem;
+					margin-top: 2.5rem;
 				}
 				@media (min-width: $md3) {
-					margin-top: 3.5rem;
+					margin-top: 2.5rem;
 				}
 				@media (min-width: $md2) {
 					margin-top: 3.75rem;
@@ -146,13 +143,18 @@
 			grid-auto-flow: column;
 		}
 		@media (min-width: $md4) {
+			gap: 0.3rem $gutter-x;
+		}
+		@media (min-width: $md2) {
 			gap: 0.4rem $gutter-x;
 		}
 		@media (min-width: $md2) {
-			gap: 0.3rem $gutter-x;
 			margin-top: 1rem;
 			grid-template-columns: repeat(5, 1fr);
 			grid-template-rows: repeat(5, auto);
+		}
+		@media (min-width: $md1) {
+			gap: 0.3rem $gutter-x;
 		}
 	}
 	// .article__list-item
