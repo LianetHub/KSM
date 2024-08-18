@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1486,15 +1486,15 @@ body.menu-lock {
 }
 
 .events__block:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
 }
 
 .events__content {
-  margin-top: 1.125rem;
+  margin-top: 0.875rem;
 }
 
 .events__content .row {
-  --gutter-y: 2rem;
+  --gutter-y: 1.75rem;
 }
 
 .events__item {
@@ -1524,7 +1524,7 @@ body.menu-lock {
 
 .events__item-desc {
   line-height: 120%;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   font-size: 0.9375rem;
 }
 
@@ -1581,14 +1581,19 @@ body.menu-lock {
   --gutter-y: 1.5rem;
 }
 
+.event__time {
+  display: block;
+}
+
 .event__title {
-  margin-top: 0.88rem;
   font-weight: 700;
   font-size: 1.5rem;
+  line-height: 112.5%;
+  margin-top: 0.65rem;
 }
 
 .event__tagline {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .event__body {
@@ -1931,6 +1936,15 @@ body.menu-lock {
 
   .events {
     padding: 3.75rem 0 3rem;
+  }
+
+  .event__title {
+    margin-top: 0.88rem;
+    line-height: normal;
+  }
+
+  .event__tagline {
+    margin-top: 1.25rem;
   }
 
   .cart {
@@ -2445,7 +2459,7 @@ body.menu-lock {
   }
 
   .events {
-    padding: 0.25rem 0 3rem;
+    padding: 1.125rem 0 3rem;
   }
 
   .cart {
@@ -3127,15 +3141,23 @@ body.menu-lock {
   }
 
   .events {
+    padding: 0.25rem 0 3rem;
+  }
+
+  .events {
     padding: 1.5rem 0 4.06rem;
   }
 
   .events__block:not(:last-child) {
-    margin-bottom: 4.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .events__block.lg-offset:not(:last-child) {
+    margin-bottom: 3.75rem;
   }
 
   .events__content {
-    margin-top: 1.75rem;
+    margin-top: 1.5rem;
   }
 
   .events__item-desc {
@@ -3153,7 +3175,12 @@ body.menu-lock {
     line-height: 116.667%;
   }
 
+  .event__time {
+    margin-top: -0.25rem;
+  }
+
   .event__title {
+    margin-top: 1.5rem;
     font-size: 1.875rem;
   }
 
