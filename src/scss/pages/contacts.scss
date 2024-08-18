@@ -1,10 +1,13 @@
 .contacts {
 	padding: 1rem em(0) 3.75rem em(0);
-	@media (min-width: $md6) {
-		padding: em(0) em(0) 3.75rem em(0);
+	@media (min-width: $md5) {
+		padding: rem(60) em(0) 3.75rem em(0);
+	}
+	@media (min-width: $md4) {
+		padding: rem(18) em(0) 3.75rem em(0);
 	}
 	@media (min-width: $md2) {
-		padding: em(0) em(0) 4.5rem em(0);
+		padding: rem(6) em(0) 4.5rem em(0);
 	}
 	// .contacts__container
 	&__container {
@@ -33,10 +36,10 @@
 		font-size: 1.3125rem;
 		@media (min-width: $md6) {
 			font-size: 1.5rem;
-			margin-top: 1rem;
+			margin-top: 0.5rem;
 		}
 		@media (min-width: $md3) {
-			margin-top: 0;
+			margin-top: -0.25rem;
 		}
 		@media (min-width: $md2) {
 			font-size: 1.75rem;
