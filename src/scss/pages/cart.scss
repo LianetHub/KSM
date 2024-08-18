@@ -1,5 +1,14 @@
 .cart {
 	padding: 0rem 0 4.25rem;
+	@media (min-width: $md6) {
+		padding: 2.5rem 0 4.25rem;
+	}
+	@media (min-width: $md4) {
+		padding: 0.5rem 0 4.25rem;
+	}
+	@media (min-width: $md2) {
+		padding: 0rem 0 4.25rem;
+	}
 	// .cart__container
 	&__container {
 	}
@@ -12,20 +21,22 @@
 			margin-top: 4.5rem;
 		}
 		@media (min-width: $md2) {
-			margin-top: 7.5rem;
+			margin-top: 4rem;
 		}
-		.row {
+		& > .row {
+			--gutter-y: 3rem;
 			@media (max-width: $md6) {
-				--gutter-y: 2.7rem;
-			}
-		}
-		.form__label {
-			@media (max-width: $md6) {
-				margin-bottom: 0;
+				--gutter-y: 2.75rem;
 			}
 		}
 	}
 	&__form-footer {
 		margin-top: 3.75rem;
+		@media (min-width: $md0) {
+			margin-top: 3rem;
+		}
+		& .row {
+			--gutter-y: 1.5rem;
+		}
 	}
 }

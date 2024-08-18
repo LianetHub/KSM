@@ -16,7 +16,88 @@
                     <div class="cart__container">
                         <div class="products__cards">
                             <div class="row">
-                                @@for (var i = 0; i < 4; i++) { @@include("./html/_product-cart.html") } </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="products__card">
+                                        <a href="/product.html" class="products__card-image">
+                                            <picture>
+                                                <source media="(min-width: 1919.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1727.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1599.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1199.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1023.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 767.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 575.98px)" srcset="@img/product.png">
+                                                <img src="@img/product.png" alt="Фото категории">
+                                            </picture>
+                                        </a>
+                                        <a href="/product.html" class="products__card-name sm-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
+                                        <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                        <div class="products__card-info">
+                                            <span class="font-medium">Раствор:</span> красно-коричневый
+                                        </div>
+                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="products__card">
+                                        <a href="/product.html" class="products__card-image">
+                                            <picture>
+                                                <source media="(min-width: 1919.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1727.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1599.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1199.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 1023.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 767.98px)" srcset="@img/product.png">
+                                                <source media="(min-width: 575.98px)" srcset="@img/product.png">
+                                                <img src="@img/product.png" alt="Фото категории">
+                                            </picture>
+                                        </a>
+                                        <a href="/product.html" class="products__card-name sm-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
+                                        <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                        <div class="products__card-info">
+                                            <span class="font-medium">Раствор:</span> светло-серый
+                                        </div>
+                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="products__card">
+                                        <a href="/product.html" class="products__card-image">
+                                            <picture>
+                                                <source media="(min-width: $md0)" srcset="@img/product.png">
+                                                <source media="(min-width: $md1)" srcset="@img/product.png">
+                                                <source media="(min-width: $md2)" srcset="@img/product.png">
+                                                <source media="(min-width: $md3)" srcset="@img/product.png">
+                                                <source media="(min-width: $md4)" srcset="@img/product.png">
+                                                <source media="(min-width: $md5)" srcset="@img/product.png">
+                                                <source media="(min-width: $md6)" srcset="@img/product.png">
+                                                <img src="@img/product.png" alt="Фото категории">
+                                            </picture>
+                                        </a>
+                                        <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Глебово W162</a>
+                                        <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="products__card">
+                                        <a href="/product.html" class="products__card-image">
+                                            <picture>
+                                                <source media="(min-width: $md0)" srcset="@img/product.png">
+                                                <source media="(min-width: $md1)" srcset="@img/product.png">
+                                                <source media="(min-width: $md2)" srcset="@img/product.png">
+                                                <source media="(min-width: $md3)" srcset="@img/product.png">
+                                                <source media="(min-width: $md4)" srcset="@img/product.png">
+                                                <source media="(min-width: $md5)" srcset="@img/product.png">
+                                                <source media="(min-width: $md6)" srcset="@img/product.png">
+                                                <img src="@img/product.png" alt="Фото категории">
+                                            </picture>
+                                        </a>
+                                        <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Архангельское W162</a>
+                                        <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                    </div>
+                                </div>
                             </div>
                             <form action="#" class="cart__form form">
                                 <div class="row">
@@ -53,7 +134,7 @@
                                                 <input type="checkbox" name="nda" class="checkbox__input hidden" hidden>
                                                 <span class="checkbox__content">
                                                     ОЗНАКОМЛЕН(-А) И ПРИНИМАЮ УСЛОВИЯ
-                                                    ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+                                                    <a href="/privacy.html">ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</a>
                                                 </span>
                                             </label>
                                         </div>

@@ -10,7 +10,8 @@
 		font-size: 1.125rem;
 		line-height: 94.444%;
 		margin-bottom: 0.5rem;
-		@media (min-width: $md2) {
+
+		@media (min-width: $md0) {
 			margin-bottom: 1.25rem;
 		}
 	}
@@ -51,53 +52,6 @@
 		font-size: 0.75rem;
 		visibility: hidden;
 	}
-
-	// // .form__textarea
-	// &__textarea {
-	// 	resize: vertical;
-	// 	text-overflow: ellipsis;
-	// 	transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
-	// 	width: 100%;
-	// 	background: #fff;
-	// 	color: $dark;
-	// 	padding: 1.2rem 0.75rem;
-	// 	line-height: 140%;
-	// 	border-radius: 0.25rem;
-	// 	background: #f2f2f2;
-	// 	font-size: 0.875rem;
-	// 	height: rem(107);
-	// 	@media (min-width: $md5) {
-	// 		font-size: 1rem;
-	// 		height: 9rem;
-	// 	}
-	// 	@media (min-width: $md2) {
-	// 		font-size: 1.125rem;
-	// 	}
-	// 	&.form__textare_sm {
-	// 		font-size: 0.875rem;
-	// 		padding: 1rem 0.75rem;
-	// 		height: 6.6875rem;
-	// 	}
-	// 	&:focus {
-	// 		outline: rem(2) solid rgba($color: #fff, $alpha: 0.75);
-	// 	}
-	// 	&:hover,
-	// 	&:focus {
-	// 		border-color: #039;
-	// 	}
-	// 	&::placeholder {
-	// 		color: #a1a5a7;
-	// 		opacity: 1;
-	// 	}
-	// 	&:disabled {
-	// 		background: #dfe0e1;
-	// 		border-color: #dfe0e1;
-	// 	}
-	// 	&._error {
-	// 		background: #fff1ed;
-	// 		border-color: #fff1ed;
-	// 	}
-	// }
 }
 
 .btn {
@@ -177,6 +131,14 @@
 			border: rem(1) solid #000;
 			width: 1.5rem;
 			height: 1.5rem;
+		}
+		& a {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
