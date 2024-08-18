@@ -4,11 +4,16 @@
 	&.header_sm {
 		.header__container {
 			.row {
-				min-height: 7rem;
+				@media (min-width: $md4) {
+					min-height: 7rem;
+				}
 			}
 		}
 		.header__top {
 			height: 7rem;
+			@media (max-width: $md5) {
+				display: none;
+			}
 		}
 	}
 	&.open-menu {
@@ -36,6 +41,9 @@
 		}
 	}
 	&__top {
+		@media (max-width: $md5) {
+			display: none;
+		}
 		@media (hover: none) {
 			display: none;
 		}
