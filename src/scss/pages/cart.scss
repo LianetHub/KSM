@@ -13,9 +13,9 @@
 	&__container {
 	}
 	&__form {
-		margin-top: 4.5rem;
+		margin-top: 3.8rem;
 		@media (min-width: $md6) {
-			margin-top: 3.5rem;
+			margin-top: 3.25rem;
 		}
 		@media (min-width: $md3) {
 			margin-top: 4.5rem;
@@ -24,10 +24,7 @@
 			margin-top: 4rem;
 		}
 		& > .row {
-			--gutter-y: 3rem;
-			@media (max-width: $md6) {
-				--gutter-y: 2.75rem;
-			}
+			--gutter-y: 2.75rem;
 		}
 	}
 	&__form-footer {

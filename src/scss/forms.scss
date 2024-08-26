@@ -94,7 +94,7 @@
 }
 
 .checkbox {
-	margin-top: 2.25rem;
+	margin-top: 2rem;
 	display: block;
 
 	// .checkbox__input
@@ -113,11 +113,12 @@
 		position: relative;
 		display: block;
 		font-size: 0.75rem;
-		padding: 0.15rem 0 0.15rem 2.5rem;
+		padding: 0.15rem 0 0.15rem 2.35rem;
 		font-weight: 500;
 		line-height: 125%;
 		cursor: pointer;
 		user-select: none;
+		max-width: 24rem;
 		&::before {
 			content: "";
 			position: absolute;
@@ -134,6 +135,7 @@
 		}
 		& a {
 			text-decoration: underline;
+
 			@media (any-hover: hover) {
 				&:hover {
 					text-decoration: none;
