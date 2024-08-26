@@ -1,0 +1,56 @@
+.cases {
+	padding: 0.75rem 0 3.4rem;
+	@media (min-width: $md6) {
+		padding: 3.75rem 0 3.4rem;
+	}
+	@media (min-width: $md3) {
+		padding: 1.1rem 0 3.4rem;
+	}
+	@media (min-width: $md2) {
+		padding: 1.5rem 0 4rem;
+	}
+	// .cases__container
+	&__container {
+	}
+	// .cases__title
+	&__title {
+	}
+	// .cases__content
+	&__content {
+		margin-top: 1.88rem;
+		& > .row {
+			--gutter-y: #{rem(32)};
+		}
+	}
+	// .cases__item
+	&__item {
+	}
+	// .cases__item-image
+	&__item-image {
+		source,
+		img {
+			width: 100%;
+		}
+	}
+	// .cases__item-desc
+	&__item-desc {
+		margin-top: 1rem;
+		font-size: 1.125rem;
+		line-height: 133.333%;
+	}
+	// .cases__item-name
+	&__item-name {
+		font-weight: 500;
+	}
+	// .cases__item-project
+	&__item-project {
+	}
+	&__more {
+		margin-top: 1.25rem;
+		display: inline-block;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		line-height: 180%;
+		text-transform: uppercase;
+	}
+}

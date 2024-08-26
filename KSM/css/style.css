@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -618,6 +618,10 @@ body.menu-lock {
   -webkit-transform-origin: 0.125rem 0;
       -ms-transform-origin: 0.125rem 0;
           transform-origin: 0.125rem 0;
+}
+
+.header__logo.header__logo_offset {
+  margin-top: -0.25rem;
 }
 
 .header__logo svg {
@@ -1641,6 +1645,42 @@ body.menu-lock {
   --gutter-y: 1.5rem;
 }
 
+.cases {
+  padding: 0.75rem 0 3.4rem;
+}
+
+.cases__content {
+  margin-top: 1.88rem;
+}
+
+.cases__content > .row {
+  --gutter-y: 2rem;
+}
+
+.cases__item-image source,
+.cases__item-image img {
+  width: 100%;
+}
+
+.cases__item-desc {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 133.333%;
+}
+
+.cases__item-name {
+  font-weight: 500;
+}
+
+.cases__more {
+  margin-top: 1.25rem;
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 180%;
+  text-transform: uppercase;
+}
+
 @media (min-width: 429.98px) {
   .footer {
     font-size: 0.9375rem;
@@ -1975,6 +2015,10 @@ body.menu-lock {
 
   .cart__form {
     margin-top: 3.25rem;
+  }
+
+  .cases {
+    padding: 3.75rem 0 3.4rem;
   }
 }
 
@@ -2789,6 +2833,10 @@ body.menu-lock {
   .cart__form {
     margin-top: 4.5rem;
   }
+
+  .cases {
+    padding: 1.1rem 0 3.4rem;
+  }
 }
 
 @media (min-width: 1599.98px) {
@@ -2975,6 +3023,10 @@ body.menu-lock {
   .header__logo {
     max-width: 27.3125rem;
     margin-left: -2.85rem;
+  }
+
+  .header__logo.header__logo_offset {
+    margin-top: -0.55rem;
   }
 
   .header__logo.header__logo_scaled {
@@ -3249,6 +3301,10 @@ body.menu-lock {
 
   .cart__form {
     margin-top: 4rem;
+  }
+
+  .cases {
+    padding: 1.5rem 0 4rem;
   }
 }
 
