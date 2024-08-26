@@ -61,7 +61,7 @@
 		}
 	}
 	&__wrapper {
-		padding: 0.8rem 0 0.5rem;
+		padding: 0.5rem 0;
 		@media (min-width: $md6) {
 			padding: 0.8rem 0 0.9rem;
 		}
@@ -236,8 +236,10 @@
 		&.active {
 			visibility: visible;
 			color: #000;
-			font-size: 1.875rem;
-			font-weight: 400;
+			@media (min-width: $md2) {
+				font-size: 1.875rem;
+				font-weight: 400;
+			}
 			.header.open-menu & {
 				@media (max-width: $md5) {
 					color: #fff;

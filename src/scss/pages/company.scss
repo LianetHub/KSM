@@ -1,13 +1,13 @@
 .article {
 	padding: 1.5rem 0 3.75rem;
 	@media (min-width: $md6) {
-		padding: 1.125rem 0 4.13rem;
+		padding: 1.45rem 0 4.13rem;
 	}
 	@media (min-width: $md4) {
 		padding: 1.125rem 0 3.75rem;
 	}
 	@media (min-width: $md2) {
-		padding: 1.125rem 0 rem(72);
+		padding: 0.35rem 0 rem(72);
 	}
 	// .article__container
 	&__container {
