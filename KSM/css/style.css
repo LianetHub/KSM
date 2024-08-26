@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1485,6 +1485,10 @@ body.menu-lock {
   --gutter-y: 1.75rem;
 }
 
+.contacts__btn {
+  white-space: nowrap;
+}
+
 .contacts__map iframe {
   min-height: 13.4375rem;
   height: 100%;
@@ -1648,7 +1652,7 @@ body.menu-lock {
   }
 }
 
-@media (min-width: 575.98px) {
+@media (min-width: 619.98px) {
   body.menu-lock {
     overflow: visible;
   }
@@ -3410,7 +3414,7 @@ body.menu-lock {
   }
 
   .products.products_more {
-    padding-bottom: 5rem;
+    padding-bottom: 4.6rem;
   }
 
   .products.products_more .product__cards {
@@ -3605,6 +3609,10 @@ body.menu-lock {
     padding: 1.35rem 0 4rem;
   }
 
+  .products.products_more {
+    padding-bottom: 4.35rem;
+  }
+
   .products__filters {
     margin-top: -2rem;
   }
@@ -3701,9 +3709,13 @@ body.menu-lock {
   .products__card-price.sm-price {
     font-size: 0.9375rem;
   }
+
+  .contacts__container > .row {
+    --gutter-x: 1.5rem;
+  }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 619.98px) {
   .tablet-only {
     display: none;
   }

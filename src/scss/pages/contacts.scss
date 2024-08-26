@@ -13,6 +13,9 @@
 	&__container {
 		& > .row {
 			--gutter-y: #{rem(24)};
+			@media (max-width: $md5) {
+				--gutter-x: #{rem(24)};
+			}
 			@media (min-width: $md3) {
 				--gutter-y: 2.75rem;
 			}
@@ -125,6 +128,7 @@
 	}
 	// .contacts__btn
 	&__btn {
+		white-space: nowrap;
 	}
 	// .contacts__map
 	&__map {

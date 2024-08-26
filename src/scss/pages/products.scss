@@ -21,7 +21,10 @@
 	&.products_more {
 		padding-bottom: 3.75rem;
 		@media (min-width: $md1) {
-			padding-bottom: 5rem;
+			padding-bottom: 4.6rem;
+		}
+		@media (min-width: $md0) {
+			padding-bottom: 4.35rem;
 		}
 		.product__cards {
 			@media (min-width: $md1) {
