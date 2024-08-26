@@ -79,6 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        if (target.matches('.product__delete-btn')) {
+
+            target.classList.toggle('deleted');
+
+            if (target.matches('.deleted')) {
+                target.textContent = "Выбрать";
+            } else {
+                target.textContent = "УДАЛИТЬ";
+            }
+        }
+
 
     });
 

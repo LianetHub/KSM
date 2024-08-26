@@ -74,8 +74,10 @@
 	}
 	// .contacts__blocks
 	&__blocks {
+		max-width: rem(322);
 		@media (min-width: $md6) {
 			margin-top: 1.25rem;
+			max-width: 100%;
 		}
 		@media (min-width: $md3) {
 			margin-top: 0;
