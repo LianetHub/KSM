@@ -52,6 +52,16 @@
 	// .events__title
 	&__title {
 	}
+	// .events__items
+	&__items {
+		margin-top: 1rem;
+		@media (min-width: $md2) {
+			margin-top: 1.5rem;
+		}
+		.row {
+			--gutter-y: 1.75rem;
+		}
+	}
 	// .events__content
 	&__content {
 		margin-top: 1rem;
@@ -98,9 +108,11 @@
 		@media (min-width: $md2) {
 			font-size: 1.125rem;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				font-weight: 500;
+		&[href] {
+			@media (any-hover: hover) {
+				&:hover {
+					font-weight: 500;
+				}
 			}
 		}
 	}

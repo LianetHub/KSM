@@ -111,6 +111,11 @@
 			@media (min-width: $md2) {
 				margin-top: -0.55rem;
 			}
+			&.header__logo_scaled {
+				@media (min-width: $md2) {
+					margin-top: -0.25rem;
+				}
+			}
 		}
 		& svg {
 			& path {

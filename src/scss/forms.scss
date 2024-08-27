@@ -23,7 +23,7 @@
 		line-height: 140%;
 		border-radius: 0;
 		background: transparent;
-		border-bottom: rem(1) solid;
+		border-bottom: 1px solid;
 		color: currentColor;
 		font-size: 0.9375rem;
 		padding: 0.5rem 2rem 0.25rem 0;
@@ -68,7 +68,6 @@
 	font-size: 0.9375rem;
 	line-height: 1;
 	font-weight: 500;
-	// padding: 1rem;
 	padding: 0.969rem 0.9rem 0.969rem 1rem;
 	gap: 1rem;
 	&::after {
@@ -83,7 +82,11 @@
 			color: #fff;
 		}
 	}
-
+	&[download] {
+		&::after {
+			content: "↓";
+		}
+	}
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;
@@ -123,24 +126,25 @@
 			content: "";
 			position: absolute;
 			color: #fff;
-			top: 0.25rem;
+			top: 50%;
+			transform: translateY(-50%);
 			left: 0;
 			background: transparent;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: rem(1) solid #000;
+			border: 1px solid #000;
 			width: 1.5rem;
 			height: 1.5rem;
 		}
-		& a {
-			text-decoration: underline;
+		// & a {
+		// 	text-decoration: underline;
 
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
+		// 	@media (any-hover: hover) {
+		// 		&:hover {
+		// 			text-decoration: none;
+		// 		}
+		// 	}
+		// }
 	}
 }

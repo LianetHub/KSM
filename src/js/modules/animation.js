@@ -8,7 +8,9 @@ export const animation = () => {
         if (!logo) return;
 
         const isSmallScreen = window.innerWidth < 1600;
-        const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 25 : 600);
+        // const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 25 : 600);
+        // удалить потом добавление класса к логотипу - header__logo_animate-sm
+        const maxScroll = isSmallScreen ? 50 : 25;
 
         const logoCurrent = document.querySelector('.header__logo-current');
         const oneThirdScroll = maxScroll / 3;
@@ -16,7 +18,8 @@ export const animation = () => {
         gsap.set(logo, { scale: 1 });
         gsap.set(logoCurrent, { autoAlpha: 1 });
 
-        const scaleReductionFactor = isSmallScreen ? 0 : 0.475;
+        // const scaleReductionFactor = isSmallScreen ? 0 : 0.475;
+        const scaleReductionFactor = isSmallScreen ? 0 : 0.465;
 
 
         ScrollTrigger.create({

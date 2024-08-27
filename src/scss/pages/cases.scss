@@ -37,6 +37,8 @@
 		margin-top: 1rem;
 		font-size: 1.125rem;
 		line-height: 133.333%;
+		display: flex;
+		flex-direction: column;
 	}
 	// .cases__item-name
 	&__item-name {

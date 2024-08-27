@@ -608,14 +608,14 @@
 	}
 	// .product__delete-btn
 	&__delete-btn {
+		text-transform: uppercase;
 		&::before {
-			@extend %ic, .icon-clear;
+			@extend %ic, .icon-plus;
 			order: 1;
 		}
-		text-transform: uppercase;
-		&.deleted {
+		&.active {
 			&::before {
-				@extend %ic, .icon-plus;
+				@extend %ic, .icon-clear;
 			}
 		}
 		&::after {

@@ -9,6 +9,18 @@
 	@media (min-width: $md2) {
 		padding: 0.35rem 0 rem(72);
 	}
+	&.article_case {
+		padding: 1.5rem 0 3.75rem;
+		@media (min-width: $md6) {
+			padding: 4rem 0 4.13rem;
+		}
+		@media (min-width: $md4) {
+			padding: 2rem 0 3.75rem;
+		}
+		@media (min-width: $md2) {
+			padding: 2rem 0 rem(72);
+		}
+	}
 	// .article__container
 	&__container {
 	}
@@ -93,6 +105,18 @@
 	}
 	// .article__slider
 	&__slider {
+	}
+	&__desc {
+		padding-top: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		font-weight: 500;
+		line-height: 125%;
+		font-size: 0.75rem;
+		@media (min-width: $md3) {
+			line-height: 120%;
+			font-size: 0.9375rem;
+		}
 	}
 	&__text {
 		& p {

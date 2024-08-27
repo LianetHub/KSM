@@ -21,8 +21,8 @@
                         <div class="cases__content">
                             <div class="row">
                                 @@for (var i = 1; i < 12; i++) { <div class="col-lg-2 col-xs-4">
-                                    <div class="cases__item">
-                                        <div class="cases__item-image">
+                                    <a href="/case.html" class="cases__item">
+                                        <span class="cases__item-image">
                                             <picture>
                                                 <source media="(min-width: $md0)" srcset="@img/cases/`+i+`.jpg">
                                                 <source media="(min-width: $md1)" srcset="@img/cases/`+i+`.jpg">
@@ -33,12 +33,12 @@
                                                 <source media="(min-width: $md6)" srcset="@img/cases/`+i+`.jpg">
                                                 <img src="@img/cases/`+i+`.jpg" alt="Фото кейса">
                                             </picture>
-                                        </div>
-                                        <div class="cases__item-desc">
-                                            <div class="cases__item-name">Счастье на Серпуховке</div>
-                                            <div class="cases__item-project">UNK Architects</div>
-                                        </div>
-                                    </div>
+                                        </span>
+                                        <span class="cases__item-desc">
+                                            <span class="cases__item-name">Счастье на Серпуховке</span>
+                                            <span class="cases__item-project">UNK Architects</span>
+                                        </span>
+                                    </a>
                             </div>}
                         </div>
                         <a href="" class="cases__more">Показать ещё ↓</a>

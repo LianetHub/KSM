@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     devFunctions.OS();
     devFunctions.isWebp();
-    devFunctions.checkEmptyInputs()
-    devFunctions.animation()
+    devFunctions.checkEmptyInputs();
+    devFunctions.animation();
+    devFunctions.mask();
 
 
 
@@ -63,35 +64,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.matches('.products__card-btn')) {
             target.classList.toggle('active');
-            if (target.classList.contains('active')) {
-                document.querySelector('.header__menu-cart').innerHTML++;
-            } else {
-                document.querySelector('.header__menu-cart').innerHTML--;
-            }
-            getFixedMenu();
-            setTimeout(() => {
-                removeFixedMenu()
-            }, 2000)
-            if (document.querySelector('.header__menu-cart').innerHTML > 0) {
-                document.querySelector('.header__menu-cart').classList.add('active')
-            } else {
-                document.querySelector('.header__menu-cart').classList.remove('active')
-            }
+            getQuantityCart(target);
         }
 
         if (target.matches('.product__delete-btn')) {
 
-            target.classList.toggle('deleted');
+            target.classList.toggle('active');
 
-            if (target.matches('.deleted')) {
-                target.textContent = "Выбрать";
-            } else {
+            if (target.matches('.active')) {
                 target.textContent = "УДАЛИТЬ";
+            } else {
+                target.textContent = "Выбрать";
             }
+            getQuantityCart(target);
         }
 
 
     });
+
+    function getQuantityCart(target) {
+        if (target.classList.contains('active')) {
+            document.querySelector('.header__menu-cart').innerHTML++;
+        } else {
+            document.querySelector('.header__menu-cart').innerHTML--;
+        }
+        getFixedMenu();
+        setTimeout(() => {
+            removeFixedMenu()
+        }, 2000)
+        if (document.querySelector('.header__menu-cart').innerHTML > 0) {
+            document.querySelector('.header__menu-cart').classList.add('active')
+        } else {
+            document.querySelector('.header__menu-cart').classList.remove('active')
+        }
+    }
 
     function getMenu() {
         document.body.classList.toggle('menu-lock');
@@ -185,7 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header__logo').classList.remove('visible');
     }
 
-
+    // disable form submit
+    if (document.querySelector('[name="nda"]')) {
+        document.querySelector('[name="nda"]').addEventListener('change', (e) => {
+            if (e.target.checked) {
+                e.target?.closest('form')?.querySelector('button[type="submit"]').removeAttribute('disabled');
+            } else {
+                e.target?.closest('form')?.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+            }
+        })
+    }
 
 
 
