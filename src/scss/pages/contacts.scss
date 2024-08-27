@@ -132,6 +132,9 @@
 	}
 	// .contacts__map
 	&__map {
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
 		& iframe {
 			min-height: 13.4375rem;
 			@media (min-width: $md4) {
@@ -148,6 +151,7 @@
 			}
 			height: 100%;
 			width: 100%;
+			flex: 1 1 auto;
 		}
 	}
 }
