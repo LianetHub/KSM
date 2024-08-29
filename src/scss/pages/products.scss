@@ -16,7 +16,7 @@
 		padding: 1.35rem 0 5.5rem;
 	}
 	@media (min-width: $md0) {
-		padding: 1.35rem 0 4rem;
+		padding: 1.25rem 0 4rem;
 	}
 	&.products_more {
 		padding-bottom: 3.75rem;
@@ -104,6 +104,24 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+	&__body {
+		position: relative;
+		&._loading {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($color: #fff, $alpha: 0.5);
+				z-index: 2;
+			}
+		}
+		&::after {
+			top: 25vh;
 		}
 	}
 	// .products__cards
@@ -296,8 +314,8 @@
 			}
 		}
 	}
-	// .products__filters-caption
-	&__filters-caption {
+	// .products__filters-header
+	&__filters-header {
 		font-size: 1rem;
 		font-weight: 700;
 		line-height: 1.125rem;
@@ -305,9 +323,7 @@
 		justify-content: space-between;
 		border-bottom: rem(1) solid;
 		padding-bottom: 0.5rem;
-		@media (min-width: $md0) {
-			padding-bottom: 0.35rem;
-		}
+
 		&::before {
 			order: 1;
 		}
@@ -321,16 +337,34 @@
 	&__filters-price {
 		font-size: 1rem;
 		line-height: 150%;
-		border-bottom: rem(1) solid;
-		padding: 0rem 0 0.3rem;
-		&:not(:last-child) {
-			margin-bottom: 1.15rem;
+		position: relative;
+		& span {
+			position: absolute;
+			top: 45%;
+			transform: translateY(-50%);
+			line-height: 1.25;
 		}
-		@media (min-width: $md0) {
-			padding: 0rem 0 0.6rem;
-			&:not(:last-child) {
-				margin-bottom: 0.8rem;
+		.form__input {
+			padding-top: 0;
+			font-size: 1rem;
+			&::placeholder {
+				color: #000;
 			}
+			&:focus {
+				&::placeholder {
+					opacity: 0;
+				}
+			}
+			&[name="start-price"] {
+				padding-left: 1.75rem;
+			}
+			&[name="end-price"] {
+				padding-left: 2rem;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
 		}
 	}
 	// .products__filters-body
@@ -340,9 +374,6 @@
 			display: block;
 		}
 		margin-top: 1.15rem;
-		@media (min-width: $md0) {
-			margin-top: 1rem;
-		}
 		&.active {
 			display: block;
 		}
@@ -377,7 +408,17 @@
 	// .products__filters-item
 	&__filters-item {
 		margin-right: -0.75rem;
+		cursor: pointer;
 	}
+	// .products__filters-input
+	&__filters-input {
+		&:checked {
+			& + span {
+				font-weight: 500;
+			}
+		}
+	}
+
 	// .products__more
 	&__more {
 		display: inline-block;

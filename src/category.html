@@ -15,92 +15,232 @@
             <main class="page">
                 <section class="products">
                     <div class="products__container">
-                        <div class="products__filters">
+                        <form action="#" class="products__filters">
                             <div class="row">
-                                <div class="col-md-2 col-xs-4">
-                                    <div class="products__filters-caption">Цена</div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Цена</div>
+                                    </div>
                                     <div class="products__filters-body">
                                         <div class="products__filters-price">
-                                            От 1000 ₽/м²
+                                            <span>От</span>
+                                            <input type="text" name="start-price" autocomplete="off" class="form__input" placeholder="1000 ₽/м²">
                                         </div>
                                         <div class="products__filters-price">
-                                            До 7000 ₽/м²
+                                            <span>До</span>
+                                            <input type="text" name="end-price" autocomplete="off" class="form__input" placeholder="7000 ₽/м²">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-xs-4">
-                                    <div class="products__filters-caption active">Цвет</div>
-                                    <div class="products__filters-body active">
-                                        <ul class="products__filters-list">
-                                            <li class="products__filters-item font-medium">Белый</li>
-                                            <li class="products__filters-item">Слоновая кость</li>
-                                            <li class="products__filters-item">Соломенный</li>
-                                            <li class="products__filters-item">Жёлтый</li>
-                                            <li class="products__filters-item">Красный</li>
-                                            <li class="products__filters-item">Коричневый</li>
-                                            <li class="products__filters-item">Серый</li>
-                                            <li class="products__filters-item">Чёрный</li>
-                                            <li class="products__filters-item">Пёстрый</li>
-                                        </ul>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Цвет</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
+                                    <div class="products__filters-body ">
+                                        <div class="products__filters-list">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Белый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Слоновая кость
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Соломенный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Жёлтый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Красный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Коричневый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Серый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Чёрный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Пёстрый
+                                                </span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-xs-4">
-                                    <div class="products__filters-caption">Бренд</div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Бренд</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
                                     <div class="products__filters-body">
-                                        <ul class="products__filters-list">
-                                            <li class="products__filters-item">Донские Зори</li>
-                                            <li class="products__filters-item">Сафоновский КЗ</li>
-                                            <li class="products__filters-item">Wienerberger</li>
-                                            <li class="products__filters-item">Terca</li>
-                                            <li class="products__filters-item">Engels</li>
-                                            <li class="products__filters-item">Muhr</li>
-                                            <li class="products__filters-item">Recke</li>
-                                            <li class="products__filters-item">ЛСР</li>
-                                            <li class="products__filters-item">Terex</li>
-                                        </ul>
+                                        <div class="products__filters-list">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Донские Зори
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Сафоновский КЗ
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Wienerberger
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Terca
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Engels
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Muhr
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Recke
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    ЛСР
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Terex
+                                                </span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-xs-4">
-                                    <div class="products__filters-caption">Страна</div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Страна</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
                                     <div class="products__filters-body">
-                                        <ul class="products__filters-list">
-                                            <li class="products__filters-item">Россия</li>
-                                            <li class="products__filters-item">Бельгия</li>
-                                            <li class="products__filters-item">Голландия</li>
-                                            <li class="products__filters-item">Великобритания</li>
-                                            <li class="products__filters-item">Германия</li>
-                                            <li class="products__filters-item">Эстония</li>
-                                            <li class="products__filters-item">Финляндия</li>
-                                        </ul>
+                                        <div class="products__filters-list">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Россия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Бельгия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Голландия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Великобритания
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Германия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Эстония
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Финляндия
+                                                </span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <h1 class="products__title title">Кирпич ручной формовки</h1>
-                        <div class="products__cards">
-                            <div class="row">
-                                @@for (var i = 0; i < 15; i++) { @@include("./html/_product.html") } <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
-                                            <picture>
-                                                <source media="(min-width: $md0)" srcset="@img/product.png">
-                                                <source media="(min-width: $md1)" srcset="@img/product.png">
-                                                <source media="(min-width: $md2)" srcset="@img/product.png">
-                                                <source media="(min-width: $md3)" srcset="@img/product.png">
-                                                <source media="(min-width: $md4)" srcset="@img/product.png">
-                                                <source media="(min-width: $md5)" srcset="@img/product.png">
-                                                <source media="(min-width: $md6)" srcset="@img/product.png">
-                                                <img src="@img/product.png" alt="Фото категории">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
+                        </form>
+                        <div class="products__body">
+                            <h1 class="products__title title">Кирпич ручной формовки</h1>
+                            <div class="products__cards">
+                                <div class="row">
+                                    @@for (var i = 0; i < 15; i++) { @@include("./html/_product.html") } <div class="col-lg-2 col-xs-4">
+                                        <div class="products__card">
+                                            <a href="/product.html" class="products__card-image">
+                                                <picture>
+                                                    <source media="(min-width: $md0)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md1)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md2)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md3)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md4)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md5)" srcset="@img/product.png">
+                                                    <source media="(min-width: $md6)" srcset="@img/product.png">
+                                                    <img src="@img/product.png" alt="Фото категории">
+                                                </picture>
+                                            </a>
+                                            <a href="/product.html" class="products__card-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
+                                            <div class="products__card-price">3019,89 ₽/м²</div>
+                                            <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                        </div>
+                                </div>
                             </div>
                         </div>
+                        <a href="" class="products__more">Показать ещё ↓</a>
                     </div>
-                    <a href="" class="products__more">Показать ещё ↓</a>
         </div>
         </section>
         </main>

@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.checkEmptyInputs();
     devFunctions.animation();
     devFunctions.mask();
+    devFunctions.filter();
 
 
 
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.classList.contains('products__filters-caption')) {
             target.classList.toggle('active');
-            target.nextElementSibling.classList.toggle('active');
+            target.parentNode.nextElementSibling.classList.toggle('active');
         }
 
         if (target.matches('.swiper-pagination-current')) {
@@ -56,10 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderBlock && sliderBlock.swiper.slideNext();
         }
 
-        if (target.matches('.header__menu-link')) {
+        if (target.matches('.header__menu-link') && target.getAttribute('href').startsWith('#')) {
             document.querySelector('.header').style = "";
             document.querySelector('.header').classList.remove('fixed');
-            document.querySelector('.logo').classList.remove('visible');
+            document.querySelector('.header__logo').classList.remove('visible');
         }
 
         if (target.matches('.products__card-btn')) {
@@ -161,16 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.header__logo')) {
 
         document.querySelector('.header__logo').addEventListener('mouseenter', (e) => {
-            getFixedMenu()
+            if (scrollY > document.querySelector('.header').offsetHeight) {
+                getFixedMenu()
+            }
         })
         document.querySelector('.header__top').addEventListener('mouseenter', (e) => {
-            getFixedMenu()
+            if (scrollY > document.querySelector('.header').offsetHeight) {
+                getFixedMenu()
+            }
         })
         document.querySelector('.header').addEventListener('mouseleave', (e) => {
 
-            document.querySelector('.header').style = "";
-            document.querySelector('.header').classList.remove('fixed');
-            document.querySelector('.header__logo').classList.remove('visible');
+            removeFixedMenu()
 
         });
 
@@ -179,14 +182,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function getFixedMenu() {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
-            document.querySelector('.header').style.setProperty('height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
+            document.body.style.setProperty('margin-top', `${document.querySelector('.header__wrapper').offsetHeight}px`)
             document.querySelector('.header').classList.add('fixed');
             logo.classList.add('visible');
         }
     }
 
     function removeFixedMenu() {
-        document.querySelector('.header').style = "";
+        document.body.style = "";
         document.querySelector('.header').classList.remove('fixed');
         document.querySelector('.header__logo').classList.remove('visible');
     }
