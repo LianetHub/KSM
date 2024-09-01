@@ -4,7 +4,7 @@ export { checkEmptyInputs } from './checkEmptyInputs.js';
 export { animation } from './animation.js';
 export { mask } from './maskRussua.js';
 export { filter } from './filter.js';
-// export { beforeSlider } from './before-slider.js';
+export { cookies } from './cookies.js';
 // export { formSubmit } from './formsubmit.js';
 // export { toggleLocking } from "./toggleLocking.js";
 // export { intInputMask } from './intInputMask.js';

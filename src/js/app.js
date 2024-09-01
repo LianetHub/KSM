@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.animation();
     devFunctions.mask();
     devFunctions.filter();
+    devFunctions.cookies();
 
 
 

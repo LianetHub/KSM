@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -11,8 +19,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -278,6 +278,30 @@ body.menu-lock {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #808080;
+  z-index: 2;
+  padding: 1.12rem;
+}
+
+.cookie__container .row > * {
+  padding: 0;
+}
+
+.cookie__btn::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.cookie__btn::after {
+  display: none;
 }
 
 .title {
@@ -572,6 +596,17 @@ body.menu-lock {
 .btn.btn-primary:active {
   background: #000;
   color: #fff;
+}
+
+.btn.btn-white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn.btn-white:hover,
+.btn.btn-white:active {
+  background: #fff;
+  color: #000;
 }
 
 .btn[download]::after {
@@ -1058,6 +1093,7 @@ body.menu-lock {
 .products__category-image {
   background: #f2f4f3;
   position: relative;
+  overflow: hidden;
   height: 0;
   margin-top: 0.75rem;
   padding-bottom: 78%;
@@ -3965,6 +4001,10 @@ body.menu-lock {
 }
 
 @media (max-width: 619.98px) {
+  .cookie__container {
+    padding: 0 0rem 0 1.5rem;
+  }
+
   .tablet-only {
     display: none;
   }
@@ -4041,6 +4081,13 @@ body.menu-lock {
   }
 }
 
+@media (max-width: 429.98px) {
+  .cookie__btn {
+    font-size: 0.65rem;
+    gap: 0.25rem;
+  }
+}
+
 @media (hover: none) {
   .header__top {
     display: none;
@@ -4080,6 +4127,13 @@ body.menu-lock {
 
   .article__list-link:hover::after {
     visibility: visible;
+  }
+
+  .products__category-image:hover source,
+  .products__category-image:hover img {
+    -webkit-transform: scale(2.5);
+        -ms-transform: scale(2.5);
+            transform: scale(2.5);
   }
 
   .products__card-btn:hover {

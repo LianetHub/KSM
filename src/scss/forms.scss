@@ -82,6 +82,15 @@
 			color: #fff;
 		}
 	}
+	&.btn-white {
+		border: 1px solid #fff;
+		color: #fff;
+		&:hover,
+		&:active {
+			background: #fff;
+			color: #000;
+		}
+	}
 	&[download] {
 		&::after {
 			content: "↓";
