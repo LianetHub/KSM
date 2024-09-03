@@ -135,6 +135,9 @@
 		min-height: 100%;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		background: #e5e5e5;
 		& iframe {
 			min-height: 13.4375rem;
 			@media (min-width: $md4) {

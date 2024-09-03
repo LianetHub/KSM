@@ -84,7 +84,7 @@ export const filter = () => {
         clearTimeout(filterTimeout);
         filterTimeout = setTimeout(() => {
             sendFilterRequest();
-        }, 2000);
+        }, 500);
     }
 
     function sendFilterRequest() {
@@ -92,7 +92,7 @@ export const filter = () => {
         filterBody.classList.add('_loading');
         setTimeout(() => {
             filterBody.classList.remove('_loading');
-        }, 2000)
+        }, 500)
 
         // fetch(filterForm.action, {
         //     method: 'GET',

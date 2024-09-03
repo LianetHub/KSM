@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     }
+
     function getFixedMenu() {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
@@ -204,6 +205,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.target?.closest('form')?.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
             }
         })
+    }
+
+
+    const colorOptions = document.querySelectorAll('input[name="product-color"]');
+    const visualElement = document.querySelector('.product__options-visual');
+
+    if (colorOptions && visualElement) {
+
+        colorOptions.forEach(option => {
+
+            option.addEventListener('change', function () {
+                if (this.checked) {
+                    visualElement.style.setProperty('--seam-color', `url('../img/colors/${this.value}.png')`);
+
+                }
+            });
+        });
     }
 
 

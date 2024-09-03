@@ -38,10 +38,10 @@
     <meta property="twitter:image:src" content="/OG.png">
     <!-- Twitter -->
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240901194200">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240903221806">
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/reset.min.css?_v=20240901194200">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240901194200">
+    <link rel="stylesheet" href="css/reset.min.css?_v=20240903221806">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240903221806">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
                 <div class="header__container">
                     <div class="row">
                         <div class="col-sm-2 col-xs-1 col-4">
-                            <a href="/" class="header__logo header__logo_animate-sm">
+                            <a href="#" class="header__logo header__logo_animate-sm">
                                 <svg width="437" viewBox="0 0 437 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
                                     <path d="M46.004 0.800781L25.956 19.5048L46.004 40.0008H40.404L22.26 21.6328H7.7V40.0008H3.5V0.800781H7.7V18.0488H22.148L40.46 0.800781H46.004Z" fill="black"></path>
                                     <g class="header__logo-current">
@@ -114,12 +114,12 @@
                                 </div>
                                 <div class="products__filters-body">
                                     <div class="products__filters-price">
-                                        <span>От</span>
-                                        <input type="text" name="start-price" autocomplete="off" class="form__input" placeholder="1000 ₽/м²">
+                                        <label for="start-price">От</label>
+                                        <input type="text" id="start-price" name="start-price" autocomplete="off" class="form__input" placeholder="1000 ₽/м²">
                                     </div>
                                     <div class="products__filters-price">
-                                        <span>До</span>
-                                        <input type="text" name="end-price" autocomplete="off" class="form__input" placeholder="7000 ₽/м²">
+                                        <label for="end-price">До</label>
+                                        <input type="text" id="end-price" name="end-price" autocomplete="off" class="form__input" placeholder="7000 ₽/м²">
                                     </div>
                                 </div>
                             </div>
@@ -261,23 +261,12 @@
                             <div class="row">
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -287,23 +276,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -313,23 +291,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -339,23 +306,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -365,23 +321,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -391,23 +336,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -417,23 +351,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -443,23 +366,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -469,23 +381,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -495,23 +396,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -521,23 +411,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -547,23 +426,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -573,23 +441,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -599,23 +456,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -625,23 +471,12 @@
                                 </div>
                                 <div class="col-lg-2 col-xs-4">
                                     <div class="products__card">
-                                        <a href="/product.html" class="products__card-image">
+                                        <a href="/product.html" class="products__card-image has-hover">
                                             <picture>
-                                                <source type="image/webp" media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1919.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1727.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1599.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1199.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 1023.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 767.98px)" srcset="img/product.png">
-                                                <source type="image/webp" media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source media="(min-width: 575.98px)" srcset="img/product.png">
-                                                <source type="image/webp" srcset="img/product.png"><img src="img/product.png" alt="Фото категории">
+                                                <source srcset="img/product.webp" type="image/webp"><img src="img/product.png" alt="Фото категории">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="img/hover-product.webp" type="image/webp"><img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
                                             </picture>
                                         </a>
                                         <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
@@ -731,11 +566,11 @@
             </div>
         </footer>
     </div> <!-- plugnis -->
-    <script src="js/libs/swiper-bundle.min.js?_v=20240901194200"></script>
-    <script src="js/libs/gsap.min.js?_v=20240901194200"></script>
-    <script src="js/libs/ScrollTrigger.min.js?_v=20240901194200"></script>
+    <script src="js/libs/swiper-bundle.min.js?_v=20240903221806"></script>
+    <script src="js/libs/gsap.min.js?_v=20240903221806"></script>
+    <script src="js/libs/ScrollTrigger.min.js?_v=20240903221806"></script>
     <!-- plugnis -->
-    <script src="js/app.min.js?_v=20240901194200"></script>
+    <script src="js/app.min.js?_v=20240903221806"></script>
 </body>
 
 </html>

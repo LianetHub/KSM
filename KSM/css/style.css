@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1162,8 +1162,6 @@ body.menu-lock {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .products__card-image picture img,
@@ -1172,6 +1170,25 @@ body.menu-lock {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.products__card-image > img,
+.products__card-image > source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products__card-image.has-hover img:not(.hover-img) {
+  display: block;
+}
+
+.products__card-image.has-hover img.hover-img {
+  display: none;
 }
 
 .products__card-name {
@@ -1271,7 +1288,7 @@ body.menu-lock {
   position: relative;
 }
 
-.products__filters-price span {
+.products__filters-price label {
   position: absolute;
   top: 45%;
   -webkit-transform: translateY(-50%);
@@ -1441,6 +1458,20 @@ body.menu-lock {
 
 .product__options-body {
   margin-top: 1.45rem;
+}
+
+.product__options-visual {
+  position: relative;
+}
+
+.product__options-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--seam-color) center/cover no-repeat;
 }
 
 .product__options-colors {
@@ -1688,6 +1719,9 @@ body.menu-lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #e5e5e5;
 }
 
 .contacts__map iframe {
@@ -4129,11 +4163,12 @@ body.menu-lock {
     visibility: visible;
   }
 
-  .products__category-image:hover source,
-  .products__category-image:hover img {
-    -webkit-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-            transform: scale(2.5);
+  .products__card-image.has-hover:hover img:not(.hover-img) {
+    display: none;
+  }
+
+  .products__card-image.has-hover:hover img.hover-img {
+    display: block;
   }
 
   .products__card-btn:hover {

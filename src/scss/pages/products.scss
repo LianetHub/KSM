@@ -106,14 +106,6 @@
 			height: 100%;
 			object-fit: cover;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				& source,
-				& img {
-					transform: scale(2.5);
-				}
-			}
-		}
 	}
 	&__body {
 		position: relative;
@@ -191,13 +183,42 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: 100%;
 			& img,
 			source {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+		& > img,
+		& > source {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.has-hover {
+			& img {
+				&:not(.hover-img) {
+					display: block;
+				}
+				&.hover-img {
+					display: none;
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					& img {
+						&:not(.hover-img) {
+							display: none;
+						}
+						&.hover-img {
+							display: block;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -347,7 +368,7 @@
 		font-size: 1rem;
 		line-height: 150%;
 		position: relative;
-		& span {
+		& label {
 			position: absolute;
 			top: 45%;
 			transform: translateY(-50%);
@@ -539,6 +560,16 @@
 	}
 	// .product__options-visual
 	&__options-visual {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--seam-color) center / cover no-repeat;
+		}
 	}
 	// .product__options-colors
 	&__options-colors {
