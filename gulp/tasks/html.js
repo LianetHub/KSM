@@ -11,6 +11,11 @@ function addWebpSources() {
             const $ = cheerio.load(file.contents.toString());
             $('picture').each(function () {
                 const picture = $(this);
+
+                if (picture.closest('.products__card-image').length > 0) {
+                    return;
+                }
+
                 const img = picture.find('img');
                 const imgSrc = img.attr('src');
 
