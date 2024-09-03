@@ -62,7 +62,10 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 10%;
+			width: 40%;
+			@media (min-width: $md5) {
+				width: 10%;
+			}
 			height: 100%;
 			z-index: 2;
 			cursor: pointer;
@@ -72,7 +75,10 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 10%;
+			width: 40%;
+			@media (min-width: $md5) {
+				width: 10%;
+			}
 			height: 100%;
 			cursor: pointer;
 			z-index: 2;

@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -346,7 +346,7 @@ body.menu-lock {
   position: absolute;
   top: 0;
   left: 0;
-  width: 10%;
+  width: 40%;
   height: 100%;
   z-index: 2;
   cursor: pointer;
@@ -357,7 +357,7 @@ body.menu-lock {
   position: absolute;
   top: 0;
   right: 0;
-  width: 10%;
+  width: 40%;
   height: 100%;
   cursor: pointer;
   z-index: 2;
@@ -704,7 +704,7 @@ body.menu-lock {
 }
 
 .header__logo.header__logo_offset {
-  margin-top: -0.25rem;
+  margin-top: -0.3rem;
 }
 
 .header__logo svg {
@@ -820,6 +820,7 @@ body.menu-lock {
   display: block;
   padding: 0.21875rem 0rem;
   width: 100%;
+  will-change: contents;
   will-change: transform;
 }
 
@@ -996,9 +997,12 @@ body.menu-lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-weight: 500;
   line-height: 125%;
   font-size: 0.75rem;
+}
+
+.article__desc strong {
+  font-weight: 500;
 }
 
 .article__text p:not(:last-child) {
@@ -2427,6 +2431,14 @@ body.menu-lock {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+
+  .slider__slide::before {
+    width: 10%;
+  }
+
+  .slider__slide::after {
+    width: 10%;
   }
 
   .header__top {

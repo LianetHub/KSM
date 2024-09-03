@@ -110,9 +110,11 @@
 		padding-top: 0.5rem;
 		display: flex;
 		flex-direction: column;
-		font-weight: 500;
 		line-height: 125%;
 		font-size: 0.75rem;
+		& strong {
+			font-weight: 500;
+		}
 		@media (min-width: $md3) {
 			line-height: 120%;
 			font-size: 0.9375rem;

@@ -107,7 +107,7 @@
 			}
 		}
 		&.header__logo_offset {
-			margin-top: -0.25rem;
+			margin-top: -0.3rem;
 			@media (min-width: $md2) {
 				margin-top: -0.55rem;
 			}
@@ -350,6 +350,7 @@
 			padding: rem(4.5) rem(0);
 		}
 		width: 100%;
+		will-change: contents;
 		// transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
 		will-change: transform;
 		&::before {
@@ -360,6 +361,7 @@
 			margin-left: auto;
 			background: currentColor;
 			border-radius: 0;
+
 			// transition: transform 0.3s ease 0s;
 			will-change: transform;
 		}

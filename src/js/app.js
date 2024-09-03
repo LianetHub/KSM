@@ -59,9 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (target.matches('.header__menu-link') && target.getAttribute('href').startsWith('#')) {
-            document.querySelector('.header').style = "";
-            document.querySelector('.header').classList.remove('fixed');
-            document.querySelector('.header__logo').classList.remove('visible');
+            removeFixedMenu()
+        }
+
+        if (target.closest('.header__logo') && target.closest('.header__logo').getAttribute('href').startsWith('#')) {
+            removeFixedMenu()
         }
 
         if (target.matches('.products__card-btn')) {
