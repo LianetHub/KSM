@@ -1,107 +1,54 @@
-.fancybox__container {
-	max-width: 100% !important;
-	padding: 0 !important;
-}
-
-.fancybox__slide {
-	padding-block: 4.75rem;
-	padding-inline: 0;
-	@media (min-width: $md4) {
-		padding-block: 2.5rem;
-	}
-}
-
-.fancybox__backdrop {
-	background: rgba($color: #161c24, $alpha: 0.6);
-}
-
-.fancybox__content {
-	color: inherit;
-	background: none;
-	padding: 0;
-}
-
-.fancybox__content :focus:not(.carousel__button.is-close) {
-	outline: none;
-}
-
 .popup {
 	display: none;
-	width: 100%;
-	padding: 0;
-	background: none;
-	max-width: rem(500);
-
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow-y: auto;
+	background: #e5e5e5;
+	&.open {
+		display: flex;
+		flex-direction: column;
+	}
+	// .popup__header
+	&__header {
+		padding: 0.8rem 0;
+	}
+	// .popup__logo
+	&__logo {
+		position: relative;
+		z-index: 16;
+		max-width: rem(235);
+		display: block;
+		position: fixed;
+		margin-left: -2.05rem;
+		transform-origin: 0.125rem 0;
+		@media (min-width: $md6) {
+			transform-origin: 0.5rem 0;
+			margin-left: -2.65rem;
+			clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
+		}
+		@media (min-width: $md5) {
+			clip-path: none;
+		}
+		@media (min-width: $md2) {
+			max-width: rem(437);
+			margin-left: -2.85rem;
+		}
+		// @media (min-width: $md2) {
+		// }
+		transform: scale(0.525, 0.525) !important;
+	}
 	// .popup__body
 	&__body {
-		position: relative;
-		width: 100%;
-		background: #ffffff;
-		color: $dark;
-		padding: rem(40) rem(16) rem(30);
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		@media (min-width: $md5) {
-			padding: 2.69rem 2.25rem;
-		}
+		flex: 1 1 auto;
 	}
-	&__title {
-		text-align: center;
-
-		font-weight: 500;
-		line-height: 120%;
-		font-size: 1.25rem;
-		@media (min-width: $md5) {
-			font-size: 2rem;
-		}
-	}
-	&__subtitle {
-		margin-top: 1.5rem;
-		text-align: center;
-		font-size: 1.125rem;
-		line-height: 140%;
-		max-width: 21.20813rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	&__form {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-		margin-top: 1rem;
-		@media (min-width: $md5) {
-			margin-top: 1.5rem;
-		}
-		.btn {
-			min-height: rem(76);
-		}
-	}
-	&__btn {
-		margin-top: 1.5rem;
-		min-width: 12.125rem;
-	}
-	&__close {
-		position: absolute;
-
-		background: none;
-		top: 0.5rem;
-		right: 0.5rem;
-		font-size: 1.25rem;
-		@media (min-width: $md4) {
-			font-size: 1.5rem;
-			top: 0.75rem;
-			right: 0.87rem;
-		}
-		color: #1f2b32;
-		transition: color 0.3s ease 0s;
-		&::before {
-			@extend %ic, .icon-close;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
+	// .popup__link
+	&__link {
+		&.active {
+			font-weight: 500;
 		}
 	}
 }

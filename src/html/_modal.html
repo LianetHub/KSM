@@ -1,54 +1,46 @@
-<div id="consult" class="popup">
+<div id="overlay" class="popup lock-padding">
+    <div class="popup__header">
+        <div class="popup__container">
+            <div class="row">
+                <div class="col-sm-2 col-xs-1 col-4">
+                    <div class="popup__logo logo">
+                        <svg width="437" viewBox="0 0 437 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+                            <path d="M46.004 0.800781L25.956 19.5048L46.004 40.0008H40.404L22.26 21.6328H7.7V40.0008H3.5V0.800781H7.7V18.0488H22.148L40.46 0.800781H46.004Z" fill="black" />
+                            <g class="header__logo-current">
+                                <path d="M73.1636 0.132812C87.2746 0.132812 96.0116 8.02881 96.0116 20.5728C96.0116 33.0048 87.2746 40.6768 73.1636 40.6768C58.9956 40.6768 50.2036 33.0048 50.2036 20.5728C50.2036 8.02881 59.1636 0.132812 73.1636 0.132812ZM73.1636 36.9808C84.1956 36.9808 91.6446 31.7168 91.6446 20.5728C91.6446 9.1488 84.1956 3.8288 73.1636 3.8288C61.9076 3.8288 54.5716 9.2608 54.5716 20.5728C54.5716 31.7728 61.8516 36.9808 73.1636 36.9808Z" fill="#1A1818" />
+                                <path d="M109.451 40.0046H105.252V0.804688H109.451V17.5486H141.371V0.804688H145.571V40.0046H141.371V21.2447H109.451V40.0046Z" fill="#1A1818" />
+                                <path d="M170.491 40.0046V4.50067H152.571V0.804688H192.611V4.50067H174.691V40.0046H170.491Z" fill="#1A1818" />
+                                <path d="M226.715 30.0927H199.891L194.852 40.0046H190.091L210.531 0.804688H216.188L236.57 40.0046H231.867L226.715 30.0927ZM201.738 26.5087H224.867L213.331 4.16467H213.163L201.738 26.5087Z" fill="#1A1818" />
+                                <path d="M285.794 0.804688L265.746 19.5087L285.794 40.0046H280.193L262.05 21.6367H247.49V40.0046H243.29V0.804688H247.49V18.0527H261.938L280.25 0.804688H285.794Z" fill="#1A1818" />
+                                <path d="M306.514 40.0046V4.50067H288.594V0.804688H328.634V4.50067H310.714V40.0046H306.514Z" fill="#1A1818" />
+                                <path d="M339.834 0.804688V18.0527H357.641C365.481 18.0527 371.361 21.5247 371.361 29.0847C371.361 36.0847 365.481 40.0046 357.641 40.0046H335.633V0.804688H339.834ZM339.834 36.4207H357.922C362.961 36.4207 366.993 35.2447 366.993 29.0847C366.993 22.9247 362.961 21.6367 357.922 21.6367H339.834V36.4207ZM380.993 40.0046H376.793V0.804688H380.993V40.0046Z" fill="#1A1818" />
+                            </g>
+                            <path d="M41.356 66.5849C39.956 58.8569 32.9 54.8249 23.884 54.8249C12.404 54.8249 5.34798 60.4249 5.34798 71.4569C5.34798 80.9209 10.556 88.0329 23.884 88.0329C34.3 88.0329 40.46 82.7689 41.356 76.4409H45.724C44.548 84.2809 37.996 91.6729 23.772 91.6729C9.04398 91.6729 0.97998 83.7769 0.97998 71.4569C0.97998 60.1449 8.09198 51.1289 23.94 51.1289C36.54 51.1289 44.436 57.7369 45.724 66.5849H41.356Z" fill="black" />
+                            <path d="M26.516 133.881H23.212L7.812 107.617H7.7V142.001H3.5V102.801H9.436L24.948 129.233H25.116L40.068 102.801H46.004V142.001H41.804V107.113H41.692L26.516 133.881Z" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-7 col-8">
+                    <nav aria-label="Меню в модальном окне" class="header__menu">
+                        <div class="header__menu-body">
+                            <ul class="header__menu-list lg-list">
+                                <li class="header__menu-item"><a href="" class="header__menu-link popup__link active">ОБРАТНАЯ СВЯЗЬ</a></li>
+                                <li class="header__menu-item"><a href="" class="header__menu-link popup__link">ПЛАНШЕТ/МОКАП </a></li>
+                                <li class="header__menu-item"><a href="" class="header__menu-link popup__link">РАСЧЁТ ПРОЕКТА</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="popup__body">
-        <button type="button" class="popup__close" data-fancybox-close></button>
-        <h3 class="popup__title ">Заполните форму и мы свяжемся с вами, чтобы уточнить детали!</h3>
-        <form action="#" class="popup__form form">
-            <input type="text" name="name" data-required class="form__input form__input_sm" placeholder="Имя">
-            <input type="tel" name="phone" data-required class="form__input form__input_sm" placeholder="Телефон">
-            <input type="email" name="email" data-required class="form__input form__input_sm" placeholder="Email">
-            <textarea name="message" class="form__textarea form__textare_sm" placeholder="Расскажите о проекте"></textarea>
-            <label class="checkbox checkbox_dark checkbox_sm">
-                <input type="checkbox" checked name="privacy" class="checkbox__input hidden" hidden>
-                <span class="checkbox__content">
-                    Я согласен с
-                    <a href="/privacy.html" class="checkbox__content-link">
-                        правилами обработки персональных данных
-                    </a>
-                </span>
-            </label>
-            <button type="submit" class="form__btn btn btn-primary icon-more">Отправить</button>
+        <form action="#" class="popup__form">
+            <div class="row">
+
+            </div>
         </form>
     </div>
-</div>
-<div id="price" class="popup">
-    <div class="popup__body">
-        <button type="button" class="popup__close" data-fancybox-close></button>
-        <h3 class="popup__title">Запросить прайс-лист</h3>
-        <form action="#" class="popup__form form">
-            <input type="text" name="name" data-required class="form__input form__input_sm" placeholder="Имя">
-            <input type="tel" name="phone" data-required class="form__input form__input_sm" placeholder="Телефон">
-            <input type="email" name="email" data-required class="form__input form__input_sm" placeholder="Email">
-            <textarea name="message" class="form__textarea form__textare_sm" placeholder="Расскажите о проекте"></textarea>
-            <label class="checkbox checkbox_dark checkbox_sm">
-                <input type="checkbox" checked name="privacy" class="checkbox__input hidden" hidden>
-                <span class="checkbox__content">
-                    Я согласен с
-                    <a href="/privacy.html" class="checkbox__content-link">
-                        правилами обработки персональных данных
-                    </a>
-                </span>
-            </label>
-            <button type="submit" class="form__btn btn btn-primary icon-more">Отправить</button>
-        </form>
-    </div>
-</div>
-<div id="success" class="popup">
-    <div class="popup__body">
-        <button type="button" class="popup__close" data-fancybox-close></button>
-        <h3 class="popup__title">Спасибо!</h3>
-        <p class="popup__subtitle">
-            Мы получили ваш запрос и свяжемся с вами в ближайшее время
-        </p>
-        <button type="button" data-fancybox-close class="popup__btn btn btn-primary">Закрыть</button>
-    </div>
+    @@include('./_footer.html')
 </div>

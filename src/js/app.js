@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.mask();
     devFunctions.filter();
     devFunctions.cookies();
+    devFunctions.popup();
 
 
 
@@ -186,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getFixedMenu() {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
-            document.body.style.setProperty('margin-top', `${document.querySelector('.header__wrapper').offsetHeight}px`)
+            document.body.style.setProperty('margin-top', `${document.querySelector('.header__wrapper').offsetHeight}px`);
             document.querySelector('.header').classList.add('fixed');
             logo.classList.add('visible');
         }

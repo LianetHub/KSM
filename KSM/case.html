@@ -38,10 +38,10 @@
     <meta property="twitter:image:src" content="/OG.png">
     <!-- Twitter -->
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240903230458">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240904225602">
     <!-- plugnis -->
-    <link rel="stylesheet" href="css/reset.min.css?_v=20240903230458">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240903230458">
+    <link rel="stylesheet" href="css/reset.min.css?_v=20240904225602">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240904225602">
 </head>
 
 <body>
@@ -266,12 +266,104 @@
                 </div>
             </div>
         </footer>
-    </div> <!-- plugnis -->
-    <script src="js/libs/swiper-bundle.min.js?_v=20240903230458"></script>
-    <script src="js/libs/gsap.min.js?_v=20240903230458"></script>
-    <script src="js/libs/ScrollTrigger.min.js?_v=20240903230458"></script>
+    </div>
+    <div id="overlay" class="popup lock-padding">
+        <div class="popup__header">
+            <div class="popup__container">
+                <div class="row">
+                    <div class="col-sm-2 col-xs-1 col-4">
+                        <div class="popup__logo logo">
+                            <svg width="437" viewBox="0 0 437 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+                                <path d="M46.004 0.800781L25.956 19.5048L46.004 40.0008H40.404L22.26 21.6328H7.7V40.0008H3.5V0.800781H7.7V18.0488H22.148L40.46 0.800781H46.004Z" fill="black"></path>
+                                <g class="header__logo-current">
+                                    <path d="M73.1636 0.132812C87.2746 0.132812 96.0116 8.02881 96.0116 20.5728C96.0116 33.0048 87.2746 40.6768 73.1636 40.6768C58.9956 40.6768 50.2036 33.0048 50.2036 20.5728C50.2036 8.02881 59.1636 0.132812 73.1636 0.132812ZM73.1636 36.9808C84.1956 36.9808 91.6446 31.7168 91.6446 20.5728C91.6446 9.1488 84.1956 3.8288 73.1636 3.8288C61.9076 3.8288 54.5716 9.2608 54.5716 20.5728C54.5716 31.7728 61.8516 36.9808 73.1636 36.9808Z" fill="#1A1818"></path>
+                                    <path d="M109.451 40.0046H105.252V0.804688H109.451V17.5486H141.371V0.804688H145.571V40.0046H141.371V21.2447H109.451V40.0046Z" fill="#1A1818"></path>
+                                    <path d="M170.491 40.0046V4.50067H152.571V0.804688H192.611V4.50067H174.691V40.0046H170.491Z" fill="#1A1818"></path>
+                                    <path d="M226.715 30.0927H199.891L194.852 40.0046H190.091L210.531 0.804688H216.188L236.57 40.0046H231.867L226.715 30.0927ZM201.738 26.5087H224.867L213.331 4.16467H213.163L201.738 26.5087Z" fill="#1A1818"></path>
+                                    <path d="M285.794 0.804688L265.746 19.5087L285.794 40.0046H280.193L262.05 21.6367H247.49V40.0046H243.29V0.804688H247.49V18.0527H261.938L280.25 0.804688H285.794Z" fill="#1A1818"></path>
+                                    <path d="M306.514 40.0046V4.50067H288.594V0.804688H328.634V4.50067H310.714V40.0046H306.514Z" fill="#1A1818"></path>
+                                    <path d="M339.834 0.804688V18.0527H357.641C365.481 18.0527 371.361 21.5247 371.361 29.0847C371.361 36.0847 365.481 40.0046 357.641 40.0046H335.633V0.804688H339.834ZM339.834 36.4207H357.922C362.961 36.4207 366.993 35.2447 366.993 29.0847C366.993 22.9247 362.961 21.6367 357.922 21.6367H339.834V36.4207ZM380.993 40.0046H376.793V0.804688H380.993V40.0046Z" fill="#1A1818"></path>
+                                </g>
+                                <path d="M41.356 66.5849C39.956 58.8569 32.9 54.8249 23.884 54.8249C12.404 54.8249 5.34798 60.4249 5.34798 71.4569C5.34798 80.9209 10.556 88.0329 23.884 88.0329C34.3 88.0329 40.46 82.7689 41.356 76.4409H45.724C44.548 84.2809 37.996 91.6729 23.772 91.6729C9.04398 91.6729 0.97998 83.7769 0.97998 71.4569C0.97998 60.1449 8.09198 51.1289 23.94 51.1289C36.54 51.1289 44.436 57.7369 45.724 66.5849H41.356Z" fill="black"></path>
+                                <path d="M26.516 133.881H23.212L7.812 107.617H7.7V142.001H3.5V102.801H9.436L24.948 129.233H25.116L40.068 102.801H46.004V142.001H41.804V107.113H41.692L26.516 133.881Z" fill="black"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-7 col-8">
+                        <nav aria-label="Меню в модальном окне" class="header__menu">
+                            <div class="header__menu-body">
+                                <ul class="header__menu-list lg-list">
+                                    <li class="header__menu-item"><a href="" class="header__menu-link popup__link active">ОБРАТНАЯ СВЯЗЬ</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link popup__link">ПЛАНШЕТ/МОКАП </a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link popup__link">РАСЧЁТ ПРОЕКТА</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup__body">
+            <form action="#" class="popup__form">
+                <div class="row">
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-2 col-4 order-sm-first order-2 pc-none">
+                        <a href="" class="footer__caption font-bold"> Полный каталог строительных материалов <span class="text-nowrap">«КСМ—Строй»</span>
+                        </a>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 order-sm-0 order-1">
+                        <h2 class="footer__caption font-bold pc-only">Каталог материалов</h2>
+                        <a href="" class="footer__logo">
+                            <img src="img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-4 col-8 offset-md-1 order-lg-0 order-first">
+                        <h2 class="footer__caption font-bold">Поиск по сайту</h2>
+                        <form action="#" class="footer__form form">
+                            <div class="form__field">
+                                <input type="text" name="search" autocomplete="off" class="form__input">
+                                <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                            </div>
+                        </form>
+                        <a href="http://ru.ermolaevbureau.com/" target="_blank" class="footer__design tablet-only">Дизайн: Ermolaev Bureau ↽</a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-8 offset-lg-0 offset-md-1 order-sm-0 order-4">
+                        <h2 class="footer__caption font-bold">©2024, Торговый дом «К.С.М.»</h2>
+                        <address class="footer__address"> г. Москва, ул. Новоалексеевская, 22/2 <br> подъезд&nbsp;1, этаж&nbsp;1 </address>
+                        <a href="/privacy.html" class="footer__privacy">Политика конфиденциальности <span>данных</span> </a>
+                        <a href="http://ru.ermolaevbureau.com/" target="_blank" class="footer__design mobile-only">Дизайн: Ermolaev Bureau ↽</a>
+                    </div>
+                    <div class="col-lg-1 col-sm-2 col-4 order-sm-0 order-3">
+                        <h2 class="footer__caption font-bold">Контакты</h2>
+                        <div class="footer__contacts">
+                            <a href="" class="footer__contacts-link">Обратная связь</a>
+                            <a href="tel:+74956029329" class="footer__contacts-link">+7 (495) 602-93-29</a>
+                            <a href="mailto:info@tdkcm.ru" class="footer__contacts-link link-underline">info@tdkcm.ru</a>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 order-md-0 order-sm-first order-2">
+                        <h2 class="footer__caption font-bold">Соцсети</h2>
+                        <div class="footer__contacts">
+                            <a href="https://t.me/tdkcm" target="_blank" class="footer__contacts-link">Telegram ↽</a>
+                            <a href="https://vk.com/tdksm" target="_blank" class="footer__contacts-link">Vkontakte ↽</a>
+                            <a href="https://youtube.com/@tdkcm?si=UdP_Pfg17mS1xVL0" target="_blank" class="footer__contacts-link">Youtube ↽</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <!-- plugnis -->
-    <script src="js/app.min.js?_v=20240903230458"></script>
+    <script src="js/libs/swiper-bundle.min.js?_v=20240904225602"></script>
+    <script src="js/libs/gsap.min.js?_v=20240904225602"></script>
+    <script src="js/libs/ScrollTrigger.min.js?_v=20240904225602"></script>
+    <!-- plugnis -->
+    <script src="js/app.min.js?_v=20240904225602"></script>
 </body>
 
 </html>

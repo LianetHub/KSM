@@ -70,6 +70,9 @@ body {
 			overflow: visible;
 		}
 	}
+	&.modal-lock {
+		overflow: hidden;
+	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {
