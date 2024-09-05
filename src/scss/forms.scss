@@ -27,6 +27,10 @@
 		color: currentColor;
 		font-size: 0.9375rem;
 		padding: 0.5rem 2rem 0.25rem 0;
+		&::placeholder {
+			opacity: 1;
+			color: currentColor;
+		}
 		&.form__input_lg {
 			font-size: 1.125rem;
 		}
@@ -37,6 +41,36 @@
 			& ~ .form__field-clear {
 				visibility: visible;
 			}
+		}
+	}
+	// .form__textarea
+	&__textarea {
+		text-overflow: ellipsis;
+		transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
+		width: 100%;
+		resize: none;
+		height: 5.325rem;
+		line-height: 140%;
+		border-radius: 0;
+		background: transparent;
+		border-bottom: 1px solid;
+		color: currentColor;
+		font-size: 1.125rem;
+		padding: 0.5rem 2rem 0.25rem 0;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		scrollbar-width: 0;
+		&:disabled {
+			border-color: #ddd;
+		}
+		&._input {
+			& ~ .form__field-clear {
+				visibility: visible;
+			}
+		}
+		& ~ .form__field-clear {
+			top: 0.75rem;
 		}
 	}
 	// .form__field
@@ -51,6 +85,27 @@
 		right: 0.5rem;
 		font-size: 0.75rem;
 		visibility: hidden;
+	}
+	// .form__file
+	&__file {
+		margin-top: rem(32);
+		@media (min-width: $md2) {
+			margin-top: rem(44);
+		}
+		display: block;
+	}
+	// .form__file-input
+	&__file-input {
+	}
+	// .form__file-btn
+	&__file-btn {
+		cursor: pointer;
+		&::after {
+			display: none;
+		}
+		&::before {
+			order: 1;
+		}
 	}
 }
 
@@ -75,6 +130,15 @@
 	}
 	&.btn-primary {
 		border: 1px solid #000;
+		color: #000;
+		&:hover,
+		&:active {
+			background: #000;
+			color: #fff;
+		}
+	}
+	&.btn-primary-dashed {
+		border: 1px dashed #000;
 		color: #000;
 		&:hover,
 		&:active {

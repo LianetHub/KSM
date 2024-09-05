@@ -34,16 +34,11 @@ export const popup = () => {
 				bodyLock();
 			}
 			currentPopup.classList.add('open');
-
-			currentPopup.addEventListener('click', function (e) {
-				if (!e.target.closest('.popup__body')) {
-					popupClose(e.target.closest('.popup'));
-				}
-			});
 		}
 	}
 
 	function popupClose(popupActive) {
+
 
 		if (popupActive) {
 			popupActive.classList.remove('open');

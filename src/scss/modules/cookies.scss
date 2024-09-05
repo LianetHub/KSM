@@ -5,18 +5,10 @@
 	right: 0;
 	background: #808080;
 	z-index: 2;
-	padding: 1.12rem;
+	padding: 1.12rem 0;
 
 	// .cookie__container
 	&__container {
-		@media (max-width: $md6) {
-			padding: 0 0rem 0 1.5rem;
-		}
-		.row {
-			& > * {
-				padding: 0;
-			}
-		}
 	}
 	// .cookie__btn
 	&__btn {
@@ -26,6 +18,7 @@
 		}
 		&::before {
 			order: 1;
+			font-size: 0.875em;
 		}
 		&::after {
 			display: none;

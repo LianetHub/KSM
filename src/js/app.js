@@ -4,13 +4,6 @@
 
 import * as devFunctions from './modules/functions.js';
 
-//  init Fancybox
-// if (typeof Fancybox !== "undefined" && Fancybox !== null) {
-//     Fancybox.bind("[data-fancybox]", {
-//         dragToClose: false,
-//         closeButton: false
-//     });
-// }
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -22,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.filter();
     devFunctions.cookies();
     devFunctions.popup();
-
+    devFunctions.formSubmit()
 
 
 
@@ -83,6 +76,39 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             getQuantityCart(target);
         }
+
+        if (target.matches('[data-modal]')) {
+
+            if (!target.dataset.modal) return;
+
+            let currentModal = target.dataset.modal;
+            let currentModalMenuItem = document.querySelector(`.popup__menu-link[href="#${currentModal}"]`);
+
+            if (currentModalMenuItem) {
+
+                currentModalMenuItem.click();
+            }
+
+
+        }
+
+        if (target.matches('.popup__menu-link')) {
+            e.preventDefault();
+
+            let targetId = target.getAttribute('href').replace('#', "");
+
+            document.querySelectorAll('.popup__menu-link').forEach(popupMenuItem => {
+                popupMenuItem.classList.remove('active');
+            });
+
+            document.querySelectorAll('[data-form]').forEach(form => {
+                form.classList.remove('active');
+            });
+
+            document.querySelector(`[data-form="${targetId}"]`)?.classList.add('active');
+            target.classList.add('active');
+        }
+
 
 
     });
@@ -200,13 +226,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // disable form submit
-    if (document.querySelector('[name="nda"]')) {
-        document.querySelector('[name="nda"]').addEventListener('change', (e) => {
-            if (e.target.checked) {
-                e.target?.closest('form')?.querySelector('button[type="submit"]').removeAttribute('disabled');
-            } else {
-                e.target?.closest('form')?.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
-            }
+    if (document.querySelectorAll('[name="nda"]').length > 0) {
+        document.querySelectorAll('[name="nda"]').forEach(checkbox => {
+
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    e.target?.closest('form')?.querySelector('button[type="submit"]').removeAttribute('disabled');
+                } else {
+                    e.target?.closest('form')?.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+                }
+            })
         })
     }
 
@@ -225,6 +254,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+
+        function preloadImages() {
+
+            const visualBlock = document.querySelector('.product__options-visual');
+
+            if (!visualBlock) {
+                console.warn('Block with class .product__options-visual not found');
+                return;
+            }
+
+
+            const computedStyle = getComputedStyle(visualBlock);
+            let seamColorUrl = computedStyle.getPropertyValue('--seam-color').trim();
+            seamColorUrl = seamColorUrl.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+
+
+            const basePath = seamColorUrl.substring(0, seamColorUrl.lastIndexOf('/') + 1);
+
+            const seemInputs = document.querySelectorAll('[name="product-color"]');
+            const seemColors = Array.from(seemInputs).map(input => input.value);
+
+            const hiddenContainer = document.createElement('div');
+            hiddenContainer.style.display = 'none';
+            document.body.appendChild(hiddenContainer);
+
+            seemColors.forEach(seemColor => {
+                const img = document.createElement('img');
+                let imageSrc = `${basePath}${seemColor}.png`;
+                img.src = imageSrc;
+
+                img.onerror = () => {
+                    console.warn(`Image not found: ${imageSrc}`);
+                };
+
+                hiddenContainer.appendChild(img);
+            });
+
+
+            setTimeout(() => {
+                document.body.removeChild(hiddenContainer);
+            }, 3000);
+        }
+
+        preloadImages();
+
     }
 
 
