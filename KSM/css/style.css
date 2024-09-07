@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -84,6 +84,10 @@ body.menu-lock {
 
 body.modal-lock {
   overflow: hidden;
+}
+
+body.bg-gray {
+  background: #e5e5e5;
 }
 
 .wrapper {
@@ -2144,6 +2148,24 @@ body.modal-lock {
   text-transform: uppercase;
 }
 
+.error-page {
+  padding: 1rem 0;
+}
+
+.error-page__container .row {
+  --gutter-y: 1rem;
+}
+
+.error-page__text {
+  font-size: 0.9375rem;
+  line-height: 120%;
+  max-width: 28rem;
+}
+
+.error-page__btn {
+  margin-top: 1.25rem;
+}
+
 @media (min-width: 429.98px) {
   .footer {
     font-size: 0.9375rem;
@@ -2510,6 +2532,10 @@ body.modal-lock {
   .cases {
     padding: 3.75rem 0 3.4rem;
   }
+
+  .error-page__btn {
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -2743,6 +2769,10 @@ body.modal-lock {
 
   .contacts {
     padding: 3.75rem 0em 3.75rem 0em;
+  }
+
+  .error-page {
+    padding: 3.75rem 0;
   }
 }
 
@@ -3050,6 +3080,14 @@ body.modal-lock {
 
   .cases {
     padding: 1.1rem 0 3.4rem;
+  }
+
+  .error-page {
+    padding: 1.65rem 0;
+  }
+
+  .error-page__text {
+    max-width: 42rem;
   }
 }
 
@@ -3858,6 +3896,24 @@ body.modal-lock {
 
   .cases {
     padding: 1.5rem 0 4rem;
+  }
+
+  .error-page {
+    padding: 1.25rem 0;
+  }
+
+  .error-page__container .row {
+    --gutter-y: 1.5rem;
+  }
+
+  .error-page__text {
+    max-width: 60rem;
+    font-size: 1.125rem;
+    line-height: 116.667%;
+  }
+
+  .error-page__btn {
+    margin-top: 1.25rem;
   }
 }
 

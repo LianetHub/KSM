@@ -1,23 +1,23 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 // // ======================================ШРИФТЫ===============================================
 
 // &display=swap&subset=cyrillic-ext
-@import "fonts";
+@import 'fonts';
 
 // ======================================ШРИФТЫ===============================================
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
-@import "icons";
+@import 'icons';
 
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "KSM";
+$fontfamily: 'KSM';
 
 // Шрифт по умолчанию
 
@@ -73,6 +73,9 @@ body {
 	&.modal-lock {
 		overflow: hidden;
 	}
+	&.bg-gray {
+		background: #e5e5e5;
+	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {
@@ -90,7 +93,7 @@ body {
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	padding: 0 rem(9) 0 rem(40);
 	width: 100%;
@@ -107,12 +110,12 @@ body {
 
 //=================Подключаем файлы стилей
 //================Общий файл для элементов страницы
-@import "grid";
-@import "ui";
-@import "forms";
+@import 'grid';
+@import 'ui';
+@import 'forms';
 //================Общий файл для элементов страницы
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
 //=======================================
 
 // =======================ОСНОВНОЙ БЛОК==================
@@ -122,9 +125,10 @@ body {
 }
 // ========================================================
 
-@import "pages/company";
-@import "pages/products";
-@import "pages/contacts";
-@import "pages/events";
-@import "pages/cart";
-@import "pages/cases";
+@import 'pages/company';
+@import 'pages/products';
+@import 'pages/contacts';
+@import 'pages/events';
+@import 'pages/cart';
+@import 'pages/cases';
+@import 'pages/error';
