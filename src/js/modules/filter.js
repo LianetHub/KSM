@@ -64,8 +64,8 @@ export const filter = () => {
             const sanitizedValue = input.value.replace(/\D/g, '');
             if (input.value.length !== 0) {
                 input.value = `${sanitizedValue} ₽/м²`;
+                handleFilterChange();
             }
-            handleFilterChange();
         });
     });
 
@@ -84,7 +84,7 @@ export const filter = () => {
         clearTimeout(filterTimeout);
         filterTimeout = setTimeout(() => {
             sendFilterRequest();
-        }, 500);
+        }, 300);
     }
 
     function sendFilterRequest() {

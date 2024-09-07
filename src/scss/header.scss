@@ -257,6 +257,8 @@
 			@media (min-width: $md2) {
 				font-size: 1.875rem;
 				font-weight: 400;
+				margin-right: -0.1rem;
+				line-height: 1;
 			}
 			.header.open-menu & {
 				@media (max-width: $md5) {

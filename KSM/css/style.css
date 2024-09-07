@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "KSM";
   font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
@@ -21,6 +13,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -858,10 +858,7 @@ body.bg-gray {
   content: "";
   position: absolute;
   color: #fff;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  bottom: 0.25rem;
   left: 0;
   background: transparent;
   display: -webkit-box;
@@ -1486,13 +1483,17 @@ body.bg-gray {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 0.0625rem solid;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.45rem;
 }
 
 .products__filters-header::before {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.products__filters-clear {
+  padding: 0 0.25rem;
 }
 
 .products__filters-price {
@@ -3613,6 +3614,8 @@ body.bg-gray {
   .header__menu-cart.active {
     font-size: 1.875rem;
     font-weight: 400;
+    margin-right: -0.1rem;
+    line-height: 1;
   }
 
   .icon-menu {
