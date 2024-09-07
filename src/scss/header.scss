@@ -19,7 +19,7 @@
 	&.open-menu {
 		@media (max-width: $md6) {
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -30,6 +30,7 @@
 			}
 		}
 	}
+
 	&.fixed {
 		.header__wrapper {
 			position: fixed;
@@ -37,7 +38,14 @@
 			left: 0;
 			width: 100%;
 			z-index: 10;
-			background: linear-gradient(180deg, #fff 65%, transparent 65%);
+			background: #fff;
+		}
+		.row {
+			min-height: auto;
+		}
+		.header__logo {
+			position: static;
+			height: 5rem;
 		}
 	}
 	&__top {
@@ -238,10 +246,10 @@
 			}
 		}
 		&::before {
-			content: "[";
+			content: '[';
 		}
 		&::after {
-			content: "]";
+			content: ']';
 		}
 		&.active {
 			visibility: visible;
@@ -353,7 +361,7 @@
 		// transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
 		will-change: transform;
 		&::before {
-			content: "";
+			content: '';
 			display: block;
 			height: rem(2);
 			width: 100%;

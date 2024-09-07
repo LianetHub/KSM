@@ -1,29 +1,25 @@
 gsap.registerPlugin(ScrollTrigger);
 
 export const animation = () => {
-
-
-    function initAnimation() {
-        const logo = document.querySelector('.header__logo');
+    function initAnimation(logo) {
         if (!logo) return;
 
         const isSmallScreen = window.innerWidth < 1600;
-        // const maxScroll = isSmallScreen ? 50 : (logo.classList.contains('header__logo_animate-sm') ? 25 : 600);
-        // удалить потом добавление класса к логотипу - header__logo_animate-sm
         const maxScroll = isSmallScreen ? 50 : 25;
+        const popup = logo.closest('.popup');
+        const scroller = popup ? popup : window;
 
-        const logoCurrent = document.querySelector('.header__logo-current');
+        const logoCurrent = logo.querySelector('.header__logo-current');
         const oneThirdScroll = maxScroll / 3;
 
         gsap.set(logo, { scale: 1 });
         gsap.set(logoCurrent, { autoAlpha: 1 });
 
-        // const scaleReductionFactor = isSmallScreen ? 0 : 0.475;
         const scaleReductionFactor = isSmallScreen ? 0 : 0.465;
-
 
         ScrollTrigger.create({
             trigger: logo,
+            scroller: scroller,
             start: 0,
             end: oneThirdScroll,
             scrub: true,
@@ -45,11 +41,11 @@ export const animation = () => {
 
         ScrollTrigger.create({
             trigger: logo,
+            scroller: scroller,
             start: 2 * oneThirdScroll,
             end: maxScroll,
             scrub: true,
             onUpdate: self => {
-
                 gsap.to(logoCurrent, {
                     autoAlpha: 1,
                     duration: 0,
@@ -65,15 +61,20 @@ export const animation = () => {
             },
             onEnterBack: () => {
                 logo.classList.remove('clip-logo');
+
+                setTimeout(() => {
+                    logoCurrent.style = ""
+                }, 0)
+
             }
         });
 
         ScrollTrigger.create({
             trigger: logo,
+            scroller: scroller,
             start: maxScroll,
             end: "+=300",
             scrub: true,
-
             onUpdate: self => {
                 gsap.to(logoCurrent, {
                     autoAlpha: 0,
@@ -88,25 +89,17 @@ export const animation = () => {
         });
     }
 
-    initAnimation();
 
-    // function checkWidthAndInitAnimation() {
-    //     if (window.innerWidth > 1023.98) {
-    //         initAnimation();
-    //     }
-    // }
-
-    // checkWidthAndInitAnimation();
-    window.addEventListener('resize', function () {
-
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        document.querySelector('.header__logo').classList.remove('clip-logo')
-        initAnimation();
-        // checkWidthAndInitAnimation();
+    document.querySelectorAll('.header__logo').forEach(logo => {
+        initAnimation(logo);
     });
 
+    window.addEventListener('resize', function () {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-
-
-
+        document.querySelectorAll('.header__logo').forEach(logo => {
+            logo.classList.remove('clip-logo');
+            initAnimation(logo);
+        });
+    });
 };
