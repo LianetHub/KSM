@@ -177,9 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const slideWidth = rect.width;
 
 
-                    if (x < slideWidth * 0.1) {
+                    if (x < slideWidth * 0.5) {
                         swiper.slidePrev();
-                    } else if (x > slideWidth * 0.9) {
+                    } else if (x > slideWidth * 0.5) {
 
                         swiper.slideNext();
                     }

@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -447,7 +447,7 @@ body.bg-gray {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 50%;
   height: 100%;
   z-index: 2;
   cursor: pointer;
@@ -458,7 +458,7 @@ body.bg-gray {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 50%;
   height: 100%;
   cursor: pointer;
   z-index: 2;
@@ -2696,14 +2696,6 @@ body.bg-gray {
             order: -1;
   }
 
-  .slider__slide::before {
-    width: 10%;
-  }
-
-  .slider__slide::after {
-    width: 10%;
-  }
-
   .header__top {
     position: fixed;
     top: 0;
@@ -4321,6 +4313,10 @@ body.bg-gray {
 
   .products__card-price.sm-price {
     font-size: 1.125rem;
+  }
+
+  .contacts__map iframe {
+    aspect-ratio: 1.512013256;
   }
 }
 

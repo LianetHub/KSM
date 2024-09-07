@@ -140,6 +140,9 @@
 		background: #e5e5e5;
 		& iframe {
 			min-height: 13.4375rem;
+			@media (max-width: $md4) {
+				aspect-ratio: math.div(365, 241.4);
+			}
 			@media (min-width: $md4) {
 				min-height: 19.125rem;
 			}

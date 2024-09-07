@@ -1,6 +1,6 @@
 //============ МОДУЛИ ====================
-@import "modules/cookies";
-@import "modules/popup";
+@import 'modules/cookies';
+@import 'modules/popup';
 // @import "modules/before-slider";
 // @import "modules/datepicker";
 // @import "modules/select";
@@ -58,27 +58,21 @@
 		}
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 40%;
-			@media (min-width: $md5) {
-				width: 10%;
-			}
+			width: 50%;
 			height: 100%;
 			z-index: 2;
 			cursor: pointer;
 		}
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 40%;
-			@media (min-width: $md5) {
-				width: 10%;
-			}
+			width: 50%;
 			height: 100%;
 			cursor: pointer;
 			z-index: 2;
@@ -168,20 +162,20 @@
 		display: none;
 	}
 	&:disabled,
-	&[aria-disabled="true"] {
+	&[aria-disabled='true'] {
 		opacity: 0.28;
 	}
 }
 
 .swiper-button-prev {
 	&::before {
-		content: "←";
+		content: '←';
 	}
 }
 
 .swiper-button-next {
 	&::before {
-		content: "→";
+		content: '→';
 	}
 }
 
@@ -318,7 +312,7 @@
 
 ._loading {
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 50%;
 		left: 50%;
