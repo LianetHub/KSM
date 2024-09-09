@@ -101,8 +101,9 @@ body {
 		padding: 0 rem(24) 0 rem(56);
 	}
 	@media (min-width: $md0) {
-		max-width: rem(1840);
-		box-sizing: content-box;
+		// max-width: rem(1840);
+		max-width: 100%;
+		// box-sizing: content-box;
 	}
 }
 
