@@ -42,6 +42,11 @@
 				visibility: visible;
 			}
 		}
+		&._error {
+			& ~ .form__error {
+				display: block;
+			}
+		}
 	}
 	// .form__textarea
 	&__textarea {
@@ -72,6 +77,11 @@
 		& ~ .form__field-clear {
 			top: 0.75rem;
 		}
+		&._error {
+			& ~ .form__error {
+				display: block;
+			}
+		}
 	}
 	// .form__field
 	&__field {
@@ -80,8 +90,7 @@
 	// .form__field-clear
 	&__field-clear {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0.5rem;
 		right: 0;
 		font-size: 0.75rem;
 		padding: 0.5rem;
@@ -123,6 +132,30 @@
 	}
 	// .form__files-name
 	&__files-name {
+	}
+	&__error {
+		margin-top: 0.25rem;
+		font-size: rem(14);
+		display: none;
+	}
+}
+
+.timepicker {
+	position: absolute;
+	top: 100%;
+	background: #e5e5e5;
+
+	display: none;
+	&.active {
+		display: block;
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 18px;
+	}
+	// .timepicker__item
+	&__item {
 	}
 }
 

@@ -1,17 +1,19 @@
-@use "sass:color";
-@use "sass:math";
+@use 'sass:color';
+@use 'sass:math';
+
 
 @mixin dp-header-button-common {
 	border-color: transparent;
 	font-weight: bold;
-}
-
-@mixin dp-footer-button-common {
+  }
+  
+  @mixin dp-footer-button-common {
 	flex: auto;
 	margin: calc(0.375rem - 1px) 0.375rem;
 	border-radius: $dp-border-radius-small;
 	font-size: $dp-font-size-small;
-}
+  }
+  
 
 //== foundational variables ==//
 $black: hsl(0, 0%, 4%) !default;
@@ -27,27 +29,27 @@ $grey-lighter: color.scale($light, $lightness: -10%) !default;
 //== datepicker variables ==//
 $dp-background-color: $white !default;
 $dp-border-color: $grey-lighter !default;
-$dp-border-radius: 2.25rem !default;
-$dp-border-radius-small: 1rem !default;
+$dp-border-radius: 4px !default;
+$dp-border-radius-small: 2px !default;
 $dp-line-height-base: 1.5 !default;
 $dp-font-size-normal: 1rem !default;
 $dp-font-size-small: 0.75rem !default;
 $dp-font-weight-semibold: 600 !default;
-$dp-font-weight-bold: 400 !default;
+$dp-font-weight-bold: 700 !default;
 $dp-dropdown-offset: 4px !default;
 $dp-dropdown-shadow: 0 2px 3px rgb($black, 0.1), 0 0 0 1px rgb($black, 0.1) !default;
 $dp-dropdown-z: 20 !default;
 
 $dp-title-background-color: $light !default;
 
-$dp-cell-size-base: 2.5rem !default;
+$dp-cell-size-base: 2.25rem !default;
 $dp-cell-focus-background-color: color.scale($light, $lightness: -5%) !default;
 $dp-cell-prevnext-color: hsl(0, 0%, 48%) !default; // grey
 $dp-cell-disabled-color: $grey-lighter !default;
-$dp-cell-selected-background-color: #4770ff !default;
+$dp-cell-selected-background-color: $link !default;
 $dp-cell-selected-color: #fff !default; // link(blue)-invert
 $dp-cell-selected-font-weight: $dp-font-weight-semibold !default;
-$dp-cell-today-background-color: #4770ff !default; // turquoise (primary)
+$dp-cell-today-background-color: hsl(171, 100%, 41%) !default; // turquoise (primary)
 $dp-cell-today-color: #fff !default; // turquoise-invert
 $dp-cell-highlighted-background-color: $light !default;
 $dp-range-start-end-background-color: $grey-light !default;
@@ -63,7 +65,7 @@ $dp-input-in-edit-focus-box-shadow-size: 0 0 0.25em 0.25em !default;
 
 //== calculated variables ==//
 $dp-dow-height: $dp-font-size-normal * $dp-line-height-base !default;
-$dp-dow-font-size: 1.125rem !default;
+$dp-dow-font-size: math.div($dp-font-size-small + $dp-font-size-normal, 2) !default;
 $dp-view-width: $dp-cell-size-base * 7 !default;
 $dp-week-numbers-width: math.percentage(math.div(0.75, 0.75 + 1 * 7)) !default; // 0.75 = small-font, 1 = nomal-font
 $dp-month-year-height: $dp-cell-size-base * 2 !default;
@@ -87,7 +89,7 @@ $dp-input-in-edit-box-shadow: $dp-input-in-edit-focus-box-shadow-size rgb($dp-in
 $dp-one-seventh: math.percentage(math.div(1, 7));
 
 //== mixins ==//
-@import "mixins";
+@import 'mixins';
 
 //== styles ==//
 .datepicker {
@@ -112,13 +114,9 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 .datepicker-picker {
 	display: flex;
 	flex-direction: column;
+	border-radius: $dp-border-radius;
 	background-color: $dp-background-color;
-	padding: 0.75rem 0.25rem;
-	border-radius: 1rem;
-	@media (min-width: $md5) {
-		border-radius: $dp-border-radius;
-		padding: 1rem 1.75rem;
-	}
+
 	.datepicker-dropdown & {
 		box-shadow: $dp-dropdown-shadow;
 	}
@@ -144,11 +142,9 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 
 .datepicker-controls {
 	display: flex;
-	align-items: center;
 
 	.datepicker-header & {
-		padding: 0 0 1.19rem;
-		border-bottom: rem(1) solid rgba($color: #dfe0e1, $alpha: 0.5);
+		padding: 2px 2px 0;
 	}
 
 	@if mixin-exists(dp-button) {
@@ -246,34 +242,12 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 
 	.prev-button,
 	.next-button {
-		// padding-right: 0.375rem;
-		// padding-left: 0.375rem;
-		flex: 0 0 1.5rem;
-		height: 1.5rem;
-		font-size: 0;
-		position: relative;
-		&::before {
-			@extend %ic, .icon-chevron;
-			font-size: 1.5rem;
-			color: $accent;
-			height: 1.5rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+		padding-right: 0.375rem;
+		padding-left: 0.375rem;
+		flex: 0 0 $dp-one-seventh;
 
 		&.disabled {
 			visibility: hidden;
-		}
-		&.prev-btn {
-			&::before {
-				transform: rotate(90deg);
-			}
-		}
-		&.next-btn {
-			&::before {
-				transform: rotate(-90deg);
-			}
 		}
 	}
 }
@@ -284,16 +258,11 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 }
 
 .datepicker-view {
-	margin-top: 1.13rem;
 	align-items: stretch;
-	width: math.div($dp-view-width, 1.05);
-	@media (min-width: $md5) {
-		width: $dp-view-width;
-	}
+	width: $dp-view-width;
 }
 
 .datepicker-grid {
-	margin-top: 1rem;
 	flex-wrap: wrap;
 	flex: auto;
 }
@@ -356,10 +325,7 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 .datepicker-cell {
 	@extend %flex-basis-day;
 
-	height: math.div($dp-cell-size-base, 1.05);
-	@media (min-width: $md5) {
-		height: $dp-cell-size-base;
-	}
+	height: $dp-cell-size-base;
 
 	&:not(.day) {
 		flex-basis: 25%;
@@ -378,11 +344,9 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 	&.selected {
 		&,
 		&:hover {
-			position: relative;
-			z-index: 1;
-			font-weight: $dp-cell-selected-font-weight;
-			color: $dp-cell-selected-color;
 			background-color: $dp-cell-selected-background-color;
+			color: $dp-cell-selected-color;
+			font-weight: $dp-cell-selected-font-weight;
 		}
 	}
 
@@ -416,14 +380,15 @@ $dp-one-seventh: math.percentage(math.div(1, 7));
 
 	&.today {
 		&:not(.selected) {
+			background-color: $dp-cell-today-background-color;
+
 			&:not(.disabled) {
-				color: $accent;
-				background: #fff;
+				color: $dp-cell-today-color;
 			}
 		}
 
 		&.focused:not(.selected) {
-			// background-color: $dp-cell-today-focus-background-color;
+			background-color: $dp-cell-today-focus-background-color;
 		}
 	}
 

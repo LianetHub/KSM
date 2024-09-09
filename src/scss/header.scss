@@ -125,6 +125,7 @@
 			}
 		}
 		& svg {
+			pointer-events: none;
 			& path {
 				.header.open-menu & {
 					@media (max-width: $md6) {

@@ -2,7 +2,26 @@
 
 
 
+// import { Datepicker } from 'vanillajs-datepicker';
 import * as devFunctions from './modules/functions.js';
+import { Timepicker } from './modules/timepicker.js';
+
+
+(function () {
+    Datepicker.locales.ru = {
+        days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+        daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+        monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+        today: "Сегодня",
+        clear: "Очистить",
+        format: "dd.mm.yyyy",
+        weekStart: 1,
+        monthsTitle: 'Месяцы'
+    };
+}());
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,8 +35,28 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.cookies();
     devFunctions.popup();
     devFunctions.formSubmit();
-    devFunctions.inputFiles()
+    devFunctions.inputFiles();
 
+
+    document.querySelectorAll('input[name="date"]')?.forEach(datepicker => {
+        let datepickerInstance = new Datepicker(datepicker, {
+            language: "ru",
+            todayBtn: false,
+            weekNumbers: 0,
+            clearBtn: false,
+            autohide: true,
+            prevArrow: '←',
+            nextArrow: '→',
+            showOnFocus: true,
+        });
+    });
+
+    document.querySelectorAll('input[name="time"]')?.forEach(timepicker => {
+        let timepickerInstance = new Timepicker(timepicker, {
+            startTime: "10:00",
+            endTime: "19:30"
+        });
+    })
 
 
     // event handlers
@@ -27,11 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = e.target;
 
 
-
-
         if (target.matches('.form__field-clear')) {
-            target.previousElementSibling.value = "";
-            target.previousElementSibling.classList.remove('_input');
+            const parentNode = target.closest('.form__field');
+            const input = parentNode?.querySelector('.form__input');
+            input.value = "";
+            input.classList.remove('_input');
         }
 
         if (target.closest('.icon-menu')) {
@@ -110,9 +149,17 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.add('active');
         }
 
+        if (target.tagName.toLowerCase() === 'a' && target.getAttribute('href') == '#') {
+            e.preventDefault();
 
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
 
     });
+
 
     function getQuantityCart(target) {
         if (target.classList.contains('active')) {

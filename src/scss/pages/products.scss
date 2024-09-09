@@ -367,7 +367,7 @@
 		position: relative;
 		& label {
 			position: absolute;
-			top: 45%;
+			top: 43%;
 			transform: translateY(-50%);
 			line-height: 1.25;
 		}
@@ -383,7 +383,7 @@
 				}
 			}
 			&[name='start-price'] {
-				padding-left: 1.75rem;
+				padding-left: 1.85rem;
 			}
 			&[name='end-price'] {
 				padding-left: 2rem;
