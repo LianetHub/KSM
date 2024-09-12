@@ -11,14 +11,6 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -29,6 +21,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1153,10 +1153,17 @@ body.bg-gray {
   line-height: 133.333%;
 }
 
-.form__error {
-  margin-top: 0.25rem;
+.form__files-remove {
   font-size: 0.875rem;
+}
+
+.form__error {
+  font-size: 0.75rem;
   display: none;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .timepicker {
@@ -1202,7 +1209,7 @@ body.bg-gray {
   font-size: 0.9375rem;
   line-height: 1;
   font-weight: 500;
-  padding: 0.969rem 0.9rem 0.969rem 1rem;
+  padding: 0.969rem 1rem;
   gap: 1rem;
 }
 
@@ -1525,7 +1532,7 @@ body.bg-gray {
 
 .footer__caption {
   display: inline-block;
-  line-height: 113.333%;
+  line-height: 150%;
 }
 
 .footer__logo {
@@ -2845,10 +2852,6 @@ body.bg-gray {
   .footer {
     padding: 1.75rem 0 1.6875rem;
     font-size: 0.75rem;
-  }
-
-  .footer__caption {
-    line-height: 150%;
   }
 
   .footer__design {

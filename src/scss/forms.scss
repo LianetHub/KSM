@@ -130,13 +130,19 @@
 		font-size: 1.125rem;
 		line-height: 133.333%;
 	}
+	&__files-remove {
+		font-size: rem(14);
+	}
 	// .form__files-name
 	&__files-name {
 	}
 	&__error {
-		margin-top: 0.25rem;
-		font-size: rem(14);
+		font-size: rem(12);
 		display: none;
+		position: absolute;
+		top: calc(100% + 0.25rem);
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 }
 
@@ -173,7 +179,7 @@
 	font-size: 0.9375rem;
 	line-height: 1;
 	font-weight: 500;
-	padding: 0.969rem 0.9rem 0.969rem 1rem;
+	padding: 0.969rem 1rem;
 	gap: 1rem;
 	&::after {
 		content: '→';

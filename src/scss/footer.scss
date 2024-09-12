@@ -22,10 +22,7 @@
 	// .footer__caption
 	&__caption {
 		display: inline-block;
-		line-height: 113.333%;
-		@media (min-width: $md6) {
-			line-height: 150%;
-		}
+		line-height: 150%;
 		@media (min-width: $md4) {
 			margin-right: -2rem;
 		}
