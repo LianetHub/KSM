@@ -49,6 +49,9 @@ $ui-index-4: 4; // Для сайдбаров
 $ui-index-5: 5; // Для модалок
 $ui-index-6: 6; // Для элементов, перекрывающих все
 
+$header: var(--header-height, 186px);
+$headerWrapper: var(--header-wrapper-height, 107px);
+
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 
 .no-bef {

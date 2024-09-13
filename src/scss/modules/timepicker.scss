@@ -1,0 +1,17 @@
+.timepicker {
+	position: absolute;
+	top: 100%;
+	background: #e5e5e5;
+
+	width: 100%;
+	&__items {
+		width: fit-content;
+		padding: rem(10) 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(18);
+	}
+	// .timepicker__item
+	&__item {
+	}
+}

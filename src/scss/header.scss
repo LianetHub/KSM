@@ -32,6 +32,7 @@
 	}
 
 	&.fixed {
+		height: $header;
 		.header__wrapper {
 			position: fixed;
 			top: 0;
@@ -39,6 +40,7 @@
 			width: 100%;
 			z-index: 10;
 			background: #fff;
+			// background: green;
 		}
 		.row {
 			min-height: auto;
@@ -64,11 +66,12 @@
 			top: 0;
 			left: 0;
 			width: 100%;
+			height: $headerWrapper;
 			display: block;
-			height: 7rem;
 		}
 	}
 	&__wrapper {
+		min-height: rem(107);
 		padding: 0.5rem 0;
 		@media (min-width: $md6) {
 			padding: 0.8rem 0 0.9rem;

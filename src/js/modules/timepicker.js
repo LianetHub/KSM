@@ -13,6 +13,7 @@ export class Timepicker {
 
         this.timepicker = document.createElement('div');
         this.timepicker.classList.add('timepicker');
+        this.timepicker.style.display = 'none';
 
         const timeItemsContainer = document.createElement('div');
         timeItemsContainer.classList.add('timepicker__items');
@@ -54,11 +55,11 @@ export class Timepicker {
     }
 
     showTimepicker() {
-        this.timepicker.classList.add('active');
+        this.timepicker.style.display = 'block';
     }
 
     hideTimepicker() {
-        this.timepicker.classList.remove('active');
+        this.timepicker.style.display = 'none';
     }
 
 

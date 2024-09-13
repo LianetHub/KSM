@@ -5,22 +5,9 @@
 // import { Datepicker } from 'vanillajs-datepicker';
 import * as devFunctions from './modules/functions.js';
 import { Timepicker } from './modules/timepicker.js';
+import { Datepicker } from './modules/datepicker.js';
 
 
-(function () {
-    Datepicker.locales.ru = {
-        days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
-        daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
-        daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-        months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-        monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-        today: "Сегодня",
-        clear: "Очистить",
-        format: "dd.mm.yyyy",
-        weekStart: 1,
-        monthsTitle: 'Месяцы'
-    };
-}());
 
 
 
@@ -38,18 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.inputFiles();
 
 
+    window.addEventListener('resize', () => {
+        getHeaderHeight()
+    })
+    window.addEventListener('scroll', () => {
+        getHeaderHeight()
+    })
+    getHeaderHeight()
+
+    function getHeaderHeight() {
+        document.body.style.setProperty('--header-height', `${document.querySelector('.header').offsetHeight}px`);
+    }
+
+    function getHeaderWrapperHeight() {
+        document.body.style.setProperty('--header-wrapper-height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
+    }
+
     document.querySelectorAll('input[name="date"]')?.forEach(datepicker => {
-        let datepickerInstance = new Datepicker(datepicker, {
-            language: "ru",
-            todayBtn: false,
-            weekNumbers: 0,
-            clearBtn: false,
-            autohide: true,
-            prevArrow: '←',
-            nextArrow: '→',
-            showOnFocus: true,
-        });
-    });
+        let datepickerInstance = new Datepicker(datepicker, {});
+    })
+
 
     document.querySelectorAll('input[name="time"]')?.forEach(timepicker => {
         let timepickerInstance = new Timepicker(timepicker, {
@@ -71,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const input = parentNode?.querySelector('.form__input');
             input.value = "";
             input.classList.remove('_input');
+            input.dispatchEvent(new Event('clear'));
         }
 
         if (target.closest('.icon-menu')) {
@@ -261,14 +257,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function getFixedMenu() {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
-            document.body.style.setProperty('margin-top', `${document.querySelector('.header__wrapper').offsetHeight}px`);
             document.querySelector('.header').classList.add('fixed');
             logo.classList.add('visible');
+            getHeaderWrapperHeight()
         }
     }
 
     function removeFixedMenu() {
-        document.body.style = "";
         document.querySelector('.header').classList.remove('fixed');
         document.querySelector('.header__logo').classList.remove('visible');
     }
@@ -299,12 +294,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.checked) {
                     const selectedValue = this.value;
 
-                    // Удаляем класс active со всех изображений
+
                     seemsImages.forEach(image => {
                         image.classList.remove('active');
                     });
 
-                    // Добавляем класс active для нужного изображения
                     const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
                     if (activeImage) {
                         activeImage.classList.add('active');
@@ -315,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Функция для предзагрузки изображений
         function preloadImages() {
             const seemInputs = document.querySelectorAll('[name="product-color"]');
             const seemColors = Array.from(seemInputs).map(input => input.value);
@@ -336,7 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 hiddenContainer.appendChild(img);
             });
 
-            // Удаляем скрытый контейнер через 3 секунды
             setTimeout(() => {
                 document.body.removeChild(hiddenContainer);
             }, 3000);
