@@ -79,6 +79,7 @@ export const html = () => {
         .pipe(app.plugins.replace(/\$md6/g, "575.98px"))
         .pipe(app.plugins.if(app.isBuild, addWebpSources()))
         .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
+        .pipe(app.plugins.replace(/<imga(\s|>)/g, "<img$1"))
         .pipe(
             app.plugins.if(
                 app.isBuild,
