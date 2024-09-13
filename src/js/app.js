@@ -289,38 +289,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const colorOptions = document.querySelectorAll('input[name="product-color"]');
-    const visualElement = document.querySelector('.product__options-visual');
+    const seemsImages = document.querySelectorAll('.product__options-seem');
 
-    if (colorOptions && visualElement) {
+    if (colorOptions && seemsImages.length) {
 
         colorOptions.forEach(option => {
 
             option.addEventListener('change', function () {
                 if (this.checked) {
-                    visualElement.style.setProperty('--seam-color', `url('../img/colors/${this.value}.png')`);
+                    const selectedValue = this.value;
 
+                    // Удаляем класс active со всех изображений
+                    seemsImages.forEach(image => {
+                        image.classList.remove('active');
+                    });
+
+                    // Добавляем класс active для нужного изображения
+                    const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
+                    if (activeImage) {
+                        activeImage.classList.add('active');
+                    } else {
+                        console.warn(`Image for value ${selectedValue} not found`);
+                    }
                 }
             });
         });
 
-
+        // Функция для предзагрузки изображений
         function preloadImages() {
-
-            const visualBlock = document.querySelector('.product__options-visual');
-
-            if (!visualBlock) {
-                console.warn('Block with class .product__options-visual not found');
-                return;
-            }
-
-
-            const computedStyle = getComputedStyle(visualBlock);
-            let seamColorUrl = computedStyle.getPropertyValue('--seam-color').trim();
-            seamColorUrl = seamColorUrl.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
-
-
-            const basePath = seamColorUrl.substring(0, seamColorUrl.lastIndexOf('/') + 1);
-
             const seemInputs = document.querySelectorAll('[name="product-color"]');
             const seemColors = Array.from(seemInputs).map(input => input.value);
 
@@ -330,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             seemColors.forEach(seemColor => {
                 const img = document.createElement('img');
-                let imageSrc = `${basePath}${seemColor}.png`;
+                let imageSrc = `../img/colors/${seemColor}.png`;
                 img.src = imageSrc;
 
                 img.onerror = () => {
@@ -340,15 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 hiddenContainer.appendChild(img);
             });
 
-
+            // Удаляем скрытый контейнер через 3 секунды
             setTimeout(() => {
                 document.body.removeChild(hiddenContainer);
             }, 3000);
         }
 
         preloadImages();
-
     }
+
 
 
 
