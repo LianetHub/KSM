@@ -69,7 +69,7 @@ export const html = () => {
             )
         )
         .pipe(fileinclude())
-        .pipe(app.plugins.replace(/@img\//g, "img/"))
+        .pipe(app.plugins.replace(/img src="@img\//g, 'img src="img/'))
         .pipe(app.plugins.replace(/\$md0/g, "1919.98px"))
         .pipe(app.plugins.replace(/\$md1/g, "1727.98px"))
         .pipe(app.plugins.replace(/\$md2/g, "1599.98px"))
@@ -80,6 +80,7 @@ export const html = () => {
         .pipe(app.plugins.if(app.isBuild, addWebpSources()))
         .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
         .pipe(app.plugins.replace(/<imga(\s|>)/g, "<img$1"))
+        .pipe(app.plugins.replace(/"@img\//g, 'img/'))
         .pipe(
             app.plugins.if(
                 app.isBuild,
