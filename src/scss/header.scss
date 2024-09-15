@@ -1,6 +1,4 @@
 .header {
-	position: relative;
-	z-index: 2;
 	&.header_sm {
 		.header__container {
 			.row {
@@ -30,26 +28,33 @@
 			}
 		}
 	}
-
-	&.fixed {
-		height: $header;
-		.header__wrapper {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 10;
-			background: #fff;
-			// background: green;
+	&.header-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 6.5rem;
+		height: auto;
+		z-index: 3;
+		background: #fff;
+		display: none;
+		&.visible {
+			display: block;
 		}
 		.row {
 			min-height: auto;
 		}
+		.header__wrapper {
+			min-height: 0;
+		}
 		.header__logo {
 			position: static;
 			height: 5rem;
+			overflow: visible;
+			clip-path: none;
 		}
 	}
+
 	&__top {
 		@media (max-width: $md5) {
 			display: none;
@@ -66,13 +71,16 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: $headerWrapper;
+			height: 6.5rem;
 			display: block;
+			z-index: 2;
 		}
 	}
 	&__wrapper {
 		min-height: rem(107);
 		padding: 0.5rem 0;
+		position: relative;
+		z-index: 4;
 		@media (min-width: $md6) {
 			padding: 0.8rem 0 0.9rem;
 		}

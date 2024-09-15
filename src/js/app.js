@@ -25,21 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.inputFiles();
 
 
-    window.addEventListener('resize', () => {
-        getHeaderHeight()
-    })
-    window.addEventListener('scroll', () => {
-        getHeaderHeight()
-    })
-    getHeaderHeight()
+    // window.addEventListener('resize', () => {
+    //     getHeaderHeight()
+    // })
+    // window.addEventListener('scroll', () => {
+    //     getHeaderHeight()
+    // })
+    // getHeaderHeight()
 
-    function getHeaderHeight() {
-        document.body.style.setProperty('--header-height', `${document.querySelector('.header').offsetHeight}px`);
-    }
+    // function getHeaderHeight() {
+    //     document.body.style.setProperty('--header-height', `${document.querySelector('.header').offsetHeight}px`);
+    // }
 
-    function getHeaderWrapperHeight() {
-        document.body.style.setProperty('--header-wrapper-height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
-    }
+    // function getHeaderWrapperHeight() {
+    //     document.body.style.setProperty('--header-wrapper-height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
+    // }
 
     document.querySelectorAll('input[name="date"]')?.forEach(datepicker => {
         let datepickerInstance = new Datepicker(datepicker, {});
@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
 
         const target = e.target;
+
+        console.log(target);
 
 
         if (target.matches('.form__field-clear')) {
@@ -159,19 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getQuantityCart(target) {
         if (target.classList.contains('active')) {
-            document.querySelector('.header__menu-cart').innerHTML++;
+            document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
+                cartItem.innerHTML++
+            });
         } else {
-            document.querySelector('.header__menu-cart').innerHTML--;
+            document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
+                cartItem.innerHTML--
+            })
         }
         getFixedMenu();
         setTimeout(() => {
             removeFixedMenu()
         }, 2000)
-        if (document.querySelector('.header__menu-cart').innerHTML > 0) {
-            document.querySelector('.header__menu-cart').classList.add('active')
-        } else {
-            document.querySelector('.header__menu-cart').classList.remove('active')
-        }
+        document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
+            if (cartItem.innerHTML > 0) {
+                cartItem.classList.add('active')
+            } else {
+                cartItem.classList.remove('active')
+            }
+        })
     }
 
     function getMenu() {
@@ -240,15 +248,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 getFixedMenu()
             }
         })
+
         document.querySelector('.header__top').addEventListener('mouseenter', (e) => {
             if (scrollY > document.querySelector('.header').offsetHeight) {
                 getFixedMenu()
             }
         })
-        document.querySelector('.header').addEventListener('mouseleave', (e) => {
-
+        document.querySelector('.header-fixed').addEventListener('mouseleave', (e) => {
             removeFixedMenu()
-
         });
 
 
@@ -257,14 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function getFixedMenu() {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
-            document.querySelector('.header').classList.add('fixed');
+            document.querySelector('.header-fixed').classList.add('visible');
             logo.classList.add('visible');
-            getHeaderWrapperHeight()
         }
     }
 
     function removeFixedMenu() {
-        document.querySelector('.header').classList.remove('fixed');
+        document.querySelector('.header-fixed').classList.remove('visible');
         document.querySelector('.header__logo').classList.remove('visible');
     }
 

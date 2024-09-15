@@ -34,6 +34,7 @@ export class Datepicker {
 
         // Кнопка "←"
         this.prevButton = document.createElement('button');
+        this.prevButton.type = 'button';
         this.prevButton.classList.add('datepicker__prev');
         this.prevButton.textContent = '←';
 
@@ -43,6 +44,7 @@ export class Datepicker {
 
         // Кнопка "→"
         this.nextButton = document.createElement('button');
+        this.nextButton.type = 'button';
         this.nextButton.classList.add('datepicker__next');
         this.nextButton.textContent = '→';
 
@@ -55,19 +57,29 @@ export class Datepicker {
         this.datepicker.appendChild(body);
         this.datepicker.appendChild(footer);
 
-        // Вставляем datepicker в DOM после input
+        // Вставляем datepicker в DOM перед input
         this.element.insertAdjacentElement('afterend', this.datepicker);
     }
 
     init() {
 
-        this.element.addEventListener('focus', () => this.show());
+        this.element.addEventListener('focus', () => {
+            console.log('focis');
+            this.show();
+        });
+        this.element.addEventListener('blur', (e) => {
+            console.log('blur');
+            if (!e.relatedTarget?.closest('.datepicker')) {
+                this.hide();
+            }
+
+        });
         this.element.addEventListener('clear', () => {
             this.currentDate = new Date();
             this.selectedDate = new Date();
             this.render();
         });
-        document.addEventListener('click', (e) => this.handleOutsideClick(e));
+        // document.addEventListener('click', (e) => this.handleOutsideClick(e));
 
         this.prevButton.addEventListener('click', () => this.changeMonth(-1));
         this.nextButton.addEventListener('click', () => this.changeMonth(1));
@@ -77,10 +89,14 @@ export class Datepicker {
 
     show() {
         this.datepicker.style.display = 'block';
+        this.element.setAttribute('placeholder', this.element.getAttribute('placeholder').replace('↓', '↑'))
+        this.element.classList.add('focus-datepicker');
     }
 
     hide() {
         this.datepicker.style.display = 'none';
+        this.element.setAttribute('placeholder', this.element.getAttribute('placeholder').replace('↑', '↓'))
+        this.element.classList.remove('focus-datepicker');
     }
 
     handleOutsideClick(e) {
@@ -149,6 +165,8 @@ export class Datepicker {
             this.selectedDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
             this.element.value = this.formatDate(this.selectedDate);
             this.render();
+            console.log('btn click');
+
             this.hide();
         });
 

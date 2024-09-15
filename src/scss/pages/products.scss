@@ -341,7 +341,7 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: rem(1) solid;
-		padding-bottom: 0.45rem;
+		padding-bottom: rem(10);
 
 		&::before {
 			order: 1;
@@ -363,13 +363,15 @@
 		position: relative;
 		& label {
 			position: absolute;
-			top: 43%;
-			transform: translateY(-50%);
-			line-height: 1.25;
+			bottom: 0;
+			line-height: math.div(24, 16);
+			padding-bottom: rem(4);
 		}
 		.form__input {
 			padding-top: 0;
 			font-size: 1rem;
+			padding-bottom: rem(4);
+			line-height: math.div(24, 16);
 			&::placeholder {
 				color: #000;
 			}
@@ -504,7 +506,7 @@
 			padding-bottom: #{math.div(888, 908) * 100%};
 			width: 100%;
 			position: relative;
-			background: #f2f4f3;
+			background: #eff5f4;
 			& img,
 			source {
 				position: absolute;

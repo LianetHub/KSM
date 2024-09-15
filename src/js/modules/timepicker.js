@@ -40,7 +40,7 @@ export class Timepicker {
         }
 
         this.timepicker.appendChild(timeItemsContainer);
-        this.input.parentNode.insertBefore(this.timepicker, this.input.nextSibling);
+        this.input.insertAdjacentElement('afterend', this.timepicker);
     }
 
     addEventListeners() {
@@ -50,16 +50,21 @@ export class Timepicker {
         });
 
         this.input.addEventListener('blur', () => {
-            setTimeout(() => this.hideTimepicker(), 200); // Небольшая задержка для возможности клика по timepicker
+            setTimeout(() => this.hideTimepicker(), 200);
         });
     }
 
     showTimepicker() {
         this.timepicker.style.display = 'block';
+        this.input.setAttribute('placeholder', this.input.getAttribute('placeholder').replace('↓', '↑'))
+        this.input.classList.add('focus-timepicker')
+
     }
 
     hideTimepicker() {
         this.timepicker.style.display = 'none';
+        this.input.setAttribute('placeholder', this.input.getAttribute('placeholder').replace('↑', '↓'))
+        this.input.classList.remove('focus-timepicker')
     }
 
 

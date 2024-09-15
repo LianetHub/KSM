@@ -1,15 +1,15 @@
 .timepicker {
-	position: absolute;
-	top: 100%;
 	background: #e5e5e5;
 
 	width: 100%;
+	border-bottom: rem(1) solid;
 	&__items {
 		width: fit-content;
-		padding: rem(10) 0;
+		padding: rem(20) 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: rem(18);
+		gap: rem(60);
+		row-gap: rem(16);
 	}
 	// .timepicker__item
 	&__item {

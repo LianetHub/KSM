@@ -11,8 +11,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -27,8 +27,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -92,6 +92,7 @@ body.bg-gray {
 
 .wrapper {
   position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 100%;
   display: -webkit-box;
@@ -412,13 +413,13 @@ body.bg-gray {
 }
 
 .datepicker {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: static;
   background: #e5e5e5;
   z-index: 2;
-  padding: 0.625rem 0;
+  padding: 1.125rem 0 1.25rem;
   width: 100%;
+  border-bottom: 0.0625rem solid;
+  font-size: 1.125rem;
 }
 
 .datepicker__body {
@@ -432,7 +433,8 @@ body.bg-gray {
   display: grid;
   -ms-grid-columns: (1fr)[7];
   grid-template-columns: repeat(7, 1fr);
-  gap: 18px;
+  gap: 1.5625rem;
+  row-gap: 0.875rem;
 }
 
 .datepicker__grid button.greyed {
@@ -440,7 +442,7 @@ body.bg-gray {
 }
 
 .datepicker__footer {
-  margin-top: 1.875rem;
+  margin-top: 1.5625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,22 +450,22 @@ body.bg-gray {
 }
 
 .timepicker {
-  position: absolute;
-  top: 100%;
   background: #e5e5e5;
   width: 100%;
+  border-bottom: 0.0625rem solid;
 }
 
 .timepicker__items {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.625rem 0;
+  padding: 1.25rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.125rem;
+  gap: 3.75rem;
+  row-gap: 1rem;
 }
 
 .title {
@@ -678,8 +680,6 @@ body.bg-gray {
 
 .form__input {
   text-overflow: ellipsis;
-  -webkit-transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
   width: 100%;
   line-height: 140%;
   border-radius: 0;
@@ -717,6 +717,11 @@ body.bg-gray {
 
 .form__input.form__input_lg {
   font-size: 1.125rem;
+}
+
+.form__input.focus-datepicker,
+.form__input.focus-timepicker {
+  border-color: transparent;
 }
 
 .form__input:disabled {
@@ -954,40 +959,46 @@ body.bg-gray {
   height: 1.5rem;
 }
 
-.header {
-  position: relative;
-  z-index: 2;
-}
-
 .header.header_sm .header__top {
   height: 7rem;
 }
 
-.header.fixed {
-  height: var(--header-height, 186px);
-}
-
-.header.fixed .header__wrapper {
+.header.header-fixed {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  min-height: 6.5rem;
+  height: auto;
+  z-index: 3;
   background: #fff;
+  display: none;
 }
 
-.header.fixed .row {
+.header.header-fixed.visible {
+  display: block;
+}
+
+.header.header-fixed .row {
   min-height: auto;
 }
 
-.header.fixed .header__logo {
+.header.header-fixed .header__wrapper {
+  min-height: 0;
+}
+
+.header.header-fixed .header__logo {
   position: static;
   height: 5rem;
+  overflow: visible;
+  clip-path: none;
 }
 
 .header__wrapper {
   min-height: 6.6875rem;
   padding: 0.5rem 0;
+  position: relative;
+  z-index: 4;
 }
 
 .header__logo {
@@ -1558,7 +1569,7 @@ body.bg-gray {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 0.0625rem solid;
-  padding-bottom: 0.45rem;
+  padding-bottom: 0.625rem;
 }
 
 .products__filters-header::before {
@@ -1579,16 +1590,16 @@ body.bg-gray {
 
 .products__filters-price label {
   position: absolute;
-  top: 43%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  line-height: 1.25;
+  bottom: 0;
+  line-height: 1.5;
+  padding-bottom: 0.25rem;
 }
 
 .products__filters-price .form__input {
   padding-top: 0;
   font-size: 1rem;
+  padding-bottom: 0.25rem;
+  line-height: 1.5;
 }
 
 .products__filters-price .form__input::-webkit-input-placeholder {
@@ -1711,7 +1722,7 @@ body.bg-gray {
   padding-bottom: 97.7973568282%;
   width: 100%;
   position: relative;
-  background: #f2f4f3;
+  background: #eff5f4;
 }
 
 .product__slider .slider__slide img,
@@ -2792,8 +2803,9 @@ body.bg-gray {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--header-wrapper-height, 107px);
+    height: 6.5rem;
     display: block;
+    z-index: 2;
   }
 
   .header__logo {
