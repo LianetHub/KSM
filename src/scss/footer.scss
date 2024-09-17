@@ -23,7 +23,19 @@
 	&__caption {
 		display: inline-block;
 		line-height: 150%;
+		&.footer-catalog {
+			font-size: 0.75rem;
+
+			max-width: rem(180);
+			@media (min-width: $md6) {
+				max-width: rem(200);
+				@media (max-width: $md5) {
+					line-height: 190%;
+				}
+			}
+		}
 		@media (min-width: $md4) {
+			max-width: 100%;
 			margin-right: -2rem;
 		}
 		@media (min-width: $md3) {

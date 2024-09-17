@@ -6,7 +6,7 @@
 import * as devFunctions from './modules/functions.js';
 import { Timepicker } from './modules/timepicker.js';
 import { Datepicker } from './modules/datepicker.js';
-
+import initMap from './modules/map.js';
 
 
 
@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.popup();
     devFunctions.formSubmit();
     devFunctions.inputFiles();
+
+    if (document.getElementById('map')) {
+        initMap()
+    }
 
 
     // window.addEventListener('resize', () => {

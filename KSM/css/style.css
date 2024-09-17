@@ -1198,6 +1198,11 @@ body.bg-gray {
   line-height: 150%;
 }
 
+.footer__caption.footer-catalog {
+  font-size: 0.75rem;
+  max-width: 11.25rem;
+}
+
 .footer__logo {
   margin-top: 0.35rem;
   width: 6.3125rem;
@@ -2048,6 +2053,19 @@ body.bg-gray {
           flex: 1 1 auto;
 }
 
+.contacts__map canvas {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%);
+}
+
+.contacts__map .ymaps-layers-pane {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
 .events {
   padding: 1.25rem 0 3rem;
 }
@@ -2520,6 +2538,10 @@ body.bg-gray {
   .footer {
     padding: 1.75rem 0 1.6875rem;
     font-size: 0.75rem;
+  }
+
+  .footer__caption.footer-catalog {
+    max-width: 12.5rem;
   }
 
   .footer__design {
@@ -3053,6 +3075,7 @@ body.bg-gray {
   }
 
   .footer__caption {
+    max-width: 100%;
     margin-right: -2rem;
   }
 
@@ -3720,6 +3743,7 @@ body.bg-gray {
   .header__menu-cart.active {
     font-size: 1.875rem;
     font-weight: 400;
+    margin-top: -0.25rem;
     margin-right: -0.1rem;
     line-height: 1;
   }
@@ -4554,6 +4578,12 @@ body.bg-gray {
   .cookie__btn {
     font-size: 0.65rem;
     gap: 0.25rem;
+  }
+}
+
+@media (min-width: 619.98px) and (max-width: 767.98px) {
+  .footer__caption.footer-catalog {
+    line-height: 190%;
   }
 }
 
