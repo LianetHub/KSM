@@ -1727,7 +1727,7 @@ body.bg-gray {
   padding-bottom: 97.7973568282%;
   width: 100%;
   position: relative;
-  background: #eff5f4;
+  background: #e2eae8;
 }
 
 .product__slider .slider__slide img,
@@ -1740,7 +1740,6 @@ body.bg-gray {
           transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
-  mix-blend-mode: multiply;
 }
 
 .product__options {

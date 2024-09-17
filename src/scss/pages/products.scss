@@ -506,7 +506,9 @@
 			padding-bottom: #{math.div(888, 908) * 100%};
 			width: 100%;
 			position: relative;
-			background: #eff5f4;
+
+			background: #e2eae8;
+
 			& img,
 			source {
 				position: absolute;
@@ -515,7 +517,7 @@
 				transform: translate(-50%, -50%);
 				max-width: 100%;
 				max-height: 100%;
-				mix-blend-mode: multiply;
+				// mix-blend-mode: multiply;
 			}
 		}
 	}
