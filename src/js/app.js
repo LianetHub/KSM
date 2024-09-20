@@ -64,8 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const target = e.target;
 
-        console.log(target);
-
 
         if (target.matches('.form__field-clear')) {
             const parentNode = target.closest('.form__field');

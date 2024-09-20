@@ -3,7 +3,7 @@ export class Timepicker {
         this.input = input;
         this.startTime = options.startTime || "10:00";
         this.endTime = options.endTime || "19:30";
-        this.timeInterval = 30; // Интервал в минутах
+        this.timeInterval = 30;
         this.timepicker = null;
         this.createTimepicker();
         this.addEventListeners();

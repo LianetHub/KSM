@@ -19,7 +19,7 @@ function initMap() {
             // // iconImageHref: 'img/icons/placemark.svg',
             // iconImageSize: [70, 80],
             // iconImageOffset: [-15, -42]
-            preset: "islands#redStretchyIcon",
+            preset: 'twirl#redIcon'
         });
 
 
