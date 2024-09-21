@@ -294,50 +294,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorOptions = document.querySelectorAll('input[name="product-color"]');
     const seemsImages = Array.from(document.querySelectorAll('.product__options-seem'));
 
+    if (colorOptions && seemsImages.length) {
 
-    const seemsImagesMap = {};
-    seemsImages.forEach(image => {
-        const imageName = image.src.match(/(\d+)-lg\.png$/);
-        if (imageName) {
-            seemsImagesMap[imageName[1]] = image;
-        }
-    });
-
-    if (colorOptions.length && seemsImages.length) {
         colorOptions.forEach(option => {
+
             option.addEventListener('change', function () {
                 if (this.checked) {
-                    const selectedValue = this.value;
-
 
                     window.requestAnimationFrame(() => {
+                        const selectedValue = this.value;
 
-                        seemsImages.forEach(image => image.classList.remove('active'));
-
-
-                        const activeImage = seemsImagesMap[selectedValue];
+                        seemsImages.forEach(image => {
+                            image.classList.remove('active');
+                        });
+                        const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
                         if (activeImage) {
                             activeImage.classList.add('active');
                         } else {
                             console.warn(`Image for value ${selectedValue} not found`);
                         }
-                    });
+                    })
+
                 }
             });
         });
 
-        // Предзагрузка изображений
         function preloadImages() {
+            const seemInputs = document.querySelectorAll('[name="product-color"]');
+            const seemColors = Array.from(seemInputs).map(input => input.value);
+
             const hiddenContainer = document.createElement('div');
             hiddenContainer.style.display = 'none';
             document.body.appendChild(hiddenContainer);
 
-            seemsImages.forEach(image => {
+            seemColors.forEach(seemColor => {
                 const img = document.createElement('img');
-                img.src = image.src;
+                let imageSrc = `../img/colors/${seemColor}.png`;
+                img.src = imageSrc;
+
+                img.onerror = () => {
+                    console.warn(`Image not found: ${imageSrc}`);
+                };
+
                 hiddenContainer.appendChild(img);
             });
-
 
             setTimeout(() => {
                 document.body.removeChild(hiddenContainer);
@@ -346,6 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         preloadImages();
     }
+
 
 
 
