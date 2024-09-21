@@ -55,11 +55,11 @@ export class Datepicker {
     init() {
 
         this.element.addEventListener('focus', () => {
-            console.log('focis');
+
             this.show();
         });
         this.element.addEventListener('blur', (e) => {
-            console.log('blur');
+
             if (!e.relatedTarget?.closest('.datepicker')) {
                 this.hide();
             }
@@ -151,7 +151,6 @@ export class Datepicker {
             this.selectedDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
             this.element.value = this.formatDate(this.selectedDate);
             this.render();
-            console.log('btn click');
 
             this.hide();
         });
