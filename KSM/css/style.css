@@ -3,8 +3,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -19,8 +19,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1788,14 +1788,16 @@ body.bg-gray {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: none;
   will-change: contents;
   -webkit-transform: translate3d(0, 0, -1px);
           transform: translate3d(0, 0, -1px);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .product__options-seem.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .product__options-colors {
