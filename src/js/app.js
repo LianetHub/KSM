@@ -300,19 +300,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             option.addEventListener('change', function () {
                 if (this.checked) {
-                    const selectedValue = this.value;
 
+                    window.requestAnimationFrame(() => {
+                        const selectedValue = this.value;
 
-                    seemsImages.forEach(image => {
-                        image.classList.remove('active');
-                    });
+                        seemsImages.forEach(image => {
+                            image.classList.remove('active');
+                        });
+                        const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
+                        if (activeImage) {
+                            activeImage.classList.add('active');
+                        } else {
+                            console.warn(`Image for value ${selectedValue} not found`);
+                        }
+                    })
 
-                    const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
-                    if (activeImage) {
-                        activeImage.classList.add('active');
-                    } else {
-                        console.warn(`Image for value ${selectedValue} not found`);
-                    }
                 }
             });
         });

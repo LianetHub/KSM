@@ -583,7 +583,7 @@
 		display: none;
 		will-change: display;
 		transform: translate3d(0, 0, -1px);
-
+		contain: layout;
 		&.active {
 			display: block;
 		}
