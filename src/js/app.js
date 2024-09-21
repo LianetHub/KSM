@@ -309,12 +309,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.checked) {
                     const selectedValue = this.value;
 
+
                     window.requestAnimationFrame(() => {
-                        seemsImages.forEach(image => image.classList.toggle('active', false));
+
+                        seemsImages.forEach(image => image.classList.remove('active'));
+
 
                         const activeImage = seemsImagesMap[selectedValue];
                         if (activeImage) {
-                            activeImage.classList.toggle('active', true);
+                            activeImage.classList.add('active');
                         } else {
                             console.warn(`Image for value ${selectedValue} not found`);
                         }
@@ -323,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-
+        // Предзагрузка изображений
         function preloadImages() {
             const hiddenContainer = document.createElement('div');
             hiddenContainer.style.display = 'none';
