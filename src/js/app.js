@@ -309,15 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.checked) {
                     const selectedValue = this.value;
 
-
                     window.requestAnimationFrame(() => {
-
-                        seemsImages.forEach(image => image.classList.remove('active'));
-
+                        seemsImages.forEach(image => image.classList.toggle('active', false));
 
                         const activeImage = seemsImagesMap[selectedValue];
                         if (activeImage) {
-                            activeImage.classList.add('active');
+                            activeImage.classList.toggle('active', true);
                         } else {
                             console.warn(`Image for value ${selectedValue} not found`);
                         }
