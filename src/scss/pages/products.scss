@@ -580,15 +580,12 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		// display: none;
-		will-change: contents;
+		display: none;
+		will-change: display;
 		transform: translate3d(0, 0, -1px);
-		opacity: 0;
-		visibility: hidden;
+
 		&.active {
-			// display: block;
-			opacity: 1;
-			visibility: visible;
+			display: block;
 		}
 	}
 	// .product__options-colors
