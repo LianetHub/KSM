@@ -11,14 +11,21 @@
 	font-size: rem(18);
 	// .datepicker__body
 	&__body {
-		width: fit-content;
+		// width: fit-content;
+		@media (min-width: $md6) {
+			padding-right: #{math.div(1, 8) * 100%};
+		}
 	}
 	// .datepicker__grid
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
-		gap: rem(21);
+
+		column-gap: rem(15);
 		row-gap: rem(15);
+		@media (min-width: $md6) {
+			column-gap: rem(21);
+		}
 		& button {
 			&.selected {
 				font-weight: 500;

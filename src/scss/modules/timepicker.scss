@@ -4,14 +4,20 @@
 	width: 100%;
 	border-bottom: rem(1) solid;
 	&__items {
-		width: fit-content;
-		padding: rem(20) 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: rem(60);
-		row-gap: rem(16);
+		column-gap: rem(15);
+		row-gap: rem(15);
+		font-size: rem(18);
+		padding: rem(20) 0;
+		@media (min-width: $md6) {
+			padding: rem(20) 0 rem(102);
+			column-gap: rem(40);
+		}
 	}
 	// .timepicker__item
 	&__item {
+		text-align: left;
+		// width: fit-content;
 	}
 }
