@@ -8,17 +8,13 @@ function initMap() {
         var myMap = new ymaps.Map("map", {
             center: centerCoords,
             zoom: 17,
-            controls: ['zoomControl']
         }, {
             suppressMapOpenBlock: true
         });
 
+        myMap.controls.add('zoomControl')
 
         var myPlacemark = new ymaps.Placemark(placemarkCoords, {}, {
-            // iconLayout: 'default#image',
-            // // iconImageHref: 'img/icons/placemark.svg',
-            // iconImageSize: [70, 80],
-            // iconImageOffset: [-15, -42]
             preset: 'twirl#redIcon'
         });
 

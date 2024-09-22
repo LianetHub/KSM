@@ -272,6 +272,11 @@
 				margin-top: -0.25rem;
 				margin-right: -0.1rem;
 				line-height: 1;
+				@media (any-hover: hover) {
+					&:hover {
+						font-weight: 500;
+					}
+				}
 			}
 			.header.open-menu & {
 				@media (max-width: $md5) {
