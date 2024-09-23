@@ -50,7 +50,7 @@ export class Timepicker {
         });
 
         this.input.addEventListener('blur', () => {
-            setTimeout(() => this.hideTimepicker(), 200);
+            this.hideTimepicker();
         });
     }
 
