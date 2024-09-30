@@ -88,11 +88,11 @@ export const filter = () => {
     }
 
     function sendFilterRequest() {
-        const filterBody = document.querySelector('.products__body');
-        filterBody.classList.add('_loading');
-        setTimeout(() => {
-            filterBody.classList.remove('_loading');
-        }, 500)
+        // const filterBody = document.querySelector('.products__body');
+        // filterBody.classList.add('_loading');
+        // setTimeout(() => {
+        //     filterBody.classList.remove('_loading');
+        // }, 500)
 
         // fetch(filterForm.action, {
         //     method: 'GET',

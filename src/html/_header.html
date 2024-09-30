@@ -1,4 +1,4 @@
-<header class="header@@if(big===false){ header_sm}">
+<header class="header header-static@@if(big===false){ header_sm}">
     <div class="header__top"></div>
     <div class="header__wrapper">
         <div class="header__container">
@@ -28,6 +28,7 @@
                 </div>
                 <div class="col-sm-6 col-xs-7 col-8">
                     <nav aria-label="Меню в шапке" class="header__menu">
+                        <a href="/cart.html" class="header__menu-cart@@if(cart>0){ active} mobile-only">@@cart</a>
                         <div class="header__menu-body">
                             <ul class="header__menu-list">
                                 <li class="header__menu-item"><a href="/" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
@@ -76,8 +77,7 @@
     <div class="header__wrapper">
         <div class="header__container">
             <div class="row">
-                <div class="col-sm-2 col-xs-1 col-4"></div>
-                <div class="col-4 mobile-only">
+                <div class="col-4 mobile-only offset-sm-2 offset-xs-1 offset-4">
                     <button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
                         <span></span>
                         <span></span>
@@ -86,6 +86,7 @@
                 </div>
                 <div class="col-sm-6 col-xs-7 col-8">
                     <nav aria-label="Меню в шапке" class="header__menu">
+                        <a href="/cart.html" class="header__menu-cart@@if(cart>0){ active} mobile-only">@@cart</a>
                         <div class="header__menu-body">
                             <ul class="header__menu-list">
                                 <li class="header__menu-item"><a href="/" class="header__menu-link font-medium">КОМПАНИЯ</a></li>

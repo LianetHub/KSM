@@ -596,6 +596,9 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.16rem;
+		@media (max-width: $md5) {
+			max-width: rem(218);
+		}
 	}
 	// .product__options-color
 	&__options-color {

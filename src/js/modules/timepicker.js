@@ -49,8 +49,11 @@ export class Timepicker {
             this.showTimepicker();
         });
 
-        this.input.addEventListener('blur', () => {
-            this.hideTimepicker();
+        this.input.addEventListener('blur', (e) => {
+
+            if (!e.relatedTarget?.closest('.timepicker')) {
+                this.hideTimepicker();
+            }
         });
     }
 

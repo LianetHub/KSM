@@ -267,12 +267,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let logo = document.querySelector('.header__logo');
         if (logo.classList.contains('clip-logo')) {
             document.querySelector('.header-fixed').classList.add('visible');
+            document.querySelector('.header-static').classList.add('hide');
             logo.classList.add('visible');
         }
     }
 
     function removeFixedMenu() {
         document.querySelector('.header-fixed').classList.remove('visible');
+        document.querySelector('.header-static').classList.remove('hide');
         document.querySelector('.header__logo').classList.remove('visible');
     }
 

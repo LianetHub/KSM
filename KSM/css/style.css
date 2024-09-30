@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -978,6 +978,14 @@ body.bg-gray {
   height: 7rem;
 }
 
+.header.header-static.hide {
+  visibility: hidden;
+}
+
+.header.header-static.hide .header__logo {
+  visibility: visible;
+}
+
 .header.header-fixed {
   position: fixed;
   top: 0;
@@ -1000,7 +1008,7 @@ body.bg-gray {
 }
 
 .header.header-fixed .header__wrapper {
-  min-height: 0;
+  min-height: 6.7rem;
 }
 
 .header.header-fixed .header__logo {
@@ -1058,6 +1066,13 @@ body.bg-gray {
   padding: 2.625rem 0 0 0;
 }
 
+.header__menu > .header__menu-cart {
+  font-size: 1.875rem;
+  position: absolute;
+  right: 0.6875rem;
+  bottom: 1.5rem;
+}
+
 .header__menu-body {
   position: relative;
 }
@@ -1083,7 +1098,6 @@ body.bg-gray {
 }
 
 .header__menu-cart.active {
-  visibility: visible;
   color: #000;
 }
 
@@ -4699,6 +4713,10 @@ body.bg-gray {
     font-size: 0.9375rem;
   }
 
+  .product__options-colors {
+    max-width: 13.625rem;
+  }
+
   .contacts__container > .row,
   .contacts__container > .privacy__content {
     --gutter-x: 1.5rem;
@@ -4718,7 +4736,7 @@ body.bg-gray {
     width: 100%;
     height: 2rem;
     background: #000;
-    z-index: 5;
+    z-index: 4;
   }
 
   .header.open-menu .header__logo svg path {
@@ -4751,7 +4769,7 @@ body.bg-gray {
     gap: 2.6rem;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-width: 0;
+    scrollbar-width: none;
   }
 
   .header__menu-body::-webkit-scrollbar {
