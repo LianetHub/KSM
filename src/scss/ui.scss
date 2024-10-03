@@ -20,6 +20,17 @@
 	font-weight: 700;
 }
 
+.title-lg {
+	font-size: 1.3125rem;
+	@media (min-width: $md6) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: $md32) {
+		font-size: 1.875rem;
+	}
+	font-weight: 700;
+}
+
 .text-block {
 	font-size: 0.9375rem;
 	line-height: 120%;

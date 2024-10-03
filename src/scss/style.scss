@@ -24,6 +24,7 @@ $fontfamily: 'KSM';
 $md0: 1919.98px; // xxxl
 $md1: 1727.98px; // xxl
 $md2: 1599.98px; // xl
+$md32: 1439.98px; // xl
 $md3: 1199.98px; // lg
 $md4: 1023.98px; // md
 $md5: 767.98px; // sm
@@ -53,12 +54,6 @@ $header: var(--header-height, 186px);
 $headerWrapper: var(--header-wrapper-height, 107px);
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
-
-.no-bef {
-	& .btn::after {
-		display: none !important;
-	}
-}
 
 body {
 	font-family: $fontfamily, sans-serif;
@@ -106,7 +101,6 @@ body {
 	}
 	@media (min-width: $md0) {
 		max-width: rem(1840);
-
 		box-sizing: content-box;
 	}
 	&.container-lg {

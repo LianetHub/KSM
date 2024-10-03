@@ -178,7 +178,9 @@
 		}
 	}
 	&.btn-primary-dashed {
-		border: 1px dashed #000;
+		// border: 1px dashed #000;
+		background: linear-gradient(90deg, #000 62.5%, transparent 62.5%) 0 0 / 8px 1px repeat-x, linear-gradient(90deg, #000 62.5%, transparent 62.5%) 0 100% / 8px 1px repeat-x,
+			linear-gradient(#000 62.5%, transparent 62.5%) 0 0 / 1px 8px repeat-y, linear-gradient(#000 62.5%, transparent 62.5%) 100% 0 / 1px 8px repeat-y;
 		color: #000;
 		&:hover,
 		&:active {
@@ -239,7 +241,8 @@
 			content: '';
 			position: absolute;
 			color: #fff;
-			bottom: 0.25rem;
+			top: 50%;
+			transform: translateY(-50%);
 			left: 0;
 			background: transparent;
 			display: flex;

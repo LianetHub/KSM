@@ -5,7 +5,7 @@ export const animation = () => {
         if (!logo) return;
 
         const isSmallScreen = window.innerWidth < 1600;
-        const maxScroll = isSmallScreen ? 50 : 25;
+        const maxScroll = isSmallScreen ? 50 : 100;
         const popup = logo.closest('.popup');
         const scroller = popup ? popup : window;
 
