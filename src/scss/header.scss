@@ -13,6 +13,14 @@
 				display: none;
 			}
 		}
+		.header__logo {
+			&.clip-logo {
+				clip-path: polygon(0 0, 12% 0, 12% 100%, 0% 100%);
+				@media (max-width: $md5) {
+					clip-path: none;
+				}
+			}
+		}
 	}
 	&.open-menu {
 		@media (max-width: $md6) {

@@ -48,12 +48,14 @@
 	&__item-project {
 	}
 	&__more {
-		margin-top: 1.25rem;
 		display: inline-block;
 		font-size: 0.9375rem;
 		font-weight: 500;
 		line-height: 180%;
 		text-transform: uppercase;
 		width: fit-content;
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+		}
 	}
 }

@@ -5,7 +5,9 @@ export const animation = () => {
         if (!logo) return;
 
         const isSmallScreen = window.innerWidth < 1600;
-        const maxScroll = isSmallScreen ? 50 : 100;
+        const hasParentSm = !!logo.closest('.header_sm');
+
+        const maxScroll = isSmallScreen ? 50 : 80;
         const popup = logo.closest('.popup');
         const scroller = popup ? popup : window;
 
@@ -21,7 +23,7 @@ export const animation = () => {
             trigger: logo,
             scroller: scroller,
             start: 0,
-            end: 3 * oneThirdScroll,
+            end: hasParentSm ? 0 : 3 * oneThirdScroll,
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
@@ -42,8 +44,8 @@ export const animation = () => {
         ScrollTrigger.create({
             trigger: logo,
             scroller: scroller,
-            start: 3 * oneThirdScroll,
-            end: maxScroll,
+            start: hasParentSm ? 0 : 3 * oneThirdScroll,
+            end: hasParentSm ? oneThirdScroll : maxScroll,
             scrub: true,
             onUpdate: self => {
                 gsap.to(logoCurrent, {

@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seemsImages = Array.from(document.querySelectorAll('.product__options-seem'));
 
     if (colorOptions && seemsImages.length) {
+        const selectedTitle = document.querySelector('.product__options-title');
 
         colorOptions.forEach(option => {
 
@@ -312,6 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const activeImage = document.querySelector(`.product__options-seem[src*="${selectedValue}.png"]`);
                         if (activeImage) {
                             activeImage.classList.add('active');
+                            selectedTitle.textContent = activeImage.getAttribute('title');
                         } else {
                             console.warn(`Image for value ${selectedValue} not found`);
                         }

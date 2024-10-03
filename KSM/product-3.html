@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>КСМ | Материалы</title>
+    <title>КСМ | Страница товара</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
     <!-- favicon -->
     <!-- Open Graph  -->
     <meta property="og:type" content="business.business">
-    <meta property="og:title" content="КСМ | Материалы">
+    <meta property="og:title" content="КСМ | Страница товара">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="/OG.png">
@@ -31,7 +31,7 @@
     <!-- Open Graph  -->
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="КСМ | Материалы">
+    <meta property="twitter:title" content="КСМ | Страница товара">
     <meta property="twitter:description" content="">
     <meta property="twitter:site" content="">
     <meta property="twitter:url" content="">
@@ -46,13 +46,13 @@
 
 <body>
     <div class="wrapper">
-        <header class="header header-static">
+        <header class="header header-static header_sm">
             <div class="header__top"></div>
             <div class="header__wrapper">
                 <div class="header__container">
                     <div class="row">
                         <div class="col-sm-2 col-xs-1 col-4">
-                            <a href="#" class="header__logo logo">
+                            <a href="#" class="header__logo logo header__logo_scaled">
                                 <svg width="437" viewBox="0 0 437 142" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
                                     <path d="M46.004 0.800781L25.956 19.5048L46.004 40.0008H40.404L22.26 21.6328H7.7V40.0008H3.5V0.800781H7.7V18.0488H22.148L40.46 0.800781H46.004Z" fill="black"></path>
                                     <g class="header__logo-current">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-7 col-8">
                             <nav aria-label="Меню в шапке" class="header__menu">
-                                <a href="/cart.html" class="header__menu-cart mobile-only">0</a>
+                                <a href="/cart.html" class="header__menu-cart active mobile-only">2</a>
                                 <div class="header__menu-body">
                                     <ul class="header__menu-list">
                                         <li class="header__menu-item"><a href="/" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
@@ -89,7 +89,7 @@
                                         <li class="header__menu-item"><a href="/contacts.html" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
                                         <li class="header__menu-item"><a href="/cases.html" class="header__menu-link font-medium">КЕЙСЫ</a></li>
                                     </ul>
-                                    <a href="/cart.html" class="header__menu-cart">0</a>
+                                    <a href="/cart.html" class="header__menu-cart active">2</a>
                                     <form action="#" class="header__form form mobile-only">
                                         <div class="form__label font-bold">Поиск по сайту</div>
                                         <div class="form__field">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-7 col-8">
                             <nav aria-label="Меню в шапке" class="header__menu">
-                                <a href="/cart.html" class="header__menu-cart mobile-only">0</a>
+                                <a href="/cart.html" class="header__menu-cart active mobile-only">2</a>
                                 <div class="header__menu-body">
                                     <ul class="header__menu-list">
                                         <li class="header__menu-item"><a href="/" class="header__menu-link font-medium">КОМПАНИЯ</a></li>
@@ -128,7 +128,7 @@
                                         <li class="header__menu-item"><a href="/contacts.html" class="header__menu-link font-medium">КОНТАКТЫ</a></li>
                                         <li class="header__menu-item"><a href="/cases.html" class="header__menu-link font-medium">КЕЙСЫ</a></li>
                                     </ul>
-                                    <a href="/cart.html" class="header__menu-cart">0</a>
+                                    <a href="/cart.html" class="header__menu-cart active">2</a>
                                     <form action="#" class="header__form form mobile-only">
                                         <div class="form__label font-bold">Поиск по сайту</div>
                                         <div class="form__field">
@@ -144,372 +144,378 @@
             </div>
         </div>
         <main class="page">
-            <section class="products">
-                <div class="products__container">
-                    <form action="#" class="products__filters">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-4 products__filters-column">
-                                <div class="products__filters-header">
-                                    <div class="products__filters-caption">Цена</div>
+            <section class="product">
+                <div class="product__container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product__slider slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/01.webp" type="image/webp"><img src="img/product/01.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/02.webp" type="image/webp"><img src="img/product/02.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/03.webp" type="image/webp"><img src="img/product/03.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/04.webp" type="image/webp"><img src="img/product/04.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/05.webp" type="image/webp"><img src="img/product/05.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
+                                    <div class="slider__slide swiper-slide">
+                                        <picture>
+                                            <source srcset="img/product/06.webp" type="image/webp"><img src="img/product/06.png" alt="Фото категории">
+                                        </picture>
+                                    </div>
                                 </div>
-                                <div class="products__filters-body">
-                                    <div class="products__filters-price">
-                                        <label for="start-price">От</label>
-                                        <input type="text" id="start-price" name="start-price" autocomplete="off" class="form__input" placeholder="1000 ₽/м²">
-                                    </div>
-                                    <div class="products__filters-price">
-                                        <label for="end-price">До</label>
-                                        <input type="text" id="end-price" name="end-price" autocomplete="off" class="form__input" placeholder="7000 ₽/м²">
-                                    </div>
+                                <div class="slider__controls">
+                                    <div class="slider__prev swiper-button-prev"></div>
+                                    <div class="slider__pagination swiper-pagination"></div>
+                                    <div class="slider__next swiper-button-next"></div>
                                 </div>
                             </div>
-                            <div class="col-md-2 col-xs-4 products__filters-column">
-                                <div class="products__filters-header">
-                                    <div class="products__filters-caption">Цвет</div>
-                                    <button type="button" class="products__filters-clear icon-clear hidden"></button>
-                                </div>
-                                <div class="products__filters-body ">
-                                    <div class="products__filters-list">
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Белый </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Слоновая кость </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Соломенный </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Жёлтый </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Красный </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Коричневый </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Серый </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Чёрный </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="color" class="products__filters-input hidden" hidden="">
-                                            <span> Пёстрый </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-xs-4 products__filters-column">
-                                <div class="products__filters-header">
-                                    <div class="products__filters-caption">Бренд</div>
-                                    <button type="button" class="products__filters-clear icon-clear hidden"></button>
-                                </div>
-                                <div class="products__filters-body">
-                                    <div class="products__filters-list">
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Донские Зори </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Сафоновский КЗ </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Wienerberger </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Terca </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Engels </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Muhr </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Recke </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> ЛСР </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="brand" class="products__filters-input hidden" hidden="">
-                                            <span> Terex </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-xs-4 products__filters-column">
-                                <div class="products__filters-header">
-                                    <div class="products__filters-caption">Страна</div>
-                                    <button type="button" class="products__filters-clear icon-clear hidden"></button>
-                                </div>
-                                <div class="products__filters-body">
-                                    <div class="products__filters-list">
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Россия </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Бельгия </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Голландия </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Великобритания </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Германия </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Эстония </span>
-                                        </label>
-                                        <label class="products__filters-item">
-                                            <input type="checkbox" name="country" class="products__filters-input hidden" hidden="">
-                                            <span> Финляндия </span>
-                                        </label>
+                            <div class="product__options">
+                                <h2 class="product__options-title">Светло-серый раствор</h2>
+                                <div class="product__options-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="product__options-visual">
+                                                <div class="product__options-seems">
+                                                    <img src="img/colors/01-xs.png" title="Светло-серый раствор" class="product__options-seem active" alt="seem-color">
+                                                    <img src="img/colors/02-xs.png" title="Бежевый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/03-xs.png" title="Желто-бежевый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/04-xs.png" title="Желто-серый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/05-xs.png" title="Серый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/06-xs.png" title="Темно-серый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/07-xs.png" title="Красно-коричневый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/08-xs.png" title="Коричнеый раствор" class="product__options-seem" alt="seem-color">
+                                                    <img src="img/colors/09-xs.png" title="Черный раствор" class="product__options-seem" alt="seem-color">
+                                                </div>
+                                                <picture>
+                                                    <source srcset="img/colors/03-product.webp" type="image/webp"><img src="img/colors/03-product.png" alt="visual">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-sm-2 col-4">
+                                            <div class="product__options-colors">
+                                                <label class="product__options-color">
+                                                    <input type="radio" checked="" name="product-color" value="01-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/01.webp" type="image/webp"><img src="img/colors/01.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="02-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/02.webp" type="image/webp"><img src="img/colors/02.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="03-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/03.webp" type="image/webp"><img src="img/colors/03.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="04-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/04.webp" type="image/webp"><img src="img/colors/04.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="05-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/05.webp" type="image/webp"><img src="img/colors/05.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="06-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/06.webp" type="image/webp"><img src="img/colors/06.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="07-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/07.webp" type="image/webp"><img src="img/colors/07.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="08-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/08.webp" type="image/webp"><img src="img/colors/08.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                                <label class="product__options-color">
+                                                    <input type="radio" name="product-color" value="09-xs" class="product__options-input hidden" hidden="">
+                                                    <span class="product__options-block">
+                                                        <picture>
+                                                            <source srcset="img/colors/09.webp" type="image/webp"><img src="img/colors/09.png" class="cover-image" alt="color">
+                                                        </picture>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <div class="products__body">
-                        <h1 class="products__title title">Кирпич ручной формовки</h1>
-                        <div class="products__cards">
-                            <div class="row">
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                        <div class="col-md-4">
+                            <div class="product__info">
+                                <ul class="product__breads">
+                                    <li class="product__bread">
+                                        <a href="" class="product__bread-link">Материалы</a>
+                                    </li>
+                                    <li class="product__bread">
+                                        <a href="" class="product__bread-link">Кирпич ручной формовки</a>
+                                    </li>
+                                    <li class="product__bread">
+                                        <span class="product__bread-link">Донские зори</span>
+                                    </li>
+                                </ul>
+                                <h1 class="product__title">Донские Зори Архангельское W160</h1>
+                                <div class="product__price">
+                                    <div class="row">
+                                        <div class="col-xlg-2 col-md-4 col-sm-2 col-4">
+                                            <div class="product__price-value">122,52 ₽ / шт.</div>
+                                        </div>
+                                        <div class="col-xlg-2 col-md-4 col-sm-2 col-4">
+                                            <div class="product__price-value">7 260,54 ₽ / м²</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                <div class="product__props">
+                                    <div class="row">
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Производитель:</div>
+                                                <div class="product__props-value">Донские Зори</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Пустотность:</div>
+                                                <div class="product__props-value">Полнотелый</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Страна:</div>
+                                                <div class="product__props-value">Россия</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Марка:</div>
+                                                <div class="product__props-value">М-175</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Код товара:</div>
+                                                <div class="product__props-value">W162</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Морозостойкость:</div>
+                                                <div class="product__props-value">F-100</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Цвет:</div>
+                                                <div class="product__props-value">Серый</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Водопоглощение:</div>
+                                                <div class="product__props-value">8,50%</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Тип:</div>
+                                                <div class="product__props-value">Ручная формовка</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Вес:</div>
+                                                <div class="product__props-value">2.5 кг</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Формат:</div>
+                                                <div class="product__props-value">WFD</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Кол-во (м²):</div>
+                                                <div class="product__props-value">59</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Размер:</div>
+                                                <div class="product__props-value">215×102×65</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <div class="product__props-item">
+                                                <div class="product__props-name">Кол-во (поддон)</div>
+                                                <div class="product__props-value">512 шт</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                <div class="product__delete">
+                                    <div class="row">
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <button class="product__delete-btn btn btn-primary active">УДАЛИТЬ</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                <div class="product__desc">
+                                    <h2 class="product__desc-caption"> Описание и сертификаты </h2>
+                                    <div class="product__desc-text text-block">
+                                        <p> Производство кирпича торговой марки «Донские зори» началось в 2009 году в городе Новочеркасск Ростовской области. <br> Желание уйти от конвейерной безликости продукции появилось сразу: донским просторам органичны индивидуальность и творческий подход. <br> В итоге, в тесном сотрудничестве с Ростовским государственным строительным университетом появились наработки, позволившие впервые в России наладить выпуск качественного кирпича ручной формовки. </p>
+                                        <p> По своим характеристикам и внешнему виду «Донские зори» ничем не уступают лучшим импортным образцам. Но в нынешних условиях их стоимость значительно ниже. Близость от Москвы и отсутствие таможни позволяют гарантировать наличие полной товарной линейки в нужном объёме в нужный срок. Сегодня с завода ежемесячно отгружается более 750 000 кирпичей. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. </p>
+                                        <p> Уникальный кирпич серии "Усадьба" нацелен на возрождение традиций русских мастеров и адресован ценителям усадебного мира во всех его проявлениях. Более того, по желанию заказчика на кирпичи могут быть нанесены логотипы и надписи, завод готов изготовить любые фигурные элементы по индивидуальным лекалам: </p>
+                                        <ul>
+                                            <li>произведён вручную, каждый кирпич уникален и сохраняет следы рук мастера;</li>
+                                            <li>цена ниже Европейских аналогов;</li>
+                                            <li>большой ассортимент;</li>
+                                            <li>высокое качество;</li>
+                                            <li>морозостойкость более 170 циклов;</li>
+                                            <li>высокая прочность на изгиб;</li>
+                                            <li>качественная упаковка (термоусадочная пленка, каждый ряд переложен вспененным полистиролом для предотвращения потертостей).</li>
+                                            <li>возможность разработки индивидуальной сортировки под заказ (от 50 000 штук);</li>
+                                            <li>сохранение традиций русских мастеров.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__desc-links">
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ PDF</span> Протокол исследований на керамический кирпич Донские зори </a>
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ PDF</span> Протокол испытаний на кирпич Донские зори 215x102x65 мм </a>
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ PDF</span> Протокол испытаний на облицовочный кирпич на морозостойкость Донские зори </a>
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ PDF</span> Сертификат соответствия на облицовочный кирпич Донские зори </a>
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ PDF</span> Экспертное заключение на облицовочный кирпич Донские зори </a>
+                                    </div>
+                                    <div class="product__desc-links">
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ RFA</span> BIM-модель </a>
+                                        <a href="" class="product__desc-link">
+                                            <span class="font-medium">↓ JPG</span> Текстура </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Донские Зори Азарово W162</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-xs-4">
-                                    <div class="products__card">
-                                        <a href="/product.html" class="products__card-image has-hover">
-                                            <picture>
-                                                <img src="img/product.png" alt="Фото категории">
-                                                <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
-                                            </picture>
-                                        </a>
-                                        <a href="/product.html" class="products__card-name font-medium">Кирпич клинкерный Модформат ПРАГА Донские Зори MN013</a>
-                                        <div class="products__card-price">3019,89 ₽/м²</div>
-                                        <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                <div class="product__btns">
+                                    <div class="row">
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <a href="#overlay" data-modal="feedback" class="product__btns-item btn btn-primary"> ЗАКАЗАТЬ ОБРАЗЕЦ </a>
+                                        </div>
+                                        <div class="col-xlg-4 col-md-8 col-sm-4 col-8">
+                                            <a href="#calendar" data-modal="showroom" class="product__btns-item btn btn-primary"> ПОСЕТИТЬ ШОУРУМ </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-8">
-                                <a href="" class="products__more">Показать ещё ↓</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products products_more">
+                <div class="products__container">
+                    <h2 class="products__title title-xs">Похожие материалы</h2>
+                    <div class="product__cards">
+                        <div class="row">
+                            <div class="col-md-2 col-4">
+                                <div class="products__card">
+                                    <a href="/product.html" class="products__card-image has-hover">
+                                        <picture>
+                                            <img src="img/product.png" alt="Фото категории">
+                                            <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
+                                        </picture>
+                                    </a>
+                                    <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Азарово W162</a>
+                                    <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                    <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="products__card">
+                                    <a href="/product.html" class="products__card-image has-hover">
+                                        <picture>
+                                            <img src="img/product.png" alt="Фото категории">
+                                            <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
+                                        </picture>
+                                    </a>
+                                    <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Азарово W162</a>
+                                    <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                    <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="products__card">
+                                    <a href="/product.html" class="products__card-image has-hover">
+                                        <picture>
+                                            <img src="img/product.png" alt="Фото категории">
+                                            <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
+                                        </picture>
+                                    </a>
+                                    <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Азарово W162</a>
+                                    <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                    <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="products__card">
+                                    <a href="/product.html" class="products__card-image has-hover">
+                                        <picture>
+                                            <img src="img/product.png" alt="Фото категории">
+                                            <img src="img/hover-product.png" class="hover-img" alt="Фото товара при наведении">
+                                        </picture>
+                                    </a>
+                                    <a href="/product.html" class="products__card-name sm-name font-medium">Донские Зори Азарово W162</a>
+                                    <div class="products__card-price sm-price">3019,89 ₽/м²</div>
+                                    <button type="button" aria-label="Добавить в корзину" class="products__card-btn icon-plus"></button>
+                                </div>
                             </div>
                         </div>
                     </div>

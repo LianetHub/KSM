@@ -687,6 +687,12 @@
 		margin-top: 1.75rem;
 		font-size: 0.9375rem;
 		line-height: 160%;
+		@media (min-width: $md32) {
+			margin-right: -2rem;
+		}
+		@media (min-width: $md2) {
+			margin-right: 0;
+		}
 		.row {
 			--gutter-y: 0;
 		}
@@ -700,7 +706,11 @@
 			gap: 0.25rem $gutter-x;
 		}
 		@media (min-width: $md32) {
+			gap: 0.25rem 0.75rem;
 			white-space: nowrap;
+		}
+		@media (min-width: $md2) {
+			gap: 0.25rem $gutter-x;
 		}
 	}
 	// .product__props-name
@@ -763,6 +773,7 @@
 			}
 		}
 		& ul {
+			margin-top: 0.25rem;
 			padding-left: 2rem;
 			& li {
 				display: flex;
