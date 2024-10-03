@@ -21,7 +21,7 @@ export const animation = () => {
             trigger: logo,
             scroller: scroller,
             start: 0,
-            end: oneThirdScroll,
+            end: 3 * oneThirdScroll,
             scrub: true,
             onUpdate: self => {
                 const progress = self.progress;
@@ -42,7 +42,7 @@ export const animation = () => {
         ScrollTrigger.create({
             trigger: logo,
             scroller: scroller,
-            start: 2 * oneThirdScroll,
+            start: 3 * oneThirdScroll,
             end: maxScroll,
             scrub: true,
             onUpdate: self => {
