@@ -9,6 +9,9 @@
 	@media (min-width: $md2) {
 		padding: 0.35rem 0 rem(72);
 	}
+	@media (min-width: $md0) {
+		padding: 0.35rem 0 rem(85);
+	}
 	&.article_case {
 		padding: 1.5rem 0 3.75rem;
 		@media (min-width: $md6) {
@@ -30,6 +33,9 @@
 			margin-top: 1.4rem;
 			@media (min-width: $md2) {
 				margin-top: 2.2rem;
+			}
+			@media (min-width: $md0) {
+				margin-top: 2.4rem;
 			}
 			&.xxl-offset {
 				margin-top: rem(60);
@@ -63,6 +69,9 @@
 				@media (min-width: $md2) {
 					margin-top: 4.1rem;
 				}
+				@media (min-width: $md0) {
+					margin-top: 5rem;
+				}
 			}
 			&.md-offset {
 				margin-top: 3.25rem;
@@ -87,12 +96,18 @@
 				@media (min-width: $md2) {
 					margin-top: 2.2rem;
 				}
+				@media (min-width: $md0) {
+					margin-top: 2.75rem;
+				}
 			}
 		}
 		.row {
 			--gutter-y: 1.125rem;
 			@media (min-width: $md2) {
 				--gutter-y: 1.5rem;
+			}
+			@media (min-width: $md0) {
+				--gutter-y: 1.75rem;
 			}
 		}
 	}
@@ -119,6 +134,10 @@
 			line-height: 120%;
 			font-size: 0.9375rem;
 		}
+		@media (min-width: $md0) {
+			font-size: 1.125rem;
+			line-height: 133.33%;
+		}
 	}
 	&__text {
 		& p {
@@ -127,6 +146,9 @@
 				@media (min-width: $md2) {
 					margin-bottom: 1.4rem;
 				}
+				@media (min-width: $md0) {
+					margin-bottom: 1.8rem;
+				}
 			}
 		}
 		& ul {
@@ -134,7 +156,7 @@
 				display: flex;
 				gap: 0.25rem;
 				&::before {
-					content: "—";
+					content: '—';
 					flex-shrink: 0;
 				}
 				&:not(:last-child) {
@@ -145,6 +167,9 @@
 				margin-bottom: 1.1rem;
 				@media (min-width: $md2) {
 					margin-bottom: 1.4rem;
+				}
+				@media (min-width: $md0) {
+					margin-bottom: 1.5rem;
 				}
 			}
 		}
@@ -182,6 +207,10 @@
 		@media (min-width: $md1) {
 			gap: 0.3rem $gutter-x;
 		}
+		@media (min-width: $md0) {
+			gap: 0.55rem $gutter-x;
+			font-size: 1.125rem;
+		}
 	}
 	// .article__list-item
 	&__list-item {
@@ -189,7 +218,7 @@
 	// .article__list-link
 	&__list-link {
 		&::after {
-			content: "↽";
+			content: '↽';
 			visibility: hidden;
 			display: inline-block;
 			margin-left: 0.35rem;

@@ -9,6 +9,9 @@
 	width: 100%;
 	border-bottom: rem(1) solid;
 	font-size: rem(18);
+	@media (min-width: $md0) {
+		font-size: 1.5rem;
+	}
 	// .datepicker__body
 	&__body {
 		// width: fit-content;

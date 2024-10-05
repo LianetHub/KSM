@@ -22,6 +22,9 @@
 			@media (min-width: $md2) {
 				--gutter-y: 3.75rem;
 			}
+			@media (min-width: $md0) {
+				--gutter-y: 4.25rem;
+			}
 		}
 	}
 	// .contacts__image
@@ -45,7 +48,10 @@
 			margin-top: -0.25rem;
 		}
 		@media (min-width: $md2) {
-			font-size: 1.75rem;
+			font-size: rem(30);
+		}
+		@media (min-width: $md0) {
+			font-size: 2.25rem;
 		}
 	}
 	// .contacts__desc
@@ -54,11 +60,17 @@
 		@media (min-width: $md2) {
 			margin-top: 1.5rem;
 		}
+		@media (min-width: $md0) {
+			margin-top: 1.75rem;
+		}
 		& p {
 			&:not(:last-child) {
 				margin-bottom: 1.125rem;
 				@media (min-width: $md1) {
 					margin-bottom: 1.5rem;
+				}
+				@media (min-width: $md0) {
+					margin-bottom: 1.875rem;
 				}
 			}
 		}
@@ -72,6 +84,9 @@
 			--gutter-y: 0.875rem;
 			@media (min-width: $md6) {
 				--gutter-y: 1.25rem;
+			}
+			@media (min-width: $md0) {
+				--gutter-y: 2rem;
 			}
 		}
 	}
@@ -87,6 +102,9 @@
 		}
 		.row {
 			--gutter-y: 1.25rem;
+			@media (min-width: $md0) {
+				--gutter-y: 1.75rem;
+			}
 		}
 	}
 	// .contacts__worktime
@@ -122,6 +140,9 @@
 		@media (min-width: $md3) {
 			margin-top: 2.25rem;
 		}
+		@media (min-width: $md0) {
+			margin-top: 1.5rem;
+		}
 		.row {
 			--gutter-y: 1.75rem;
 		}
@@ -138,39 +159,26 @@
 		position: relative;
 		overflow: hidden;
 		background: #e5e5e5;
-
-		& iframe {
-			min-height: 13.4375rem;
-			@media (max-width: $md4) {
-				aspect-ratio: math.div(365, 241.4);
-			}
-			@media (min-width: $md4) {
-				min-height: 19.125rem;
-			}
-			@media (min-width: $md3) {
-				min-height: 22.875rem;
-			}
-			@media (min-width: $md2) {
-				min-height: 33.75rem;
-			}
-			@media (min-width: $md0) {
-				min-height: 37.5rem;
-			}
-			height: 100%;
-			width: 100%;
-			flex: 1 1 auto;
+		min-height: 13.4375rem;
+		@media (max-width: $md4) {
+			aspect-ratio: math.div(365, 241.4);
 		}
-		// & canvas {
-		// 	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-		// 	-webkit-filter: grayscale(100%);
-		// }
-		// & [class*='events-pane'] {
-		// 	filter: grayscale(100%) !important;
-		// 	-ms-filter: grayscale(100%) !important;
-		// 	-webkit-filter: grayscale(100%) !important;
-		// 	-moz-filter: grayscale(100%) !important;
-		// 	-o-filter: grayscale(100%) !important;
-		// }
+		@media (min-width: $md4) {
+			min-height: 19.125rem;
+		}
+		@media (min-width: $md3) {
+			min-height: 22.875rem;
+		}
+		@media (min-width: $md2) {
+			min-height: 33.75rem;
+		}
+		@media (min-width: $md0) {
+			min-height: 37.5rem;
+		}
+		@media (min-width: $md0) {
+			min-height: 50.6875rem;
+		}
+
 		.ymaps-layers-pane {
 			filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
 			-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */

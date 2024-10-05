@@ -17,6 +17,9 @@
 	@media (min-width: $md2) {
 		font-size: 1.875rem;
 	}
+	@media (min-width: $md0) {
+		font-size: rem(36);
+	}
 	font-weight: 700;
 }
 
@@ -28,6 +31,9 @@
 	@media (min-width: $md32) {
 		font-size: 1.875rem;
 	}
+	@media (min-width: $md0) {
+		font-size: 2.25rem;
+	}
 	font-weight: 700;
 }
 
@@ -37,6 +43,10 @@
 	@media (min-width: $md2) {
 		font-size: 1.125rem;
 		line-height: 116.667%;
+	}
+	@media (min-width: $md0) {
+		font-size: rem(24);
+		line-height: math.div(30, 24);
 	}
 	&.lh-lg {
 		@media (min-width: $md2) {
@@ -105,6 +115,12 @@
 			font-size: 1.125rem;
 			line-height: 133.333%;
 			letter-spacing: 0.00563rem;
+		}
+		@media (min-width: $md0) {
+			margin-top: 0.75rem;
+			font-size: 1.5rem;
+
+			letter-spacing: 0.0075rem;
 		}
 	}
 	// .slider__prev

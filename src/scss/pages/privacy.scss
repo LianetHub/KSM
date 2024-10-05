@@ -18,6 +18,9 @@
 		@media (min-width: $md2) {
 			--gutter-y: 1.5rem;
 		}
+		@media (min-width: $md0) {
+			--gutter-y: 1.875rem;
+		}
 		& h1 {
 			@extend .article__block;
 			@extend .article__title, .title;

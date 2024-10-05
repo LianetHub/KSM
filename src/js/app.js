@@ -1,15 +1,9 @@
 "use strict";
 
-
-
-// import { Datepicker } from 'vanillajs-datepicker';
 import * as devFunctions from './modules/functions.js';
 import { Timepicker } from './modules/timepicker.js';
 import { Datepicker } from './modules/datepicker.js';
 import initMap from './modules/map.js';
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -67,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.matches('.form__field-clear')) {
             const parentNode = target.closest('.form__field');
-            const input = parentNode?.querySelector('.form__input');
+            const input = parentNode?.querySelector('.form__input') || parentNode?.querySelector('.form__textarea');
             input.value = "";
             input.classList.remove('_input');
             input.dispatchEvent(new Event('clear'));

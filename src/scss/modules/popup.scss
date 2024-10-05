@@ -47,6 +47,9 @@
 		@media (min-width: $md3) {
 			font-size: 0.875rem;
 		}
+		@media (min-width: $md0) {
+			font-size: 1rem;
+		}
 	}
 	// .popup__menu-list
 	&__menu-list {
@@ -109,6 +112,9 @@
 		}
 		.form__label {
 			margin-bottom: 0.5rem;
+			@media (min-width: $md0) {
+				margin-bottom: 0.75rem;
+			}
 		}
 	}
 	// .popup__form-row
@@ -117,12 +123,18 @@
 		@media (min-width: $md2) {
 			margin-top: 2.75rem;
 		}
+		@media (min-width: $md0) {
+			margin-top: 3.25rem;
+		}
 	}
 	// .popup__form-bottom
 	&__form-bottom {
 		margin-top: 4.25rem;
 		@media (min-width: $md2) {
 			margin-top: 3.75rem;
+		}
+		@media (min-width: $md0) {
+			margin-top: 1.5rem;
 		}
 	}
 	// .popup__thanks-logo

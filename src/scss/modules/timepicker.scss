@@ -14,6 +14,10 @@
 			padding: rem(20) 0 rem(102);
 			column-gap: rem(40);
 		}
+		@media (min-width: $md0) {
+			padding: rem(20) 0 rem(116);
+			font-size: 1.5rem;
+		}
 	}
 	// .timepicker__item
 	&__item {

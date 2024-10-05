@@ -21,7 +21,8 @@ $fontfamily: 'KSM';
 
 // Шрифт по умолчанию
 
-$md0: 1919.98px; // xxxl
+$md-x: 2559.98px; // xxxl
+$md0: 1919.98px;
 $md1: 1727.98px; // xxl
 $md2: 1599.98px; // xl
 $md32: 1439.98px; // xl
@@ -50,10 +51,15 @@ $ui-index-4: 4; // Для сайдбаров
 $ui-index-5: 5; // Для модалок
 $ui-index-6: 6; // Для элементов, перекрывающих все
 
-$header: var(--header-height, 186px);
-$headerWrapper: var(--header-wrapper-height, 107px);
+// $header: var(--header-height, 186px);
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
+
+* {
+	@media (min-width: $md5) {
+		scroll-margin-top: rem(110);
+	}
+}
 
 body {
 	font-family: $fontfamily, sans-serif;
@@ -99,8 +105,8 @@ body {
 	@media (min-width: $md6) {
 		padding: 0 rem(24) 0 rem(56);
 	}
-	@media (min-width: $md0) {
-		max-width: rem(1840);
+	@media (min-width: $md-x) {
+		max-width: rem(2480);
 		box-sizing: content-box;
 	}
 	&.container-lg {
