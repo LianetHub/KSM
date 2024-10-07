@@ -4,6 +4,7 @@ import * as devFunctions from './modules/functions.js';
 import { Timepicker } from './modules/timepicker.js';
 import { Datepicker } from './modules/datepicker.js';
 import initMap from './modules/map.js';
+import { Cart } from './modules/cart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -21,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('map')) {
         initMap()
     }
+
+
+    new Cart({
+        openMenu: getFixedMenu,
+        hideMenu: removeFixedMenu,
+    });
 
 
     // window.addEventListener('resize', () => {
@@ -50,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             endTime: "19:30"
         });
     })
+
+
 
 
     // event handlers
@@ -92,23 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.closest('.header__logo') && target.closest('.header__logo').getAttribute('href').startsWith('#')) {
             removeFixedMenu()
-        }
-
-        if (target.matches('.products__card-btn')) {
-            target.classList.toggle('active');
-            getQuantityCart(target);
-        }
-
-        if (target.matches('.product__delete-btn')) {
-
-            target.classList.toggle('active');
-
-            if (target.matches('.active')) {
-                target.textContent = "УДАЛИТЬ";
-            } else {
-                target.textContent = "Выбрать";
-            }
-            getQuantityCart(target);
         }
 
         if (target.matches('[data-modal]')) {
@@ -155,28 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    function getQuantityCart(target) {
-        if (target.classList.contains('active')) {
-            document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
-                cartItem.innerHTML++
-            });
-        } else {
-            document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
-                cartItem.innerHTML--
-            })
-        }
-        getFixedMenu();
-        setTimeout(() => {
-            removeFixedMenu()
-        }, 2000)
-        document.querySelectorAll('.header__menu-cart').forEach(cartItem => {
-            if (cartItem.innerHTML > 0) {
-                cartItem.classList.add('active')
-            } else {
-                cartItem.classList.remove('active')
-            }
-        })
-    }
 
     function getMenu() {
         document.body.classList.toggle('menu-lock');

@@ -1,0 +1,1 @@
+var BASE_URL = "https://tech.tdkcm.ru/ajax/ajax.php";
