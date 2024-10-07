@@ -3,8 +3,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -27,8 +27,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -488,7 +488,8 @@ body.bg-gray {
 
 .text-block,
 .privacy__content ul,
-.privacy__content p {
+.privacy__content p,
+.article__text p {
   font-size: 0.9375rem;
   line-height: 120%;
 }
@@ -3041,9 +3042,6 @@ body.bg-gray {
   .products__filters-list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: column;
-    -ms-grid-rows: (1fr)[5];
-    grid-template-rows: repeat(5, 1fr);
     gap: 0.35rem 1.5rem;
   }
 
@@ -3312,12 +3310,9 @@ body.bg-gray {
   }
 
   .products__filters-list {
-    grid-auto-flow: row;
     gap: 0.3rem 1.5rem;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
   }
 
   .product {
@@ -4093,14 +4088,16 @@ body.bg-gray {
 
   .text-block,
   .privacy__content ul,
-  .privacy__content p {
+  .privacy__content p,
+  .article__text p {
     font-size: 1.125rem;
     line-height: 116.667%;
   }
 
   .text-block.lh-lg,
   .privacy__content ul.lh-lg,
-  .privacy__content p.lh-lg {
+  .privacy__content p.lh-lg,
+  .article__text p.lh-lg {
     line-height: 133.333%;
   }
 
@@ -4294,9 +4291,6 @@ body.bg-gray {
     gap: 0.35rem 1.5rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: column;
-    -ms-grid-rows: (1fr)[5];
-    grid-template-rows: repeat(5, 1fr);
   }
 
   .products__more {
@@ -4842,7 +4836,8 @@ body.bg-gray {
 
   .text-block,
   .privacy__content ul,
-  .privacy__content p {
+  .privacy__content p,
+  .article__text p {
     font-size: 1.5rem;
     line-height: 1.25;
   }
