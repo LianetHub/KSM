@@ -11,7 +11,7 @@ export class Cart {
             const target = e.target;
 
             if (target.matches('.products__card-btn') || target.matches('.product__delete-btn')) {
-                target.classList.toggle('active');
+
                 this.updateCart(target);
             }
         });
@@ -19,10 +19,12 @@ export class Cart {
 
     updateCart(target) {
         const productId = target.closest('[data-id]').getAttribute('data-id');
-        const command = target.classList.contains('active') ? 'add' : 'remove';
+        const command = target.classList.contains('active') ? 'remove' : 'add';
 
         this.fetchCart(command, productId)
             .then(() => {
+
+                target.classList.toggle('active');
 
                 if (target.matches('.product__delete-btn')) {
                     target.textContent = target.classList.contains('active') ? "УДАЛИТЬ" : "Выбрать";
