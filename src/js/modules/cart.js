@@ -11,7 +11,6 @@ export class Cart {
             const target = e.target;
 
             if (target.matches('.products__card-btn') || target.matches('.product__delete-btn')) {
-
                 this.updateCart(target);
             }
         });
@@ -22,7 +21,8 @@ export class Cart {
         const command = target.classList.contains('active') ? 'remove' : 'add';
 
         this.fetchCart(command, productId)
-            .then(() => {
+            .then((data) => {
+                const { amount } = data;
 
                 target.classList.toggle('active');
 
@@ -30,15 +30,15 @@ export class Cart {
                     target.textContent = target.classList.contains('active') ? "УДАЛИТЬ" : "Выбрать";
                 }
 
-                this.updateCartUI(command);
+                this.updateCartUI(amount);
             })
             .catch((error) => console.error('Ошибка при обновлении корзины:', error));
     }
 
-    updateCartUI(command) {
+    updateCartUI(amount) {
         this.cartItems.forEach(cartItem => {
-            cartItem.innerHTML = command === 'add' ? ++cartItem.innerHTML : --cartItem.innerHTML;
-            cartItem.classList.toggle('active', cartItem.innerHTML > 0);
+            cartItem.textContent = amount;
+            cartItem.classList.toggle('active', amount > 0);
         });
 
         this.openMenu();
