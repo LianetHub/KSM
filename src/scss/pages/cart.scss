@@ -45,4 +45,44 @@
 			--gutter-y: 1.5rem;
 		}
 	}
+	&__empty {
+		padding: 1rem 0;
+		@media (min-width: $md5) {
+			padding: 3.75rem 0;
+		}
+		@media (min-width: $md4) {
+			padding: 1.65rem 0;
+		}
+		@media (min-width: $md2) {
+			padding: 1.25rem 0;
+		}
+		.row {
+			--gutter-y: 1rem;
+			@media (min-width: $md2) {
+				--gutter-y: 1.5rem;
+			}
+		}
+		& p {
+			font-size: 0.9375rem;
+			line-height: 120%;
+			max-width: 28rem;
+			@media (min-width: $md4) {
+				max-width: 42rem;
+			}
+			@media (min-width: $md2) {
+				max-width: 60rem;
+				font-size: 1.125rem;
+				line-height: 116.667%;
+			}
+		}
+		& .btn {
+			margin-top: 1.25rem;
+			@media (min-width: $md6) {
+				margin-top: 1rem;
+			}
+			@media (min-width: $md2) {
+				margin-top: 1.25rem;
+			}
+		}
+	}
 }

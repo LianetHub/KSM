@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Корзина'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "cart",
+            "big": false,
+            "cart": 4,
+            "small": true,
+            "alter": false
+            })
+            <main class="page">
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="cart__empty">
+                            <div class="row">
+                                <div class="col-md-7 offset-md-1">
+                                    <h1 class="title">Корзина пуста</h1>
+                                </div>
+                                <div class="col-sm-6 offset-sm-2">
+                                    <p>Для добавления товаров сделайте Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur cupiditate temporibus eligendi, facilis id quas illum nostrum, nulla iste et ad quasi harum laboriosam, minus suscipit maxime debitis autem? Qui.</p>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-sm-4 offset-sm-2">
+                                    <a href="/" class="btn btn-primary">ПЕРЕЙТИ В КАТАЛОГ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

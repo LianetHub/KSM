@@ -100,22 +100,25 @@
                                 <div class="col-xl-2 offset-xl-2 col-sm-4 col-8">
                                     <div class="form__label font-bold">Имя*:</div>
                                     <div class="form__field">
-                                        <input type="text" name="name" class="form__input form__input_lg">
+                                        <input type="text" name="name" data-required class="form__input form__input_lg">
                                         <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        <div class="form__error">Введите ваше имя</div>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-sm-4 col-8">
                                     <div class="form__label font-bold">Электронная почта*:</div>
                                     <div class="form__field">
-                                        <input type="email" name="email" class="form__input form__input_lg">
+                                        <input type="email" name="email" data-required class="form__input form__input_lg">
                                         <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        <div class="form__error">Введите правильный e-mail</div>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-sm-4 col-8">
                                     <div class="form__label font-bold">Телефон:</div>
                                     <div class="form__field">
-                                        <input type="tel" name="phone" class="form__input form__input_lg">
+                                        <input type="tel" name="phone" data-required class="form__input form__input_lg">
                                         <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        <div class="form__error">Введите правильный телефон</div>
                                     </div>
                                 </div>
                             </div>
