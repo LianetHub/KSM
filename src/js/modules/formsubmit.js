@@ -106,6 +106,7 @@ export const formSubmit = () => {
 				popup.classList.remove('open');
 			})
 			document.querySelector('body').classList.remove('modal-lock');
+			window.location.href = "/"
 		}, 2000)
 	}
 };
