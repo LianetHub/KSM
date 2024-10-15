@@ -11,14 +11,6 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -29,6 +21,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -624,7 +624,8 @@ body.bg-gray {
   font-variant-numeric: tabular-nums;
 }
 
-._loading::after {
+._loading::after,
+.form._sending::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -687,6 +688,21 @@ body.bg-gray {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.form._sending {
+  position: relative;
+}
+
+.form._sending::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
 }
 
 .form__label {
@@ -1497,7 +1513,8 @@ body.bg-gray {
   position: relative;
 }
 
-.products__body._loading::before {
+.products__body._loading::before,
+.products__body.form._sending::before {
   content: "";
   position: absolute;
   top: 0;

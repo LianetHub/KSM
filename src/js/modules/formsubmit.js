@@ -31,9 +31,7 @@ export const formSubmit = () => {
 				closeAndShowSuccessModal();
 
 			} catch (error) {
-
-				alert(error.message);
-				closeAndShowSuccessModal();
+				console.log(error.message);
 
 			} finally {
 				form.classList.remove("_sending");
