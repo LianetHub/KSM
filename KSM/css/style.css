@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -11,8 +19,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -4332,8 +4332,8 @@ body.bg-gray {
 
   .contacts__worktime-days {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 6rem;
-            flex: 0 0 6rem;
+        -ms-flex: 0 0 7rem;
+            flex: 0 0 7rem;
   }
 
   .contacts__map {
@@ -4935,7 +4935,7 @@ body.bg-gray {
   .article__block:not(:first-child),
   .privacy__content h2:not(:first-child),
   .privacy__content h1:not(:first-child) {
-    margin-top: 2.4rem;
+    margin-top: 1.875rem;
   }
 
   .article__block:not(:first-child).xl-offset,
