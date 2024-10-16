@@ -3,6 +3,8 @@ export class Cart {
         this.cartItems = document.querySelectorAll('.header__menu-cart');
         this.openMenu = options.openMenu || function () { };
         this.hideMenu = options.hideMenu || function () { };
+        this.cartContent = document.querySelector('.cart__content');
+        this.cartEmpty = document.querySelector('.cart__empty');
         this.init();
     }
 
@@ -20,6 +22,7 @@ export class Cart {
         const productId = target.closest('[data-id]').getAttribute('data-id');
         const command = target.classList.contains('active') ? 'remove' : 'add';
 
+
         this.fetchCart(command, productId)
             .then((data) => {
                 const { amount } = data;
@@ -31,6 +34,20 @@ export class Cart {
                 }
 
                 this.updateCartUI(amount);
+
+                if (command === 'remove' && target.closest('.cart__content')) {
+                    const productCard = target.closest('.products__card');
+                    if (productCard) {
+                        productCard.remove();
+                    }
+                }
+
+                if (this.cartContent && this.cartEmpty) {
+                    if (amount === 0) {
+                        this.cartContent.classList.add('hidden');
+                        this.cartEmpty.classList.remove('hidden');
+                    }
+                }
             })
             .catch((error) => console.error('Ошибка при обновлении корзины:', error));
     }
