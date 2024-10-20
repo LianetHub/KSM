@@ -30,34 +30,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // window.addEventListener('resize', () => {
-    //     getHeaderHeight()
-    // })
-    // window.addEventListener('scroll', () => {
-    //     getHeaderHeight()
-    // })
-    // getHeaderHeight()
+    function initDayPicker(daypicker) {
+        const dateInput = daypicker.querySelector('input[name="date"]');
+        const timeInput = daypicker.querySelector('input[name="time"]');
 
-    // function getHeaderHeight() {
-    //     document.body.style.setProperty('--header-height', `${document.querySelector('.header').offsetHeight}px`);
-    // }
+        if (dateInput && timeInput) {
 
-    // function getHeaderWrapperHeight() {
-    //     document.body.style.setProperty('--header-wrapper-height', `${document.querySelector('.header__wrapper').offsetHeight}px`);
-    // }
+            const datepickerInstance = new Datepicker(dateInput);
+            const timepickerInstance = new Timepicker(timeInput, {
+                startTime: "10:00",
+                endTime: "19:30"
+            });
 
-    document.querySelectorAll('input[name="date"]')?.forEach(datepicker => {
-        let datepickerInstance = new Datepicker(datepicker, {});
-    })
+            function openBothPickers() {
+                datepickerInstance.open();
+                timepickerInstance.open();
+            }
+
+            function closeBothPickers() {
+                datepickerInstance.close();
+                timepickerInstance.close();
+            }
 
 
-    document.querySelectorAll('input[name="time"]')?.forEach(timepicker => {
-        let timepickerInstance = new Timepicker(timepicker, {
-            startTime: "10:00",
-            endTime: "19:30"
-        });
-    })
+            function areBothFieldsFilled() {
+                return dateInput.value && timeInput.value;
+            }
 
+            dateInput.addEventListener('focus', openBothPickers);
+            timeInput.addEventListener('focus', openBothPickers);
+
+            const clearDateButton = dateInput.parentNode.querySelector('.form__field-clear');
+            const clearTimeButton = timeInput.parentNode.querySelector('.form__field-clear');
+
+            function clearAllFields() {
+                dateInput.value = '';
+                timeInput.value = '';
+                dateInput.classList.remove('_input');
+                timeInput.classList.remove('_input');
+            }
+
+            clearDateButton?.addEventListener('click', () => {
+                clearAllFields();
+                closeBothPickers();
+            });
+
+            clearTimeButton?.addEventListener('click', () => {
+                clearAllFields();
+                closeBothPickers();
+            });
+
+
+            dateInput.addEventListener('input', () => {
+                if (areBothFieldsFilled()) {
+                    closeBothPickers();
+                }
+            });
+
+            timeInput.addEventListener('input', () => {
+                if (areBothFieldsFilled()) {
+                    closeBothPickers();
+                }
+            });
+        }
+    }
+
+    document.querySelectorAll('.daypicker')?.forEach(initDayPicker);
 
 
 

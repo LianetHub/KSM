@@ -22,7 +22,7 @@ $fontfamily: 'KSM';
 // Шрифт по умолчанию
 
 $md-x: 2559.98px; // xxxl
-$md0: 1919.98px;
+$md0: 1920.98px;
 $md1: 1727.98px; // xxl
 $md2: 1599.98px; // xl
 $md32: 1439.98px; // xl
@@ -142,3 +142,4 @@ body {
 @import 'pages/cases';
 @import 'pages/error';
 @import 'pages/privacy';
+@import 'pages/search';

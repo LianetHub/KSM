@@ -29,10 +29,13 @@ export class Timepicker {
             timeButton.classList.add('timepicker__item');
             timeButton.textContent = timeString;
 
-
             timeButton.addEventListener('click', () => {
                 this.input.value = timeString;
-                this.hideTimepicker();
+                const inputEvent = new Event('input', {
+                    bubbles: true,
+                    cancelable: true
+                });
+                this.input.dispatchEvent(inputEvent);
             });
 
             timeItemsContainer.appendChild(timeButton);
@@ -49,12 +52,6 @@ export class Timepicker {
             this.showTimepicker();
         });
 
-        this.input.addEventListener('blur', (e) => {
-
-            if (!e.relatedTarget?.closest('.timepicker')) {
-                this.hideTimepicker();
-            }
-        });
     }
 
     showTimepicker() {
@@ -88,6 +85,14 @@ export class Timepicker {
 
     addMinutes(date, minutes) {
         return new Date(date.getTime() + minutes * 60000);
+    }
+
+    open() {
+        this.showTimepicker();
+    }
+
+    close() {
+        this.hideTimepicker();
     }
 }
 

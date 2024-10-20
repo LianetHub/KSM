@@ -1,0 +1,50 @@
+.search {
+	padding: 0.5rem 0 2rem;
+	// .search__container
+	&__container {
+	}
+	// .search__header
+	&__header {
+		.row {
+			--gutter-y: 1.5rem;
+		}
+	}
+	// .search__title
+	&__title {
+		font-weight: 700;
+		font-size: 1.3125rem;
+		@media (min-width: $md6) {
+			font-size: 1.5rem;
+		}
+		@media (min-width: $md32) {
+			font-size: 1.875rem;
+		}
+		@media (min-width: $md-x) {
+			font-size: 2.25rem;
+		}
+	}
+	// .search__quantity
+	&__quantity {
+		font-size: 1.125rem;
+		margin-top: 1.25rem;
+		@media (min-width: $md6) {
+			margin-top: 1.4rem;
+		}
+		@media (min-width: $md0) {
+			font-size: 1.5rem;
+		}
+	}
+	// .search__form
+	&__form {
+	}
+	// .search__body
+	&__body {
+		margin-top: 1.875rem;
+		@media (min-width: $md6) {
+			margin-top: 2.25rem;
+		}
+		@media (min-width: $md0) {
+			margin-top: 2.75rem;
+		}
+	}
+}

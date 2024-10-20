@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -752,6 +752,10 @@ body.bg-gray {
   font-size: 1.125rem;
 }
 
+.form__input.form__input_lg ~ .form__field-clear {
+  font-size: 1.125rem;
+}
+
 .form__input.focus-datepicker,
 .form__input.focus-timepicker {
   border-color: transparent;
@@ -812,9 +816,8 @@ body.bg-gray {
 
 .form__field-clear {
   position: absolute;
-  top: 0.5rem;
+  top: 0.25rem;
   right: 0;
-  font-size: 0.75rem;
   padding: 0.5rem;
   visibility: hidden;
 }
@@ -964,7 +967,6 @@ body.bg-gray {
   padding: 0.15rem 0 0.15rem 2.35rem;
   font-weight: 500;
   line-height: 125%;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -975,6 +977,7 @@ body.bg-gray {
 .checkbox__content::before {
   content: "";
   position: absolute;
+  cursor: pointer;
   color: #fff;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2437,6 +2440,29 @@ body.bg-gray {
   margin-bottom: 1.1rem;
 }
 
+.search {
+  padding: 0.5rem 0 2rem;
+}
+
+.search__header .row,
+.search__header .privacy__content {
+  --gutter-y: 1.5rem;
+}
+
+.search__title {
+  font-weight: 700;
+  font-size: 1.3125rem;
+}
+
+.search__quantity {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+}
+
+.search__body {
+  margin-top: 1.875rem;
+}
+
 @media (min-width: 429.98px) {
   .footer {
     font-size: 0.9375rem;
@@ -2851,6 +2877,18 @@ body.bg-gray {
 
   .privacy {
     padding: 1.45rem 0 4.13rem;
+  }
+
+  .search__title {
+    font-size: 1.5rem;
+  }
+
+  .search__quantity {
+    margin-top: 1.4rem;
+  }
+
+  .search__body {
+    margin-top: 2.25rem;
   }
 }
 
@@ -3616,7 +3654,12 @@ body.bg-gray {
   }
 
   .footer__caption {
+    white-space: nowrap;
     line-height: 125%;
+  }
+
+  .footer__logo {
+    margin-top: 1rem;
   }
 
   .footer__form {
@@ -3956,6 +3999,10 @@ body.bg-gray {
   .product__desc-text p:not(:first-child) {
     margin-top: 1.35rem;
   }
+
+  .search__title {
+    font-size: 1.875rem;
+  }
 }
 
 @media (min-width: 1599.98px) {
@@ -4211,10 +4258,6 @@ body.bg-gray {
 
   .footer__caption {
     line-height: 113.333%;
-  }
-
-  .footer__logo {
-    margin-top: 1rem;
   }
 
   .footer__form {
@@ -4717,7 +4760,7 @@ body.bg-gray {
   }
 }
 
-@media (min-width: 1919.98px) {
+@media (min-width: 1920.98px) {
   .col-xxxl-1 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 12.5%;
@@ -4929,6 +4972,10 @@ body.bg-gray {
     font-size: 1.5rem;
   }
 
+  .form__input.form__input_lg ~ .form__field-clear {
+    font-size: 1.5rem;
+  }
+
   .form__textarea {
     font-size: 1.5rem;
     height: 6.85rem;
@@ -4936,8 +4983,7 @@ body.bg-gray {
   }
 
   .form__field-clear {
-    top: 0.75rem;
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
 
   .form__file {
@@ -5277,6 +5323,14 @@ body.bg-gray {
   .privacy__content {
     --gutter-y: 1.875rem;
   }
+
+  .search__quantity {
+    font-size: 1.5rem;
+  }
+
+  .search__body {
+    margin-top: 2.75rem;
+  }
 }
 
 @media (min-width: 2559.98px) {
@@ -5284,6 +5338,10 @@ body.bg-gray {
     max-width: 155rem;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
+  }
+
+  .search__title {
+    font-size: 2.25rem;
   }
 }
 

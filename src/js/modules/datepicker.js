@@ -55,22 +55,14 @@ export class Datepicker {
     init() {
 
         this.element.addEventListener('focus', () => {
-
             this.show();
         });
-        this.element.addEventListener('blur', (e) => {
 
-            if (!e.relatedTarget?.closest('.datepicker')) {
-                this.hide();
-            }
-
-        });
         this.element.addEventListener('clear', () => {
             this.currentDate = new Date();
             this.selectedDate = new Date();
             this.render();
         });
-        // document.addEventListener('click', (e) => this.handleOutsideClick(e));
 
         this.prevButton.addEventListener('click', () => this.changeMonth(-1));
         this.nextButton.addEventListener('click', () => this.changeMonth(1));
@@ -90,11 +82,7 @@ export class Datepicker {
         this.element.classList.remove('focus-datepicker');
     }
 
-    handleOutsideClick(e) {
-        if (!this.datepicker.contains(e.target) && e.target !== this.element) {
-            this.hide();
-        }
-    }
+
 
     changeMonth(offset) {
         this.currentDate.setMonth(this.currentDate.getMonth() + offset);
@@ -150,9 +138,16 @@ export class Datepicker {
         button.addEventListener('click', () => {
             this.selectedDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
             this.element.value = this.formatDate(this.selectedDate);
+
+
+            const inputEvent = new Event('input', {
+                bubbles: true,
+                cancelable: true
+            });
+            this.element.dispatchEvent(inputEvent);
+
             this.render();
 
-            this.hide();
         });
 
         return button;
@@ -160,5 +155,13 @@ export class Datepicker {
 
     formatDate(date) {
         return `${String(date.getDate()).padStart(2, '0')}.${String(date.getMonth() + 1).padStart(2, '0')}.${date.getFullYear()}`;
+    }
+
+    open() {
+        this.show();
+    }
+
+    close() {
+        this.hide();
     }
 }

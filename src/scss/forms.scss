@@ -42,9 +42,15 @@
 		}
 		&.form__input_lg {
 			font-size: 1.125rem;
+			& ~ .form__field-clear {
+				font-size: 1.125rem;
+			}
 			@media (min-width: $md0) {
 				padding: 0.5rem 2rem 0.5rem 0;
 				font-size: 1.5rem;
+				& ~ .form__field-clear {
+					font-size: 1.5rem;
+				}
 			}
 		}
 		&.focus-datepicker,
@@ -112,14 +118,12 @@
 	// .form__field-clear
 	&__field-clear {
 		position: absolute;
-		top: 0.5rem;
+		top: 0.25rem;
 		right: 0;
-		font-size: 0.75rem;
 		padding: 0.5rem;
 		visibility: hidden;
 		@media (min-width: $md0) {
-			top: 0.75rem;
-			font-size: 1rem;
+			font-size: 0.9375rem;
 		}
 	}
 	// .form__file
@@ -270,12 +274,13 @@
 		padding: 0.15rem 0 0.15rem 2.35rem;
 		font-weight: 500;
 		line-height: 125%;
-		cursor: pointer;
+
 		user-select: none;
 		max-width: 24rem;
 		&::before {
 			content: '';
 			position: absolute;
+			cursor: pointer;
 			color: #fff;
 			top: 50%;
 			transform: translateY(-50%);

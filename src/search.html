@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Результаты поиска'
+    })
+    <body class="bg-gray">
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "",
+            "big": false,
+            "cart": 0,
+            "small": true,
+            "alter": false
+            })
+            <main class="page">
+                <section class="search">
+                    <div class="search__container">
+                        <div class="search__header">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h1 class="search__title">Результаты поиска</h1>
+                                </div>
+                                <div class="col-xxxl-3 col-md-4 col-8">
+                                    <form action="#" class="search__form form">
+                                        <div class="form__field">
+                                            <input type="text" name="search" autocomplete="off" class="form__input form__input_lg" value="Донские Зори">
+                                            <button type="button" tabindex="-1" class="form__field-clear icon-clear"></button>
+                                        </div>
+                                    </form>
+                                    <div class="search__quantity">Результаты: 12</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__body">
+                            <div class="row">
+                                @@for (var i = 0; i < 12; i++) { @@include("./html/_product-more.html") } </div>
+                            </div>
+                        </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

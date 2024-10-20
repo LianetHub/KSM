@@ -28,7 +28,6 @@
 		line-height: 150%;
 		&.footer-catalog {
 			font-size: 0.75rem;
-
 			max-width: rem(180);
 			@media (min-width: $md6) {
 				max-width: rem(200);
@@ -42,6 +41,7 @@
 			margin-right: -2rem;
 		}
 		@media (min-width: $md3) {
+			white-space: nowrap;
 			line-height: 125%;
 		}
 		@media (min-width: $md2) {
@@ -57,7 +57,7 @@
 		margin-top: 0.35rem;
 		width: rem(101);
 		display: inline-block;
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			margin-top: 1rem;
 		}
 		@media (min-width: $md0) {
