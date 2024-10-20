@@ -96,7 +96,6 @@ export const formSubmit = () => {
 		return cleaned.length >= 10 && /^[1-9]\d{9,14}$/.test(cleaned);
 	}
 
-
 	function closeAndShowSuccessModal() {
 		document.querySelector('.popup-thanks').classList.add('open');
 		document.querySelector('body').classList.add('modal-lock');

@@ -11,14 +11,6 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -29,6 +21,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -750,6 +750,7 @@ body.bg-gray {
 
 .form__input.form__input_lg {
   font-size: 1.125rem;
+  padding: 0.5rem 2.5rem 0.25rem 0;
 }
 
 .form__input.form__input_lg ~ .form__field-clear {
@@ -2441,7 +2442,7 @@ body.bg-gray {
 }
 
 .search {
-  padding: 0.5rem 0 2rem;
+  padding: 0.5rem 0 4rem;
 }
 
 .search__header .row,
@@ -2742,10 +2743,6 @@ body.bg-gray {
   .footer {
     padding: 1.75rem 0 1.6875rem;
     font-size: 0.75rem;
-  }
-
-  .footer__caption.footer-catalog {
-    max-width: 12.5rem;
   }
 
   .footer__design {
@@ -4968,7 +4965,7 @@ body.bg-gray {
   }
 
   .form__input.form__input_lg {
-    padding: 0.5rem 2rem 0.5rem 0;
+    padding: 0.5rem 2.5rem 0.5rem 0;
     font-size: 1.5rem;
   }
 

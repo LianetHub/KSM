@@ -45,8 +45,9 @@
 			& ~ .form__field-clear {
 				font-size: 1.125rem;
 			}
+			padding: 0.5rem 2.5rem 0.25rem 0;
 			@media (min-width: $md0) {
-				padding: 0.5rem 2rem 0.5rem 0;
+				padding: 0.5rem 2.5rem 0.5rem 0;
 				font-size: 1.5rem;
 				& ~ .form__field-clear {
 					font-size: 1.5rem;
