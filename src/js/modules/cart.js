@@ -38,7 +38,7 @@ export class Cart {
                 if (command === 'remove' && target.closest('.cart__content')) {
                     const productCard = target.closest('.products__card');
                     if (productCard) {
-                        productCard.remove();
+                        productCard.parentNode.remove();
                     }
                 }
 
