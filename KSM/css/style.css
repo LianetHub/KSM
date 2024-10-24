@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1771,6 +1771,15 @@ body.bg-gray {
   font-weight: 500;
 }
 
+.products__filters-input:disabled + span {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #808080;
+}
+
 .products__more {
   display: inline-block;
   width: -webkit-fit-content;
@@ -3111,10 +3120,6 @@ body.bg-gray {
     grid-auto-flow: column;
   }
 
-  .products__card-price {
-    font-size: 1.5rem;
-  }
-
   .products__card-info {
     line-height: 133.333%;
     font-size: 1.125rem;
@@ -4381,6 +4386,10 @@ body.bg-gray {
     margin-top: 1.25rem;
   }
 
+  .products__card-price {
+    margin-top: 1.25rem;
+  }
+
   .products__filters {
     margin-bottom: 4rem;
   }
@@ -5132,6 +5141,10 @@ body.bg-gray {
     font-size: 1.5rem;
   }
 
+  .products__card-price {
+    font-size: 1.5rem;
+  }
+
   .products__filters {
     margin-top: -2rem;
   }
@@ -5584,7 +5597,7 @@ body.bg-gray {
     color: #fff;
   }
 
-  .products__filters-item:hover {
+  .products__filters-item span:hover {
     font-weight: 500;
   }
 

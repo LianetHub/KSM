@@ -261,7 +261,10 @@
 		font-size: 1.125rem;
 		line-height: 133.333%;
 		margin-bottom: auto;
-		@media (min-width: $md5) {
+		@media (min-width: $md2) {
+			margin-top: 1.25rem;
+		}
+		@media (min-width: $md0) {
 			font-size: 1.5rem;
 		}
 		&.sm-price {
@@ -461,9 +464,11 @@
 	&__filters-item {
 		margin-right: -0.75rem;
 		cursor: pointer;
-		@media (any-hover: hover) {
-			&:hover {
-				font-weight: 500;
+		& span {
+			@media (any-hover: hover) {
+				&:hover {
+					font-weight: 500;
+				}
 			}
 		}
 	}
@@ -472,6 +477,13 @@
 		&:checked {
 			& + span {
 				font-weight: 500;
+			}
+		}
+		&:disabled {
+			& + span {
+				pointer-events: none;
+				user-select: none;
+				color: #808080;
 			}
 		}
 	}
