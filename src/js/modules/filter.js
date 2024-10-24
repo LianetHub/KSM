@@ -3,7 +3,7 @@ export const filter = () => {
     if (!document.querySelector('.products__filters')) return;
 
     const filterColumns = document.querySelectorAll('.products__filters-column');
-    const priceInputs = document.querySelectorAll('input[name="start-price"], input[name="end-price"]');
+    const priceInputs = document.querySelectorAll('.start-price, .end-price');
     const filterForm = document.querySelector('.products__filters');
     let filterTimeout;
 
@@ -57,13 +57,15 @@ export const filter = () => {
         });
 
         input.addEventListener('focus', () => {
-            input.value = input.value.replace(' ₽/м²', '');
+            let inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
+            input.value = input.value.replace(` ${inputUnit}`, '');
         });
 
         input.addEventListener('blur', () => {
             const sanitizedValue = input.value.replace(/\D/g, '');
             if (input.value.length !== 0) {
-                input.value = `${sanitizedValue} ₽/м²`;
+                let inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
+                input.value = `${sanitizedValue} ${inputUnit}`;
                 handleFilterChange();
             }
         });

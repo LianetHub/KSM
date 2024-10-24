@@ -409,10 +409,10 @@
 					opacity: 0;
 				}
 			}
-			&[name='start-price'] {
+			&.start-price {
 				padding-left: 1.85em;
 			}
-			&[name='end-price'] {
+			&.end-price {
 				padding-left: 2em;
 			}
 		}
