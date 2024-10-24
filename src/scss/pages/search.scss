@@ -39,12 +39,19 @@
 	}
 	// .search__body
 	&__body {
+		position: relative;
 		margin-top: 1.875rem;
 		@media (min-width: $md6) {
 			margin-top: 2.25rem;
 		}
 		@media (min-width: $md0) {
 			margin-top: 2.75rem;
+		}
+		&._loading {
+			
+			&::after {
+				top: 25vh;
+			}
 		}
 	}
 }
