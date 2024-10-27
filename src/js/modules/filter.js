@@ -5,7 +5,7 @@ export const filter = () => {
     const filterColumns = document.querySelectorAll('.products__filters-column');
     const priceInputs = document.querySelectorAll('.start-price, .end-price');
     const filterForm = document.querySelector('.products__filters');
-    let filterTimeout;
+    // let filterTimeout;
 
 
 
@@ -18,7 +18,7 @@ export const filter = () => {
             inputs.forEach(input => {
                 input.addEventListener('change', () => {
                     toggleClearButton(column);
-                    handleFilterChange();
+                    // handleFilterChange();
                 });
             });
         }
@@ -30,7 +30,7 @@ export const filter = () => {
                     input.checked = false;
                 });
                 toggleClearButton(column);
-                handleFilterChange();
+                // handleFilterChange();
             });
         }
     });
@@ -66,7 +66,7 @@ export const filter = () => {
             if (input.value.length !== 0) {
                 let inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
                 input.value = `${sanitizedValue} ${inputUnit}`;
-                handleFilterChange();
+                // handleFilterChange();
             }
         });
     });
@@ -82,37 +82,57 @@ export const filter = () => {
         }
     }
 
-    function handleFilterChange() {
-        clearTimeout(filterTimeout);
-        filterTimeout = setTimeout(() => {
-            sendFilterRequest();
-        }, 300);
-    }
+    filterForm.addEventListener('submit', function () {
 
-    function sendFilterRequest() {
-        // const filterBody = document.querySelector('.products__body');
-        // filterBody.classList.add('_loading');
-        // setTimeout(() => {
-        //     filterBody.classList.remove('_loading');
-        // }, 500)
+        e.preventDefault();
 
-        // fetch(filterForm.action, {
-        //     method: 'GET',
-        // })
-        //     .then(response => {
-        //         if (!response.ok) {
-        //             throw new Error('Network response was not ok');
-        //         }
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         console.log('Success:', data);
-        //     })
-        //     .catch(error => {
-        //         console.error('There was a problem with the fetch operation:', error);
-        //     })
-        //     .finally(() => {
-        //         filterBodies.forEach(body => body.classList.remove('_loading'));
-        //     });
-    }
+        const startPriceInput = filterForm.querySelector('.start-price');
+        const endPriceInput = filterForm.querySelector('.end-price');
+
+        const originalStartPrice = startPriceInput.value;
+        const originalEndPrice = endPriceInput.value;
+
+        startPriceInput.value = startPriceInput.value.replace(/\D/g, '');
+        endPriceInput.value = endPriceInput.value.replace(/\D/g, '');
+
+        startPriceInput.value = originalStartPrice;
+        endPriceInput.value = originalEndPrice;
+
+        filterForm.submit();
+
+    })
+
+    // function handleFilterChange() {
+    //     clearTimeout(filterTimeout);
+    //     filterTimeout = setTimeout(() => {
+    //         sendFilterRequest();
+    //     }, 300);
+    // }
+
+    // function sendFilterRequest() {
+    //     // const filterBody = document.querySelector('.products__body');
+    //     // filterBody.classList.add('_loading');
+    //     // setTimeout(() => {
+    //     //     filterBody.classList.remove('_loading');
+    //     // }, 500)
+
+    //     // fetch(filterForm.action, {
+    //     //     method: 'GET',
+    //     // })
+    //     //     .then(response => {
+    //     //         if (!response.ok) {
+    //     //             throw new Error('Network response was not ok');
+    //     //         }
+    //     //         return response.json();
+    //     //     })
+    //     //     .then(data => {
+    //     //         console.log('Success:', data);
+    //     //     })
+    //     //     .catch(error => {
+    //     //         console.error('There was a problem with the fetch operation:', error);
+    //     //     })
+    //     //     .finally(() => {
+    //     //         filterBodies.forEach(body => body.classList.remove('_loading'));
+    //     //     });
+    // }
 }

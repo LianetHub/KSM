@@ -1,6 +1,7 @@
 export const formSubmit = () => {
-	const forms = document.querySelectorAll('form:not(.search__form):not(.footer__form):not(.header__form)');
+	const forms = document.querySelectorAll('form:not(.search__form):not(.footer__form):not(.header__form):not(.products__filters)');
 	forms.forEach((form) => {
+
 		form.addEventListener("submit", formSend);
 
 	});
@@ -8,6 +9,7 @@ export const formSubmit = () => {
 	document.addEventListener("input", handleFormInput);
 
 	async function formSend(e) {
+
 		e.preventDefault();
 
 
