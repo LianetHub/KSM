@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function initDayPicker(daypicker) {
-        const dateInput = daypicker.querySelector('input[name="date"]');
-        const timeInput = daypicker.querySelector('input[name="time"]');
+        const dateInput = daypicker.querySelector('input.date');
+        const timeInput = daypicker.querySelector('input.time');
 
         if (dateInput && timeInput) {
 
