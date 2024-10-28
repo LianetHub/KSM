@@ -95,10 +95,10 @@ export const filter = () => {
         startPriceInput.value = startPriceInput.value.replace(/\D/g, '');
         endPriceInput.value = endPriceInput.value.replace(/\D/g, '');
 
+        filterForm.submit();
+
         startPriceInput.value = originalStartPrice;
         endPriceInput.value = originalEndPrice;
-
-        filterForm.submit();
 
     })
 
