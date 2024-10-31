@@ -325,32 +325,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        function preloadImages() {
-            const seemInputs = document.querySelectorAll('[name="product-color"]');
-            const seemColors = Array.from(seemInputs).map(input => input.value);
+        // function preloadImages() {
+        //     const seemInputs = document.querySelectorAll('[name="product-color"]');
+        //     const seemColors = Array.from(seemInputs).map(input => input.value);
 
-            const hiddenContainer = document.createElement('div');
-            hiddenContainer.style.display = 'none';
-            document.body.appendChild(hiddenContainer);
+        //     const hiddenContainer = document.createElement('div');
+        //     hiddenContainer.style.display = 'none';
+        //     document.body.appendChild(hiddenContainer);
 
-            seemColors.forEach(seemColor => {
-                const img = document.createElement('img');
-                let imageSrc = `../img/colors/${seemColor}.png`;
-                img.src = imageSrc;
+        //     seemColors.forEach(seemColor => {
+        //         const img = document.createElement('img');
+        //         let imageSrc = `../img/colors/${seemColor}.png`;
+        //         img.src = imageSrc;
 
-                img.onerror = () => {
-                    console.warn(`Image not found: ${imageSrc}`);
-                };
+        //         img.onerror = () => {
+        //             console.warn(`Image not found: ${imageSrc}`);
+        //         };
 
-                hiddenContainer.appendChild(img);
-            });
+        //         hiddenContainer.appendChild(img);
+        //     });
 
-            setTimeout(() => {
-                document.body.removeChild(hiddenContainer);
-            }, 3000);
-        }
+        //     setTimeout(() => {
+        //         document.body.removeChild(hiddenContainer);
+        //     }, 3000);
+        // }
 
-        preloadImages();
+        // preloadImages();
     }
 
 
@@ -360,7 +360,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
-
-
 
 
