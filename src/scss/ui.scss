@@ -70,7 +70,8 @@
 .slider {
 	min-width: 0;
 	max-width: 100%;
-
+	&:has(.swiper-button-lock, .swiper-pagination-lock) {
+	}
 	// .slider__slide
 	&__slide {
 		height: auto;
@@ -110,17 +111,19 @@
 		line-height: 120%;
 		letter-spacing: 0.00469rem;
 		margin-top: 0.65rem;
+		min-height: rem(28);
 		@media (min-width: $md2) {
 			margin-top: 0.44rem;
 			font-size: 1.125rem;
 			line-height: 133.333%;
 			letter-spacing: 0.00563rem;
+			min-height: rem(32);
 		}
 		@media (min-width: $md0) {
 			margin-top: 0.75rem;
 			font-size: 1.5rem;
-
 			letter-spacing: 0.0075rem;
+			min-height: rem(44);
 		}
 	}
 	// .slider__prev

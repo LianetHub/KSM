@@ -463,8 +463,9 @@
 	// .products__filters-item
 	&__filters-item {
 		margin-right: -0.75rem;
-		cursor: pointer;
+
 		& span {
+			cursor: pointer;
 			@media (any-hover: hover) {
 				&:hover {
 					font-weight: 500;
@@ -484,6 +485,7 @@
 				pointer-events: none;
 				user-select: none;
 				color: #808080;
+				cursor: default;
 			}
 		}
 	}

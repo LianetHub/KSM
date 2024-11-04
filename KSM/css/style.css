@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -11,24 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -559,6 +559,7 @@ body.bg-gray {
   line-height: 120%;
   letter-spacing: 0.00469rem;
   margin-top: 0.65rem;
+  min-height: 1.75rem;
 }
 
 .slider__pagination .swiper-pagination-current,
@@ -1764,6 +1765,9 @@ body.bg-gray {
 
 .products__filters-item {
   margin-right: -0.75rem;
+}
+
+.products__filters-item span {
   cursor: pointer;
 }
 
@@ -1778,6 +1782,7 @@ body.bg-gray {
       -ms-user-select: none;
           user-select: none;
   color: #808080;
+  cursor: default;
 }
 
 .products__more {
@@ -4213,6 +4218,7 @@ body.bg-gray {
     font-size: 1.125rem;
     line-height: 133.333%;
     letter-spacing: 0.00563rem;
+    min-height: 2rem;
   }
 
   .pc-xl-none {
@@ -4972,6 +4978,7 @@ body.bg-gray {
     margin-top: 0.75rem;
     font-size: 1.5rem;
     letter-spacing: 0.0075rem;
+    min-height: 2.75rem;
   }
 
   .form__label {
