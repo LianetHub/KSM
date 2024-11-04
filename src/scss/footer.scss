@@ -121,7 +121,7 @@
 			}
 		}
 		@media (min-width: $md0) {
-			max-width: 100%;
+			max-width: rem(360);
 			line-height: 133.333%;
 			font-size: 1.125rem;
 		}
@@ -133,7 +133,7 @@
 			@media (min-width: $md3) {
 				display: none;
 			}
-			@media (min-width: $md2) {
+			@media (min-width: 1599.98px) {
 				display: inline;
 			}
 		}

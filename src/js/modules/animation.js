@@ -4,7 +4,7 @@ export const animation = () => {
     function initAnimation(logo) {
         if (!logo) return;
 
-        const isSmallScreen = window.innerWidth < 1600;
+        const isSmallScreen = window.innerWidth < 1440;
         const hasParentSm = !!logo.closest('.header_sm');
 
         const maxScroll = isSmallScreen ? 50 : 80;

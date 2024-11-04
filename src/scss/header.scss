@@ -130,6 +130,10 @@
 			clip-path: none;
 		}
 		@media (min-width: $md2) {
+			max-width: rem(380);
+			margin-left: -2.85rem;
+		}
+		@media (min-width: $md1) {
 			max-width: rem(437);
 			margin-left: -2.85rem;
 		}

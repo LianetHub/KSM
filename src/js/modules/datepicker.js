@@ -83,7 +83,6 @@ export class Datepicker {
     }
 
 
-
     changeMonth(offset) {
         this.currentDate.setMonth(this.currentDate.getMonth() + offset);
 

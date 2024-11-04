@@ -219,12 +219,16 @@
 	}
 	// .article__list-link
 	&__list-link {
+		position: relative;
 		&::after {
 			content: '↽';
 			visibility: hidden;
 			display: inline-block;
 			margin-left: 0.35rem;
 			vertical-align: top;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 		@media (any-hover: hover) {
 			&:hover {
