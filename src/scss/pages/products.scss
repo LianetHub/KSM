@@ -158,6 +158,19 @@
 				--gutter-y: 1.05rem;
 			}
 		}
+		&:has(.products__more) {
+			margin-bottom: 0;
+		}
+		// margin-bottom: 1.15rem;
+		margin-bottom: rem(45.4);
+		@media (min-width: $md2) {
+			// margin-bottom: 1.75rem;
+			margin-bottom: rem(55);
+		}
+		@media (min-width: $md1) {
+			// margin-bottom: 1.5rem;
+			margin-bottom: rem(51);
+		}
 	}
 	// .products__card
 	&__card {

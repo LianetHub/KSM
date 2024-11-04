@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1536,11 +1536,16 @@ body.bg-gray {
 
 .products__cards {
   margin-top: 0.5rem;
+  margin-bottom: 2.8375rem;
 }
 
 .products__cards .row,
 .products__cards .privacy__content {
   --gutter-y: 1.25rem;
+}
+
+.products__cards:has(.products__more) {
+  margin-bottom: 0;
 }
 
 .products__card {
@@ -4364,6 +4369,10 @@ body.bg-gray {
     --gutter-y: 1.05rem;
   }
 
+  .products__cards {
+    margin-bottom: 3.4375rem;
+  }
+
   .products__card-image {
     padding-bottom: 79.56%;
   }
@@ -4739,6 +4748,10 @@ body.bg-gray {
 
   .products.products_more .product__cards {
     margin-top: 0.7rem;
+  }
+
+  .products__cards {
+    margin-bottom: 3.1875rem;
   }
 
   .products__card-image {
