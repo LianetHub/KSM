@@ -48,9 +48,9 @@ export class Timepicker {
 
     addEventListeners() {
 
-        this.input.addEventListener('focus', () => {
-            this.showTimepicker();
-        });
+        // this.input.addEventListener('focus', () => {
+        //     this.showTimepicker();
+        // });
 
     }
 

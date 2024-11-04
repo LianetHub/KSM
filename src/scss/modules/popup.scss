@@ -102,6 +102,14 @@
 				--gutter-y: 2.75rem;
 			}
 		}
+		.form__files {
+			@media (min-width: $md5) {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+			}
+		}
 	}
 
 	// .popup__form

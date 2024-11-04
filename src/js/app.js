@@ -57,8 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 return dateInput.value && timeInput.value;
             }
 
-            dateInput.addEventListener('focus', openBothPickers);
-            timeInput.addEventListener('focus', openBothPickers);
+            dateInput.addEventListener('click', () => {
+                if (dateInput.classList.contains('focus-datepicker')) {
+                    closeBothPickers();
+                    return
+                } else {
+                    openBothPickers()
+                }
+            });
+            timeInput.addEventListener('click', () => {
+                if (timeInput.classList.contains('focus-timepicker')) {
+                    closeBothPickers()
+                } else {
+                    openBothPickers()
+                }
+            });
+
 
             const clearDateButton = dateInput.parentNode.querySelector('.form__field-clear');
             const clearTimeButton = timeInput.parentNode.querySelector('.form__field-clear');
@@ -86,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     closeBothPickers();
                 }
             });
+
+
 
             timeInput.addEventListener('input', () => {
                 if (areBothFieldsFilled()) {

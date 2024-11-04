@@ -54,9 +54,9 @@ export class Datepicker {
 
     init() {
 
-        this.element.addEventListener('focus', () => {
-            this.show();
-        });
+        // this.element.addEventListener('focus', () => {
+        //     this.show();
+        // });
 
         this.element.addEventListener('clear', () => {
             this.currentDate = new Date();
