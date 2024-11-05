@@ -937,7 +937,7 @@ body.bg-gray {
   color: #000;
 }
 
-.btn[download]::after {
+.btn.download-btn::after {
   content: "↓";
 }
 

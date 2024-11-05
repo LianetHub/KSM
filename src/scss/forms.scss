@@ -238,7 +238,7 @@
 			color: #000;
 		}
 	}
-	&[download] {
+	&.download-btn {
 		&::after {
 			content: '↓';
 		}
