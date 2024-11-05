@@ -52,5 +52,15 @@
 				top: 25vh;
 			}
 		}
+		&:has(.products__more) {
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(45.4);
+		@media (min-width: $md2) {
+			margin-bottom: rem(55);
+		}
+		@media (min-width: $md1) {
+			margin-bottom: rem(51);
+		}
 	}
 }

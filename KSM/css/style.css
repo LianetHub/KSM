@@ -11,6 +11,14 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -2467,11 +2467,16 @@ body.bg-gray {
 .search__body {
   position: relative;
   margin-top: 1.875rem;
+  margin-bottom: 2.8375rem;
 }
 
 .search__body._loading::after,
 .search__body.form._sending::after {
   top: 25vh;
+}
+
+.search__body:has(.products__more) {
+  margin-bottom: 0;
 }
 
 @media (min-width: 429.98px) {
@@ -4573,6 +4578,10 @@ body.bg-gray {
   .search__title {
     font-size: 1.875rem;
   }
+
+  .search__body {
+    margin-bottom: 3.4375rem;
+  }
 }
 
 @media (min-width: 1439.98px) and (any-hover: hover) {
@@ -4785,6 +4794,10 @@ body.bg-gray {
 
   .contacts__desc p:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  .search__body {
+    margin-bottom: 3.1875rem;
   }
 }
 
