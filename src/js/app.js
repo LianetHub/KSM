@@ -370,6 +370,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    const fadeImages = document.querySelectorAll('.fade-load-image');
+
+    fadeImages?.forEach(fadeImage => {
+        if (fadeImage.complete) {
+            fadeImage.classList.add('loaded');
+        } else {
+            fadeImage.addEventListener('load', () => {
+                fadeImage.classList.add('loaded');
+            });
+        }
+    });
+
+    function updateColumns() {
+
+        const mediaQuery = window.matchMedia('(min-width: 1440px)');
+        if (!mediaQuery.matches) return;
+
+
+        const propsValues = document.querySelectorAll('.product__props-value');
+
+
+        if (!propsValues?.length) return;
+
+
+        propsValues.forEach(value => {
+            const parentCol = value.closest('.col-8');
+            if (parentCol) {
+
+                const lineHeight = Math.ceil(parseFloat(getComputedStyle(value).lineHeight));
+                const elementHeight = value.offsetHeight;
+
+                parentCol.classList.add('col-xl-4', 'col-md-8', 'col-sm-4');
+                if (elementHeight > lineHeight) {
+                    parentCol.classList.remove('col-xl-4', 'col-md-8', 'col-sm-4');
+                }
+            }
+        });
+    }
+
+
+    const hasPropsValues = document.querySelector('.product__props-value') !== null;
+
+
+    if (hasPropsValues) {
+
+        updateColumns();
+
+        // window.addEventListener('resize', updateColumns);
+    }
+
+
+
+
+
 
 
 

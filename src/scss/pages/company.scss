@@ -111,6 +111,15 @@
 				--gutter-y: 1.75rem;
 			}
 		}
+		.contacts__text,
+		.contacts__caption {
+			@extend .text-block;
+		}
+		.contacts__text {
+			@media (min-width: $md4) {
+				max-width: 30rem;
+			}
+		}
 	}
 	&__title {
 		padding-top: 0.25rem;
@@ -158,7 +167,7 @@
 				display: flex;
 				gap: 0.25rem;
 				&::before {
-					content: '—';
+					content: "—";
 					flex-shrink: 0;
 				}
 				&:not(:last-child) {
@@ -221,7 +230,7 @@
 	&__list-link {
 		position: relative;
 		&::after {
-			content: '↽';
+			content: "↽";
 			visibility: hidden;
 			display: inline-block;
 			margin-left: 0.35rem;

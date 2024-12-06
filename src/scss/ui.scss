@@ -1,8 +1,8 @@
 //============ МОДУЛИ ====================
-@import 'modules/cookies';
-@import 'modules/popup';
-@import 'modules/datepicker';
-@import 'modules/timepicker';
+@import "modules/cookies";
+@import "modules/popup";
+@import "modules/datepicker";
+@import "modules/timepicker";
 // @import "modules/before-slider";
 // @import "modules/select";
 // @import "modules/animation";
@@ -81,7 +81,7 @@
 		}
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -91,7 +91,7 @@
 			cursor: pointer;
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -193,20 +193,20 @@
 		display: none;
 	}
 	&:disabled,
-	&[aria-disabled='true'] {
+	&[aria-disabled="true"] {
 		opacity: 0.28;
 	}
 }
 
 .swiper-button-prev {
 	&::before {
-		content: '←';
+		content: "←";
 	}
 }
 
 .swiper-button-next {
 	&::before {
-		content: '→';
+		content: "→";
 	}
 }
 
@@ -222,6 +222,14 @@
 	bottom: auto;
 	width: auto;
 	font-variant-numeric: tabular-nums;
+}
+
+.fade-load-image {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	&.loaded {
+		opacity: 1;
+	}
 }
 
 // .pagination {
@@ -343,7 +351,7 @@
 
 ._loading {
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 50%;
 		left: 50%;

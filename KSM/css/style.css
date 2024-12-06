@@ -489,7 +489,13 @@ body.bg-gray {
 .text-block,
 .privacy__content ul,
 .privacy__content p,
-.article__text p {
+.article__text p,
+.article__block .contacts__text,
+.privacy__content h2 .contacts__text,
+.privacy__content h1 .contacts__text,
+.article__block .contacts__caption,
+.privacy__content h2 .contacts__caption,
+.privacy__content h1 .contacts__caption {
   font-size: 0.9375rem;
   line-height: 120%;
 }
@@ -623,6 +629,16 @@ body.bg-gray {
   bottom: auto;
   width: auto;
   font-variant-numeric: tabular-nums;
+}
+
+.fade-load-image {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-load-image.loaded {
+  opacity: 1;
 }
 
 ._loading::after,
@@ -850,16 +866,17 @@ body.bg-gray {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #000;
   font-size: 1.125rem;
   line-height: 133.333%;
 }
 
 .form__files-remove {
-  font-size: 0.875rem;
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
 }
 
 .form__error {
@@ -1681,7 +1698,7 @@ body.bg-gray {
 }
 
 .products__filters-clear {
-  padding: 0 0.25rem;
+  padding: 0 0.5rem;
 }
 
 .products__filters-price {
@@ -1965,6 +1982,18 @@ body.bg-gray {
   --gutter-y: 0;
 }
 
+.product__props .col-8:not(.col-xl-4) .product__props-value,
+.product__props .privacy__content ul:not(.col-xl-4) .product__props-value,
+.privacy__content .product__props ul:not(.col-xl-4) .product__props-value,
+.product__props .privacy__content p:not(.col-xl-4) .product__props-value,
+.privacy__content .product__props p:not(.col-xl-4) .product__props-value,
+.product__props .privacy__content h2:not(.col-xl-4) .product__props-value,
+.privacy__content .product__props h2:not(.col-xl-4) .product__props-value,
+.product__props .privacy__content h1:not(.col-xl-4) .product__props-value,
+.privacy__content .product__props h1:not(.col-xl-4) .product__props-value {
+  white-space: normal;
+}
+
 .product__props-item {
   display: -ms-grid;
   display: grid;
@@ -2178,7 +2207,7 @@ body.bg-gray {
 }
 
 .events__items {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .events__items .row,
@@ -2187,7 +2216,7 @@ body.bg-gray {
 }
 
 .events__content {
-  margin-top: 1rem;
+  margin-top: 1.75rem;
 }
 
 .events__content .row,
@@ -3380,6 +3409,12 @@ body.bg-gray {
     margin-top: 1.75rem;
   }
 
+  .article__block .contacts__text,
+  .privacy__content h2 .contacts__text,
+  .privacy__content h1 .contacts__text {
+    max-width: 30rem;
+  }
+
   .article__list {
     gap: 0.3rem 1.5rem;
   }
@@ -4152,7 +4187,13 @@ body.bg-gray {
   .text-block,
   .privacy__content ul,
   .privacy__content p,
-  .article__text p {
+  .article__text p,
+  .article__block .contacts__text,
+  .privacy__content h2 .contacts__text,
+  .privacy__content h1 .contacts__text,
+  .article__block .contacts__caption,
+  .privacy__content h2 .contacts__caption,
+  .privacy__content h1 .contacts__caption {
     font-size: 1.125rem;
     line-height: 116.667%;
   }
@@ -4160,7 +4201,13 @@ body.bg-gray {
   .text-block.lh-lg,
   .privacy__content ul.lh-lg,
   .privacy__content p.lh-lg,
-  .article__text p.lh-lg {
+  .article__text p.lh-lg,
+  .article__block .lh-lg.contacts__text,
+  .privacy__content h2 .lh-lg.contacts__text,
+  .privacy__content h1 .lh-lg.contacts__text,
+  .article__block .lh-lg.contacts__caption,
+  .privacy__content h2 .lh-lg.contacts__caption,
+  .privacy__content h1 .lh-lg.contacts__caption {
     line-height: 133.333%;
   }
 
@@ -4402,7 +4449,6 @@ body.bg-gray {
 
   .product__props-item {
     gap: 0.25rem 0.75rem;
-    white-space: nowrap;
   }
 
   .product__props-item {
@@ -4472,14 +4518,6 @@ body.bg-gray {
 
   .events__block.lg-offset:not(:last-child) {
     margin-bottom: 3.75rem;
-  }
-
-  .events__items {
-    margin-top: 1.5rem;
-  }
-
-  .events__content {
-    margin-top: 1.75rem;
   }
 
   .events__item-desc {
@@ -4993,7 +5031,13 @@ body.bg-gray {
   .text-block,
   .privacy__content ul,
   .privacy__content p,
-  .article__text p {
+  .article__text p,
+  .article__block .contacts__text,
+  .privacy__content h2 .contacts__text,
+  .privacy__content h1 .contacts__text,
+  .article__block .contacts__caption,
+  .privacy__content h2 .contacts__caption,
+  .privacy__content h1 .contacts__caption {
     font-size: 1.5rem;
     line-height: 1.25;
   }
@@ -5043,7 +5087,7 @@ body.bg-gray {
   }
 
   .form__files-remove {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .header__menu {

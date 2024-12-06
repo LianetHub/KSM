@@ -2,7 +2,7 @@
 	&._sending {
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -162,7 +162,7 @@
 	&__files-item {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		color: #000;
 		font-size: 1.125rem;
 		line-height: 133.333%;
@@ -172,9 +172,10 @@
 		}
 	}
 	&__files-remove {
-		font-size: rem(14);
+		padding: 0.25rem 0;
+		font-size: 1.125rem;
 		@media (min-width: $md0) {
-			font-size: rem(16);
+			font-size: 1.5rem;
 		}
 	}
 	// .form__files-name
@@ -207,7 +208,7 @@
 	padding: 0.969rem 1rem;
 	gap: 1rem;
 	&::after {
-		content: '→';
+		content: "→";
 	}
 	&.btn-primary {
 		border: 1px solid #000;
@@ -240,11 +241,11 @@
 	}
 	&.download-btn {
 		&::after {
-			content: '↓';
+			content: "↓";
 		}
 	}
 	&:disabled,
-	&[aria-disabled='true'] {
+	&[aria-disabled="true"] {
 		cursor: default;
 		pointer-events: none;
 		border-color: #808080;
@@ -279,7 +280,7 @@
 		user-select: none;
 		max-width: 24rem;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			cursor: pointer;
 			color: #fff;
