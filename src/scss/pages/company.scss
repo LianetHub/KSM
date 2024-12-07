@@ -112,7 +112,8 @@
 			}
 		}
 		.contacts__text,
-		.contacts__caption {
+		.contacts__caption,
+		.contacts__worktime {
 			@extend .text-block;
 		}
 		.contacts__text {

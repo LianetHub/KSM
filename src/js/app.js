@@ -382,43 +382,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function updateColumns() {
+    // function updateColumns() {
 
-        const mediaQuery = window.matchMedia('(min-width: 1440px)');
-        if (!mediaQuery.matches) return;
-
-
-        const propsValues = document.querySelectorAll('.product__props-value');
+    //     const mediaQuery = window.matchMedia('(min-width: 1440px)');
+    //     if (!mediaQuery.matches) return;
 
 
-        if (!propsValues?.length) return;
+    //     const propsValues = document.querySelectorAll('.product__props-value');
 
 
-        propsValues.forEach(value => {
-            const parentCol = value.closest('.col-8');
-            if (parentCol) {
-
-                const lineHeight = Math.ceil(parseFloat(getComputedStyle(value).lineHeight));
-                const elementHeight = value.offsetHeight;
-
-                parentCol.classList.add('col-xl-4', 'col-md-8', 'col-sm-4');
-                if (elementHeight > lineHeight) {
-                    parentCol.classList.remove('col-xl-4', 'col-md-8', 'col-sm-4');
-                }
-            }
-        });
-    }
+    //     if (!propsValues?.length) return;
 
 
-    const hasPropsValues = document.querySelector('.product__props-value') !== null;
+    //     propsValues.forEach(value => {
+    //         const parentCol = value.closest('.col-8');
+    //         if (parentCol) {
+
+    //             const lineHeight = Math.ceil(parseFloat(getComputedStyle(value).lineHeight));
+    //             const elementHeight = value.offsetHeight;
+
+    //             parentCol.classList.add('col-xl-4', 'col-md-8', 'col-sm-4');
+    //             if (elementHeight > lineHeight) {
+    //                 parentCol.classList.remove('col-xl-4', 'col-md-8', 'col-sm-4');
+    //             }
+    //         }
+    //     });
+    // }
 
 
-    if (hasPropsValues) {
+    // const hasPropsValues = document.querySelector('.product__props-value') !== null;
 
-        updateColumns();
 
-        // window.addEventListener('resize', updateColumns);
-    }
+    // if (hasPropsValues) {
+
+    //     updateColumns();
+
+    //     // window.addEventListener('resize', updateColumns);
+    // }
 
 
 

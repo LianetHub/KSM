@@ -787,6 +787,7 @@
 	&__props-item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+
 		gap: 0.25rem 1rem;
 		@media (min-width: $md4) {
 			gap: 0.25rem $gutter-x;
@@ -802,9 +803,11 @@
 	// .product__props-name
 	&__props-name {
 		font-weight: 500;
+		flex: 0 0 calc(50% - 0.125rem);
 	}
 	// .product__props-value
 	&__props-value {
+		flex: 1 1 auto;
 		margin-right: -0.5rem;
 	}
 	// .product__delete

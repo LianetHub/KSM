@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -495,7 +495,10 @@ body.bg-gray {
 .privacy__content h1 .contacts__text,
 .article__block .contacts__caption,
 .privacy__content h2 .contacts__caption,
-.privacy__content h1 .contacts__caption {
+.privacy__content h1 .contacts__caption,
+.article__block .contacts__worktime,
+.privacy__content h2 .contacts__worktime,
+.privacy__content h1 .contacts__worktime {
   font-size: 0.9375rem;
   line-height: 120%;
 }
@@ -2004,9 +2007,15 @@ body.bg-gray {
 
 .product__props-name {
   font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 0.125rem);
+          flex: 0 0 calc(50% - 0.125rem);
 }
 
 .product__props-value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   margin-right: -0.5rem;
 }
 
@@ -4193,7 +4202,10 @@ body.bg-gray {
   .privacy__content h1 .contacts__text,
   .article__block .contacts__caption,
   .privacy__content h2 .contacts__caption,
-  .privacy__content h1 .contacts__caption {
+  .privacy__content h1 .contacts__caption,
+  .article__block .contacts__worktime,
+  .privacy__content h2 .contacts__worktime,
+  .privacy__content h1 .contacts__worktime {
     font-size: 1.125rem;
     line-height: 116.667%;
   }
@@ -4207,7 +4219,10 @@ body.bg-gray {
   .privacy__content h1 .lh-lg.contacts__text,
   .article__block .lh-lg.contacts__caption,
   .privacy__content h2 .lh-lg.contacts__caption,
-  .privacy__content h1 .lh-lg.contacts__caption {
+  .privacy__content h1 .lh-lg.contacts__caption,
+  .article__block .lh-lg.contacts__worktime,
+  .privacy__content h2 .lh-lg.contacts__worktime,
+  .privacy__content h1 .lh-lg.contacts__worktime {
     line-height: 133.333%;
   }
 
@@ -5037,7 +5052,10 @@ body.bg-gray {
   .privacy__content h1 .contacts__text,
   .article__block .contacts__caption,
   .privacy__content h2 .contacts__caption,
-  .privacy__content h1 .contacts__caption {
+  .privacy__content h1 .contacts__caption,
+  .article__block .contacts__worktime,
+  .privacy__content h2 .contacts__worktime,
+  .privacy__content h1 .contacts__worktime {
     font-size: 1.5rem;
     line-height: 1.25;
   }
