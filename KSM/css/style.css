@@ -1608,14 +1608,19 @@ body.bg-gray {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .products__card-image.has-hover img:not(.hover-img) {
   display: block;
+  z-index: 1;
 }
 
 .products__card-image.has-hover img.hover-img {
-  display: none;
+  opacity: 0.01;
+  z-index: -1;
 }
 
 .products__card-name {
@@ -5682,7 +5687,8 @@ body.bg-gray {
   }
 
   .products__card-image.has-hover:hover img.hover-img {
-    display: block;
+    z-index: 2;
+    opacity: 1;
   }
 
   .products__card-btn:hover {

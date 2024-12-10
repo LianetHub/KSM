@@ -211,19 +211,24 @@
 			width: 100%;
 			height: 100%;
 			& img,
-			source {
+			& source {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		}
 		&.has-hover {
 			& img {
 				&:not(.hover-img) {
 					display: block;
+					z-index: 1;
 				}
 				&.hover-img {
-					display: none;
+					opacity: 0.01;
+					z-index: -1;
 				}
 			}
 			@media (any-hover: hover) {
@@ -233,7 +238,8 @@
 							display: none;
 						}
 						&.hover-img {
-							display: block;
+							z-index: 2;
+							opacity: 1;
 						}
 					}
 				}

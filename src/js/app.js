@@ -370,17 +370,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const fadeImages = document.querySelectorAll('.fade-load-image');
 
-    fadeImages?.forEach(fadeImage => {
-        if (fadeImage.complete) {
-            fadeImage.classList.add('loaded');
-        } else {
-            fadeImage.addEventListener('load', () => {
+    function handleFadeImages(images) {
+        images?.forEach(fadeImage => {
+            if (fadeImage.complete) {
                 fadeImage.classList.add('loaded');
-            });
-        }
+            } else {
+                fadeImage.addEventListener('load', () => {
+                    fadeImage.classList.add('loaded');
+                });
+            }
+        });
+    }
+
+    const fadeImages = document.querySelectorAll('.fade-load-image');
+    handleFadeImages(fadeImages);
+
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === 1 && node.classList.contains('fade-load-image')) {
+                        handleFadeImages([node]);
+                    }
+
+                    const newImages = node.querySelectorAll?.('.fade-load-image');
+                    if (newImages && newImages.length) {
+                        handleFadeImages(newImages);
+                    }
+                });
+            }
+        });
     });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
 
     // function updateColumns() {
 
