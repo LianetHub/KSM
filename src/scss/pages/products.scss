@@ -594,9 +594,6 @@
 		margin-top: 2.5rem;
 		order: 1;
 		@media (min-width: $md3) {
-			margin-top: 4.5rem;
-		}
-		@media (min-width: $md32) {
 			margin-top: 2rem;
 		}
 	}
@@ -615,10 +612,9 @@
 	&__options-hint {
 		line-height: 116.667%;
 		font-size: 0.9375rem;
-		margin-top: 1rem;
+		margin-top: 0.88rem;
 		@media (min-width: $md32) {
 			font-size: 1.125rem;
-			margin-top: 0.88rem;
 		}
 	}
 	// .product__options-body

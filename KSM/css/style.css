@@ -1877,7 +1877,7 @@ body.bg-gray {
 .product__options-hint {
   line-height: 116.667%;
   font-size: 0.9375rem;
-  margin-top: 1rem;
+  margin-top: 0.88rem;
 }
 
 .product__options-body {
@@ -3825,7 +3825,7 @@ body.bg-gray {
   }
 
   .product__options {
-    margin-top: 4.5rem;
+    margin-top: 2rem;
   }
 
   .product__breads {
@@ -4436,17 +4436,12 @@ body.bg-gray {
     padding: 1.5rem 0 2.75rem;
   }
 
-  .product__options {
-    margin-top: 2rem;
-  }
-
   .product__options-title {
     font-size: 1.5rem;
   }
 
   .product__options-hint {
     font-size: 1.125rem;
-    margin-top: 0.88rem;
   }
 
   .product__options-body {
