@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1675,6 +1675,10 @@ body.bg-gray {
           transform: rotate(45deg);
 }
 
+.products__card-btn.pending {
+  pointer-events: none;
+}
+
 .products__filters {
   margin-bottom: 3rem;
   padding-top: 0.5rem;
@@ -2036,6 +2040,10 @@ body.bg-gray {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.product__delete-btn.pending {
+  pointer-events: none;
 }
 
 .product__delete-btn::after {

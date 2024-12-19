@@ -20,18 +20,23 @@ export class Cart {
 
     updateCart(target) {
         const productId = target.closest('[data-id]').getAttribute('data-id');
-        const command = target.classList.contains('active') ? 'remove' : 'add';
+        const isAdding = !target.classList.contains('active');
+        const command = isAdding ? 'add' : 'remove';
 
+        const previousAmount = this.getCurrentAmount();
+
+        target.classList.toggle('active', isAdding);
+        target.classList.add('pending');
+        if (target.matches('.product__delete-btn')) {
+            target.textContent = isAdding ? "УДАЛИТЬ" : "Выбрать";
+        }
+
+        let fakeAmount = previousAmount + (isAdding ? 1 : -1);
+        this.updateCartUI(fakeAmount);
 
         this.fetchCart(command, productId)
             .then((data) => {
                 const { amount } = data;
-
-                target.classList.toggle('active');
-
-                if (target.matches('.product__delete-btn')) {
-                    target.textContent = target.classList.contains('active') ? "УДАЛИТЬ" : "Выбрать";
-                }
 
                 this.updateCartUI(amount);
 
@@ -49,7 +54,18 @@ export class Cart {
                     }
                 }
             })
-            .catch((error) => console.error('Ошибка при обновлении корзины:', error));
+            .catch((error) => {
+                console.error('Ошибка при запросе к серверу:', error);
+
+                target.classList.toggle('active', !isAdding);
+                if (target.matches('.product__delete-btn')) {
+                    target.textContent = !isAdding ? "УДАЛИТЬ" : "Выбрать";
+                }
+
+                this.updateCartUI(previousAmount);
+            }).finally(() => {
+                target.classList.remove('pending');
+            });
     }
 
     updateCartUI(amount) {
@@ -60,6 +76,11 @@ export class Cart {
 
         this.openMenu();
         setTimeout(() => this.hideMenu(), 2000);
+    }
+
+    getCurrentAmount() {
+        const firstCartItem = this.cartItems[0];
+        return firstCartItem ? parseInt(firstCartItem.textContent, 10) || 0 : 0;
     }
 
     async fetchCart(command, productId) {

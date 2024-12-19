@@ -351,6 +351,9 @@
 				transform: rotate(45deg);
 			}
 		}
+		&.pending {
+			pointer-events: none;
+		}
 	}
 	// .products__filters
 	&__filters {
@@ -830,6 +833,9 @@
 			&::before {
 				@extend %ic, .icon-clear;
 			}
+		}
+		&.pending {
+			pointer-events: none;
 		}
 		&::after {
 			display: none;
