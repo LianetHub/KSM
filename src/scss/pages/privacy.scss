@@ -43,11 +43,16 @@
 			@extend .col-8, .col-md-5, .col-sm-6, .col-xs-7, .offset-sm-2, .offset-xs-1;
 			margin-top: 0;
 			& li {
-				display: flex;
-				gap: 0.25rem;
+				// display: flex;
+				// gap: 0.25rem;
+				position: relative;
+				padding-left: 1.375em;
 				&::before {
-					content: '—';
-					flex-shrink: 0;
+					content: "—";
+					position: absolute;
+					top: 0;
+					left: 0;
+					// flex-shrink: 0;
 				}
 				&:not(:last-child) {
 					margin-bottom: 1.3rem;
