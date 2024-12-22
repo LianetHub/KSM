@@ -101,5 +101,10 @@ export const formSubmit = () => {
 	function closeAndShowSuccessModal() {
 		document.querySelector('.popup-thanks').classList.add('open');
 		document.querySelector('body').classList.add('modal-lock');
+		setTimeout(() => {
+			document.querySelector('.popup-thanks').classList.remove('open');
+			document.querySelector('body').classList.remove('modal-lock');
+		}, 5000)
 	}
+
 };
