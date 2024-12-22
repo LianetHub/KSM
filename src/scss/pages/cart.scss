@@ -9,6 +9,13 @@
 	@media (min-width: $md2) {
 		padding: 0rem 0 4.25rem;
 	}
+	.products__card {
+		.products__card-btn {
+			&::before {
+				transform: rotate(45deg);
+			}
+		}
+	}
 	// .cart__container
 	&__container {
 	}
