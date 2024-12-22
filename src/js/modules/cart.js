@@ -13,6 +13,9 @@ export class Cart {
             const target = e.target;
 
             if (target.matches('.products__card-btn') || target.matches('.product__delete-btn')) {
+                if (target.classList.contains('pending')) {
+                    return
+                };
                 this.updateCart(target);
             }
         });

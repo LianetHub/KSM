@@ -352,7 +352,7 @@
 			}
 		}
 		&.pending {
-			pointer-events: none;
+			// pointer-events: none;
 		}
 	}
 	// .products__filters
@@ -835,7 +835,7 @@
 			}
 		}
 		&.pending {
-			pointer-events: none;
+			// pointer-events: none;
 		}
 		&::after {
 			display: none;
