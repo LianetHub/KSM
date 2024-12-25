@@ -879,10 +879,21 @@
 			margin-top: 0.25rem;
 			padding-left: 1.75em;
 			& li {
-				display: flex;
-				gap: 0.25rem;
+				position: relative;
+				padding-left: 1.5em;
+				& p {
+					&:not(:first-child) {
+						margin-top: 0.25rem;
+					}
+				}
 				&::before {
 					content: "—";
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				&:not(:last-child) {
+					margin-bottom: 0.5em;
 				}
 			}
 		}

@@ -3,8 +3,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -19,8 +19,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -2065,14 +2065,23 @@ body.bg-gray {
 }
 
 .product__desc-text ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.product__desc-text ul li p:not(:first-child) {
+  margin-top: 0.25rem;
 }
 
 .product__desc-text ul li::before {
   content: "—";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product__desc-text ul li:not(:last-child) {
+  margin-bottom: 0.5em;
 }
 
 .product__desc-links {
