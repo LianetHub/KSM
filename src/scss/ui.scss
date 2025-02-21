@@ -72,6 +72,16 @@
 	max-width: 100%;
 	&:has(.swiper-button-lock, .swiper-pagination-lock) {
 	}
+	&.swiper-single-slide {
+		.slider__slide {
+			&::before {
+				display: none;
+			}
+			&::after {
+				display: none;
+			}
+		}
+	}
 	// .slider__slide
 	&__slide {
 		height: auto;

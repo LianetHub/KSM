@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const swiper = new Swiper(slider, {
                 slidesPerView: 1,
                 loop: true,
+                watchOverflow: true,
                 navigation: {
                     nextEl: slider.querySelector('.slider__next'),
                     prevEl: slider.querySelector('.slider__prev')
@@ -222,7 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     el: slider.querySelector('.slider__pagination'),
                     type: "fraction",
                     renderFraction: function (currentClass, totalClass) {
-
 
                         return '<span class="' + currentClass + '"></span>' +
                             '/' +
@@ -235,6 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         return addLeadingZero(number);
                     }
                 },
+                on: {
+                    init: (swiper) => {
+                        if (swiper.slides.length === 1) {
+                            swiper.el.classList.add('swiper-single-slide')
+                        }
+                    }
+                }
+
             })
             function addLeadingZero(number) {
                 return number < 10 ? '0' + number : number;

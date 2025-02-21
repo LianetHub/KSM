@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -519,6 +519,14 @@ body.bg-gray {
 .slider {
   min-width: 0;
   max-width: 100%;
+}
+
+.slider.swiper-single-slide .slider__slide::before {
+  display: none;
+}
+
+.slider.swiper-single-slide .slider__slide::after {
+  display: none;
 }
 
 .slider__slide {
