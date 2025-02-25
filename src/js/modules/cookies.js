@@ -55,7 +55,7 @@ export const cookies = () => {
         noticeDiv.classList.remove('hidden');
 
         document.querySelector('.cookie__btn').addEventListener('click', function () {
-            setCookie('cookie_notice', 1);
+            setCookie('cookie_notice', 1, { expires: 180 * 24 * 60 * 60 });
             noticeDiv.classList.add('hidden');
         });
     }
