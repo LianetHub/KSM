@@ -633,6 +633,7 @@
 	// .product__options-visual
 	&__options-visual {
 		position: relative;
+		overflow: hidden;
 		& img {
 			width: 100%;
 		}
