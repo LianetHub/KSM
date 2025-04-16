@@ -652,6 +652,40 @@ body.bg-gray {
   opacity: 1;
 }
 
+[data-vk-video] {
+  position: relative;
+}
+
+[data-vk-video]::before {
+  display: none;
+}
+
+[data-vk-video]::after {
+  display: none;
+}
+
+[data-vk-video] iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+[data-vk-video] .vk-video-play {
+  background: red;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  border-radius: 50%;
+}
+
 ._loading::after,
 .form._sending::after {
   content: "";
@@ -1125,7 +1159,7 @@ body.bg-gray {
   font-size: 1.875rem;
   position: absolute;
   right: 0.6875rem;
-  bottom: 1.5rem;
+  bottom: 1.75rem;
 }
 
 .header__menu-body {
@@ -1838,6 +1872,17 @@ body.bg-gray {
   line-height: 180%;
   text-transform: uppercase;
   margin-top: 1.15rem;
+}
+
+.products__share {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1.5;
 }
 
 .product {
@@ -5286,6 +5331,10 @@ body.bg-gray {
     gap: 0.45rem 1.5rem;
   }
 
+  .products__share {
+    line-height: 133.333%;
+  }
+
   .product {
     padding: 1.5rem 0 4rem;
   }
@@ -5656,25 +5705,23 @@ body.bg-gray {
   }
 }
 
+@media (max-width: 375px) {
+  .header__menu-list {
+    padding-right: 2rem;
+  }
+}
+
 @media (min-width: 619.98px) and (max-width: 767.98px) {
   .footer__caption.footer-catalog {
     line-height: 190%;
   }
 }
 
-@media (hover: none) {
-  .header__top {
-    display: none;
-  }
-}
-
-@media (hover: hover) {
-  .header__top {
-    display: block;
-  }
-}
-
 @media (any-hover: hover) {
+  [data-vk-video] .vk-video-play:hover {
+    background: green;
+  }
+
   .header__menu-cart:hover {
     font-weight: 700;
   }
@@ -5722,7 +5769,23 @@ body.bg-gray {
     font-weight: 500;
   }
 
+  .products__share:hover {
+    font-weight: 500;
+  }
+
   .events__item-reg[href]:hover {
     font-weight: 500;
+  }
+}
+
+@media (hover: none) {
+  .header__top {
+    display: none;
+  }
+}
+
+@media (hover: hover) {
+  .header__top {
+    display: block;
   }
 }

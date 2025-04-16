@@ -457,6 +457,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    document.querySelector('.products__share')?.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const shareUrl = window.location.href;
+
+        if (navigator.share) {
+
+            navigator.share({
+                title: document.title,
+                url: shareUrl,
+            })
+                .then(() => console.log('success'))
+                .catch((error) => console.log('error:', error));
+        } else if (navigator.clipboard) {
+
+            navigator.clipboard.writeText(shareUrl)
+
+        } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = shareUrl;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+            }
+            document.body.removeChild(textArea);
+        }
+    });
+
+
+
+
+
+    document.querySelectorAll('[data-vk-video]')?.forEach(slide => {
+        const videoCode = slide.dataset.videoCode;
+        const videoOwner = slide.dataset.videoOwner;
+
+        if (!videoCode || !videoOwner) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'vk-video-wrapper';
+
+
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.src = `https://vk.com/video_ext.php?oid=${videoOwner}&id=${videoCode}&hd=2&autoplay=0`;
+
+        wrapper.appendChild(iframe);
+        slide.appendChild(wrapper);
+        slide.appendChild(playBtn);
+
+
+    });
+
+
+
 
 
 

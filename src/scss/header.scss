@@ -25,7 +25,7 @@
 	&.open-menu {
 		@media (max-width: $md6) {
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -223,7 +223,7 @@
 			font-size: 1.875rem;
 			position: absolute;
 			right: rem(11);
-			bottom: rem(24);
+			bottom: rem(28);
 		}
 	}
 	// .header__menu-body
@@ -288,10 +288,10 @@
 			}
 		}
 		&::before {
-			content: '[';
+			content: "[";
 		}
 		&::after {
-			content: ']';
+			content: "]";
 		}
 		&.active {
 			color: #000;
@@ -319,6 +319,9 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem $gutter-x-mobile;
+		@media (max-width: 375px) {
+			padding-right: 2rem;
+		}
 		@media (min-width: $md6) {
 			gap: 0.5rem $gutter-x;
 			grid-template-columns: repeat(3, 1fr);
@@ -409,7 +412,7 @@
 		will-change: contents;
 		will-change: transform;
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			height: rem(2);
 			width: 100%;

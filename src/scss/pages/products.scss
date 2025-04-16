@@ -511,7 +511,6 @@
 			}
 		}
 	}
-
 	// .products__more
 	&__more {
 		display: inline-block;
@@ -526,6 +525,20 @@
 		}
 		@media (min-width: $md1) {
 			margin-top: 1.5rem;
+		}
+	}
+	&__share {
+		margin-left: auto;
+		display: flex;
+		width: fit-content;
+		line-height: 1.5;
+		@media (any-hover: hover) {
+			&:hover {
+				font-weight: 500;
+			}
+		}
+		@media (min-width: $md0) {
+			line-height: 133.333%;
 		}
 	}
 }
