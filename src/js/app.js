@@ -463,7 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const shareUrl = window.location.href;
 
         if (navigator.share) {
-
             navigator.share({
                 title: document.title,
                 url: shareUrl,
@@ -471,9 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(() => console.log('success'))
                 .catch((error) => console.log('error:', error));
         } else if (navigator.clipboard) {
-
             navigator.clipboard.writeText(shareUrl)
-
         } else {
             const textArea = document.createElement("textarea");
             textArea.value = shareUrl;
