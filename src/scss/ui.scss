@@ -81,6 +81,9 @@
 				display: none;
 			}
 		}
+		& .slider__controls {
+			visibility: hidden;
+		}
 	}
 	// .slider__slide
 	&__slide {

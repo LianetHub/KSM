@@ -211,14 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelectorAll('.slider')) {
         document.querySelectorAll('.slider').forEach(slider => {
+            const nextBtn = slider.querySelector('.slider__next');
+            const prevBtn = slider.querySelector('.slider__prev');
+
             const swiper = new Swiper(slider, {
                 slidesPerView: 1,
-                loop: true,
+                // loop: true,
                 watchOverflow: true,
-                navigation: {
-                    nextEl: slider.querySelector('.slider__next'),
-                    prevEl: slider.querySelector('.slider__prev')
-                },
+                // navigation: {
+                //     nextEl: nextBtn,
+                //     prevEl: prevBtn
+                // },
                 pagination: {
                     el: slider.querySelector('.slider__pagination'),
                     type: "fraction",
@@ -248,19 +251,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 return number < 10 ? '0' + number : number;
             }
 
-            swiper.slides.forEach(slide => {
+            nextBtn.addEventListener('click', () => {
+                if (swiper.isEnd) {
+                    swiper.slideTo(0);
+                } else {
+                    swiper.slideNext();
+                }
+            });
 
+            prevBtn.addEventListener('click', () => {
+                if (swiper.isBeginning) {
+                    swiper.slideTo(swiper.slides.length - 1);
+                } else {
+                    swiper.slidePrev();
+                }
+            });
+
+            swiper.slides.forEach(slide => {
                 slide.addEventListener('click', (e) => {
                     const rect = slide.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const slideWidth = rect.width;
 
-
                     if (x < slideWidth * 0.5) {
-                        swiper.slidePrev();
-                    } else if (x > slideWidth * 0.5) {
-
-                        swiper.slideNext();
+                        if (swiper.isBeginning) {
+                            swiper.slideTo(swiper.slides.length - 1);
+                        } else {
+                            swiper.slidePrev();
+                        }
+                    } else {
+                        if (swiper.isEnd) {
+                            swiper.slideTo(0);
+                        } else {
+                            swiper.slideNext();
+                        }
                     }
                 });
             });
@@ -457,32 +481,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    document.querySelector('.products__share')?.addEventListener('click', function (e) {
-        e.preventDefault();
+    const shareButton = document.querySelector('.products__share');
 
-        const shareUrl = window.location.href;
+    if (shareButton) {
+        let resetTimeout;
 
-        if (navigator.share) {
-            navigator.share({
-                title: document.title,
-                url: shareUrl,
-            })
-                .then(() => console.log('success'))
-                .catch((error) => console.log('error:', error));
-        } else if (navigator.clipboard) {
-            navigator.clipboard.writeText(shareUrl)
-        } else {
-            const textArea = document.createElement("textarea");
-            textArea.value = shareUrl;
-            document.body.appendChild(textArea);
-            textArea.select();
+        shareButton.addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            clearTimeout(resetTimeout);
+
+
+            shareButton.classList.add('submit');
+            shareButton.classList.remove('success');
+            shareButton.textContent = 'Получение ссылки';
+
             try {
-                document.execCommand('copy');
-            } catch (err) {
+                const response = await fetch(`${CART_SHARE_URL}`, { method: 'GET' });
+
+                if (!response.ok) {
+                    throw new Error('Ошибка получения ссылки');
+                }
+
+                const shareUrl = await response.text();
+
+
+                if (navigator.share) {
+                    await navigator.share({
+                        title: document.title,
+                        url: shareUrl,
+                    });
+                } else if (navigator.clipboard) {
+                    await navigator.clipboard.writeText(shareUrl);
+                } else {
+                    const textArea = document.createElement("textarea");
+                    textArea.value = shareUrl;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+
+                // Успех
+                shareButton.classList.remove('submit');
+                shareButton.classList.add('success');
+                shareButton.textContent = 'Ссылка скопирована';
+
+                resetTimeout = setTimeout(() => {
+                    shareButton.classList.remove('success');
+                    shareButton.textContent = 'Поделиться корзиной ↽';
+                }, 10000);
+            } catch (error) {
+                console.error('Ошибка:', error);
+                shareButton.classList.remove('submit');
+                shareButton.classList.add('error');
+                shareButton.textContent = 'Ошибка';
+
+                resetTimeout = setTimeout(() => {
+                    shareButton.classList.remove('error');
+                    shareButton.textContent = 'Поделиться корзиной ↽';
+                }, 3000);
             }
-            document.body.removeChild(textArea);
-        }
-    });
+        });
+    }
+
 
 
 

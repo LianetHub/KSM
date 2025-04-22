@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -527,6 +527,10 @@ body.bg-gray {
 
 .slider.swiper-single-slide .slider__slide::after {
   display: none;
+}
+
+.slider.swiper-single-slide .slider__controls {
+  visibility: hidden;
 }
 
 .slider__slide {
@@ -1899,6 +1903,19 @@ body.bg-gray {
   width: -moz-fit-content;
   width: fit-content;
   line-height: 1.5;
+}
+
+.products__share.submit {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.products__share.success {
+  pointer-events: none;
+}
+
+.products__share.error {
+  pointer-events: none;
 }
 
 .product {
