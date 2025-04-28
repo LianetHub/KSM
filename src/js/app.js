@@ -530,17 +530,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 resetTimeout = setTimeout(() => {
                     shareButton.classList.remove('success');
                     shareButton.textContent = 'Поделиться корзиной ↽';
-                }, 10000);
+                }, 5000);
             } catch (error) {
                 console.error('Ошибка:', error);
                 shareButton.classList.remove('submit');
-                shareButton.classList.add('error');
-                shareButton.textContent = 'Ошибка';
 
-                resetTimeout = setTimeout(() => {
-                    shareButton.classList.remove('error');
-                    shareButton.textContent = 'Поделиться корзиной ↽';
-                }, 3000);
+                shareButton.textContent = 'Поделиться корзиной ↽';
             }
         });
     }

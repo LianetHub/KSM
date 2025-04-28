@@ -595,6 +595,7 @@
 	// .product__slider
 	&__slider {
 		order: -1;
+		margin: -1px;
 		// .slider__slide {
 		// 	height: 0;
 		// 	padding-bottom: #{math.div(888, 908) * 100%};
