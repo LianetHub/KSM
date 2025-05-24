@@ -198,7 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
+
+
     });
+
+
+
 
 
 
@@ -569,6 +574,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
+
+
+
+    // more load content
+    let currentPage = parseInt(new URLSearchParams(window.location.search).get('page')) || 1;
+    let observerLoadMore = null;
+
+    function observeMoreButton() {
+        if (observerLoadMore) {
+            observerLoadMore.disconnect();
+        }
+
+        const moreButton = document.querySelector('#more__button > a');
+        if (!moreButton) return;
+
+        observerLoadMore = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    obs.unobserve(entry.target);
+                    loadMoreContent(entry.target);
+                }
+            });
+        }, {
+            rootMargin: '0px 0px 200px 0px'
+        });
+
+        observerLoadMore.observe(moreButton);
+    }
+
+    function loadMoreContent(button) {
+        const typePage = button.dataset.type;
+        const href = button.getAttribute('href');
+        const wrapper = document.querySelector(`#js-${typePage}-loader`);
+        const parentDiv = button.closest('#more__button');
+
+        if (parentDiv) parentDiv.remove();
+        document.querySelector('.products__body')?.classList.add('_loading');
+
+        currentPage++;
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.set('page', currentPage);
+        history.pushState({ page: currentPage }, '', newUrl);
+
+        fetch(href + (href.includes('?') ? '&' : '?') + 'ajax=Y')
+            .then(response => response.text())
+            .then(data => {
+                if (wrapper) wrapper.insertAdjacentHTML('beforeend', data);
+                document.querySelector('.products__body')?.classList.remove('_loading');
+                observeMoreButton();
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке:', error);
+                document.querySelector('.products__body')?.classList.remove('_loading');
+            });
+    }
+
+    document.addEventListener('click', function (e) {
+        const target = e.target.closest('#more__button > a');
+        if (!target) return;
+
+        e.preventDefault();
+        loadMoreContent(target);
+    });
+
+
+    window.addEventListener('popstate', function (event) {
+        const pageFromHistory = event.state?.page;
+        if (pageFromHistory) {
+            location.href = location.pathname + '?page=' + pageFromHistory;
+        } else {
+            location.href = location.pathname;
+        }
+    });
+
+
+    observeMoreButton();
+
+
+
 
 
 
