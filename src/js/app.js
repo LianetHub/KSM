@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const shareUrl = await response.text();
 
 
-                if (navigator.share) {
+                if (window.innerWidth <= 768 && navigator.share) {
                     await navigator.share({
                         title: document.title,
                         url: shareUrl,
@@ -578,12 +578,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // more load content
-    let currentPage = parseInt(new URLSearchParams(window.location.search).get('page')) || 1;
+    let currentPage = parseInt(new URLSearchParams(window.location.search).get('pages')) || 1;
     let observerLoadMore = null;
 
     function observeMoreButton() {
         if (observerLoadMore) {
-            observerLoadMore.disconnect();
+            observerLoadMore.disconnect(); ё
         }
 
         const moreButton = document.querySelector('#more__button > a');
@@ -613,9 +613,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.products__body')?.classList.add('_loading');
 
         currentPage++;
-        const newUrl = new URL(window.location.href);
-        newUrl.searchParams.set('page', currentPage);
-        history.pushState({ page: currentPage }, '', newUrl);
+
+        const currentUrl = new URL(window.location.href);
+        const currentPageInUrl = parseInt(currentUrl.searchParams.get('pages')) || 1;
+
+        if (currentPage !== currentPageInUrl) {
+            currentUrl.searchParams.set('pages', currentPage);
+            history.pushState({ page: currentPage }, '', currentUrl);
+        }
 
         fetch(href + (href.includes('?') ? '&' : '?') + 'ajax=Y')
             .then(response => response.text())
@@ -642,7 +647,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('popstate', function (event) {
         const pageFromHistory = event.state?.page;
         if (pageFromHistory) {
-            location.href = location.pathname + '?page=' + pageFromHistory;
+            location.href = location.pathname + '?pages=' + pageFromHistory;
         } else {
             location.href = location.pathname;
         }
