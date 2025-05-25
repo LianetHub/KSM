@@ -583,7 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function observeMoreButton() {
         if (observerLoadMore) {
-            observerLoadMore.disconnect(); ё
+            observerLoadMore.disconnect();
         }
 
         const moreButton = document.querySelector('#more__button > a');
