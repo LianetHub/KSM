@@ -8,10 +8,10 @@ import { Cart } from './modules/cart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    devFunctions.animation();
     devFunctions.OS();
     devFunctions.isWebp();
     devFunctions.checkEmptyInputs();
-    devFunctions.animation();
     devFunctions.mask();
     devFunctions.filter();
     devFunctions.cookies();
@@ -189,14 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.add('active');
         }
 
-        if (target.tagName.toLowerCase() === 'a' && target.getAttribute('href') == '#') {
-            e.preventDefault();
+        // if (target.tagName.toLowerCase() === 'a' && target.getAttribute('href') == '#') {
+        //     e.preventDefault();
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
+        //     window.scrollTo({
+        //         top: 0,
+        //         behavior: "smooth"
+        //     })
+        // }
 
 
 
@@ -610,7 +610,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const parentDiv = button.closest('#more__button');
 
         if (parentDiv) parentDiv.remove();
-        document.querySelector('.products__body')?.classList.add('_loading');
+        // document.querySelector('.products__body')?.classList.add('_loading');
 
         currentPage++;
 
@@ -626,12 +626,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.text())
             .then(data => {
                 if (wrapper) wrapper.insertAdjacentHTML('beforeend', data);
-                document.querySelector('.products__body')?.classList.remove('_loading');
+                // document.querySelector('.products__body')?.classList.remove('_loading');
                 observeMoreButton();
             })
             .catch(error => {
                 console.error('Ошибка при загрузке:', error);
-                document.querySelector('.products__body')?.classList.remove('_loading');
+                // document.querySelector('.products__body')?.classList.remove('_loading');
             });
     }
 
@@ -643,8 +643,10 @@ document.addEventListener('DOMContentLoaded', () => {
         loadMoreContent(target);
     });
 
-
     window.addEventListener('popstate', function (event) {
+
+        if (location.hash) return;
+
         const pageFromHistory = event.state?.page;
         if (pageFromHistory) {
             location.href = location.pathname + '?pages=' + pageFromHistory;
@@ -655,6 +657,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     observeMoreButton();
+
+    document.addEventListener('filter:updated', () => {
+        observeMoreButton();
+    });
 
 
 

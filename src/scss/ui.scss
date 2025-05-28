@@ -70,6 +70,7 @@
 .slider {
 	min-width: 0;
 	max-width: 100%;
+	overflow: hidden;
 	&:has(.swiper-button-lock, .swiper-pagination-lock) {
 	}
 	&.swiper-single-slide {
@@ -88,8 +89,10 @@
 	// .slider__slide
 	&__slide {
 		height: auto;
+		outline: 1px solid #fff;
 		& source,
 		& img {
+			// margin: -10px;
 			width: 100%;
 		}
 		position: relative;

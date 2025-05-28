@@ -82,9 +82,15 @@ export const filter = () => {
         }
     }
 
-    filterForm.addEventListener('submit', function () {
+    filterForm.addEventListener('submit', function (e) {
 
         e.preventDefault();
+
+        const url = new URL(window.location.href);
+        if (url.searchParams.has('pages')) {
+            url.searchParams.delete('pages');
+            history.replaceState(null, '', url.toString());
+        }
 
         const startPriceInput = filterForm.querySelector('.start-price');
         const endPriceInput = filterForm.querySelector('.end-price');
@@ -99,6 +105,10 @@ export const filter = () => {
 
         startPriceInput.value = originalStartPrice;
         endPriceInput.value = originalEndPrice;
+
+        document.dispatchEvent(new CustomEvent('filter:updated'));
+
+
 
     })
 
