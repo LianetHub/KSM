@@ -1,8 +1,8 @@
 export class Timepicker {
     constructor(input, options) {
         this.input = input;
-        this.startTime = options.startTime || "10:00";
-        this.endTime = options.endTime || "19:30";
+        this.startTime = options.startTime || "08:00";
+        this.endTime = options.endTime || "18:30";
         this.timeInterval = 30;
         this.timepicker = null;
         this.createTimepicker();

@@ -1,5 +1,5 @@
 function initMap() {
-    ymaps.ready(init);
+
     let mapElement = document.getElementById('map');
     let centerCoords = mapElement.getAttribute('data-center').split(',').map(Number);
     let placemarkCoords = mapElement.getAttribute('data-placemark').split(',').map(Number);
@@ -23,6 +23,8 @@ function initMap() {
         myMap.geoObjects.add(myPlacemark);
         myMap.controls.remove('routeEditor');
     }
+
+    ymaps.ready(init);
 }
 
 export default initMap;

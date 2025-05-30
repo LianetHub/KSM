@@ -11,11 +11,11 @@
 		font-size: rem(18);
 		padding: rem(20) 0;
 		@media (min-width: $md6) {
-			padding: rem(20) 0 rem(102);
+			padding: rem(20) 0 rem(66);
 			column-gap: rem(40);
 		}
 		@media (min-width: $md0) {
-			padding: rem(20) 0 rem(116);
+			padding: rem(20) 0 rem(72);
 			font-size: 1.5rem;
 		}
 	}

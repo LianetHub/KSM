@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const datepickerInstance = new Datepicker(dateInput);
             const timepickerInstance = new Timepicker(timeInput, {
-                startTime: "10:00",
-                endTime: "19:30"
+                startTime: "08:00",
+                endTime: "18:30"
             });
 
             function openBothPickers() {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             removeFixedMenu()
         }
 
-        if (target.closest('.header__logo') && target.closest('.header__logo').getAttribute('href').startsWith('#')) {
+        if (target.closest('.header__logo') && target.closest('.header__logo')?.getAttribute('href')?.startsWith('#')) {
             removeFixedMenu()
         }
 

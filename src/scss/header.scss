@@ -223,7 +223,8 @@
 			font-size: 1.875rem;
 			position: absolute;
 			right: rem(11);
-			top: rem(68);
+			// top: rem(68);
+			top: 4rem;
 		}
 	}
 	// .header__menu-body
@@ -260,6 +261,7 @@
 				font-size: 1.875rem;
 				position: relative;
 				z-index: 12;
+				margin-top: -0.25rem;
 			}
 			.header.open-menu & {
 				visibility: visible;

@@ -3,6 +3,7 @@ export const formSubmit = () => {
 	forms.forEach((form) => {
 
 		form.addEventListener("submit", formSend);
+		form.addEventListener("reset", resetUI);
 
 	});
 
@@ -105,6 +106,17 @@ export const formSubmit = () => {
 			document.querySelector('.popup-thanks').classList.remove('open');
 			document.querySelector('body').classList.remove('modal-lock');
 		}, 5000)
+	}
+
+	function resetUI(e) {
+		const form = e.target;
+
+		const inputs = form.querySelectorAll('._input');
+		const filesPreviews = form.querySelectorAll('.form__files');
+
+		inputs?.forEach(input => input.classList.remove('_input'));
+		filesPreviews?.forEach(filePreview => filePreview.remove());
+
 	}
 
 };

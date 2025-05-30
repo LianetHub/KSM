@@ -134,10 +134,19 @@ export class Datepicker {
         button.type = 'button';
         if (extraClass) button.classList.add(extraClass);
 
-        button.addEventListener('click', () => {
-            this.selectedDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
-            this.element.value = this.formatDate(this.selectedDate);
+        const buttonDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
+        if (extraClass !== 'greyed' && buttonDate < today) {
+            button.disabled = true;
+        }
+
+        button.addEventListener('click', () => {
+            if (button.disabled) return;
+
+            this.selectedDate = buttonDate;
+            this.element.value = this.formatDate(this.selectedDate);
 
             const inputEvent = new Event('input', {
                 bubbles: true,
@@ -146,11 +155,11 @@ export class Datepicker {
             this.element.dispatchEvent(inputEvent);
 
             this.render();
-
         });
 
         return button;
     }
+
 
     formatDate(date) {
         return `${String(date.getDate()).padStart(2, '0')}.${String(date.getMonth() + 1).padStart(2, '0')}.${date.getFullYear()}`;

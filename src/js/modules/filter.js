@@ -18,6 +18,7 @@ export const filter = () => {
             inputs.forEach(input => {
                 input.addEventListener('change', () => {
                     toggleClearButton(column);
+                    document.dispatchEvent(new CustomEvent('filter:updated'));
                     // handleFilterChange();
                 });
             });
@@ -30,6 +31,7 @@ export const filter = () => {
                     input.checked = false;
                 });
                 toggleClearButton(column);
+                document.dispatchEvent(new CustomEvent('filter:updated'));
                 // handleFilterChange();
             });
         }

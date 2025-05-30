@@ -1181,7 +1181,7 @@ body.bg-gray {
   font-size: 1.875rem;
   position: absolute;
   right: 0.6875rem;
-  top: 4.25rem;
+  top: 4rem;
 }
 
 .header__menu-body {
@@ -2445,6 +2445,30 @@ body.bg-gray {
   margin-bottom: 1.25rem;
 }
 
+.event__body ul {
+  margin-top: -0.5rem;
+}
+
+.event__body ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.event__body ul li span {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: inline-block;
+  min-width: 3.75rem;
+}
+
+.event__body ul li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .cart {
   padding: 0rem 0 4.25rem;
 }
@@ -2840,7 +2864,7 @@ body.bg-gray {
   }
 
   .timepicker__items {
-    padding: 1.25rem 0 6.375rem;
+    padding: 1.25rem 0 4.125rem;
     -webkit-column-gap: 2.5rem;
        -moz-column-gap: 2.5rem;
             column-gap: 2.5rem;
@@ -5133,7 +5157,7 @@ body.bg-gray {
   }
 
   .timepicker__items {
-    padding: 1.25rem 0 7.25rem;
+    padding: 1.25rem 0 4.5rem;
     font-size: 1.5rem;
   }
 
@@ -5514,7 +5538,7 @@ body.bg-gray {
   }
 
   .event__body p:not(:last-child) {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5rem;
   }
 
   .cart__form {
@@ -5722,6 +5746,7 @@ body.bg-gray {
     font-size: 1.875rem;
     position: relative;
     z-index: 12;
+    margin-top: -0.25rem;
   }
 
   .header.open-menu .header__menu-body {
