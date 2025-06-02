@@ -1,6 +1,9 @@
-gsap.registerPlugin(ScrollTrigger);
 
 export const animation = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+
     function initAnimation(logo) {
         if (!logo) return;
 

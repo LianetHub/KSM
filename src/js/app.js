@@ -8,7 +8,9 @@ import { Cart } from './modules/cart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    devFunctions.animation();
+    waitForGsapAndRun(() => {
+        devFunctions.animation();
+    });
     devFunctions.OS();
     devFunctions.isWebp();
     devFunctions.checkEmptyInputs();
@@ -18,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.popup();
     devFunctions.formSubmit();
     devFunctions.inputFiles();
+
+    function waitForGsapAndRun(callback, interval = 50, timeout = 5000) {
+        let waited = 0;
+        const timer = setInterval(() => {
+            if (window.gsap && window.ScrollTrigger) {
+                clearInterval(timer);
+                callback();
+            } else if (waited > timeout) {
+                clearInterval(timer);
+                console.error('GSAP или ScrollTrigger не загрузились за время ожидания');
+            }
+            waited += interval;
+        }, interval);
+    }
+
+
 
     if (document.getElementById('map')) {
         initMap()
@@ -58,6 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             dateInput.addEventListener('click', () => {
+                if (!dateInput.value) {
+                    const today = new Date();
+                    const day = today.getDate().toString().padStart(2, '0');
+                    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                    const year = today.getFullYear();
+
+                    dateInput.value = `${day}.${month}.${year}`;
+                    dateInput.classList.add('_input');
+
+                    timepickerInstance.updateDisabledTimes(today);
+                }
+
                 if (dateInput.classList.contains('focus-datepicker')) {
                     closeBothPickers();
                     return
@@ -66,6 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             timeInput.addEventListener('click', () => {
+                if (!dateInput.value) {
+                    const today = new Date();
+                    const day = today.getDate().toString().padStart(2, '0');
+                    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                    const year = today.getFullYear();
+
+                    dateInput.value = `${day}.${month}.${year}`;
+                    dateInput.classList.add('_input');
+
+                    timepickerInstance.updateDisabledTimes(today);
+                }
                 if (timeInput.classList.contains('focus-timepicker')) {
                     closeBothPickers()
                 } else {
@@ -98,6 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
             dateInput.addEventListener('input', () => {
                 if (areBothFieldsFilled()) {
                     closeBothPickers();
+                }
+                const selectedDateParts = dateInput.value.split('.');
+                if (selectedDateParts.length === 3) {
+                    const [day, month, year] = selectedDateParts.map(Number);
+                    const selectedDate = new Date(year, month - 1, day);
+                    timepickerInstance.updateDisabledTimes(selectedDate);
                 }
             });
 
@@ -314,6 +361,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header-fixed').addEventListener('mouseleave', (e) => {
             removeFixedMenu()
         });
+
+        window.addEventListener('wheel', function (event) {
+            if (event.deltaY > 0) {
+                removeFixedMenu()
+            } else {
+                getFixedMenu()
+            }
+        });
+
 
 
     }
@@ -661,6 +717,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('filter:updated', () => {
         observeMoreButton();
     });
+
+    const wrapperContainers = document.querySelectorAll('[id^="js-"][id$="-loader"]');
+
+    wrapperContainers?.forEach(wrapper => {
+        if (!wrapper) return;
+
+        const mo = new MutationObserver(() => {
+            observeMoreButton();
+        });
+
+        mo.observe(wrapper, {
+            childList: true,
+            subtree: true
+        });
+    });
+
+
 
 
 

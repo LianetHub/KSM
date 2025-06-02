@@ -138,7 +138,11 @@ export class Datepicker {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        if (extraClass !== 'greyed' && buttonDate < today) {
+        if (extraClass === 'greyed') {
+            button.disabled = true;
+        }
+
+        else if (buttonDate < today) {
             button.disabled = true;
         }
 

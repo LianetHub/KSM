@@ -82,6 +82,27 @@ export class Timepicker {
         return `${hours}:${minutes}`;
     }
 
+    updateDisabledTimes(selectedDate) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const isToday = selectedDate.toDateString() === today.toDateString();
+
+        const now = new Date();
+
+        this.timepicker.querySelectorAll('.timepicker__item').forEach(button => {
+            const [hours, minutes] = button.textContent.split(':').map(Number);
+            const buttonTime = new Date();
+            buttonTime.setHours(hours, minutes, 0, 0);
+
+
+            button.disabled = false;
+
+            if (isToday && buttonTime < now) {
+                button.disabled = true;
+            }
+        });
+    }
+
 
     addMinutes(date, minutes) {
         return new Date(date.getTime() + minutes * 60000);

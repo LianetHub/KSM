@@ -36,6 +36,11 @@
 			&.greyed {
 				color: #808080;
 			}
+			&:disabled,
+			&[disabled] {
+				color: #808080;
+				pointer-events: none;
+			}
 		}
 	}
 	// .datepicker__footer

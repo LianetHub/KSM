@@ -22,6 +22,11 @@
 	// .timepicker__item
 	&__item {
 		text-align: left;
+		&:disabled,
+		&[disabled] {
+			color: #808080;
+			pointer-events: none;
+		}
 		// width: fit-content;
 	}
 }
