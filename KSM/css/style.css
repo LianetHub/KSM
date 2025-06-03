@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -333,6 +333,12 @@ body.bg-gray {
 .popup.popup-thanks {
   background: #000;
   padding: 0.9375rem 0;
+}
+
+.popup.popup-thanks .popup__close {
+  color: #fff;
+  top: 0.9375rem;
+  right: 0.9375rem;
 }
 
 .popup.open {

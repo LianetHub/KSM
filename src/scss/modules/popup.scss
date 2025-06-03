@@ -11,6 +11,11 @@
 	&.popup-thanks {
 		background: #000;
 		padding: rem(15) 0;
+		.popup__close {
+			color: #fff;
+			top: rem(15);
+			right: rem(15);
+		}
 	}
 	&.open {
 		display: flex;

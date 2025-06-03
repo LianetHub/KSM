@@ -4,7 +4,6 @@ export const popup = () => {
 	const lockPadding = document.querySelectorAll('.lock-padding');
 
 
-	const timeout = 300;
 
 	popupLinks.forEach(popupLink => {
 		popupLink.addEventListener('click', function (e) {
@@ -20,7 +19,13 @@ export const popup = () => {
 	const popupCloseIcons = document.querySelectorAll('.popup__close');
 	popupCloseIcons.forEach(icon => {
 		icon.addEventListener('click', function (e) {
-			popupClose(icon.closest('.popup'));
+			if (icon.closest('.popup-thanks')) {
+				document.querySelectorAll('.popup').forEach(popup => {
+					popupClose(popup);
+				});
+			} else {
+				popupClose(icon.closest('.popup'));
+			}
 			e.preventDefault();
 		});
 	});
