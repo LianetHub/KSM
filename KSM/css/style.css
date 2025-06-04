@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -21,6 +13,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -335,10 +335,22 @@ body.bg-gray {
   padding: 0.9375rem 0;
 }
 
+.popup.popup-thanks .popup__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .popup.popup-thanks .popup__close {
   color: #fff;
-  top: 0.9375rem;
-  right: 0.9375rem;
+  position: static;
+  margin-left: auto;
 }
 
 .popup.open {
@@ -5552,6 +5564,10 @@ body.bg-gray {
 
   .event__body p:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  .event__body ul li span {
+    min-width: 5.625rem;
   }
 
   .cart__form {

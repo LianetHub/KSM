@@ -11,10 +11,18 @@
 	&.popup-thanks {
 		background: #000;
 		padding: rem(15) 0;
+		.popup__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
 		.popup__close {
 			color: #fff;
-			top: rem(15);
-			right: rem(15);
+			position: static;
+			margin-left: auto;
+
+			// top: rem(15);
+			// right: rem(15);
 		}
 	}
 	&.open {

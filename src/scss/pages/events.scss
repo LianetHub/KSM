@@ -266,6 +266,9 @@
 					flex-shrink: 0;
 					display: inline-block;
 					min-width: rem(60);
+					@media (min-width: $md0) {
+						min-width: rem(90);
+					}
 				}
 				&:not(:last-child) {
 					margin-bottom: 0.25rem;
