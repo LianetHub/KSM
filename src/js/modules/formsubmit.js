@@ -56,7 +56,7 @@ export const formSubmit = () => {
 		formReq.forEach(input => {
 			formRemoveError(input);
 
-			if (input.matches("[name='email']") && !emailTest(input.value)) {
+			if (input.matches("[type='email']") && !emailTest(input.value)) {
 				formAddError(input);
 				error++;
 			} else if (input.matches("[type='checkbox']") && !input.checked) {
@@ -113,9 +113,17 @@ export const formSubmit = () => {
 
 		const inputs = form.querySelectorAll('._input');
 		const filesPreviews = form.querySelectorAll('.form__files');
+		const submitButton = form.querySelector('button[type="submit"]');
+		const ndaInput = form.querySelector('[name="nda"]');
+
 
 		inputs?.forEach(input => input.classList.remove('_input'));
 		filesPreviews?.forEach(filePreview => filePreview.remove());
+
+		if (ndaInput) {
+			submitButton.disabled = true;
+		}
+
 
 	}
 

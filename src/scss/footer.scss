@@ -125,6 +125,13 @@
 			line-height: 133.333%;
 			font-size: 1.125rem;
 		}
+		& a {
+			@media (any-hover: hover) {
+				&:hover {
+					font-weight: 500;
+				}
+			}
+		}
 	}
 	// .footer__privacy
 	&__privacy {
