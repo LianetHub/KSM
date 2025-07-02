@@ -11,16 +11,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1683,6 +1683,7 @@ body.bg-gray {
   position: relative;
   display: block;
   height: 0;
+  font-size: 0;
   width: 100%;
   margin-top: 0.75rem;
   padding-bottom: 78.744%;
@@ -5852,6 +5853,10 @@ body.bg-gray {
   .products__card-image.has-hover:hover img.hover-img {
     z-index: 2;
     opacity: 1;
+  }
+
+  .products__card-image:hover {
+    background-color: #e4e8e6;
   }
 
   .products__card-btn:hover {

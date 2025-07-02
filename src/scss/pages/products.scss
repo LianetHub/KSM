@@ -184,6 +184,7 @@
 		position: relative;
 		display: block;
 		height: 0;
+		font-size: 0;
 		width: 100%;
 		margin-top: 0.75rem;
 		padding-bottom: 78.744%;
@@ -243,6 +244,11 @@
 						}
 					}
 				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color: #f2f4f3, $amount: 5);
 			}
 		}
 	}
