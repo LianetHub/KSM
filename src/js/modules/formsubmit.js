@@ -1,18 +1,14 @@
 export const formSubmit = () => {
 	const forms = document.querySelectorAll('form:not(.search__form):not(.footer__form):not(.header__form):not(.products__filters)');
 	forms.forEach((form) => {
-
 		form.addEventListener("submit", formSend);
 		form.addEventListener("reset", resetUI);
-
 	});
 
 	document.addEventListener("input", handleFormInput);
 
 	async function formSend(e) {
-
 		e.preventDefault();
-
 
 		const form = e.target;
 		const currentUrl = form.getAttribute("action");
@@ -20,7 +16,6 @@ export const formSubmit = () => {
 
 		if (error === 0) {
 			try {
-
 				form.classList.add("_sending");
 
 				const response = await fetch(currentUrl, {
@@ -32,10 +27,8 @@ export const formSubmit = () => {
 
 				form.reset();
 				closeAndShowSuccessModal();
-
 			} catch (error) {
 				console.log(error.message);
-
 			} finally {
 				form.classList.remove("_sending");
 			}
@@ -51,21 +44,28 @@ export const formSubmit = () => {
 
 	function formValidate(form) {
 		let error = 0;
-		const formReq = form.querySelectorAll("[data-required]");
+		// Получаем все поля формы, которые могут быть валидированы
+		const formInputs = form.querySelectorAll("input, textarea, select"); // Включаем все типы полей
 
-		formReq.forEach(input => {
+		formInputs.forEach(input => {
+
 			formRemoveError(input);
 
-			if (input.matches("[type='email']") && !emailTest(input.value)) {
+			const isRequired = input.hasAttribute("data-required");
+			const inputValue = input.value.trim();
+
+
+			if (!isRequired && inputValue === "" && !(input.matches("[type='checkbox']") || input.matches("[type='radio']"))) {
+				return;
+			}
+
+			if (isRequired && (inputValue === "" || (input.matches("[type='checkbox']") && !input.checked) || (input.matches("[name='message']") && inputValue.length < 1))) {
 				formAddError(input);
 				error++;
-			} else if (input.matches("[type='checkbox']") && !input.checked) {
+			} else if (input.matches("[type='email']") && inputValue !== "" && !emailTest(inputValue)) {
 				formAddError(input);
 				error++;
-			} else if (input.value.trim() === "" || (input.matches("[name='message']") && input.value.trim().length < 1)) {
-				formAddError(input);
-				error++;
-			} else if (input.matches("[type='tel']") && !phoneTest(input.value)) {
+			} else if (input.matches("[type='tel']") && inputValue !== "" && !phoneTest(inputValue)) {
 				formAddError(input);
 				error++;
 			}
@@ -85,7 +85,7 @@ export const formSubmit = () => {
 		input.parentElement.classList.remove("_error");
 		// const form = input.closest('.form');
 		// if (form && !form.querySelector('._error')) {
-		// 	form.querySelector('.form__error-message')?.classList.remove('visible');
+		//  form.querySelector('.form__error-message')?.classList.remove('visible');
 		// }
 	}
 
@@ -96,7 +96,7 @@ export const formSubmit = () => {
 
 	function phoneTest(phone) {
 		const cleaned = phone.replace(/\D/g, '');
-		return cleaned.length >= 10 && /^[1-9]\d{9,14}$/.test(cleaned);
+		return cleaned.length >= 6 && /^[1-9]\d{5,14}$/.test(cleaned);
 	}
 
 	function closeAndShowSuccessModal() {
@@ -110,12 +110,10 @@ export const formSubmit = () => {
 
 	function resetUI(e) {
 		const form = e.target;
-
 		const inputs = form.querySelectorAll('._input');
 		const filesPreviews = form.querySelectorAll('.form__files');
 		const submitButton = form.querySelector('button[type="submit"]');
 		const ndaInput = form.querySelector('[name="nda"]');
-
 
 		inputs?.forEach(input => input.classList.remove('_input'));
 		filesPreviews?.forEach(filePreview => filePreview.remove());
@@ -123,8 +121,5 @@ export const formSubmit = () => {
 		if (ndaInput) {
 			submitButton.disabled = true;
 		}
-
-
 	}
-
 };
