@@ -7,6 +7,8 @@ export const formSubmit = () => {
 
 	document.addEventListener("input", handleFormInput);
 
+	let successModalTimeoutId;
+
 	async function formSend(e) {
 		e.preventDefault();
 
@@ -44,16 +46,14 @@ export const formSubmit = () => {
 
 	function formValidate(form) {
 		let error = 0;
-		// Получаем все поля формы, которые могут быть валидированы
-		const formInputs = form.querySelectorAll("input, textarea, select"); // Включаем все типы полей
+
+		const formInputs = form.querySelectorAll("input, textarea, select");
 
 		formInputs.forEach(input => {
-
 			formRemoveError(input);
 
 			const isRequired = input.hasAttribute("data-required");
 			const inputValue = input.value.trim();
-
 
 			if (!isRequired && inputValue === "" && !(input.matches("[type='checkbox']") || input.matches("[type='radio']"))) {
 				return;
@@ -77,16 +77,11 @@ export const formSubmit = () => {
 	function formAddError(input) {
 		input.classList.add("_error");
 		input.parentElement.classList.add("_error");
-		// input.closest('.form')?.querySelector('.form__error-message')?.classList.add('visible');
 	}
 
 	function formRemoveError(input) {
 		input.classList.remove("_error");
 		input.parentElement.classList.remove("_error");
-		// const form = input.closest('.form');
-		// if (form && !form.querySelector('._error')) {
-		//  form.querySelector('.form__error-message')?.classList.remove('visible');
-		// }
 	}
 
 	function emailTest(email) {
@@ -100,12 +95,107 @@ export const formSubmit = () => {
 	}
 
 	function closeAndShowSuccessModal() {
-		document.querySelector('.popup-thanks').classList.add('open');
+		const successModal = document.querySelector('.popup-thanks');
+		successModal.classList.add('open');
 		document.querySelector('body').classList.add('modal-lock');
-		setTimeout(() => {
-			document.querySelectorAll('.popup').forEach(popup => popup.classList.remove('open'));
-			document.querySelector('body').classList.remove('modal-lock');
-		}, 5000)
+
+		if (successModalTimeoutId) {
+			clearTimeout(successModalTimeoutId);
+		}
+
+		successModalTimeoutId = setTimeout(() => {
+			if (successModal.classList.contains('open')) {
+				successModal.classList.remove('open');
+				document.querySelector('body').classList.remove('modal-lock');
+			}
+			successModalTimeoutId = null;
+		}, 5000);
+	}
+
+	function popup() {
+		const popupLinks = document.querySelectorAll('[data-modal]');
+		const body = document.querySelector('body');
+		const lockPadding = document.querySelectorAll('.lock-padding');
+
+		popupLinks.forEach(popupLink => {
+			popupLink.addEventListener('click', function (e) {
+				const popupName = popupLink.getAttribute('href').replace('#', '');
+				const currentPopup = document.getElementById(popupName);
+				if (currentPopup) {
+					popupOpen(currentPopup);
+					e.preventDefault();
+				}
+			});
+		});
+
+		const popupCloseIcons = document.querySelectorAll('.popup__close');
+		popupCloseIcons.forEach(icon => {
+			icon.addEventListener('click', function (e) {
+				if (icon.closest('.popup-thanks')) {
+
+					if (successModalTimeoutId) {
+						clearTimeout(successModalTimeoutId);
+						successModalTimeoutId = null;
+					}
+					document.querySelectorAll('.popup').forEach(popup => {
+						popupClose(popup);
+					});
+				} else {
+					popupClose(icon.closest('.popup'));
+				}
+				e.preventDefault();
+			});
+		});
+
+		function popupOpen(currentPopup) {
+			if (currentPopup) {
+				const popupActive = document.querySelector('.popup.open');
+				if (popupActive) {
+					popupClose(popupActive);
+				}
+				bodyLock();
+				currentPopup.classList.add('open');
+			}
+		}
+
+		function popupClose(popupActive) {
+			if (popupActive) {
+				popupActive.classList.remove('open');
+				bodyUnlock();
+			}
+		}
+
+		function bodyLock() {
+			const lockPaddingValue = `${window.innerWidth - document.querySelector('.wrapper').offsetWidth}px`;
+
+			lockPadding.forEach(el => {
+				el.style.paddingRight = lockPaddingValue;
+			});
+			body.style.paddingRight = lockPaddingValue;
+			body.classList.add('modal-lock');
+		}
+
+		function bodyUnlock() {
+			lockPadding.forEach(el => {
+				el.style.paddingRight = '0px';
+			});
+			body.style.paddingRight = '0px';
+			body.classList.remove('modal-lock');
+		}
+
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') {
+				const popupActive = document.querySelector('.popup.open');
+				if (popupActive) {
+
+					if (popupActive.classList.contains('popup-thanks') && successModalTimeoutId) {
+						clearTimeout(successModalTimeoutId);
+						successModalTimeoutId = null;
+					}
+					popupClose(popupActive);
+				}
+			}
+		});
 	}
 
 	function resetUI(e) {
@@ -122,4 +212,6 @@ export const formSubmit = () => {
 			submitButton.disabled = true;
 		}
 	}
+
+	popup();
 };

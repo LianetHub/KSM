@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.mask();
     devFunctions.filter();
     devFunctions.cookies();
-    devFunctions.popup();
+
     devFunctions.formSubmit();
     devFunctions.inputFiles();
 
