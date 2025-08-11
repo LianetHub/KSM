@@ -11,8 +11,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -27,8 +27,8 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -2107,12 +2107,12 @@ body.bg-gray {
 .product__props {
   margin-top: 1.75rem;
   font-size: 0.9375rem;
-  line-height: 150%;
+  line-height: 130%;
 }
 
 .product__props .row,
 .product__props .privacy__content {
-  --gutter-y: 0.25rem;
+  --gutter-y: 0.875rem;
 }
 
 .product__props .col-8:not(.col-xl-4) .product__props-value,
