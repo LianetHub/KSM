@@ -796,7 +796,7 @@
 	&__props {
 		margin-top: 1.75rem;
 		font-size: 0.9375rem;
-		line-height: 160%;
+		line-height: 150%;
 		@media (min-width: $md32) {
 			margin-right: -2rem;
 		}
@@ -808,7 +808,7 @@
 			font-size: 1.125rem;
 		}
 		.row {
-			--gutter-y: 0;
+			--gutter-y: #{rem(4)};
 			@media (min-width: $md0) {
 				--gutter-y: 0.1rem;
 			}
