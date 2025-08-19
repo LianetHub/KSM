@@ -809,9 +809,6 @@
 		}
 		.row {
 			--gutter-y: #{rem(14)};
-			@media (min-width: $md0) {
-				--gutter-y: 0.1rem;
-			}
 		}
 		.col-8:not(.col-xl-4) {
 			.product__props-value {

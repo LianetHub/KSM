@@ -5452,11 +5452,6 @@ body.bg-gray {
     font-size: 1.125rem;
   }
 
-  .product__props .row,
-  .product__props .privacy__content {
-    --gutter-y: 0.1rem;
-  }
-
   .product__desc-caption {
     font-size: 1.875rem;
   }
