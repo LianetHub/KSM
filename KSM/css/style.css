@@ -2112,7 +2112,7 @@ body.bg-gray {
 
 .product__props .row,
 .product__props .privacy__content {
-  --gutter-y: 0.875rem;
+  --gutter-y: 0.4rem;
 }
 
 .product__props .col-8:not(.col-xl-4) .product__props-value,

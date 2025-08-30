@@ -808,7 +808,7 @@
 			font-size: 1.125rem;
 		}
 		.row {
-			--gutter-y: #{rem(14)};
+			--gutter-y: 0.4rem;
 		}
 		.col-8:not(.col-xl-4) {
 			.product__props-value {
