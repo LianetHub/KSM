@@ -19,16 +19,16 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -786,6 +786,14 @@ body.bg-gray {
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
             transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  word-break: break-all;
+  overflow: hidden;
 }
 
 .hidden {
@@ -2130,9 +2138,6 @@ body.bg-gray {
 
 .product__props-name {
   font-weight: 500;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(50% - 0.125rem);
-          flex: 0 0 calc(50% - 0.125rem);
 }
 
 .product__props-value {
