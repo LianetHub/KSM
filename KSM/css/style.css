@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -1903,6 +1903,9 @@ body.bg-gray {
   gap: 0.35rem 0.5625rem;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[var(--rows-in-column)];
+  grid-template-rows: repeat(var(--rows-in-column), auto);
+  grid-auto-flow: column;
 }
 
 .products__filters-item {
@@ -3014,6 +3017,9 @@ body.bg-gray {
   .products__filters-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
   }
 
   .product {
@@ -3333,9 +3339,12 @@ body.bg-gray {
   }
 
   .products__filters-list {
+    gap: 0.35rem 1.5rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.35rem 1.5rem;
+    -ms-grid-rows: (auto)[var(--rows-in-column)];
+    grid-template-rows: repeat(var(--rows-in-column), auto);
+    grid-auto-flow: column;
   }
 
   .product__props {
@@ -3624,6 +3633,9 @@ body.bg-gray {
     gap: 0.3rem 1.5rem;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
   }
 
   .product {
@@ -4594,6 +4606,9 @@ body.bg-gray {
     gap: 0.35rem 1.5rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (auto)[var(--rows-in-column)];
+    grid-template-rows: repeat(var(--rows-in-column), auto);
+    grid-auto-flow: column;
   }
 
   .products__more {

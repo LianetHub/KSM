@@ -468,20 +468,30 @@
 		display: grid;
 		gap: 0.35rem $gutter-x-mobile;
 		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(var(--rows-in-column), auto);
+		grid-auto-flow: column;
 		@media (min-width: $md6) {
 			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-auto-flow: row;
 		}
 		@media (min-width: $md5) {
-			grid-template-columns: repeat(2, 1fr);
 			gap: 0.35rem $gutter-x;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(var(--rows-in-column), auto);
+			grid-auto-flow: column;
 		}
 		@media (min-width: $md4) {
 			gap: 0.3rem $gutter-x;
 			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-auto-flow: row;
 		}
 		@media (min-width: $md2) {
 			gap: 0.35rem $gutter-x;
 			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(var(--rows-in-column), auto);
+			grid-auto-flow: column;
 		}
 		@media (min-width: $md0) {
 			font-size: 1.125rem;
