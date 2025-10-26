@@ -5,10 +5,27 @@ export const filter = () => {
     const filterColumns = document.querySelectorAll('.products__filters-column');
     const priceInputs = document.querySelectorAll('.start-price, .end-price');
     const filterForm = document.querySelector('.products__filters');
-    // let filterTimeout;
 
+    const formatNumber = (value) => {
+        const sanitizedValue = String(value).replace(/\D/g, '');
+        if (sanitizedValue.length === 0) return '';
+        return sanitizedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    };
 
+    const applyFormatting = (input) => {
+        const sanitizedValue = input.value.replace(/\D/g, '');
+        if (sanitizedValue.length > 0) {
+            const formattedValue = formatNumber(sanitizedValue);
+            const inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
+            input.value = `${formattedValue} ${inputUnit}`;
+        }
+    };
 
+    const initializePriceInputs = () => {
+        priceInputs.forEach(input => {
+            applyFormatting(input);
+        });
+    };
 
     filterColumns.forEach(column => {
         const clearButton = column.querySelector('.products__filters-clear');
@@ -19,11 +36,10 @@ export const filter = () => {
                 input.addEventListener('change', () => {
                     toggleClearButton(column);
                     document.dispatchEvent(new CustomEvent('filter:updated'));
-                    // handleFilterChange();
+
                 });
             });
         }
-
 
         if (clearButton) {
             clearButton.addEventListener('click', () => {
@@ -32,11 +48,10 @@ export const filter = () => {
                 });
                 toggleClearButton(column);
                 document.dispatchEvent(new CustomEvent('filter:updated'));
-                // handleFilterChange();
+
             });
         }
     });
-
 
     priceInputs.forEach(input => {
 
@@ -59,17 +74,39 @@ export const filter = () => {
         });
 
         input.addEventListener('focus', () => {
-            let inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
-            input.value = input.value.replace(` ${inputUnit}`, '');
+            const sanitizedValue = input.value.replace(/\D/g, '');
+            input.value = formatNumber(sanitizedValue);
+
+        });
+
+        input.addEventListener('input', () => {
+            const caretPosition = input.selectionStart;
+            const oldValue = input.value;
+            const oldValueSanitized = oldValue.replace(/\D/g, '');
+            const formattedValueWithoutUnit = formatNumber(oldValueSanitized);
+            input.value = formattedValueWithoutUnit;
+
+            let newCaretPosition = caretPosition + (input.value.length - oldValue.length);
+
+            if (
+                oldValue.length < input.value.length &&
+                (input.value.charAt(newCaretPosition - 1) === ' ' || input.value.charAt(newCaretPosition - 1) === '/')
+            ) {
+                newCaretPosition += 1;
+            }
+
+            if (newCaretPosition < 0) {
+                newCaretPosition = 0;
+            }
+
+            input.setSelectionRange(newCaretPosition, newCaretPosition);
+
+            document.dispatchEvent(new CustomEvent('filter:updated'));
         });
 
         input.addEventListener('blur', () => {
-            const sanitizedValue = input.value.replace(/\D/g, '');
-            if (input.value.length !== 0) {
-                let inputUnit = input.dataset.measure ? input.dataset.measure : "₽/м²";
-                input.value = `${sanitizedValue} ${inputUnit}`;
-                // handleFilterChange();
-            }
+            applyFormatting(input);
+            document.dispatchEvent(new CustomEvent('filter:updated'));
         });
     });
 
@@ -110,41 +147,8 @@ export const filter = () => {
 
         document.dispatchEvent(new CustomEvent('filter:updated'));
 
+    });
 
+    initializePriceInputs();
 
-    })
-
-    // function handleFilterChange() {
-    //     clearTimeout(filterTimeout);
-    //     filterTimeout = setTimeout(() => {
-    //         sendFilterRequest();
-    //     }, 300);
-    // }
-
-    // function sendFilterRequest() {
-    //     // const filterBody = document.querySelector('.products__body');
-    //     // filterBody.classList.add('_loading');
-    //     // setTimeout(() => {
-    //     //     filterBody.classList.remove('_loading');
-    //     // }, 500)
-
-    //     // fetch(filterForm.action, {
-    //     //     method: 'GET',
-    //     // })
-    //     //     .then(response => {
-    //     //         if (!response.ok) {
-    //     //             throw new Error('Network response was not ok');
-    //     //         }
-    //     //         return response.json();
-    //     //     })
-    //     //     .then(data => {
-    //     //         console.log('Success:', data);
-    //     //     })
-    //     //     .catch(error => {
-    //     //         console.error('There was a problem with the fetch operation:', error);
-    //     //     })
-    //     //     .finally(() => {
-    //     //         filterBodies.forEach(body => body.classList.remove('_loading'));
-    //     //     });
-    // }
 }
