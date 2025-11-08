@@ -126,6 +126,7 @@
 	}
 	// .contacts__text
 	&__text {
+		line-height: math.div(24, 18);
 		// margin-right: -0.5rem;
 		// max-width: 28rem;
 	}

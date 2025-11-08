@@ -348,7 +348,10 @@
 		}
 		&::before {
 			font-size: 0.75rem;
-			padding-top: 0.125rem;
+			// padding-top: 0.125rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		&.active {
 			// background: #000;
