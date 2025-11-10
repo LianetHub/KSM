@@ -979,6 +979,9 @@
 	&__btns {
 		margin-top: 3rem;
 		order: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
 		@media (min-width: $md4) {
 			margin-top: 2.5rem;
 		}
@@ -987,6 +990,7 @@
 		}
 		.row {
 			--gutter-y: 1.5rem;
+			--gutter-x: 1.5rem;
 		}
 	}
 	// .product__btns-item
