@@ -275,5 +275,13 @@
 				}
 			}
 		}
+		& a:not([class]) {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					font-weight: 700;
+				}
+			}
+		}
 	}
 }

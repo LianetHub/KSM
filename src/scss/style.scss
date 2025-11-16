@@ -61,6 +61,10 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	}
 }
 
+html {
+	scrollbar-gutter: stable;
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 
