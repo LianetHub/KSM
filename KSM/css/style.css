@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -29,6 +21,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1684,7 +1684,7 @@ body.bg-gray .header {
 
 .products__cards .row > p,
 .products__cards .privacy__content > p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.9375rem;
   line-height: 120%;
 }
@@ -4624,7 +4624,7 @@ body.bg-gray .header {
   .products__cards .privacy__content > p {
     font-size: 1.125rem;
     line-height: 116.667%;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .products__cards .row,

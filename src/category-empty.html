@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'КСМ | Материалы'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "title": "materials",
+            "big": true,
+            "cart": 0,
+            "small": true,
+            "alter": false
+            })
+            <main class="page">
+                <section class="products">
+                    <div class="products__container">
+                        <form action="#" class="products__filters" method="get">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Цена</div>
+                                    </div>
+                                    <div class="products__filters-body">
+                                        <div class="products__filters-price">
+                                            <label for="start-price">От</label>
+                                            <input type="text" id="start-price" value="100000" autocomplete="off" data-measure="Шт/с" class="form__input start-price" placeholder="1 000 Шт/с">
+                                        </div>
+                                        <div class="products__filters-price">
+                                            <label for="end-price">До</label>
+                                            <input type="text" id="end-price" autocomplete="off" data-measure="₽/м²" class="form__input end-price" placeholder="7 000 ₽/м²">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Цвет</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
+                                    <div class="products__filters-body ">
+                                        <div class="products__filters-list" style="--rows-in-column: 5;">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Белый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Слоновая кость
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Соломенный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Жёлтый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Красный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" disabled name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Коричневый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Серый
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Чёрный
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="color" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Пёстрый
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Бренд</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
+                                    <div class="products__filters-body">
+                                        <div class="products__filters-list" style="--rows-in-column: 5;">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Донские Зори
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Сафоновский КЗ
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Wienerberger
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Terca
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Engels
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Muhr
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Recke
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    ЛСР
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="brand" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Terex
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-4 products__filters-column">
+                                    <div class="products__filters-header">
+                                        <div class="products__filters-caption">Страна</div>
+                                        <button type="button" class="products__filters-clear icon-clear hidden"></button>
+                                    </div>
+                                    <div class="products__filters-body">
+                                        <div class="products__filters-list" style="--rows-in-column: 4;">
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Россия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Бельгия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Голландия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Великобритания
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Германия
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Эстония
+                                                </span>
+                                            </label>
+                                            <label class="products__filters-item">
+                                                <input type="checkbox" name="country" class="products__filters-input hidden" hidden>
+                                                <span>
+                                                    Финляндия
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Empty State -->
+                        <div class="products__body">
+                            <h1 class="products__title title">Кирпич ручной формовки</h1>
+                            <div class="products__cards">
+                                <div class="row" id="js-materials-loader">
+                                    <p>По вашим критериям не нашлось ни одного товара</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
