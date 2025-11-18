@@ -148,6 +148,16 @@
 		}
 		.row {
 			--gutter-y: 1.25rem;
+			& > p {
+				margin-top: 1rem;
+				font-size: 0.9375rem;
+				line-height: 120%;
+				@media (min-width: $md2) {
+					font-size: 1.125rem;
+					line-height: 116.667%;
+					margin-top: 1.5rem;
+				}
+			}
 			@media (min-width: $md4) {
 				--gutter-y: 1.05rem;
 			}
