@@ -182,6 +182,17 @@
 			margin-bottom: rem(51);
 		}
 	}
+	// .products__empty
+	&__empty {
+		margin-top: 1rem;
+		font-size: 0.9375rem;
+		line-height: 120%;
+		@media (min-width: $md2) {
+			font-size: 1.125rem;
+			line-height: 116.667%;
+			margin-top: 1.5rem;
+		}
+	}
 	// .products__card
 	&__card {
 		display: flex;
