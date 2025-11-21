@@ -166,6 +166,7 @@
 		color: #000;
 		font-size: 1.125rem;
 		line-height: 133.333%;
+		gap: 0.5rem;
 		@media (min-width: $md0) {
 			line-height: 1;
 			font-size: 1.5rem;
@@ -180,6 +181,8 @@
 	}
 	// .form__files-name
 	&__files-name {
+		hyphens: auto;
+		word-break: break-all;
 	}
 	&__error {
 		font-size: rem(12);

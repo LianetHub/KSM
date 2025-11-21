@@ -144,13 +144,16 @@
 			}
 		}
 		&.header__logo_offset {
-			margin-top: -5px;
-			@media (min-width: $md2) {
-				margin-top: -9px;
+			& svg {
+				margin-top: rem(-5);
+				@media (min-width: $md2) {
+					margin-top: rem(-10);
+					margin-left: rem(1);
+				}
 			}
 			&.header__logo_scaled {
 				@media (min-width: $md2) {
-					margin-top: -4px;
+					margin-top: rem(-4);
 				}
 			}
 		}
@@ -392,12 +395,11 @@
 	z-index: 11;
 	margin-left: auto;
 	min-width: 1.45rem;
-	height: rem(36);
+	min-height: rem(36);
 	margin-top: rem(-3.5);
 	@media (min-width: $md5) {
 		min-width: rem(42);
 		margin-top: rem(-4.5);
-
 		margin-left: 2.5rem;
 	}
 	@media (min-width: $md2) {
@@ -414,7 +416,7 @@
 		&::before {
 			content: "";
 			display: block;
-			height: rem(2);
+			height: rem(2.5);
 			width: 100%;
 			margin-left: auto;
 			background: currentColor;
@@ -428,7 +430,7 @@
 		& span {
 			width: rem(28);
 			&:first-child {
-				transform: translateY(rem(10));
+				transform: translateY(rem(10.5));
 				@media (min-width: $md5) {
 					transform: translateY(rem(11.5));
 				}
@@ -440,7 +442,7 @@
 				opacity: 0;
 			}
 			&:nth-child(3) {
-				transform: translateY(rem(-10));
+				transform: translateY(rem(-10.5));
 				@media (min-width: $md5) {
 					transform: translateY(rem(-11.5));
 				}

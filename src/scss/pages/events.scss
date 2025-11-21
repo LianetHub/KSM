@@ -199,6 +199,7 @@
 	// .event__time
 	&__time {
 		display: block;
+
 		@media (min-width: $md2) {
 			margin-top: -0.25rem;
 		}
@@ -213,6 +214,9 @@
 		font-size: 1.5rem;
 		line-height: 112.5%;
 		margin-top: 0.65rem;
+		& a {
+			text-decoration: underline;
+		}
 		@media (min-width: $md6) {
 			margin-top: 0.5rem;
 			line-height: normal;
@@ -279,7 +283,7 @@
 			text-decoration: underline;
 			@media (any-hover: hover) {
 				&:hover {
-					font-weight: 700;
+					font-weight: 500;
 				}
 			}
 		}
