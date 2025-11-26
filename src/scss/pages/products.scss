@@ -885,18 +885,6 @@
 	// .product__props-name
 	&__props-name {
 		font-weight: 500;
-		&.text-ellipsis {
-			@media (max-width: $md4) {
-				hyphens: auto;
-			}
-			@media (min-width: $md4) {
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				max-width: 100%;
-				word-break: break-all;
-				overflow: hidden;
-			}
-		}
 	}
 	// .product__props-value
 	&__props-value {
