@@ -3,6 +3,14 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
+  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -20,14 +28,6 @@
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
-  src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -2165,6 +2165,9 @@ body.bg-gray .header {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   gap: 0.25rem 1rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .product__props-name {
@@ -3723,6 +3726,9 @@ body.bg-gray .header {
   }
 
   .product__props-item {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
     gap: 0.25rem 1.5rem;
   }
 

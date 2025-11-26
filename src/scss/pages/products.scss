@@ -868,9 +868,10 @@
 	&__props-item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-
 		gap: 0.25rem 1rem;
+		align-items: end;
 		@media (min-width: $md4) {
+			align-items: normal;
 			gap: 0.25rem $gutter-x;
 		}
 		@media (min-width: $md32) {
