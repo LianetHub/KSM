@@ -181,9 +181,18 @@
 	}
 	// .form__files-name
 	&__files-name {
-		hyphens: auto;
-		word-break: break-all;
+		display: flex;
+		align-items: center;
+		max-width: calc(100% - 2rem);
+		flex: 1 1 auto;
+		// hyphens: auto;
+		// word-break: break-all;
 	}
+	// .form__files-base
+	&__files-base {
+		@extend .text-ellipsis;
+	}
+
 	&__error {
 		font-size: rem(12);
 		display: none;

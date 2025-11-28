@@ -46,7 +46,7 @@ export const cookies = () => {
             '<div class="cookie__container">' +
             '<div class="row">' +
             '<div class="col-md-4 offset-md-2">' +
-            '<button class="cookie__btn btn btn-white icon-clear">НАШ САЙТ ИСПОЛЬЗУЕТ COOKIE</button>' +
+            '<button class="cookie__btn btn btn-white icon-close">НАШ САЙТ ИСПОЛЬЗУЕТ COOKIE</button>' +
             '</div>' +
             '</div>' +
             '</div>';

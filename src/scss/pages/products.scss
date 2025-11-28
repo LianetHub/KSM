@@ -885,6 +885,17 @@
 	// .product__props-name
 	&__props-name {
 		font-weight: 500;
+		&[data-full-text] {
+			overflow: hidden;
+			max-width: 100%;
+		}
+		&:has(.text-ellipsis) {
+			display: flex;
+			width: 100%;
+		}
+		& .text-ellipsis {
+			display: inline-block;
+		}
 	}
 	// .product__props-value
 	&__props-value {

@@ -3,14 +3,6 @@
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KSM";
-  font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -21,6 +13,14 @@
   font-display: swap;
   src: url("../fonts/KSM-Regular.woff2") format("woff2"), url("../fonts/KSM-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KSM";
+  font-display: swap;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -61,9 +61,13 @@
   content: "\e900";
 }
 
+.icon-close:before {
+  content: "\e901";
+}
+
 .icon-plus:before,
 .product__delete-btn:before {
-  content: "\e901";
+  content: "\e902";
 }
 
 html {
@@ -320,7 +324,7 @@ body.bg-gray .header {
       -ms-flex-order: 1;
           order: 1;
   font-weight: 700;
-  font-size: 0.71875rem;
+  font-size: 0.6875rem;
 }
 
 .cookie__btn::after {
@@ -797,7 +801,8 @@ body.bg-gray .header {
   }
 }
 
-.text-ellipsis {
+.text-ellipsis,
+.form__files-base {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
@@ -999,9 +1004,16 @@ body.bg-gray .header {
 }
 
 .form__files-name {
-  -ms-hyphens: auto;
-      hyphens: auto;
-  word-break: break-all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 2rem);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .form__error {
@@ -1207,7 +1219,8 @@ body.bg-gray .header {
 }
 
 .header__logo.header__logo_offset svg {
-  margin-top: -0.3125rem;
+  margin-top: -0.34375rem;
+  margin-left: 1.15px;
 }
 
 .header__logo svg {
@@ -2182,6 +2195,23 @@ body.bg-gray .header {
   font-weight: 500;
 }
 
+.product__props-name[data-full-text] {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.product__props-name:has(.text-ellipsis, .form__files-base) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.product__props-name .text-ellipsis,
+.product__props-name .form__files-base {
+  display: inline-block;
+}
+
 .product__props-value {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -2983,7 +3013,7 @@ body.bg-gray .header {
     -webkit-transform-origin: 0.5rem 0;
         -ms-transform-origin: 0.5rem 0;
             transform-origin: 0.5rem 0;
-    margin-left: -2.65rem;
+    margin-left: -2.85rem;
     clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
   }
 
@@ -4503,15 +4533,6 @@ body.bg-gray .header {
     min-height: 12.75rem;
   }
 
-  .header__logo {
-    margin-left: -2.85rem;
-  }
-
-  .header__logo.header__logo_offset svg {
-    margin-top: -0.625rem;
-    margin-left: 0.0625rem;
-  }
-
   .header__logo.header__logo_offset.header__logo_scaled {
     margin-top: -0.25rem;
   }
@@ -5077,7 +5098,11 @@ body.bg-gray .header {
 
   .header__logo {
     max-width: 27.3125rem;
-    margin-left: -2.85rem;
+  }
+
+  .header__logo.header__logo_offset svg {
+    margin-left: 0.0625rem;
+    margin-top: -0.625rem;
   }
 
   .article__block:not(:first-child).xxl-offset,
@@ -5912,12 +5937,6 @@ body.bg-gray .header {
 @media (max-width: 375px) {
   .header__menu-list {
     padding-right: 2rem;
-  }
-}
-
-@media (min-width: 619.98px) and (max-width: 767.98px) {
-  .footer__caption.footer-catalog {
-    line-height: 190%;
   }
 }
 

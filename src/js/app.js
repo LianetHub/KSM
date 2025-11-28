@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     devFunctions.formSubmit();
     devFunctions.inputFiles();
+    devFunctions.initPropEllipsis()
 
     function waitForGsapAndRun(callback, interval = 50, timeout = 5000) {
         let waited = 0;

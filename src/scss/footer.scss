@@ -29,11 +29,6 @@
 		&.footer-catalog {
 			font-size: 0.75rem;
 			max-width: rem(180);
-			@media (min-width: $md6) {
-				@media (max-width: $md5) {
-					line-height: 190%;
-				}
-			}
 		}
 		@media (min-width: $md4) {
 			max-width: 100%;
