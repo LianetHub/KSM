@@ -269,12 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const swiper = new Swiper(slider, {
                 slidesPerView: 1,
-                // loop: true,
+                loop: true,
+                navigation: {
+                    nextEl: nextBtn,
+                    prevEl: prevBtn
+                },
                 watchOverflow: true,
-                // navigation: {
-                //     nextEl: nextBtn,
-                //     prevEl: prevBtn
-                // },
                 pagination: {
                     el: slider.querySelector('.slider__pagination'),
                     type: "fraction",
@@ -304,21 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return number < 10 ? '0' + number : number;
             }
 
-            nextBtn.addEventListener('click', () => {
-                if (swiper.isEnd) {
-                    swiper.slideTo(0);
-                } else {
-                    swiper.slideNext();
-                }
-            });
-
-            prevBtn.addEventListener('click', () => {
-                if (swiper.isBeginning) {
-                    swiper.slideTo(swiper.slides.length - 1);
-                } else {
-                    swiper.slidePrev();
-                }
-            });
 
             swiper.slides.forEach(slide => {
                 slide.addEventListener('click', (e) => {
@@ -327,17 +312,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const slideWidth = rect.width;
 
                     if (x < slideWidth * 0.5) {
-                        if (swiper.isBeginning) {
-                            swiper.slideTo(swiper.slides.length - 1);
-                        } else {
-                            swiper.slidePrev();
-                        }
+                        swiper.slidePrev();
                     } else {
-                        if (swiper.isEnd) {
-                            swiper.slideTo(0);
-                        } else {
-                            swiper.slideNext();
-                        }
+                        swiper.slideNext();
                     }
                 });
             });

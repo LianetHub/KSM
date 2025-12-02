@@ -146,6 +146,12 @@
 		@media (min-width: $md2) {
 			margin-top: 0.5rem;
 		}
+		&:has(.products__empty) {
+			margin-top: 0;
+			.row {
+				--gutter-y: 0;
+			}
+		}
 		.row {
 			--gutter-y: 1.25rem;
 			& > p {
@@ -885,6 +891,9 @@
 	// .product__props-name
 	&__props-name {
 		font-weight: 500;
+		@media (min-width: $md6) {
+			white-space: nowrap;
+		}
 		&[data-full-text] {
 			overflow: hidden;
 			max-width: 100%;

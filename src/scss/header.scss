@@ -186,14 +186,16 @@
 			.header__logo-current {
 				opacity: 1 !important;
 				visibility: visible !important;
-				display: block !important;
+				display: block;
 			}
 		}
 	}
 	// .header__logo-current
 	&__logo-current {
-		@media (min-width: $md6) {
-			display: none;
+		@media (min-width: $md7) {
+			@media (max-width: $md5) {
+				display: none !important;
+			}
 		}
 		@media (min-width: $md4) {
 			display: block;

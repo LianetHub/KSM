@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "KSM";
   font-display: swap;
   src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
@@ -21,14 +29,6 @@
   font-display: swap;
   src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -323,7 +323,6 @@ body.bg-gray .header {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  font-weight: 700;
   font-size: 0.6875rem;
 }
 
@@ -1239,7 +1238,7 @@ body.bg-gray .header {
 .header__logo.visible .header__logo-current {
   opacity: 1 !important;
   visibility: visible !important;
-  display: block !important;
+  display: block;
 }
 
 .header__menu {
@@ -1696,6 +1695,15 @@ body.bg-gray .header {
 .products__cards {
   margin-top: 0.5rem;
   margin-bottom: 2.8375rem;
+}
+
+.products__cards:has(.products__empty) {
+  margin-top: 0;
+}
+
+.products__cards:has(.products__empty) .row,
+.products__cards:has(.products__empty) .privacy__content {
+  --gutter-y: 0;
 }
 
 .products__cards .row,
@@ -2773,10 +2781,6 @@ body.bg-gray .header {
 }
 
 @media (min-width: 429.98px) {
-  .footer {
-    font-size: 0.9375rem;
-  }
-
   .products__category-name {
     font-size: 0.9375rem;
   }
@@ -3017,10 +3021,6 @@ body.bg-gray .header {
     clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
   }
 
-  .header__logo-current {
-    display: none;
-  }
-
   .header__menu {
     margin-top: -0.05rem;
     padding: 0;
@@ -3124,6 +3124,10 @@ body.bg-gray .header {
     font-size: 1.5rem;
     line-height: 125%;
     margin-top: 1.1rem;
+  }
+
+  .product__props-name {
+    white-space: nowrap;
   }
 
   .contacts__title {
@@ -3410,7 +3414,6 @@ body.bg-gray .header {
 
   .footer__form {
     margin-top: 0;
-    max-width: 21.125rem;
   }
 
   .footer__address {
@@ -4008,7 +4011,6 @@ body.bg-gray .header {
   }
 
   .footer__form {
-    max-width: 100%;
     margin-top: 0.785rem;
   }
 
@@ -5937,6 +5939,12 @@ body.bg-gray .header {
 @media (max-width: 375px) {
   .header__menu-list {
     padding-right: 2rem;
+  }
+}
+
+@media (min-width: 429.98px) and (max-width: 767.98px) {
+  .header__logo-current {
+    display: none !important;
   }
 }
 
