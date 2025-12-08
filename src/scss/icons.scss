@@ -18,12 +18,30 @@
 	}
 }
 
+.icon-plus-product:before {
+	content: "\e907";
+}
+.icon-plus-product-rotate:before {
+	content: "\e908";
+}
+.icon-plus:before {
+	content: "\e906";
+}
+.icon-plus-invert:before {
+	content: "\e903";
+}
+.icon-plus-rotate:before {
+	content: "\e904";
+}
+.icon-plus-rotate-invert:before {
+	content: "\e905";
+}
 .icon-clear:before {
 	content: "\e900";
 }
 .icon-close:before {
 	content: "\e901";
 }
-.icon-plus:before {
+.icon-plus-square:before {
 	content: "\e902";
 }

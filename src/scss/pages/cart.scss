@@ -12,7 +12,12 @@
 	.products__card {
 		.products__card-btn {
 			&::before {
-				transform: rotate(45deg);
+				@extend .icon-plus-rotate;
+			}
+			&:hover {
+				&::before {
+					@extend .icon-plus-rotate-invert;
+				}
 			}
 		}
 	}

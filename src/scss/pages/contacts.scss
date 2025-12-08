@@ -109,6 +109,7 @@
 	}
 	// .contacts__worktime
 	&__worktime {
+		line-height: math.div(24, 18);
 	}
 	// .contacts__worktime-item
 	&__worktime-item {

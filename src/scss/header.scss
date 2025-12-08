@@ -396,6 +396,8 @@
 	min-width: 1.45rem;
 	min-height: rem(36);
 	margin-top: rem(-3.5);
+	transform: translateZ(0);
+	clip-path: polygon(-1px -1px, 101% -1px, 101% 101%, -1px 101%);
 	@media (min-width: $md5) {
 		min-width: rem(42);
 		margin-top: rem(-4.5);

@@ -355,36 +355,31 @@
 	// .products__card-btn
 	&__card-btn {
 		margin-top: 0.45rem;
-
 		@media (min-width: $md3) {
 			margin-top: 0.4rem;
 		}
 		width: 1.5rem;
 		height: 1.5rem;
+		font-size: 1.5rem;
 		flex-shrink: 0;
 		margin-left: auto;
-		border: rem(1) solid;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		@media (any-hover: hover) {
-			&:hover {
-				background: #000;
-				color: #fff;
+		&:hover {
+			&::before {
+				@extend .icon-plus-invert;
 			}
 		}
-		&::before {
-			font-size: 0.75rem;
-			// padding-top: 0.125rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+
 		&.active {
-			// background: #000;
-			// color: #fff;
 			&::before {
-				transform: rotate(45deg);
+				@extend .icon-plus-rotate;
+			}
+			&:hover {
+				&::before {
+					@extend .icon-plus-rotate-invert;
+				}
 			}
 		}
 		&.pending {
@@ -922,12 +917,12 @@
 	&__delete-btn {
 		text-transform: uppercase;
 		&::before {
-			@extend %ic, .icon-plus;
+			@extend %ic, .icon-plus-product;
 			order: 1;
 		}
 		&.active {
 			&::before {
-				@extend %ic, .icon-clear;
+				@extend %ic, .icon-plus-product-rotate;
 			}
 		}
 		&.pending {
