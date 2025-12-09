@@ -12,13 +12,14 @@
 	.products__card {
 		.products__card-btn {
 			&::before {
-				@extend .icon-plus-rotate;
+				// @extend .icon-plus-rotate;
+				@extend .icon-plus-rotate-invert;
 			}
-			&:hover {
-				&::before {
-					@extend .icon-plus-rotate-invert;
-				}
-			}
+			// &:hover {
+			// 	&::before {
+			// 		@extend .icon-plus-rotate-invert;
+			// 	}
+			// }
 		}
 	}
 	// .cart__container

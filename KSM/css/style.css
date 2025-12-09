@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
+  font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "KSM";
   font-display: swap;
-  src: url("../fonts/KSM-Bold.woff2") format("woff2"), url("../fonts/KSM-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -25,10 +25,10 @@
 }
 
 @font-face {
-  font-family: "KSM";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/KSM-Medium.woff2") format("woff2"), url("../fonts/KSM-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -73,15 +73,13 @@
   content: "\e903";
 }
 
-.icon-plus-rotate:before,
-.cart .products__card .products__card-btn:before,
-.products__card-btn.active:before {
+.icon-plus-rotate:before {
   content: "\e904";
 }
 
 .icon-plus-rotate-invert:before,
-.cart .products__card .products__card-btn:hover:before,
-.products__card-btn.active:hover:before {
+.cart .products__card .products__card-btn:before,
+.products__card-btn.active:before {
   content: "\e905";
 }
 
@@ -1467,6 +1465,10 @@ body.bg-gray .header {
 }
 
 .footer__privacy {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   line-height: 150%;
 }
 
@@ -2252,6 +2254,11 @@ body.bg-gray .header {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.product__delete-btn.active {
+  background: #000;
+  color: #fff;
 }
 
 .product__delete-btn::after {
@@ -5977,6 +5984,12 @@ body.bg-gray .header {
 @media (min-width: 1199.98px) and (max-width: 1439.98px) {
   .footer__logo {
     max-width: 5.3125rem;
+  }
+}
+
+@media (min-width: 619.98px) and (max-width: 767.98px) {
+  .footer__form {
+    margin-right: 1rem;
   }
 }
 

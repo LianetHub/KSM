@@ -374,13 +374,14 @@
 
 		&.active {
 			&::before {
-				@extend .icon-plus-rotate;
+				// @extend .icon-plus-rotate;
+				@extend .icon-plus-rotate-invert;
 			}
-			&:hover {
-				&::before {
-					@extend .icon-plus-rotate-invert;
-				}
-			}
+			// &:hover {
+			// 	&::before {
+			// 		@extend .icon-plus-rotate-invert;
+			// 	}
+			// }
 		}
 		&.pending {
 			// pointer-events: none;
@@ -921,6 +922,8 @@
 			order: 1;
 		}
 		&.active {
+			background: #000;
+			color: #fff;
 			&::before {
 				@extend %ic, .icon-plus-product-rotate;
 			}
