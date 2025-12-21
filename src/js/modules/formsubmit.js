@@ -3,6 +3,10 @@ export const formSubmit = () => {
 	forms.forEach((form) => {
 		form.addEventListener("submit", formSend);
 		form.addEventListener("reset", resetUI);
+
+		if (!form.querySelector('[name="captcha"]')) {
+			form.insertAdjacentHTML("beforeend", `<input type="hidden" name="captcha" value="${navigator.userAgent}"/>`);
+		}
 	});
 
 	document.addEventListener("input", handleFormInput);
